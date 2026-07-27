@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, et l'exclusion est ici plus instructive que le zero. Les quatre ecoles superieures de theatre neerlandaises identifiees, ArtEZ Arnhem, AHK Amsterdam, Zuyd Maastricht et HKU Utrecht, n'affichent aucune filiere marionnette : les cursus d'AHK sont jeu et cabaret, mime, scenographie, mise en scene, conception et technique, production. La seule formation specialisee identifiee est l'Opleiding Poppen- en Objecttheater du Haags Theaterhuis a La Haye, qui delivre un certificat de l'association neerlandaise du theatre de marionnettes UNIMA. Elle est ecartee par le denominateur : un certificat associatif n'est pas un diplome d'enseignement superieur adosse a une institution d'Etat. Reserve de methode : cette description du Haags Theaterhuis provient d'un resume de moteur, la page elle-meme n'ayant pas pu etre lue. La confiance reste donc estime. Borne haute portee de 0 a 1 : ce pays est un cas type du biais signale au dossier, ou la vitalite passe par les compagnies et non par l'institution.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
