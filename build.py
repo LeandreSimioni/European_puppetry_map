@@ -197,11 +197,15 @@ def payload(countries):
     act = {code: [p['obs']['performances']['value'],
                   p['obs']['performances'].get('basis')]
            for code, p in countries.items() if 'performances' in p['obs']}
+    # The house/stage split, so a reader can recompute the strict
+    # organisation-only count the ruling of 2026-07-27 replaced.
+    units = {code: p['obs']['venues']['units']
+             for code, p in countries.items() if p['obs']['venues'].get('units')}
     pts, _, _ = school_points(countries)
     checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
                if p['obs']['schools'].get('checked_on')}
-    return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'confidence': conf,
-            'school_pts': pts, 'checked_on': checked}
+    return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'units': units,
+            'confidence': conf, 'school_pts': pts, 'checked_on': checked}
 
 
 def tally(countries):

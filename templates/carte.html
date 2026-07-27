@@ -174,6 +174,7 @@
 const PAYLOAD = __PAYLOAD__;
 const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, JOBV = PAYLOAD.job, ACT = PAYLOAD.act || {};
 const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
+const UNITS = PAYLOAD.units || {};
 /* The eyebrow line is derived from the data: hard-coded, it goes stale the
    moment a verification pass lands. */
 (function(){
@@ -450,6 +451,7 @@ function detail(){
       ${({sourced:'citable source',declared:'declared, unpublished',estimated:'estimated, not citable'})[conf(c)[0]]}${conf(c)[1]==='disputed'?' · method disputed':conf(c)[1]==='verified'?' · verified':''}</div>
     <div style="margin-top:14px">
       <div class="kv"><span>Structuring venues</span><b>${rg(d[2],d[3])}</b></div>
+      ${UNITS[c]?`<div class="kv" style="font-size:12.5px;color:#9C8DAE"><span style="padding-left:12px">of which freestanding houses · stages inside a larger organisation</span><b>${UNITS[c].house||0} · ${UNITS[c].stage||0}${UNITS[c].unknown?' · '+UNITS[c].unknown+' unsplit':''}</b></div>`:''}
       <div class="kv"><span>National schools</span><b>${rg(d[4],d[5])}</b></div>
       <div class="kv"><span>Population</span><b>${d[1]} M</b></div>
       <div class="kv"><span>Venues per million inhabitants</span><b>${(((d[2]+d[3])/2)/d[1]).toFixed(2)}</b></div>
