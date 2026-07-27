@@ -25,11 +25,11 @@
     {
       "indicateur": "ecoles",
       "valeur": 2.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "annee": 2026,
+      "source": "https://de.wikipedia.org/wiki/Staatliche_Hochschule_für_Musik_und_Darstellende_Kunst_Stuttgart ; https://www.hfs-berlin.de/studium/puppenspielkunst/der-studiengang-puppenspielkunst/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Deux etablissements retenus, tous deux lus a la source. Premier : la Hochschule fuer Schauspielkunst Ernst Busch de Berlin, departement Puppenspielkunst, cursus de quatre ans delivrant un Diplom de Puppenspieler / Darstellender Kuenstler, filiere fondee en 1971-72. Second : la Staatliche Hochschule fuer Musik und Darstellende Kunst de Stuttgart, Studiengang Figurentheater cree en 1983, delivre au seul niveau Bachelor, etablissement dont la Traegerschaft est explicitement staatlich, finance par le Land de Bade-Wurtemberg. La source allemande precise que Stuttgart est la seule Musikhochschule du pays a proposer le Figurentheater, ce qui ne contredit pas Berlin, etablissement d'art dramatique et non de musique : les deux comptent. Borne haute maintenue a 2 : les deux filieres sont documentees et aucune troisieme n'apparait, la formation restant par ailleurs largement assuree en Allemagne par des structures privees hors du denominateur.",
       "borne_basse": 2,
       "borne_haute": 2
     },
