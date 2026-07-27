@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://el.wikipedia.org/wiki/%CE%98%CE%B5%CE%B1%CF%84%CF%81%CE%B9%CE%BA%CF%8C%CF%82_%CE%9F%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CF%83%CE%BC%CF%8C%CF%82_%CE%9A%CF%8D%CF%80%CF%81%CE%BF%CF%85",
+      "confidence": "sourced",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 1
+      "reasoning": "Searched on 2026-07-27, in Greek, in the transversal venues pass. Zero. The public theatre in Cyprus is the Theatrikos Organismos Kyprou, founded in 1970 and described as the island's first semi-governmental theatre body. Its stages were read: the Central stage, the New stage of 1994, the experimental stage, and the children's stage for ages four to twelve, which in 2012 was renamed Skini 018 and absorbed the youth stage and the Theatro Valitsa. Not one of them is a puppetry stage and no puppetry ensemble is named anywhere in the account. Cypriot puppetry exists as companies without rooms — the group Ta Panda Phi, founded in 2011, is the one that recurs — and a company without a venue is excluded by the denominator by name. Recorded open rather than verified because the argument runs through the state organisation only: the Deputy Ministry of Culture's list of subsidised bodies was not read, and a municipal puppet room in Limassol or Nicosia would not appear in what was. The previous value was 1, an opening estimate produced with no research.",
+      "lower_bound": 0,
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "Technodromio, Nicosia.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: read the Deputy Ministry of Culture's list of subsidised theatre bodies. The 2026-07-27 pass read the state organisation's four stages and found no puppetry among them, which does not cover a municipal or subsidised puppet room."
   ]
 }
