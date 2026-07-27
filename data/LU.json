@@ -25,11 +25,11 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, et le Luxembourg est le seul pays de cette passe ou le zero repose sur un argument d'exhaustivite et non sur une absence de resultat. Le portail officiel d'orientation de l'Etat luxembourgeois enonce qu'aucune formation d'enseignement superieur en art dramatique n'est proposee au Luxembourg : le seul Conservatoire de Luxembourg dispense de l'art dramatique et de la diction, mais ses diplomes ne relevent pas de l'enseignement superieur et servent de preparation aux ecoles superieures etrangeres. S'il n'existe aucune formation superieure d'art dramatique dans le pays, il ne peut a fortiori exister de formation superieure specialisee en arts de la marionnette. Borne haute maintenue a 0 pour cette raison, et non portee a 1 comme dans les autres pays sans candidat. Confiance maintenue a estime malgre la force de l'argument : le portail a renvoye un refus a la lecture automatisee et l'enonce n'est connu que par resume de moteur.",
       "borne_basse": 0,
       "borne_haute": 0
     },
