@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://www.eselx.ipl.pt/curso/pos-graduacao/marionetas-e-formas-animadas",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu, la valeur passant de 0 a 1 : l'Escola Superior de Educacao de Lisboa, ESELx, composante de l'Instituto Politecnico de Lisboa, etablissement public. Critere lu a la source : post-graduation Marionetas e Formas Animadas, 60 ECTS sur deux semestres, en presentiel. La marionnette est l'objet meme de la formation. Reserve de qualification a porter au dossier : il s'agit d'une post-graduation et non d'une licence ou d'un master, ce qui en fait une formation superieure diplomante mais d'un format plus court que les cursus comptes ailleurs dans la serie. Le denominateur ne fixant pas de niveau plancher au-dela du caractere superieur et diplomant, elle est retenue. Borne haute maintenue a 1 : la page lue affirme que la formation est unique dans le paysage de la formation avancee au Portugal et la seule du pays inscrite au repertoire mondial des ecoles du domaine. Affirmation lue, non deduite.",
+      "borne_basse": 1,
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
