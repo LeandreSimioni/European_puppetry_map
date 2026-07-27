@@ -29,12 +29,169 @@
       "source": "https://bdl.stat.gov.pl/api/v1/data/by-variable/194943?unit-level=0&format=json&year=2024",
       "confidence": "sourced",
       "status": "disputed",
-      "reasoning": "Read on 2026-07-27 from the Local Data Bank of GUS, subject P2874 'Teatry', variable 194943, 'jednostki: teatr lalkowy', national level: 28 puppet theatre institutions in 2024. The series falls steadily — 35 in 2019, 29 in 2022 and 2023, 28 in 2024 — so Poland has lost a fifth of its puppet institutions in five years, which is the most useful thing this figure says. Disputed on one filter, not on the reading. GUS counts the institutions that file the theatre return and classes them by kind of theatre; it does not sort them by who backs them. The denominator here asks for public backing, and 28 is therefore a ceiling: every publicly backed puppet house is inside it, and any private one that files a return is inside it too. What would settle it is the register of instytucje kultury held by the ministry and the local authorities, read against this list of 28. The reading is exact; the question is whether the denominators match. The opening estimate was 22 to 28 and its upper bound turns out to be the sourced ceiling, which is luck rather than method.",
+      "reasoning": "Read on 2026-07-27 from the Local Data Bank of GUS, subject P2874 'Teatry', variable 194943, 'jednostki: teatr lalkowy', national level: 28 puppet theatre institutions in 2024. The series falls steadily — 35 in 2019, 29 in 2022 and 2023, 28 in 2024 — so Poland has lost a fifth of its puppet institutions in five years, which is the most useful thing this figure says. Disputed on one filter, not on the reading. GUS counts the institutions that file the theatre return and classes them by kind of theatre; it does not sort them by who backs them. The denominator here asks for public backing, and 28 is therefore a ceiling: every publicly backed puppet house is inside it, and any private one that files a return is inside it too. The opening estimate was 22 to 28 and its upper bound turns out to be the sourced ceiling, which is luck rather than method. Partly enumerated on 2026-07-27, in a second pass, because a total that names nobody puts no point on the map and cannot be audited. Eleven of the 28 are now named, and each is named on the same test the German pass used: a statement, read on a page opened at source, that the theatre is a public cultural institution or is funded by a public authority. Seven carry it on their own site — Białystok as a Miejska Instytucja Kultury, Gdańsk as an instytucja kultury of the city, Szczecin as a samorządowa instytucja kultury with additional voivodeship funding, Wrocław with its entry number in the city's register of cultural institutions, and the three Warsaw houses as instytucje kultury of the capital. Toruń carries the funding statement rather than the status. Three more — Łomża, Wałbrzych, Rabka-Zdrój — rest on the Polish encyclopedia's wording, quoted in the authority field of each so it can be weighed: miejska instytucja artystyczna, teatr miejski, państwowy teatr lalek. The other seventeen stay under 'unknown', and the reason is access rather than doubt. The candidate set is not the difficulty: POLUNIMA, the Polish centre of UNIMA, publishes its lista członków prawnych with 25 institutional puppet theatres and their addresses, and the encyclopedia adds Bydgoszcz. What is missing is the public-status statement for each, and Polish theatre sites answered 403, 500 or 503 through the day — Banialuka, Groteska, Andersen in Lublin, Arlekin, Teatr Animacji among them. POLUNIMA's own list cannot stand in for it: the heading is członkowie prawni, legal-person members, which says nothing about who backs them, and the list carries at least one independent company with no venue at all. A membership list is not a register of public institutions, and reading it as one would have added fourteen venues on a misread word. Coordinates were geocoded from the postal addresses through Nominatim on OpenStreetMap, not derived by hand: seven of the eleven resolved to the theatre building itself, named in OpenStreetMap, and the other four to their street number. This is the first record in the file whose points are geocoded rather than taken at locality level. All eleven are recorded as houses. No Polish puppet stage inside a drama theatre has been looked for, and under the ruling of 2026-07-27 that is a real omission: GUS classes each reporting institution by kind, so such a stage files under its parent and never appears as a puppet unit. The 28 is therefore a ceiling on public backing and an undercount on integrated stages at the same time, and neither error is measured.",
       "lower_bound": 28,
       "upper_bound": 28,
       "units": {
-        "unknown": 28
-      }
+        "house": 11,
+        "unknown": 17
+      },
+      "venues_list": [
+        {
+          "name": "Białostocki Teatr Lalek",
+          "city": "Białystok",
+          "address": "ul. Kalinowskiego 1, 15-875 Białystok",
+          "lat": 53.13083,
+          "lon": 23.15043,
+          "unit": "house",
+          "parent": null,
+          "authority": "Miejska Instytucja Kultury, stated on the theatre's own contact page",
+          "registration": null,
+          "url": "https://btl.bialystok.pl",
+          "source": "https://btl.bialystok.pl/kontakt/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Miejski Teatr Miniatura",
+          "city": "Gdańsk",
+          "address": "al. Grunwaldzka 16, 80-236 Gdańsk",
+          "lat": 54.375,
+          "lon": 18.61801,
+          "unit": "house",
+          "parent": null,
+          "authority": "Instytucja kultury Miasta Gdańska",
+          "registration": null,
+          "url": "https://www.teatrminiatura.pl",
+          "source": "https://www.teatrminiatura.pl/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalek Pleciuga",
+          "city": "Szczecin",
+          "address": "pl. Teatralny 1, 71-407 Szczecin",
+          "lat": 53.43731,
+          "lon": 14.54822,
+          "unit": "house",
+          "parent": null,
+          "authority": "Samorządowa instytucja kultury miasta Szczecin, with additional funding from the Zachodniopomorskie voivodeship",
+          "registration": null,
+          "url": "https://pleciuga.pl",
+          "source": "https://pleciuga.pl/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Wrocławski Teatr Lalek",
+          "city": "Wrocław",
+          "address": "pl. Teatralny 4, 50-051 Wrocław",
+          "lat": 51.10505,
+          "lon": 17.03305,
+          "unit": "house",
+          "parent": null,
+          "authority": "Rejestr Instytucji Kultury Miasta Wrocławia",
+          "registration": "RIK Wrocław 21/94",
+          "url": "https://teatrlalek.wroclaw.pl",
+          "source": "https://teatrlalek.wroclaw.pl/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalka",
+          "city": "Warszawa",
+          "address": "Pałac Kultury i Nauki, Plac Defilad 1, 00-901 Warszawa",
+          "lat": 52.23177,
+          "lon": 21.0058,
+          "unit": "house",
+          "parent": null,
+          "authority": "Instytucja Kultury m.st. Warszawy",
+          "registration": "REGON 016342053",
+          "url": "https://teatrlalka.pl",
+          "source": "https://teatrlalka.pl/pl/kontakt",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Baj",
+          "city": "Warszawa",
+          "address": "ul. Jagiellońska 28, 03-719 Warszawa",
+          "lat": 52.2525,
+          "lon": 21.03462,
+          "unit": "house",
+          "parent": null,
+          "authority": "Instytucja kultury m.st. Warszawy",
+          "registration": "REGON 000277948",
+          "url": "https://teatrbaj.pl",
+          "source": "https://teatrbaj.pl/kontakt/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalek Guliwer",
+          "city": "Warszawa",
+          "address": "ul. Różana 16, 02-548 Warszawa",
+          "lat": 52.20328,
+          "lon": 21.01979,
+          "unit": "house",
+          "parent": null,
+          "authority": "Instytucja kultury m.st. Warszawy",
+          "registration": "REGON 000277687",
+          "url": "https://teatrguliwer.pl",
+          "source": "https://teatrguliwer.pl/kontakt/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalki i Aktora w Łomży",
+          "city": "Łomża",
+          "address": "plac Niepodległości 14, Łomża",
+          "lat": 53.17453,
+          "lon": 22.07872,
+          "unit": "house",
+          "parent": null,
+          "authority": "Miejska instytucja artystyczna",
+          "registration": null,
+          "url": "https://teatrlalki.pl",
+          "source": "https://pl.wikipedia.org/wiki/Teatr_Lalki_i_Aktora_w_%C5%81om%C5%BCy",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Baj Pomorski",
+          "city": "Toruń",
+          "address": "ul. Piernikarska 9, 87-100 Toruń",
+          "lat": 53.01032,
+          "lon": 18.61208,
+          "unit": "house",
+          "parent": null,
+          "authority": "Dofinansowano ze środków Miasta Toruń, stated in the theatre's own footer",
+          "registration": null,
+          "url": "https://bajpomorski.pl",
+          "source": "https://bajpomorski.pl/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalki i Aktora w Wałbrzychu",
+          "city": "Wałbrzych",
+          "address": "ul. Jana Brzechwy 16, Wałbrzych",
+          "lat": 50.76859,
+          "lon": 16.28239,
+          "unit": "house",
+          "parent": null,
+          "authority": "Teatr miejski",
+          "registration": null,
+          "url": "https://teatrlalek.walbrzych.pl",
+          "source": "https://pl.wikipedia.org/wiki/Teatr_Lalki_i_Aktora_w_Wa%C5%82brzychu",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Teatr Lalek Rabcio",
+          "city": "Rabka-Zdrój",
+          "address": "ul. Orkana 3c, Rabka-Zdrój",
+          "lat": 49.611,
+          "lon": 19.94959,
+          "unit": "house",
+          "parent": null,
+          "authority": "Państwowy teatr lalek",
+          "registration": null,
+          "url": "https://rabcio.pl",
+          "source": "https://pl.wikipedia.org/wiki/Teatr_Lalek_Rabcio",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -136,8 +293,9 @@
   "notes": "State puppet theatres in most voivodeship capitals. Academies in Białystok and Wrocław.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
+    "venues: name the seventeen still under 'unknown'. The candidates are known — POLUNIMA's lista członków prawnych holds 25 institutional puppet theatres with addresses, and Bydgoszcz's Buratino is a 26th. What is missing for each is a statement of public status read at source; the theatre sites answered 403, 500 or 503 today. The city and voivodeship registers of instytucje kultury are the route that does not depend on a theatre's own web server, and a city register settles several houses at once in Warsaw and Łódź.",
+    "venues: look for puppet stages inside Polish drama and children's theatres. GUS cannot see them — it classes a reporting institution by kind, so an integrated puppet stage files under its parent. The German pass found ten such stages against eleven freestanding houses; there is no reason Poland should have none.",
     "venues: read the ministry's register of instytucje kultury against the 28 GUS units, to separate the publicly backed houses from any private filer.",
-    "performances: find a Polish source counting puppet performances by place of presentation rather than in permanent halls only. GUS publishes that measure but not by kind of theatre.",
-    "venues: the ruling of 2026-07-27 probably makes 28 an undercount, not just a ceiling on public backing. GUS classes each reporting institution by kind, so a puppet stage inside a drama theatre files under its parent and never appears as a puppet unit. The two errors run in opposite directions and neither is measured."
+    "performances: find a Polish source counting puppet performances by place of presentation rather than in permanent halls only. GUS publishes that measure but not by kind of theatre."
   ]
 }
