@@ -9,7 +9,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator, and this is reported rather than filled. The value stays the opening estimate, made with no source and no research, and confidence stays estimated with source null. Two routes were tried. Eurostat carries a geo code for San Marino in demo_pjan but publishes no row for it in the period queried. The national statistical office at statistica.sm was then opened: its front page is a navigation hub and announces a Bollettino demografico for the first quarter of 2026, but the figure itself sits in a document that was not opened, and a figure that has not been read is not a source. Rather than carry an approximate number, the record keeps the estimate and states where the real one is."
     },
     {
       "indicator": "venues",
@@ -93,6 +93,7 @@
   "notes": "No permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "population_M: open the Bollettino demografico of statistica.sm, the figure is there and was not read."
   ]
 }
