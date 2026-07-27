@@ -9,7 +9,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator. The value stays the opening estimate and confidence stays estimated with source null, because the obstacle here is the denominator and not the availability of data. This indicator's denominator asks, for Russia and Turkey, for the European part only. No pan-European table gives that: Eurostat carries a geo code for Russia in demo_pjan but publishes no row for it in the period queried, and would in any case give the whole federation. Producing the European part means summing Rosstat's federal districts, which is a construction rather than a reading, and it requires a prior choice that nobody has made in this repository: whether the Urals fall inside or outside. That choice moves the figure by millions. What is needed first is a ruling on the boundary, then a sum of published regional figures each read at source, with the method written out."
     },
     {
       "indicator": "venues",
@@ -108,6 +108,7 @@
   "notes": "State puppet theatres in every regional capital. Obraztsov, Moscow.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "population_M: rule on where the European boundary runs, Urals in or out, before any figure is summed from Rosstat regions."
   ]
 }
