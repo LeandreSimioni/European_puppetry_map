@@ -59,6 +59,23 @@ python3 build.py --check   # must exit without error
 python3 build.py           # regenerates the map
 ```
 
+## Talking to GitHub
+
+Use the authenticated GitHub tooling for anything on the remote: run status,
+branches, pull requests, comments. Do not call `api.github.com` with an
+anonymous `curl`.
+
+The reason is not style. Anonymous calls are rate-limited and are refused
+outright through the agent proxy, and the refusal does not look like a
+refusal: the JSON that comes back has no `status` or `conclusion` field, so a
+polling loop waiting on one spins silently until it hits its timeout. That
+cost five minutes on 2026-07-27 while a workflow run had in fact already
+finished, in success, twenty-five seconds after the push.
+
+If a check must be waited on rather than read once, poll through the
+authenticated tool, and make the loop exit on a missing field rather than
+treat it as "not ready yet".
+
 ## What not to do
 
 - Do not propose qualitative or categorical indicators. They were ruled out
