@@ -12,12 +12,17 @@
 > "National school" = specialised, degree-granting higher education course in
 > puppetry arts, backed by a state institution. A `0-1` notation marks a course
 > I did not know whether it still existed, or whether it had the standing of a
-> programme in its own right.
+> programme in its own right. *That definition is the one used at the time and
+> is no longer current: on 2026-07-27 object theatre was admitted, and state
+> backing was redefined as recognition of the award rather than ownership of the
+> institution. See `schema.json` for the denominator in force.*
 >
 > **This document is a historical record: it is the starting point, not the
-> current state.** The schools column was checked against sources in July 2026
-> and seven of these values turned out to be wrong. See `data/<CC>.json` for the
-> current values and the reasoning behind them.
+> current state.** Two of its columns have since been checked against sources.
+> The schools column was verified in July 2026 and seven of these values turned
+> out to be wrong; the population column was sourced on 2026-07-27 for 44 of the
+> 45 countries. Only the venues column is still what it was: recollection. See
+> `data/<CC>.json` for the current values and the reasoning behind them.
 
 | Country | Structuring venues (est.) | Population (M, est.) | National schools | Memory notes |
 |---|---|---|---|---|

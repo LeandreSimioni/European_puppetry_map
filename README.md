@@ -58,9 +58,8 @@ geo/europe.json           projected outlines (Natural Earth 1:50 M, public domai
 templates/carte.html      the map template, without data
 build.py                  validates the data and regenerates dist/index.html
 tools/projection.py       (lon, lat) -> SVG frame, fitted on the base map
-tools/seed_data.py        initial seeding, no longer to be run
 dist/index.html           generated map, never to be edited by hand
-docs/                     method note, protocol, initial table
+docs/                     verification protocol, and the initial table from memory
 ```
 
 ## Usage
