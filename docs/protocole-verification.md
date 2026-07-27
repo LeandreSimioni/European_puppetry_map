@@ -1,50 +1,64 @@
-# Protocole de vérification, pays par pays
+# Verification protocol, country by country
 
-## Ordre de traitement suggéré
+## Suggested order of work
 
-Commencer par les pays où la donnée existe déjà quelque part, pour calibrer la
-méthode avant d'attaquer les cas difficiles.
+Start with the countries where the data already exists somewhere, to calibrate
+the method before tackling the hard cases.
 
-1. **Pologne, Tchéquie, Roumanie, Croatie, Hongrie.** Les théâtres d'État y sont
-   comptables d'un volume et publient un rapport annuel avec nombre de
-   représentations et de spectateurs. C'est la source la plus directe.
-2. **Allemagne.** Les théâtres municipaux publient des bilans, et il existe des
-   statistiques sectorielles agrégées du spectacle vivant.
-3. **France.** Paradoxalement le cas le plus difficile : l'information est
-   éclatée et hétérogène. Passer par le côté organisateur ou par les données de
-   paie du spectacle vivant, qui donnent des jours travaillés déclarés.
-4. **Italie, Espagne, Royaume-Uni.** Peu d'agrégation, beaucoup de compagnies.
-   Probablement enquête déclarative.
-5. **Le reste**, par contact professionnel direct.
+1. **Poland, Czechia, Romania, Croatia, Hungary.** State theatres there are
+   accountable for a volume of activity and publish an annual report with
+   numbers of performances and spectators. That is the most direct source.
+2. **Germany.** Municipal theatres publish accounts, and there are aggregated
+   sector statistics for the performing arts.
+3. **France.** Paradoxically the hardest case: the information is scattered and
+   heterogeneous. Go through the presenter side, or through performing-arts
+   payroll data, which gives declared days worked.
+4. **Italy, Spain, United Kingdom.** Little aggregation, many companies.
+   Probably a declarative survey.
+5. **The rest**, by direct professional contact.
 
-## Pour chaque pays, dans l'ordre
+## For each country, in order
 
-1. Lire `data/<CC>.json` et la liste `a_verifier`.
-2. Identifier une structure ou un organisme qui publie un volume d'activité.
-3. Remplir d'abord les indicateurs institutionnels, plus faciles, qui servent de
-   test de fiabilité de la source.
-4. Ne passer aux indicateurs de métier que si le dénominateur a été tranché.
-5. Mettre à jour `confiance`, `statut`, `source`, `annee` et `raisonnement`.
-6. `python3 build.py --check`, puis commit.
+1. Read `data/<CC>.json` and the `to_check` list.
+2. Identify an organisation or body that publishes a volume of activity.
+3. Fill the institutional indicators first: they are easier and act as a
+   reliability test on the source.
+4. Only move to the trade indicators once the denominator has been settled.
+5. Update `confidence`, `status`, `source`, `year`, `checked_on` and `reasoning`.
+6. Run `python3 build.py --check`, then commit.
 
-## Modèle de raisonnement acceptable
+## Model of acceptable reasoning
 
-> Rapport annuel 2024 de la structure X : 312 représentations, troupe de 19
-> interprètes permanents, distributions de 3 à 5 selon les titres. En retenant
-> une distribution moyenne de 4, on obtient environ 66 dates par interprète.
-> Dénominateur : interprètes sous contrat permanent. Ne vaut que pour les
-> théâtres d'État, pas pour le secteur indépendant du même pays.
+> 2024 annual report of organisation X: 312 performances, a company of 19
+> permanent performers, casts of 3 to 5 depending on the title. Taking an
+> average cast of 4 gives roughly 66 performances per performer. Denominator:
+> performers on permanent contracts. Holds only for state theatres, not for the
+> independent sector of the same country.
 
-## Modèle de raisonnement inacceptable
+## Model of unacceptable reasoning
 
-> Environ 100 dates, ce qui correspond à ce qu'on observe dans les pays à
-> troupes permanentes.
+> About 100 performances, which matches what one observes in countries with
+> permanent companies.
 
-La différence : le premier se réfute, le second se croit.
+The difference: the first can be refuted, the second believes itself.
 
-## Le piège à surveiller en permanence
+## Searching in the right language
 
-Une valeur estimée qui reste en place assez longtemps finit par être citée comme
-une donnée. C'est la raison d'être du champ `confiance` et de la trame visuelle
-sur la carte. Si une valeur estimée sort du dépôt, elle revient sous forme de
-chiffre officieux et devient impossible à corriger.
+Query in the country's own language, using the domestic term for the field:
+*loutkové divadlo*, *bábkarská tvorba*, *teatru de păpuși*, *lutkarstvo*,
+*кукольный театр*, *lėlių teatras*, *Figurentheater*, *teatro di figura*. An
+English query returns the field's international literature, not the country's
+institutions.
+
+Beware of what a search engine asserts in summary. In this repository's schools
+pass, summaries wrongly gave GITIS in Moscow a puppetry faculty, placed a German
+college in Austria, and reported a Belarusian course as active. All three
+collapsed on reading the actual page. Only a page opened and read counts as a
+source.
+
+## The trap to watch for at all times
+
+An estimated value left in place long enough ends up being quoted as data. That
+is the reason for the `confidence` field and for the hatching on the map. If an
+estimated value leaves the repository, it comes back as an unofficial figure and
+becomes impossible to correct.

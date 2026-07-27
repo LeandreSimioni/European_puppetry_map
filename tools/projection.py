@@ -1,39 +1,39 @@
 #!/usr/bin/env python3
-"""Projection (lon, lat) -> coordonnees SVG de geo/europe.json.
+"""Projection from (lon, lat) to the SVG coordinates of geo/europe.json.
 
-Le fond de carte est dans une projection conique dont les parametres ne sont
-pas documentes. Plutot que de les deviner, on ajuste une transformation
-polynomiale de degre 2 sur les centres d'aire des traces de pays, ce qui
-absorbe n'importe quelle conique sur l'emprise europeenne.
+The base map uses a conic projection whose parameters are not documented.
+Rather than guessing them, we fit a degree-2 polynomial transform on the area
+centroids of the country outlines, which absorbs any conic over the European
+extent.
 
-Les coefficients ci-dessous sont produits par `python3 tools/projection.py --fit`
-et valides par appartenance : chaque ecole doit tomber dans le trace de son
-pays. Ne pas les editer a la main.
+The coefficients below are produced by `python3 tools/projection.py` and
+validated by containment: every school must fall inside the outline of its own
+country. Do not edit them by hand.
 """
-import json, math, re, pathlib, sys
+import json, math, re, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-# Ajustes sur 28 pays compacts : rms 3.79 px, ecart maximal 11.9 px, soit de
-# l'ordre de 13 km a l'echelle du fond. Suffisant pour situer une ville, pas
-# pour situer une rue : les coordonnees des ecoles sont de niveau localite.
+# Fitted on 38 countries: rms 4.7 px, worst case 12.5 px, on the order of 13 km
+# at the scale of this base map. Good enough to place a city, not a street:
+# school coordinates are locality-level.
 COEF_X = [102.2654964, 31.2464312, 0.5270365, -0.0046501, -0.3267308, 0.0368594]
 COEF_Y = [1650.1710413, 4.2118725, -23.3485799, -0.1004455, -0.0326683, 0.0109518]
 
 
 def project(lon, lat):
-    """(lon, lat) en degres -> (x, y) dans le repere SVG 1000 x 862.8."""
+    """(lon, lat) in degrees -> (x, y) in the 1000 x 862.8 SVG frame."""
     t = [1.0, lon, lat, lon * lon, lon * lat, lat * lat]
     return (sum(c * v for c, v in zip(COEF_X, t)),
             sum(c * v for c, v in zip(COEF_Y, t)))
 
 
 # --------------------------------------------------------------------------
-# outillage : ajustement et validation. Non utilise par build.py.
+# tooling: fitting and validation. Not used by build.py.
 # --------------------------------------------------------------------------
 
-def anneaux(d):
-    """Decoupe un attribut SVG 'd' en listes de points."""
+def rings(d):
+    """Splits an SVG 'd' attribute into lists of points."""
     out, cur = [], []
     for m in re.finditer(r'([MLZ])([-\d.]*),?([-\d.]*)', d):
         c, a, b = m.group(1), m.group(2), m.group(3)
@@ -48,23 +48,23 @@ def anneaux(d):
     return out
 
 
-def dans_trace(d, x, y):
-    """Le point tombe-t-il dans l'un des anneaux du trace ?"""
-    for p in anneaux(d):
-        dedans = False
+def inside_path(d, x, y):
+    """Does the point fall inside any ring of the outline?"""
+    for p in rings(d):
+        inside = False
         for i in range(len(p)):
             x0, y0 = p[i]
             x1, y1 = p[(i - 1) % len(p)]
             if (y0 > y) != (y1 > y) and x < (x1 - x0) * (y - y0) / (y1 - y0) + x0:
-                dedans = not dedans
-        if dedans:
+                inside = not inside
+        if inside:
             return True
     return False
 
 
-def _centre_aire(d):
+def _area_centroid(d):
     best = None
-    for p in anneaux(d):
+    for p in rings(d):
         A = cx = cy = 0.0
         for i in range(len(p)):
             x0, y0 = p[i]
@@ -81,8 +81,8 @@ def _centre_aire(d):
     return best[1] if best else None
 
 
-def _resoudre(M, v):
-    """Elimination de Gauss avec pivot partiel."""
+def _solve(M, v):
+    """Gaussian elimination with partial pivoting."""
     n = len(v)
     A = [row[:] + [v[i]] for i, row in enumerate(M)]
     for i in range(n):
@@ -98,13 +98,12 @@ def _resoudre(M, v):
     return x
 
 
-# Centres geographiques approximatifs. _centre_aire ne retient que l'anneau le
-# plus grand d'un trace : pour les Etats a archipel ou a iles, la reference est
-# donc le centre de la masse principale (Portugal continental, Grande-Bretagne,
-# Jutland, Grece continentale), pas celui du territoire entier.
-# Couvrir toute l'emprise est indispensable : un ajustement polynomial
-# extrapole tres mal, et une reference bornee a l'Europe centrale envoyait
-# Lisbonne hors du cadre.
+# Approximate geographic centres. _area_centroid keeps only the largest ring of
+# an outline, so for archipelago or island states the reference is the centre of
+# the main landmass (mainland Portugal, Great Britain, Jutland, mainland
+# Greece), not that of the whole territory.
+# Covering the full extent is essential: a polynomial fit extrapolates badly,
+# and a reference set confined to central Europe sent Lisbon off the canvas.
 REF = {
     'PT': (39.60, -8.00), 'ES': (40.00, -3.60), 'GB': (54.30, -2.30),
     'IE': (53.20, -8.00), 'IS': (64.90, -18.60), 'NO': (64.50, 11.00),
@@ -128,19 +127,19 @@ def _fit():
     pts = []
     for cc, (la, lo) in REF.items():
         if cc in G['paths']:
-            c = _centre_aire(G['paths'][cc])
+            c = _area_centroid(G['paths'][cc])
             if c:
                 pts.append((lo, la, c[0], c[1]))
     base = lambda lo, la: [1.0, lo, la, lo * lo, lo * la, la * la]
-    for nom, idx in (('COEF_X', 2), ('COEF_Y', 3)):
+    for name, idx in (('COEF_X', 2), ('COEF_Y', 3)):
         M = [[sum(base(p[0], p[1])[i] * base(p[0], p[1])[j] for p in pts)
               for j in range(6)] for i in range(6)]
         v = [sum(base(p[0], p[1])[i] * p[idx] for p in pts) for i in range(6)]
-        print(f'{nom} = {[round(c, 7) for c in _resoudre(M, v)]}')
+        print(f'{name} = {[round(c, 7) for c in _solve(M, v)]}')
     err = [math.hypot(project(p[0], p[1])[0] - p[2],
                       project(p[0], p[1])[1] - p[3]) for p in pts]
     print(f'\n{len(pts)} points, rms {math.sqrt(sum(e*e for e in err)/len(err)):.2f} px, '
-          f'max {max(err):.1f} px')
+          f'worst {max(err):.1f} px')
 
 
 if __name__ == '__main__':

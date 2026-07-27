@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>L'Europe des castelets</title>
+<title>The Europe of Puppet Booths</title>
 <style>
   :root{
     --nuit:#171025; --bois:#241A33; --panneau:#2B2040; --rideau:#7A1533;
@@ -46,8 +46,8 @@
   .country.sel{stroke:var(--ocre);stroke-width:2}
   .school{fill:var(--jade);stroke:#10361F;stroke-width:.7;pointer-events:none}
   .school.maybe{fill:none;stroke:var(--jade);stroke-width:1.4;stroke-dasharray:2 2}
-  /* etablissement recense mais non compte : ecole privee, filiere fermee,
-     hors perimetre geographique ou hors denominateur. Creux et ocre. */
+  /* recorded but not counted: private school, closed course, outside the
+     geographic scope or outside the denominator. Hollow and ochre. */
   .school.hors{fill:none;stroke:var(--ocre);stroke-width:1.2;stroke-dasharray:1.5 1.5}
   .schoolhit{fill:transparent;cursor:pointer}
   .clabel{fill:var(--os);font-size:11px;text-anchor:middle;pointer-events:none;
@@ -116,30 +116,30 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow" id="eyebrow">Relevé de mémoire · aucune source consultée</div>
-    <h1 class="poster">L'Europe<br><span class="thin">des castelets</span></h1>
-    <p class="standfirst">Une géographie institutionnelle de la marionnette, dessinée de mémoire : lieux permanents soutenus par la puissance publique, écoles supérieures spécialisées, et ce que ces chiffres deviennent une fois rapportés à la population. Les valeurs sont des estimations, pas des relevés.</p>
+    <div class="eyebrow" id="eyebrow">Drawn from memory · no source consulted</div>
+    <h1 class="poster">The Europe<br><span class="thin">of puppet booths</span></h1>
+    <p class="standfirst">An institutional geography of puppetry: permanent venues backed by public authorities, specialised higher schools, and what those figures become once set against population. The schools layer has been checked against sources; the rest is still estimate.</p>
   </header>
 
   <div class="controls">
     <div class="seggrp"><span class="grplab">Institutions</span>
-      <div class="seg" id="mInst" role="group" aria-label="Mesures institutionnelles"></div></div>
-    <div class="seggrp"><span class="grplab">Métier</span>
-      <div class="seg" id="mJob" role="group" aria-label="Mesures du métier"></div></div>
-    <button class="toggle" id="tgSchools" aria-pressed="true"><span class="dot"></span>Écoles</button>
-    <button class="toggle" id="tgLabels" aria-pressed="false"><span class="dot"></span>Noms</button>
+      <div class="seg" id="mInst" role="group" aria-label="Institutional measures"></div></div>
+    <div class="seggrp"><span class="grplab">The trade</span>
+      <div class="seg" id="mJob" role="group" aria-label="Measures of the trade"></div></div>
+    <button class="toggle" id="tgSchools" aria-pressed="true"><span class="dot"></span>Schools</button>
+    <button class="toggle" id="tgLabels" aria-pressed="false"><span class="dot"></span>Names</button>
   </div>
   <div class="status releve" id="status"></div>
 
   <div class="legend">
     <span id="legLo">0</span><div class="ramp"></div><span id="legHi"></span>
-    <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> aucun lieu recensé</span>
-    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> école comptée · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> filière incertaine · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--ocre);vertical-align:-1px"></span> recensée, non comptée</span>
+    <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> no venue recorded</span>
+    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> school counted · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> uncertain course · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--ocre);vertical-align:-1px"></span> recorded, not counted</span>
     <span style="color:#6E6080">·</span>
-    <span>Trame :
-      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/></svg> sourcé
-      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hLight)"/></svg> déclaré
-      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hDense)"/></svg> estimé
+    <span>Hatching:
+      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/></svg> sourced
+      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hLight)"/></svg> declared
+      <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hDense)"/></svg> estimated
     </span>
   </div>
 
@@ -149,89 +149,88 @@
       <path id="drape2" fill="#5C0F26"></path>
     </svg>
     <div class="stage-inner">
-      <svg class="map" id="map" role="img" aria-label="Carte choroplèthe de l'Europe"></svg>
+      <svg class="map" id="map" role="img" aria-label="Choropleth map of Europe"></svg>
     </div>
   </div>
 
   <div class="grid">
     <div class="card" id="detail"></div>
     <div class="card">
-      <h2 id="rankTitle">Classement</h2>
+      <h2 id="rankTitle">Ranking</h2>
       <ol class="rank" id="rank"></ol>
       <p class="note" id="rankNote"></p>
     </div>
   </div>
 
   <footer>
-    Méthode : est retenu comme lieu toute structure permanente dotée d'un mur, soutenue par une puissance publique (État, Land, canton, région, municipalité selon les régimes) et exerçant une mission de diffusion ou de création. Les compagnies conventionnées sans lieu et les festivals sont exclus, ce qui sous-estime mécaniquement l'Italie, l'Espagne et les Pays-Bas. La Russie n'est comptée que pour sa partie européenne. Andorre, Monaco, Saint-Marin, le Vatican et le Liechtenstein figurent dans les données à zéro. Les fourchettes affichées traduisent une incertitude réelle : la carte colore la valeur médiane.
+    Method. A venue is any permanent organisation with a building of its own, backed by a public authority (state, Land, canton, region or municipality depending on the system) and charged with presenting or creating work. Funded companies without a building, and festivals, are excluded, which mechanically understates Italy, Spain and the Netherlands. A school is a specialised, degree-granting higher education course backed by a state institution, counted by establishment rather than by programme: an academy carrying four puppetry degrees counts once. Russia and Turkey are counted for their European parts only, which is why the puppetry course at Eskisehir does not appear in the Turkish figure. Andorra, Monaco, San Marino, the Vatican and Liechtenstein sit at zero in the data. The ranges shown carry real uncertainty: the map colours the midpoint. Every school marker can be hovered for its address, award and link.
   </footer>
 </div>
 <div class="tip" id="tip"></div>
 
 <script>
 const PAYLOAD = __PAYLOAD__;
-const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, METIER = PAYLOAD.metier;
-const PTS = PAYLOAD.ecoles_pts || {}, VERIF = PAYLOAD.verifie_le || {};
-/* Le bandeau d'accroche se deduit des donnees : ecrit en dur, il redevient
-   faux des qu'une passe de verification aboutit. */
+const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, JOBV = PAYLOAD.job;
+const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
+/* The eyebrow line is derived from the data: hard-coded, it goes stale the
+   moment a verification pass lands. */
 (function(){
-  const conf=PAYLOAD.confiance||{}; const par={}; let tot=0, src=0;
+  const conf=PAYLOAD.confidence||{}; const par={}; let tot=0, src=0;
   for(const c in conf) for(const k in conf[c]){
     tot++; par[k]=par[k]||{n:0,s:0}; par[k].n++;
-    if(conf[c][k][0]!=='estime'){ src++; par[k].s++; }
+    if(conf[c][k][0]!=='estimated'){ src++; par[k].s++; }
   }
   const el=document.getElementById('eyebrow'); if(!el) return;
-  if(!src){ el.textContent='Relevé de mémoire · aucune source consultée'; return; }
-  const faits=Object.keys(par).filter(k=>par[k].s>par[k].n/2);
-  const noms={ecoles:'écoles',lieux:'lieux',population_M:'population',dates:'dates',
-    titres:'titres',vie_production:'vie des productions',part_sous_20:'part sous 20 dates',
-    part_jeune_public:'part jeune public',part_revenu_jeu:'revenu du jeu'};
-  el.textContent = (faits.length ? faits.map(k=>noms[k]||k).join(', ')+' relevés à la source · '
-                                 : '')
-    + src+' valeurs sourcées sur '+tot+' · le reste demeure une estimation';
+  if(!src){ el.textContent='Drawn from memory · no source consulted'; return; }
+  const done=Object.keys(par).filter(k=>par[k].s>par[k].n/2);
+  const names={schools:'schools',venues:'venues',population_M:'population',dates:'dates',
+    titles:'titles',production_life:'production life',share_under_20:'share under 20 dates',
+    share_young_audience:'young-audience share',share_income_from_performing:'income from performing'};
+  el.textContent = (done.length ? done.map(k=>names[k]||k).join(', ')+' checked at source · ' : '')
+    + src+' of '+tot+' values sourced · the rest remains an estimate';
 })();
 const RAMP = ['#3B2E52','#5C2F70','#9B3560','#D0512E','#F0AB3E'];
 const COLD = ['#22314A','#2A5573','#3B8299','#5FB3AE','#A9DFCB'];
 const NODATA = '#3A2E4C';
 
-const n0=v=>v.toFixed(0), n1=v=>v.toFixed(1).replace('.',','), pc=v=>v.toFixed(0)+' %';
-const JOB = ['dates','titres','vie','sous20','jp','jeu'];
+const n0=v=>v.toFixed(0), n1=v=>v.toFixed(1), pc=v=>v.toFixed(0)+'%';
+const JOB = ['dates','titles','life','under20','ya','income'];
 const METRICS = [
-  {g:'inst', id:'lieux', label:'Lieux', unit:'lieux', pow:.55,
-   val:c=>(DATA[c][2]+DATA[c][3])/2, fmt:v=>v.toFixed(v<10?1:0).replace('.',','),
-   hint:'Nombre de lieux permanents soutenus par la puissance publique.'},
-  {g:'inst', id:'ecoles', label:'Écoles', unit:'écoles', pow:.75,
+  {g:'inst', id:'venues', label:'Venues', unit:'venues', pow:.55,
+   val:c=>(DATA[c][2]+DATA[c][3])/2, fmt:v=>v.toFixed(v<10?1:0),
+   hint:'Number of permanent venues backed by a public authority.'},
+  {g:'inst', id:'schools', label:'Schools', unit:'schools', pow:.75,
    val:c=>(DATA[c][4]+DATA[c][5])/2, fmt:n1,
-   hint:'Formations supérieures spécialisées adossées à une institution d\'État.'},
-  {g:'inst', id:'lieuxpop', label:'Lieux / M hab.', unit:'lieux par million d\'habitants', pow:.7,
-   val:c=>((DATA[c][2]+DATA[c][3])/2)/DATA[c][1], fmt:v=>v.toFixed(2).replace('.',','),
-   hint:'Densité rapportée à la population. Les micro-États s\'envolent mécaniquement.'},
-  {g:'inst', id:'ecolespop', label:'Écoles / 10 M hab.', unit:'écoles par 10 millions d\'habitants', pow:.7,
-   val:c=>((DATA[c][4]+DATA[c][5])/2)*10/DATA[c][1], fmt:v=>v.toFixed(2).replace('.',','),
-   hint:'Capacité de formation rapportée à la population.'},
+   hint:'Specialised higher courses backed by a state institution. Counted by establishment, not by programme.'},
+  {g:'inst', id:'venuespop', label:'Venues / M pop.', unit:'venues per million inhabitants', pow:.7,
+   val:c=>((DATA[c][2]+DATA[c][3])/2)/DATA[c][1], fmt:v=>v.toFixed(2),
+   hint:'Density against population. Micro-states run away with it mechanically.'},
+  {g:'inst', id:'schoolspop', label:'Schools / 10 M pop.', unit:'schools per ten million inhabitants', pow:.7,
+   val:c=>((DATA[c][4]+DATA[c][5])/2)*10/DATA[c][1], fmt:v=>v.toFixed(2),
+   hint:'Training capacity against population.'},
 
-  {g:'job', id:'dates', label:'Dates / interprète', unit:'dates jouées par interprète et par an', pow:1, j:0, fmt:n0,
-   hint:'Médiane estimée. Combien de fois un marionnettiste monte réellement au castelet dans l\'année.'},
-  {g:'job', id:'titres', label:'Titres actifs', unit:'titres actifs au répertoire par interprète', pow:1, j:1, fmt:n1,
-   hint:'Un interprète qui alterne dix titres exploite un stock. Un interprète qui en joue deux produit un flux.'},
-  {g:'job', id:'vie', label:'Vie d\'une production', unit:'dates cumulées sur la vie d\'une production', pow:.7, j:2, fmt:n0,
-   hint:'Durée de vie de l\'œuvre, en dates. Sous trente, une production meurt avant d\'être rodée.'},
-  {g:'job', id:'sous20', label:'Moins de 20 dates', unit:'part des professionnels jouant moins de 20 dates par an', pow:1, j:3, fmt:pc,
-   cold:true, hint:'Lecture inversée : plus la teinte est claire, plus la profession compte de gens qui ne jouent presque jamais.'},
-  {g:'job', id:'jp', label:'Part jeune public', unit:'part des dates jouées en jeune public', pow:1, j:4, fmt:pc,
-   cold:true, hint:'Lecture inversée : une part très haute signale un marché adulte quasi inexistant.'},
-  {g:'job', id:'jeu', label:'Revenu du jeu', unit:'part du revenu artistique provenant du jeu', pow:1, j:5, fmt:pc,
-   hint:'Le complément vient des ateliers, de la transmission et de l\'indemnisation.'},
+  {g:'job', id:'dates', label:'Dates / performer', unit:'performances per performer per year', pow:1, j:0, fmt:n0,
+   hint:'Estimated median. How often a puppeteer actually gets behind the booth in a year.'},
+  {g:'job', id:'titles', label:'Active titles', unit:'active repertoire titles per performer', pow:1, j:1, fmt:n1,
+   hint:'A performer alternating ten titles is working a stock. One playing two is working a flow.'},
+  {g:'job', id:'life', label:'Production life', unit:'cumulative performances over a production\'s life', pow:.7, j:2, fmt:n0,
+   hint:'How long a work lives, counted in performances. Under thirty, a production dies before it settles.'},
+  {g:'job', id:'under20', label:'Under 20 dates', unit:'share of professionals performing fewer than 20 dates a year', pow:1, j:3, fmt:pc,
+   cold:true, hint:'Read inverted: the lighter the shade, the more of the profession barely performs at all.'},
+  {g:'job', id:'ya', label:'Young-audience share', unit:'share of performances played to young audiences', pow:1, j:4, fmt:pc,
+   cold:true, hint:'Read inverted: a very high share signals an adult market that barely exists.'},
+  {g:'job', id:'income', label:'Income from performing', unit:'share of artistic income coming from performing', pow:1, j:5, fmt:pc,
+   hint:'The remainder comes from workshops, teaching and unemployment insurance.'},
 ];
-METRICS.forEach(m=>{ if(m.g==='job') m.val = c => METIER[c][m.j]; });
-const IND = {lieux:'lieux', ecoles:'ecoles', lieuxpop:'lieux', ecolespop:'ecoles',
-  dates:'dates', titres:'titres', vie:'vie_production', sous20:'part_sous_20',
-  jp:'part_jeune_public', jeu:'part_revenu_jeu'};
-const CONF = PAYLOAD.confiance || {};
-function conf(c){ const e = (CONF[c]||{})[IND[metric.id]]; return e || ['estime','ouvert']; }
+METRICS.forEach(m=>{ if(m.g==='job') m.val = c => JOBV[c][m.j]; });
+const IND = {venues:'venues', schools:'schools', venuespop:'venues', schoolspop:'schools',
+  dates:'dates', titles:'titles', life:'production_life', under20:'share_under_20',
+  ya:'share_young_audience', income:'share_income_from_performing'};
+const CONF = PAYLOAD.confidence || {};
+function conf(c){ const e = (CONF[c]||{})[IND[metric.id]]; return e || ['estimated','open']; }
 let metric = METRICS[0], showSchools = true, showLabels = false, selected = 'FR';
 
-/* ---- rideau du castelet ---- */
+/* ---- booth curtain ---- */
 (function drape(){
   const n=14, w=1200, step=w/n;
   let p='M0,0 L1200,0 L1200,10 ';
@@ -313,8 +312,8 @@ function drawHatch(){
   }
   for(const q of gH.children){
     const [cf,st] = conf(q.dataset.c);
-    q.setAttribute('fill', cf==='sourced' ? 'none' : cf==='declare' ? 'url(#hLight)' : 'url(#hDense)');
-    q.setAttribute('opacity', st==='conteste' ? 1 : .82);
+    q.setAttribute('fill', cf==='sourced' ? 'none' : cf==='declared' ? 'url(#hLight)' : 'url(#hDense)');
+    q.setAttribute('opacity', st==='disputed' ? 1 : .82);
   }
 }
 function drawSchools(){
@@ -323,22 +322,22 @@ function drawSchools(){
   for(const c of codes){
     const pts = PTS[c];
     if(pts){
-      /* position reelle de chaque etablissement recense */
-      for(const [x,y,nom,ville,adresse,compte,motif,diplome] of pts){
+      /* true position of each recorded establishment */
+      for(const [x,y,name,city,address,counted,reason,award,url,desc] of pts){
         const dot=document.createElementNS(NS,'circle');
         dot.setAttribute('cx',x); dot.setAttribute('cy',y);
-        dot.setAttribute('r', compte?4.2:3.4);
-        dot.setAttribute('class','school'+(compte?'':' hors'));
+        dot.setAttribute('r', counted?4.2:3.4);
+        dot.setAttribute('class','school'+(counted?'':' hors'));
         gS.appendChild(dot);
         const hit=document.createElementNS(NS,'circle');
         hit.setAttribute('cx',x); hit.setAttribute('cy',y); hit.setAttribute('r',9);
         hit.setAttribute('class','schoolhit');
-        hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showEcoleTip(ev,c,nom,ville,compte,motif);});
+        hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showSchoolTip(ev,c,name,city,counted,reason,award);});
         hit.addEventListener('mouseleave',hideTip);
         hit.addEventListener('click',ev=>{ev.stopPropagation();select(c);});
         gS.appendChild(hit);
       }
-      /* l'incertitude du comptage reste portee au centroide */
+      /* counting uncertainty stays pinned to the country centroid */
       const inc = DATA[c][5]-DATA[c][4];
       for(let i=0;i<inc;i++){
         const [cx,cy]=GEO.centroids[c];
@@ -349,7 +348,7 @@ function drawSchools(){
       }
       continue;
     }
-    /* aucun etablissement localise : ancien rendu au centroide */
+    /* no located establishment: fall back to the centroid rendering */
     const lo=DATA[c][4], hi=DATA[c][5];
     const [x,y]=GEO.centroids[c];
     const full=lo, maybe=(hi>lo)?1:0, tot=full+maybe;
@@ -363,16 +362,17 @@ function drawSchools(){
     }
   }
 }
-const MOTIFS={prive:'école privée',ferme:'filière fermée',
-  hors_perimetre:'hors périmètre géographique de la fiche',
-  hors_denominateur:'hors dénominateur',non_diplomant:'non diplômante',
-  non_confirme:'existence non confirmée'};
-function showEcoleTip(e,c,nom,ville,compte,motif){
-  tip.innerHTML=`<div class="t">${nom}</div>
+const REASONS={private:'private school',closed:'course closed',
+  outside_scope:'outside this record\'s geographic scope',
+  outside_denominator:'outside the denominator',not_degree_granting:'not degree-granting',
+  unconfirmed:'existence not confirmed'};
+function showSchoolTip(e,c,name,city,counted,reason,award){
+  tip.innerHTML=`<div class="t">${name}</div>
     <div class="mono" style="font-size:12.5px;margin-top:3px">
-      ${ville} · ${DATA[c][0]}<br>
-      <span style="color:${compte?'#6FBFB0':'var(--ocre)'}">${compte?'comptée dans l\'indicateur':'recensée, non comptée : '+(MOTIFS[motif]||motif)}</span>
-      ${VERIF[c]?`<br><span style="color:#9C8DAE">vérifiée le ${VERIF[c]}</span>`:''}
+      ${city} · ${DATA[c][0]}<br>
+      ${award?`${award}<br>`:''}
+      <span style="color:${counted?'#6FBFB0':'var(--ocre)'}">${counted?'counted in the indicator':'recorded, not counted: '+(REASONS[reason]||reason)}</span>
+      ${CHECKED[c]?`<br><span style="color:#9C8DAE">checked on ${CHECKED[c]}</span>`:''}
     </div>`;
   tip.classList.add('on');
   const x=Math.min(e.clientX+16, innerWidth-286), y=Math.min(e.clientY+16, innerHeight-120);
@@ -396,24 +396,24 @@ function paint(){
   document.getElementById('legHi').textContent = metric.fmt(max);
   document.getElementById('legLo').textContent = metric.fmt(Math.min(...codes.map(metric.val)));
   const st=document.getElementById('status');
-  const tally={sourced:0,declare:0,estime:0,conteste:0};
-  codes.forEach(c=>{ const[a,b]=conf(c); tally[a]=(tally[a]||0)+1; if(b==='conteste') tally.conteste++; });
-  const solide = tally.sourced+tally.declare;
-  st.className = 'status '+(solide?'releve':'hypo');
-  st.innerHTML = `<span class="badge">${tally.sourced} sourcés · ${tally.declare} déclarés · ${tally.estime} estimés`
-    + (tally.conteste?` · ${tally.conteste} contestés`:'') + `</span><span>${metric.hint}</span>`;
+  const tally={sourced:0,declared:0,estimated:0,disputed:0};
+  codes.forEach(c=>{ const[a,b]=conf(c); tally[a]=(tally[a]||0)+1; if(b==='disputed') tally.disputed++; });
+  const solid = tally.sourced+tally.declared;
+  st.className = 'status '+(solid?'releve':'hypo');
+  st.innerHTML = `<span class="badge">${tally.sourced} sourced · ${tally.declared} declared · ${tally.estimated} estimated`
+    + (tally.disputed?` · ${tally.disputed} disputed`:'') + `</span><span>${metric.hint}</span>`;
   drawHatch(); drawSchools(); drawLabels(); rank(); detail();
 }
 
-/* ---- infobulle ---- */
+/* ---- tooltip ---- */
 const tip=document.getElementById('tip');
 function showTip(e,c){
   const d=DATA[c];
-  const rg=(a,b)=>a===b?String(a):`${a} à ${b}`;
+  const rg=(a,b)=>a===b?String(a):`${a} to ${b}`;
   tip.innerHTML=`<div class="t">${d[0]}</div>
     <div class="mono" style="font-size:12.5px;margin-top:3px">
-      ${rg(d[2],d[3])} lieux · ${rg(d[4],d[5])} école${d[5]>1?'s':''}<br>
-      ${METIER[c][0]} dates/interprète · ${METIER[c][1]} titres actifs<br>
+      ${rg(d[2],d[3])} venue${d[3]>1?'s':''} · ${rg(d[4],d[5])} school${d[5]>1?'s':''}<br>
+      ${JOBV[c][0]} dates/performer · ${JOBV[c][1]} active titles<br>
       <span style="color:var(--ocre)">${metric.fmt(metric.val(c))}</span> <span style="color:#9C8DAE">${metric.label}</span>
     </div>`;
   tip.classList.add('on');
@@ -422,63 +422,65 @@ function showTip(e,c){
 }
 function hideTip(){ tip.classList.remove('on'); }
 
-/* ---- panneau de détail ---- */
+/* ---- detail panel ---- */
 function select(c){
   selected=c;
   for(const el of gC.children) el.classList.toggle('sel', el.dataset.c===c);
   detail();
 }
 function detail(){
-  const c=selected, d=DATA[c], e=METIER[c];
-  const rg=(a,b)=>a===b?String(a):`${a} à ${b}`;
+  const c=selected, d=DATA[c], e=JOBV[c];
+  const rg=(a,b)=>a===b?String(a):`${a} to ${b}`;
   document.getElementById('detail').innerHTML=`
     <h2>${d[0]}</h2>
     <div class="poster big">${metric.fmt(metric.val(c))}</div>
     <div class="mono" style="font-size:11.5px;color:#9C8DAE;letter-spacing:.08em;text-transform:uppercase">${metric.unit}</div>
     <div class="mono" style="font-size:11px;margin-top:6px;color:${conf(c)[0]==='sourced'?'#6FBFB0':'var(--ocre)'}">
-      ${({sourced:'source citable',declare:'déclaré, non publié',estime:'estimé, non citable'})[conf(c)[0]]}${conf(c)[1]==='conteste'?' · méthode contestée':''}</div>
+      ${({sourced:'citable source',declared:'declared, unpublished',estimated:'estimated, not citable'})[conf(c)[0]]}${conf(c)[1]==='disputed'?' · method disputed':conf(c)[1]==='verified'?' · verified':''}</div>
     <div style="margin-top:14px">
-      <div class="kv"><span>Lieux structurants</span><b>${rg(d[2],d[3])}</b></div>
-      <div class="kv"><span>Écoles nationales</span><b>${rg(d[4],d[5])}</b></div>
-      <div class="kv"><span>Population</span><b>${String(d[1]).replace('.',',')} M</b></div>
-      <div class="kv"><span>Lieux par million d'habitants</span><b>${(((d[2]+d[3])/2)/d[1]).toFixed(2).replace('.',',')}</b></div>
+      <div class="kv"><span>Structuring venues</span><b>${rg(d[2],d[3])}</b></div>
+      <div class="kv"><span>National schools</span><b>${rg(d[4],d[5])}</b></div>
+      <div class="kv"><span>Population</span><b>${d[1]} M</b></div>
+      <div class="kv"><span>Venues per million inhabitants</span><b>${(((d[2]+d[3])/2)/d[1]).toFixed(2)}</b></div>
     </div>
-    <h2 style="margin-top:18px">Estimations métier</h2>
+    <h2 style="margin-top:18px">Trade estimates</h2>
     <div>
-      <div class="kv"><span>Dates par interprète et par an</span><b>${e[0]}</b></div>
-      <div class="kv"><span>Titres actifs au répertoire</span><b>${String(e[1]).replace('.',',')}</b></div>
-      <div class="kv"><span>Vie d'une production, en dates</span><b>${e[2]}</b></div>
-      <div class="kv"><span>Jouent moins de 20 dates par an</span><b>${e[3]} %</b></div>
-      <div class="kv"><span>Part jeune public</span><b>${e[4]} %</b></div>
-      <div class="kv"><span>Revenu venant du jeu</span><b>${e[5]} %</b></div>
+      <div class="kv"><span>Performances per performer per year</span><b>${e[0]}</b></div>
+      <div class="kv"><span>Active repertoire titles</span><b>${e[1]}</b></div>
+      <div class="kv"><span>Production life, in performances</span><b>${e[2]}</b></div>
+      <div class="kv"><span>Perform fewer than 20 dates a year</span><b>${e[3]}%</b></div>
+      <div class="kv"><span>Young-audience share</span><b>${e[4]}%</b></div>
+      <div class="kv"><span>Income from performing</span><b>${e[5]}%</b></div>
     </div>
-    ${ecolesHTML(c)}
+    ${schoolsHTML(c)}
     ${d[6]?`<p class="note">${d[6]}</p>`:''}`;
 }
-/* liste nominative des etablissements : la carte doit rester exploitable
-   hors de l'ecran, donc ville, adresse, diplome et date de collecte. */
-function ecolesHTML(c){
+/* Named list of establishments: the map has to stay usable away from the
+   screen, hence city, address, award, description, link and collection date. */
+function schoolsHTML(c){
   const pts=PTS[c];
   if(!pts||!pts.length) return '';
-  const li=pts.map(([x,y,nom,ville,adresse,compte,motif,diplome])=>`
-    <li style="margin-bottom:9px;list-style:none">
-      <div style="font-weight:600;line-height:1.3">${nom}</div>
-      <div class="mono" style="font-size:11.5px;color:#9C8DAE">
-        ${ville}${adresse?' · '+adresse:''}
-        ${diplome?`<br>${diplome}`:''}
-        <br><span style="color:${compte?'#6FBFB0':'var(--ocre)'}">${compte?'comptée':'non comptée : '+(MOTIFS[motif]||motif)}</span>
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const li=pts.map(([x,y,name,city,address,counted,reason,award,url,desc])=>`
+    <li style="margin-bottom:12px;list-style:none">
+      <div style="font-weight:600;line-height:1.3">${url?`<a href="${esc(url)}" target="_blank" rel="noopener">${name}</a>`:name}</div>
+      <div class="mono" style="font-size:11.5px;color:#9C8DAE;margin-top:2px">
+        ${city}${address?' · '+address:''}
+        ${award?`<br>${award}`:''}
+        <br><span style="color:${counted?'#6FBFB0':'var(--ocre)'}">${counted?'counted':'not counted: '+(REASONS[reason]||reason)}</span>
       </div>
+      ${desc?`<p style="margin:5px 0 0;font-size:13px;line-height:1.45;color:#C9BDD6">${desc}</p>`:''}
     </li>`).join('');
-  return `<h2 style="margin-top:18px">Établissements recensés</h2>
+  return `<h2 style="margin-top:18px">Recorded establishments</h2>
     <ul style="padding:0;margin:8px 0 0">${li}</ul>
-    ${VERIF[c]?`<div class="mono" style="font-size:11px;color:#9C8DAE;margin-top:4px">Relevé du ${VERIF[c]}</div>`:''}`;
+    ${CHECKED[c]?`<div class="mono" style="font-size:11px;color:#9C8DAE;margin-top:4px">Checked on ${CHECKED[c]}</div>`:''}`;
 }
 
-/* ---- classement ---- */
+/* ---- ranking ---- */
 function rank(){
   const sorted=codes.slice().sort((a,b)=>metric.val(b)-metric.val(a)).slice(0,14);
   const max=metric.val(sorted[0])||1;
-  document.getElementById('rankTitle').textContent='Classement · '+metric.label;
+  document.getElementById('rankTitle').textContent='Ranking · '+metric.label;
   document.getElementById('rank').innerHTML=sorted.map((c,i)=>`
     <li data-c="${c}">
       <span class="rk">${i+1}</span>
@@ -488,21 +490,21 @@ function rank(){
     <li data-c="${c}" style="padding-top:0"><span></span>
       <span class="bar" style="width:${Math.max(2,metric.val(c)/max*100)}%;background:${color(c)}"></span><span></span></li>`).join('');
   const notes = {
-    lieux:"En valeur absolue, la fracture est-ouest domine tout : l'héritage des théâtres d'État socialistes pèse plus lourd que la richesse ou la population.",
-    ecoles:"Deux académies polonaises, deux écoles allemandes. La capacité de formation ne suit pas la démographie.",
-    lieuxpop:"Sous le million d'habitants, un seul lieu suffit à porter un pays en tête. Islande, Malte, Monténégro et Luxembourg se lisent avec prudence.",
-    ecolespop:"Même réserve : les petits pays sont mécaniquement avantagés par le ratio.",
-    dates:"Hypothèse centrale : l'écart entre emploi permanent et intermittence se lit ici avant de se lire dans les budgets.",
-    titres:"À vérifier en priorité. Si l'écart se confirme, il oppose une économie de stock à une économie de flux.",
-    vie:"Une production qui meurt sous trente dates n'a jamais atteint son état d'équilibre. À croiser avec le nombre de créations annuelles.",
-    sous20:"Le chiffre le plus fragile de la série : personne ne mesure les professionnels qui ne jouent pas.",
-    jp:"Une part très haute n'est pas une vertu. Elle peut signaler l'absence de marché adulte.",
-    jeu:"Le complément mesure la dépendance aux ateliers et à l'indemnisation, donc la fragilité du métier de jeu."};
+    venues:"In absolute terms the east-west divide dominates everything: the legacy of socialist state theatres weighs more than wealth or population.",
+    schools:"Two Polish academies, two German schools. Training capacity does not follow demography. Four countries that looked like zeroes turned out to hold a course; two that held one have closed it since 2018.",
+    venuespop:"Below a million inhabitants a single venue is enough to top the table. Read Iceland, Malta, Montenegro and Luxembourg with care.",
+    schoolspop:"Same caveat: small countries are mechanically favoured by the ratio.",
+    dates:"Central hypothesis: the gap between permanent employment and intermittent work shows up here before it shows up in budgets.",
+    titles:"To be checked first. If the gap holds, it sets an economy of stock against an economy of flow.",
+    life:"A production that dies under thirty performances never reached its settled state. To be crossed with the number of new productions a year.",
+    under20:"The most fragile figure in the series: nobody measures the professionals who do not perform.",
+    ya:"A very high share is not a virtue. It can signal the absence of an adult market.",
+    income:"The remainder measures dependence on workshops and unemployment insurance, and so the fragility of performing as a living."};
   document.getElementById('rankNote').textContent = notes[metric.id]||'';
   document.querySelectorAll('#rank li').forEach(li=>li.addEventListener('click',()=>select(li.dataset.c)));
 }
 
-/* ---- contrôles ---- */
+/* ---- controls ---- */
 const allBtns=[];
 METRICS.forEach(m=>{
   const seg=document.getElementById(m.g==='inst'?'mInst':'mJob');

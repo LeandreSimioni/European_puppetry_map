@@ -1,98 +1,134 @@
-# L'Europe des castelets
+# The Europe of Puppet Booths
 
-Pré-étude cartographique de l'écosystème européen de la marionnette.
+A cartographic pre-study of the European puppetry ecosystem.
 
-**Aucune valeur de ce dépôt n'est sourcée à ce stade.** Tout ce qui s'y trouve
-a été produit de mémoire, sans recherche, pour servir d'hypothèse à confirmer ou
-à infirmer pays par pays. C'est le but de l'exercice : disposer d'une
-prévisualisation assez précise pour être réfutable.
+Everything here started as memory: values produced without research, to serve as
+hypotheses to be confirmed or refuted country by country. That is the point of
+the exercise — a preview precise enough to be refutable.
 
-## Ce que contient le dépôt
+**One layer has since been checked.** The `schools` indicator has been verified
+against sources for all 45 countries, and carries the named list of the
+establishments behind each count. Every other indicator is still an estimate and
+must not leave this repository.
+
+## What the repository holds
 
 ```
-schema.json               définitions, dénominateurs, règles de collecte
-data/<CC>.json            une fiche par pays, format long, 45 pays
-geo/europe.json           tracés projetés (Natural Earth 1:50 M, domaine public)
-templates/carte.html      gabarit de la carte, sans données
-build.py                  valide les données et régénère dist/index.html
-tools/seed_data.py        amorçage initial, ne plus exécuter
-dist/index.html           carte générée, ne jamais éditer à la main
-docs/                     note de méthode, protocole, tableau initial
+schema.json               definitions, denominators, collection rules
+data/<CC>.json            one record per country, long format, 45 countries
+geo/europe.json           projected outlines (Natural Earth 1:50 M, public domain)
+templates/carte.html      the map template, without data
+build.py                  validates the data and regenerates dist/index.html
+tools/projection.py       (lon, lat) -> SVG frame, fitted on the base map
+tools/seed_data.py        initial seeding, no longer to be run
+dist/index.html           generated map, never to be edited by hand
+docs/                     method note, protocol, initial table
 ```
 
-## Utilisation
+## Usage
 
 ```bash
-python3 build.py --check   # valide les données sans rien écrire
-python3 build.py           # régénère dist/index.html
+python3 build.py --check   # validates the data, writes nothing
+python3 build.py           # regenerates dist/index.html
 ```
 
-Aucune dépendance, Python 3 standard suffit. Ouvrir `dist/index.html` dans un
-navigateur.
+No dependencies, standard Python 3 is enough. Open `dist/index.html` in a
+browser.
 
-## Le format long, et pourquoi
+## The long format, and why
 
-Un tableau large mélange sur une même ligne du chiffre sourcé et du chiffre
-inventé, sans moyen de les distinguer. Ici, chaque observation est un objet
-autonome portant sa valeur, son année, sa source, son niveau de confiance, son
-statut et le raisonnement qui l'a produite.
+A wide table mixes sourced figures and invented ones on the same row, with no
+way to tell them apart. Here every observation is a standalone object carrying
+its value, its year, its source, its confidence level, its status and the
+reasoning that produced it.
 
 ```json
 {
-  "indicateur": "dates",
-  "valeur": 35,
-  "annee": null,
+  "indicator": "dates",
+  "value": 35,
+  "year": null,
   "source": null,
-  "confiance": "estime",
-  "statut": "conteste",
-  "raisonnement": "..."
+  "confidence": "estimated",
+  "status": "disputed",
+  "reasoning": "..."
 }
 ```
 
-Le champ `raisonnement` est obligatoire et le build échoue s'il est vide. Ce
-n'est pas une formalité : la première valeur de `dates` pour la France a été
-réfutée en une phrase dès que le raisonnement a été explicité, parce qu'il
-révélait un dénominateur amputé.
+The `reasoning` field is mandatory and the build fails when it is empty. This is
+not a formality: the first `dates` value for France was refuted in one sentence
+as soon as the reasoning was written out, because it exposed a truncated
+denominator.
 
-## Les trois niveaux de confiance
+## The three confidence levels
 
-| Niveau | Sens | Citable |
+| Level | Meaning | Citable |
 |---|---|---|
-| `estime` | Produit par raisonnement, sans source | Jamais, sous aucune forme |
-| `declare` | Communiqué par un professionnel du pays, non publié | Avec mention explicite |
-| `sourced` | Publié par une source identifiée et citable | Oui |
+| `estimated` | Produced by reasoning, with no source | Never, in any form |
+| `declared` | Given by a professional in the country, unpublished | With an explicit caveat |
+| `sourced` | Published by an identified, citable source | Yes |
 
-Le build refuse une observation `declare` ou `sourced` sans champ `source`
-renseigné.
+The build refuses a `declared` or `sourced` observation with no `source` field.
 
-## L'arbitrage qui bloque tout le reste
+## The schools layer
 
-Le dénominateur de l'indicateur `dates` n'est pas tranché. Trois options
-incompatibles :
+`schools` is the only indicator that has to justify itself one establishment at
+a time. Each observation carries `checked_on` and an `establishments` list, and
+the build fails when the number of entries with `counted: true` does not equal
+`lower_bound`.
 
-- toute personne se déclarant marionnettiste professionnel
-- toute personne ayant joué au moins une date dans l'année
-- tout interprète sous contrat permanent ou équivalent
+Countries at zero still carry establishments: those are the candidates examined
+and set aside, each with an `exclusion_reason` — `private`, `closed`,
+`not_degree_granting`, `outside_scope`, `outside_denominator`, `unconfirmed`.
+That is frequently the most useful information in the record. The United Kingdom
+reads as zero because Central closed its puppetry BA to new entrants in 2018;
+Turkey reads as zero because its one qualifying course sits in Anatolia, outside
+the European scope this record uses.
 
-Comparer des déclarés français à des permanents croates revient à comparer deux
-populations différentes. Tant que ce choix n'est pas fait, les colonnes `dates`
-et `part_sous_20` restent au statut `conteste`, et la carte les affiche comme
-telles.
+Two rulings are still open and are flagged in the data:
 
-## Ce que la carte sait déjà faire
+- **Does object theatre count as puppetry?** Latvia runs a Physical and Object
+  Theatre specialism built with the national puppet theatre, but no course title
+  contains the word puppet. Excluded for now. If the ruling goes the other way,
+  Latvia moves to 1 and other countries need re-examining.
+- **Does "backed by a state institution" mean public ownership, or state
+  recognition of the award?** Hungary's national theatre university was
+  transferred to a private foundation in 2020. Counted for now, status
+  `disputed`.
 
-Dix mesures réparties en deux couches. La couche institutions recense des
-contenants, la couche métier postule des volumes de travail. Dès qu'une mesure
-métier est active, une trame diagonale couvre la carte et le bandeau bascule sur
-« hypothèse à falsifier ». Les mesures à lecture inversée passent sur une rampe
-froide.
+## The ruling that blocks everything else
 
-## Prochaines étapes
+The denominator of the `dates` indicator is not settled. Three incompatible
+options:
 
-1. Trancher le dénominateur de `dates`.
-2. Afficher la confiance par cellule et non par couche : le payload transporte
-   déjà `confiance[pays][indicateur]`, le gabarit ne l'exploite pas encore.
-3. Remplacer une valeur estimée par une valeur sourcée, un pays à la fois, en
-   commençant par ceux dont les structures publient un rapport annuel.
-4. Ajouter les indicateurs listés dans `indicateurs_a_ajouter` du schéma, à
-   commencer par la subvention publique par représentation jouée.
+- anyone declaring themselves a professional puppeteer
+- anyone who performed at least once during the year
+- any performer on a permanent contract or equivalent
+
+Comparing French self-declared performers with Croatian salaried ones compares
+two different populations. Until that choice is made, the `dates` and
+`share_under_20` columns stay at status `disputed`, and the map shows them as
+such.
+
+## What the map already does
+
+Ten measures across two layers. The institutions layer counts containers; the
+trade layer posits volumes of work. As soon as a trade measure is active, a
+diagonal hatch covers the map. Inverted-reading measures switch to a cold ramp.
+
+School markers sit at the real coordinates of each establishment, not at the
+country centroid. Hovering one gives its city, award, status and check date; the
+detail panel lists every establishment with its address, its description and a
+link to its website.
+
+## Next steps
+
+1. Settle the denominator of `dates`.
+2. Rule on object theatre, and on foundation-run universities.
+3. Re-open Belarus and North Macedonia, the two weakest files in the schools
+   pass: neither rests on a real finding.
+4. Show confidence per cell rather than per layer: the payload already carries
+   `confidence[country][indicator]`, the template does not use it yet.
+5. Replace an estimated value with a sourced one, one country at a time,
+   starting with those whose organisations publish annual reports.
+6. Add the indicators listed under `indicators_to_add` in the schema, starting
+   with public subsidy per performance played.

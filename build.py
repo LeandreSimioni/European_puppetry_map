@@ -1,205 +1,209 @@
 #!/usr/bin/env python3
-"""Regenere dist/index.html a partir de data/<CC>.json, geo/ et templates/.
+"""Regenerates dist/index.html from data/<CC>.json, geo/ and templates/.
 
-Usage :
-    python3 build.py            # build normal
-    python3 build.py --check    # valide les donnees sans ecrire
+Usage:
+    python3 build.py            # normal build
+    python3 build.py --check    # validate the data without writing
 
-Les fichiers data/ font foi. Ne jamais editer dist/index.html a la main :
-il est ecrase a chaque build.
+The files in data/ are authoritative. Never edit dist/index.html by hand:
+it is overwritten on every build.
 """
 import json, math, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / 'tools'))
-from projection import project, dans_trace
+from projection import project, inside_path
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SCHEMA = json.loads((ROOT / 'schema.json').read_text())
 GEO = json.loads((ROOT / 'geo' / 'europe.json').read_text())
 TPL = (ROOT / 'templates' / 'carte.html').read_text()
 
-IDS = {i['id'] for i in SCHEMA['indicateurs']}
-REQUIS = ['population_M', 'lieux', 'ecoles', 'dates', 'titres',
-          'vie_production', 'part_sous_20', 'part_jeune_public', 'part_revenu_jeu']
-CONFIANCES = set(SCHEMA['confiance'])
-STATUTS = set(SCHEMA['statut'])
+IDS = {i['id'] for i in SCHEMA['indicators']}
+REQUIRED = ['population_M', 'venues', 'schools', 'dates', 'titles',
+            'production_life', 'share_under_20', 'share_young_audience',
+            'share_income_from_performing']
+CONFIDENCES = set(SCHEMA['confidence'])
+STATUSES = set(SCHEMA['status'])
+
+SCHOOL_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'status', 'award',
+                 'url', 'description', 'counted', 'source', 'checked_on')
+SCHOOL_STATUSES = {'public', 'private', 'foundation'}
 
 
-CHAMPS_ECOLE = ('nom', 'ville', 'adresse', 'lat', 'lon', 'statut', 'diplome',
-                'compte', 'source', 'verifie_le')
-STATUTS_ECOLE = {'public', 'prive', 'fondation'}
-
-
-def verifier_ecoles(code, o):
-    """L'indicateur ecoles doit pouvoir se justifier etablissement par etablissement."""
+def check_schools(code, o):
+    """The schools indicator must be justifiable one establishment at a time."""
     err = []
-    if not o.get('verifie_le'):
-        err.append(f'{code}/ecoles : verifie_le manquant, la date de collecte est obligatoire')
-    if 'etablissements' not in o:
-        err.append(f'{code}/ecoles : liste etablissements absente')
+    if not o.get('checked_on'):
+        err.append(f'{code}/schools: checked_on missing, the collection date is mandatory')
+    if 'establishments' not in o:
+        err.append(f'{code}/schools: establishments list absent')
         return err
-    comptes = 0
-    for e in o['etablissements']:
-        ou = e.get('ville') or '?'
-        manque = [c for c in CHAMPS_ECOLE if c not in e]
-        if manque:
-            err.append(f'{code}/ecoles/{ou} : champs manquants {manque}')
+    counted = 0
+    for e in o['establishments']:
+        where = e.get('city') or '?'
+        missing = [c for c in SCHOOL_FIELDS if c not in e]
+        if missing:
+            err.append(f'{code}/schools/{where}: missing fields {missing}')
             continue
-        if e['statut'] not in STATUTS_ECOLE:
-            err.append(f"{code}/ecoles/{ou} : statut '{e['statut']}' inconnu")
+        if e['status'] not in SCHOOL_STATUSES:
+            err.append(f"{code}/schools/{where}: unknown status '{e['status']}'")
         if not isinstance(e['lat'], (int, float)) or not -90 <= e['lat'] <= 90:
-            err.append(f'{code}/ecoles/{ou} : latitude invalide')
+            err.append(f'{code}/schools/{where}: invalid latitude')
         if not isinstance(e['lon'], (int, float)) or not -180 <= e['lon'] <= 180:
-            err.append(f'{code}/ecoles/{ou} : longitude invalide')
-        if e['compte']:
-            comptes += 1
+            err.append(f'{code}/schools/{where}: invalid longitude')
+        if not str(e.get('description', '')).strip():
+            err.append(f'{code}/schools/{where}: empty description')
+        if e['counted']:
+            counted += 1
             if not e.get('source'):
-                err.append(f'{code}/ecoles/{ou} : etablissement compte sans source')
-        elif not e.get('motif_exclusion'):
-            err.append(f'{code}/ecoles/{ou} : etablissement non compte sans motif_exclusion')
-    bb = o.get('borne_basse', o.get('valeur'))
-    if comptes != bb:
-        err.append(f'{code}/ecoles : {comptes} etablissement(s) compte(s) mais '
-                   f'borne_basse = {bb}. Le compte doit se justifier un par un.')
+                err.append(f'{code}/schools/{where}: counted establishment with no source')
+        elif not e.get('exclusion_reason'):
+            err.append(f'{code}/schools/{where}: uncounted establishment with no exclusion_reason')
+    low = o.get('lower_bound', o.get('value'))
+    if counted != low:
+        err.append(f'{code}/schools: {counted} counted establishment(s) but '
+                   f'lower_bound = {low}. The count must be justified one by one.')
     return err
 
 
-def charger():
-    pays, erreurs = {}, []
+def load():
+    countries, errors = {}, []
     for f in sorted((ROOT / 'data').glob('*.json')):
         d = json.loads(f.read_text())
         code = d['code']
         if code != f.stem:
-            erreurs.append(f"{f.name} : le champ code ({code}) ne correspond pas au nom de fichier")
+            errors.append(f'{f.name}: the code field ({code}) does not match the file name')
         vals = {}
         for o in d['observations']:
-            ind = o['indicateur']
+            ind = o['indicator']
             if ind not in IDS:
-                erreurs.append(f"{code} : indicateur inconnu '{ind}'")
+                errors.append(f"{code}: unknown indicator '{ind}'")
                 continue
-            if o.get('confiance') not in CONFIANCES:
-                erreurs.append(f"{code}/{ind} : confiance invalide")
-            if o.get('statut') not in STATUTS:
-                erreurs.append(f"{code}/{ind} : statut invalide")
-            if not str(o.get('raisonnement', '')).strip():
-                erreurs.append(f"{code}/{ind} : raisonnement vide, valeur refusee")
-            if o.get('confiance') in ('sourced', 'declare') and not o.get('source'):
-                erreurs.append(f"{code}/{ind} : confiance '{o['confiance']}' sans source")
-            if ind == 'ecoles':
-                erreurs += verifier_ecoles(code, o)
+            if o.get('confidence') not in CONFIDENCES:
+                errors.append(f'{code}/{ind}: invalid confidence')
+            if o.get('status') not in STATUSES:
+                errors.append(f'{code}/{ind}: invalid status')
+            if not str(o.get('reasoning', '')).strip():
+                errors.append(f'{code}/{ind}: empty reasoning, value refused')
+            if o.get('confidence') in ('sourced', 'declared') and not o.get('source'):
+                errors.append(f"{code}/{ind}: confidence '{o['confidence']}' with no source")
+            if ind == 'schools':
+                errors += check_schools(code, o)
             vals[ind] = o
-        manquants = [r for r in REQUIS if r not in vals]
-        if manquants:
-            erreurs.append(f"{code} : indicateurs manquants {manquants}")
+        missing = [r for r in REQUIRED if r not in vals]
+        if missing:
+            errors.append(f'{code}: missing indicators {missing}')
         if code not in GEO['paths']:
-            erreurs.append(f"{code} : aucun trace geographique")
-        pays[code] = {'nom': d['nom'], 'notes': d.get('notes', ''), 'obs': vals}
-    orphelins = [c for c in GEO['paths'] if c not in pays]
-    if orphelins:
-        erreurs.append(f"traces sans fichier de donnees : {orphelins}")
-    return pays, erreurs
+            errors.append(f'{code}: no geographic outline')
+        countries[code] = {'name': d['name'], 'notes': d.get('notes', ''), 'obs': vals}
+    orphans = [c for c in GEO['paths'] if c not in countries]
+    if orphans:
+        errors.append(f'outlines with no data file: {orphans}')
+    return countries, errors
 
 
-def placer(code, lon, lat):
-    """Projette une ecole et la ramene dans le trace de son pays si besoin.
+def locate(code, lon, lat):
+    """Projects a school and pulls it back inside its country outline if needed.
 
-    Le trait de cote du fond est simplifie : une ville portuaire tombe souvent
-    quelques pixels au large. On rapproche alors le point du centroide du pays
-    par pas de 2 %, jusqu'a 40 % du chemin. Renvoie (x, y, recale_de_px) ou
-    None si le point reste hors du trace, ce qui signale une coordonnee fausse
-    et non une cote mal decoupee.
+    The coastline of the base map is generalised, so a port city often lands a
+    few pixels offshore. In that case the point is moved towards the country
+    centroid in 2% steps, up to 40% of the way. Returns (x, y, shift_in_px), or
+    None if the point stays outside, which signals a wrong coordinate rather
+    than a roughly cut coastline.
     """
     x, y = project(lon, lat)
-    trace = GEO['paths'].get(code)
-    if trace is None or dans_trace(trace, x, y):
+    outline = GEO['paths'].get(code)
+    if outline is None or inside_path(outline, x, y):
         return x, y, 0.0
     cx, cy = GEO['centroids'][code]
     for i in range(1, 21):
         t = i * 0.02
         nx, ny = x + (cx - x) * t, y + (cy - y) * t
-        if dans_trace(trace, nx, ny):
+        if inside_path(outline, nx, ny):
             return nx, ny, math.hypot(nx - x, ny - y)
     return None
 
 
-def points_ecoles(pays):
-    """[x, y, nom, ville, adresse, compte, motif, diplome] par pays, plus le
-    journal des recalages."""
-    pts, recales, perdus = {}, [], []
-    for code, p in pays.items():
+def school_points(countries):
+    """[x, y, name, city, address, counted, reason, award, url, description] per
+    country, plus the log of the points that had to be shifted."""
+    pts, shifted, lost = {}, [], []
+    for code, p in countries.items():
         lst = []
-        for e in p['obs']['ecoles'].get('etablissements', []):
-            r = placer(code, e['lon'], e['lat'])
+        for e in p['obs']['schools'].get('establishments', []):
+            r = locate(code, e['lon'], e['lat'])
             if r is None:
-                perdus.append(f"{code}/{e['ville']}")
+                lost.append(f"{code}/{e['city']}")
                 continue
             x, y, d = r
             if d > 0:
-                recales.append(f"{code}/{e['ville']} {d:.1f}px")
-            lst.append([round(x, 1), round(y, 1), e['nom'], e['ville'],
-                        e.get('adresse') or '', 1 if e['compte'] else 0,
-                        e.get('motif_exclusion') or '', e.get('diplome') or ''])
+                shifted.append(f"{code}/{e['city']} {d:.1f}px")
+            lst.append([round(x, 1), round(y, 1), e['name'], e['city'],
+                        e.get('address') or '', 1 if e['counted'] else 0,
+                        e.get('exclusion_reason') or '', e.get('award') or '',
+                        e.get('url') or '', e.get('description') or ''])
         if lst:
             pts[code] = lst
-    return pts, recales, perdus
+    return pts, shifted, lost
 
 
-def payload(pays):
-    """Pivote le format long vers la structure attendue par le gabarit."""
-    data, metier, conf = {}, {}, {}
-    for code, p in pays.items():
+def payload(countries):
+    """Pivots the long format into the structure the template expects."""
+    data, job, conf = {}, {}, {}
+    for code, p in countries.items():
         o = p['obs']
-        g = lambda k, c: o[k].get(c, o[k]['valeur'])
-        data[code] = [p['nom'], o['population_M']['valeur'],
-                      g('lieux', 'borne_basse'), g('lieux', 'borne_haute'),
-                      g('ecoles', 'borne_basse'), g('ecoles', 'borne_haute'),
+        g = lambda k, c: o[k].get(c, o[k]['value'])
+        data[code] = [p['name'], o['population_M']['value'],
+                      g('venues', 'lower_bound'), g('venues', 'upper_bound'),
+                      g('schools', 'lower_bound'), g('schools', 'upper_bound'),
                       p['notes']]
-        metier[code] = [o['dates']['valeur'], o['titres']['valeur'],
-                        o['vie_production']['valeur'], o['part_sous_20']['valeur'],
-                        o['part_jeune_public']['valeur'], o['part_revenu_jeu']['valeur']]
-        conf[code] = {k: [v['confiance'], v['statut']] for k, v in o.items()}
-    pts, _, _ = points_ecoles(pays)
-    verif = {c: p['obs']['ecoles'].get('verifie_le') for c, p in pays.items()
-             if p['obs']['ecoles'].get('verifie_le')}
-    return {'geo': GEO, 'data': data, 'metier': metier, 'confiance': conf,
-            'ecoles_pts': pts, 'verifie_le': verif}
+        job[code] = [o['dates']['value'], o['titles']['value'],
+                     o['production_life']['value'], o['share_under_20']['value'],
+                     o['share_young_audience']['value'],
+                     o['share_income_from_performing']['value']]
+        conf[code] = {k: [v['confidence'], v['status']] for k, v in o.items()}
+    pts, _, _ = school_points(countries)
+    checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
+               if p['obs']['schools'].get('checked_on')}
+    return {'geo': GEO, 'data': data, 'job': job, 'confidence': conf,
+            'school_pts': pts, 'checked_on': checked}
 
 
-def resume(pays):
+def tally(countries):
     n = c = s = 0
-    for p in pays.values():
+    for p in countries.values():
         for o in p['obs'].values():
             n += 1
-            c += o['confiance'] != 'estime'
-            s += o['statut'] == 'conteste'
+            c += o['confidence'] != 'estimated'
+            s += o['status'] == 'disputed'
     return n, c, s
 
 
 def main():
-    pays, erreurs = charger()
-    if erreurs:
-        print('DONNEES INVALIDES', file=sys.stderr)
-        for e in erreurs:
+    countries, errors = load()
+    if errors:
+        print('INVALID DATA', file=sys.stderr)
+        for e in errors:
             print('  ' + e, file=sys.stderr)
         sys.exit(1)
-    n, c, s = resume(pays)
-    print(f'{len(pays)} pays, {n} observations, {c} sourcees ou declarees, {s} contestees')
-    pts, recales, perdus = points_ecoles(pays)
+    n, c, s = tally(countries)
+    print(f'{len(countries)} countries, {n} observations, {c} sourced or declared, {s} disputed')
+    pts, shifted, lost = school_points(countries)
     tot = sum(len(v) for v in pts.values())
-    print(f'{tot} etablissements localises sur {len(pts)} pays')
-    if recales:
-        print(f'  recales vers l interieur des terres (cote simplifiee) : {", ".join(recales)}')
-    if perdus:
-        print('DONNEES INVALIDES', file=sys.stderr)
-        print(f'  hors du trace de leur pays meme apres recalage : {", ".join(perdus)}',
+    print(f'{tot} establishments located across {len(pts)} countries')
+    if shifted:
+        print(f'  pulled inland (generalised coastline): {", ".join(shifted)}')
+    if lost:
+        print('INVALID DATA', file=sys.stderr)
+        print(f'  outside their country outline even after shifting: {", ".join(lost)}',
               file=sys.stderr)
         sys.exit(1)
     if '--check' in sys.argv:
         return
     out = ROOT / 'dist' / 'index.html'
     out.parent.mkdir(exist_ok=True)
-    out.write_text(TPL.replace('__PAYLOAD__', json.dumps(payload(pays), separators=(',', ':'))))
-    print(f'ecrit {out} ({out.stat().st_size // 1024} Ko)')
+    out.write_text(TPL.replace('__PAYLOAD__', json.dumps(payload(countries), separators=(',', ':'))))
+    print(f'wrote {out} ({out.stat().st_size // 1024} kB)')
 
 
 if __name__ == '__main__':
