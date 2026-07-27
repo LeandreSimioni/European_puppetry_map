@@ -8,8 +8,9 @@ the exercise — a preview precise enough to be refutable.
 
 **Two indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
-behind each count. `population_M` is sourced for all 45. Every other indicator
-is still an estimate and must not leave this repository.
+behind each count; that layer is now closed. `population_M` is sourced for all
+45. `venues` and `performances` are being collected, five countries at a time.
+Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
 
@@ -160,6 +161,17 @@ one.
 Twenty schools across 18 countries. One record stays `disputed`: Belarus, where
 no accessible source reaches stream level.
 
+### The layer is closed, 2026-07-27
+
+Sixteen countries carry a zero with an empty `establishments` list, and that is
+where they stay. The search was made in each of them; recording the candidates
+examined and set aside would document an absence a second time without changing
+a single value. The same ruling closes the follow-ups the ownership decision had
+reopened — the unexamined Italian files, Austrian and Cypriot private provision,
+a first-party Hungarian source, Belarus and North Macedonia. Any of them could
+move a count by one. None of them is worth a session while seven indicators out
+of nine have never been researched at all.
+
 ## The ruling that blocks everything else
 
 The denominator of the `dates` indicator is not settled. Three incompatible
@@ -187,27 +199,14 @@ link to its website.
 
 ## Next steps
 
-1. Settle the denominator of `dates`.
-2. Settle the Ukrainian denominator — residents, de jure population, or
+1. **Source `venues` and `performances`, five countries at a time.** In progress,
+   Baltic states first. These are the two indicators a desk can reach: national
+   culture statistics count both, and neither waits on the `dates` ruling.
+2. Settle the denominator of `dates`. It blocks 90 observations — `dates` and
+   `share_under_20` for all 45 countries.
+3. Settle the Ukrainian denominator — residents, de jure population, or
    government-controlled territory — then source against a body that publishes
    on that basis. Fetch the Bosnian annual estimate in place of the 2013
    census. Replace the Russian figure with Rosstat when it answers.
-3. Finish what the ownership ruling reopened. Four Italian files are unexamined
-   (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
-   private provision has never been opened, and Cyprus's private drama schools
-   were skipped when private still meant excluded.
-4. Reach a first-party or state source for Hungary. Two passes have failed:
-   szfe.hu and felveteli.szfe.hu answer 403, felvi.hu answered 503. The value
-   rests on an encyclopaedic entry, which is why it stays `estimated`.
-5. Record the candidates examined in the 16 countries whose `establishments`
-   list is still empty (AD, AL, BA, CY, DK, GR, IE, IS, LI, LU, MD, ME, MK, MT,
-   SM, XK). A zero with nothing behind it cannot be audited or reused.
-6. Re-open Belarus and North Macedonia, the two weakest files in the schools
-   pass: neither rests on a real finding.
-7. Show confidence per cell rather than per layer: the payload already carries
-   `confidence[country][indicator]`, the template does not use it yet.
-8. Add the indicators listed under `indicators_to_add` in the schema. Note that
-   **performances per 100,000 inhabitants does not wait on the `dates` ruling**:
-   that ruling blocks per-performer measures, not per-country ones. It needs a
-   volume of performances and a population, both of which national culture
-   statistics and step 2 can supply.
+4. Collect the four remaining trade indicators by declarative survey. No
+   published source gives them; they come from professionals or not at all.
