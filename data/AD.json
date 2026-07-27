@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 0.08,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "value": 0.076,
+      "year": 2019,
+      "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&sex=T&age=TOTAL&lang=en&sinceTimePeriod=2019&geo=AD&geo=BA&geo=BY&geo=UK&geo=RU&geo=SM&geo=UA&geo=XK",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2019: 76177 inhabitants. Eurostat dataset demo_pjan, read through the dissemination API. Andorra carries no row more recent than 2019 in that dataset, so this is the latest published figure it offers, not a current one. The year field carries that and must be read with the value: the figure is sourced, it is simply 7 years old. The previous value was an opening estimate made with no source and no research. A national statistical office would give something fresher and has not been opened here."
     },
     {
       "indicator": "venues",
