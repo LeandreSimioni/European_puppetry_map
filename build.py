@@ -29,6 +29,28 @@ SCHOOL_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'status', 'award',
                  'url', 'description', 'counted', 'source', 'checked_on')
 SCHOOL_STATUSES = {'public', 'private', 'foundation'}
 PERF_BASES = {'form', 'organisation'}
+VENUE_UNITS = ('house', 'stage', 'unknown')
+
+
+def check_venues(code, o):
+    """Since the ruling of 2026-07-27 a counted venue may be a stage inside a
+    larger organisation. Any value researched at source has to say how many of
+    each it holds, so that the strict organisation-only reading stays
+    recoverable. Opening estimates are exempt: they count nothing nameable."""
+    if o.get('confidence') == 'estimated':
+        return []
+    u = o.get('units')
+    if not isinstance(u, dict):
+        return [f'{code}/venues: sourced value with no units split. Say how many are '
+                f'house, stage or unknown, or the strict reading is lost.']
+    bad = [k for k in u if k not in VENUE_UNITS]
+    if bad:
+        return [f'{code}/venues: unknown unit kind {bad}, expected {list(VENUE_UNITS)}']
+    low = o.get('lower_bound', o.get('value'))
+    total = sum(u.get(k, 0) for k in VENUE_UNITS)
+    if total != low:
+        return [f'{code}/venues: units sum to {total} but lower_bound = {low}']
+    return []
 
 
 def check_schools(code, o):
@@ -90,6 +112,8 @@ def load():
                 errors.append(f"{code}/{ind}: confidence '{o['confidence']}' with no source")
             if ind == 'schools':
                 errors += check_schools(code, o)
+            if ind == 'venues':
+                errors += check_venues(code, o)
             if ind == 'performances' and o.get('basis') not in PERF_BASES:
                 errors.append(f"{code}/performances: basis must be one of "
                               f"{sorted(PERF_BASES)}, a count of puppetry that does not "
