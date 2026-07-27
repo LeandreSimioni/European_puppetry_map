@@ -108,6 +108,7 @@
   "notes": "Țăndărică, Bucharest. State puppet theatres in most county capitals.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "venues and performances: NOT a settled negative, unlike Lithuania, Slovakia and Hungary. Romania's statistical office does publish the category — 'teatre de papusi si marionete' is one of its standard classes of performing institution, carrying a count of institutions, of spectacole and of spectatori. It could not be read on 2026-07-27: every route into insse.ro reset the connection at the transport layer, including the publication 'Reteaua si activitatea unitatilor cultural-artistice', the TEMPO interface and a regional office mirror. That is a failure of access from this machine, not an absence of data, and the difference matters — no value was recorded, and none should be inferred from the silence.",
+    "venues: the Ministry of Culture's Registrul Artelor Spectacolului was opened and read — 256 registered institutions with their city, county and founding public authority, which is exactly the right shape for this denominator. It carries no column for the kind of theatre, and Romanian puppet houses are mostly named for a character rather than for puppetry: Tandarica, Gulliver, Puck, Licurici, Colibri, Prichindel. Only one entry names itself, the Teatrul de Marionete Arad, founded by the Arad municipal council. Sorting the register by hand would mean deciding from memory which of 256 institutions are puppet theatres, which is not a reading. Cross it against the INS class instead, once insse.ro answers."
   ]
 }

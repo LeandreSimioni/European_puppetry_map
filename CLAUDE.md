@@ -40,13 +40,17 @@ concerned and its `known_bias`. If the denominator carries the note
 
 ## The schools indicator specifically
 
+**Closed on 2026-07-27. Do not reopen it to document zeros.**
+
 Counted by establishment, never by programme: an academy carrying four puppetry
 degrees counts 1.
 
 Every `schools` observation carries `checked_on` and an `establishments` list.
 The build fails when the number of entries with `counted: true` does not equal
-`lower_bound`. A country at zero still records the candidates examined and set
-aside, each with an `exclusion_reason`.
+`lower_bound`. A country at zero carries no obligation to list what was examined:
+the search was made, the absence is the finding, and an absence does not have to
+be proved twice. Establishments already recorded stay — they cost nothing and
+several of them are useful — but sixteen empty lists are not a backlog.
 
 Coordinates are locality-level and are validated by containment: the build
 refuses a point falling outside its own country outline. If a newly added

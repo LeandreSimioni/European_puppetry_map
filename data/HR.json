@@ -12,15 +12,87 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 3874350 inhabitants, recorded as 3.874 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 2014,
+      "year": 2024,
+      "source": "https://podaci.dzs.hr/media/3p0llw4c/kul-2025-2-1_tablice-hr.xlsx",
+      "confidence": "sourced",
+      "status": "verified",
+      "basis": "form",
+      "spectators": 206029,
+      "reasoning": "Read on 2026-07-27 from the tables accompanying release KUL-2025-2-1 of the Croatian Bureau of Statistics, Umjetničko stvaralaštvo i reproduktivno izvođenje, table 1.3. Column 'lutkarska predstava', row 'Predstave, svega': 2 014 performances in 2024, seen by 206 029 visitors, drawn from 215 works of which 31 were premieres. Basis 'form': Croatia classes each work performed by kind, so this is puppetry wherever it was played. The same table shows how far that reaches beyond the puppet houses — of the 2 014, professional theatres account for 939, professional children's theatres for 1 061, and amateur companies for 14. The children's theatres out-perform the professional houses on puppetry, which no organisation-based count would show. The 14 amateur performances are inside the figure because 2 014 is the number the table gives; subtracting them would be a construction, and they are seven tenths of one per cent. One discontinuity to carry forward: this release states that the performing-arts survey moved from a season basis to the calendar year. Croatian figures before 2024 are seasons and are not directly comparable with this one."
+    },
+    {
       "indicator": "venues",
-      "value": 4.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 4.0,
+      "year": 2026,
+      "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Re-read on 2026-07-27 under the ruling of the same day. Source: the Očevidnik kazališta, the register of theatres kept by the Croatian Ministry of Culture and Media. Four public puppet houses, all freestanding organisations: Zagrebačko kazalište lutaka, Trg kralja Tomislava 19/I, KAZ-016/4; Gradsko kazalište lutaka Rijeka, Blaža Polića 6, KAZ-034/5; Gradsko kazalište lutaka Split, Tončićeva 1, KAZ-038/12; Kazalište lutaka Zadar, Sokolska 1, KAZ-074/7. Two say gradsko — municipal — in their own names, and Zadar's site names the ministry, the county and the city as its backers. Nine further register entries are companies and limited firms, one in liquidation. Four house, no stage. The Osijek question is closed and the answer is no. The Dječje kazalište Branka Mihaljevića is a public institution founded by the City of Osijek and it does play puppetry, but its own site presents a children's theatre with a drama studio and a ballet studio and names no puppet ensemble or puppet stage. Under the ruling that is the Kolibri case, not the Malé divadlo case: a mixed company that plays some puppetry is not a permanent puppetry unit. Croatia is 4, not 4.5, and the bounds close. What keeps the record disputed is unchanged and has nothing to do with Osijek: the Očevidnik carries no founder column, so public backing here rests on two theatre names and one theatre's own site rather than on a founding act read for each house. That is weaker evidence than the Slovak, Slovenian or Czech records in the same two batches.",
       "lower_bound": 4,
-      "upper_bound": 5
+      "upper_bound": 4,
+      "units": {
+        "house": 4
+      },
+      "venues_list": [
+        {
+          "name": "Zagrebačko kazalište lutaka",
+          "city": "Zagreb",
+          "address": "Trg kralja Tomislava 19/I, Zagreb",
+          "lat": 45.80693,
+          "lon": 15.97776,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "KAZ-016/4",
+          "url": "https://zkl.hr",
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Gradsko kazalište lutaka Rijeka",
+          "city": "Rijeka",
+          "address": "Blaža Polića 6, Rijeka",
+          "lat": 45.33049,
+          "lon": 14.43455,
+          "unit": "house",
+          "parent": null,
+          "authority": "Grad Rijeka, per the theatre's name",
+          "registration": "KAZ-034/5",
+          "url": null,
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Gradsko kazalište lutaka Split",
+          "city": "Split",
+          "address": "Tončićeva 1, Split",
+          "lat": 43.50983,
+          "lon": 16.43689,
+          "unit": "house",
+          "parent": null,
+          "authority": "Grad Split, per the theatre's name",
+          "registration": "KAZ-038/12",
+          "url": null,
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Kazalište lutaka Zadar",
+          "city": "Zadar",
+          "address": "Sokolska 1, Zadar",
+          "lat": 44.11258,
+          "lon": 15.22743,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministarstvo kulture i medija, Zadarska županija and Grad Zadar, per the theatre's own site",
+          "registration": "KAZ-074/7",
+          "url": "https://www.klz.hr",
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -105,9 +177,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Zadar, Rijeka, Osijek, Split. Academy of Osijek.",
+  "notes": "Zagrebačko kazalište lutaka; Gradsko kazalište lutaka Rijeka; Gradsko kazalište lutaka Split; Kazalište lutaka Zadar. Osijek examined and set aside: children’s theatre, no puppet unit named.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "venues: read a founding act for each of the four counted houses. The Očevidnik carries no founder column."
   ]
 }

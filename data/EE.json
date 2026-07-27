@@ -12,15 +12,46 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 1369995 inhabitants, recorded as 1.37 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 620,
+      "year": 2024,
+      "source": "https://andmed.stat.ee/et/stat/sotsiaalelu__kultuur__teater/KU091",
+      "confidence": "sourced",
+      "status": "verified",
+      "basis": "form",
+      "spectators": 47300,
+      "productions": 54,
+      "reasoning": "Read on 2026-07-27 from Statistics Estonia table KU091, performances by type and genre of production, all theatres taken together, through the PxWeb dissemination API. Category 'Nuku- ja objektiteatri lavastus': 620 performances in 2024, from 54 productions, seen by 47 300 spectators. Basis 'form': Estonia classes each production by genre rather than each theatre by vocation, so this is the denominator met exactly, and it is not the output of the one puppet house — the national puppet theatre alone cannot account for 54 productions. One trap in this table was opened and closed. Its classification changed around 2011: before then puppetry was carried under 'Lastelavastus' as '..nukulavastus lastele', which returns 405 performances for 2010, and the genre category returns nothing for that year. Both were queried for 2024 to make sure the two branches are not live at once. The children's branch is empty from 2024, so 620 is the whole and nothing is double counted. The consequence is that this series cannot be read back before 2011 without switching categories at the break."
+    },
+    {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 1.0,
+      "year": 2024,
+      "source": "https://statistika.teater.ee/stat/theatres/",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Checked on 2026-07-27, from the register of performing-arts institutions kept by the Estonian Theatre Agency, which classes every Estonian theatre by legal form. One establishment meets the denominator: Eesti Noorsooteater, Lai 1 / Nunne 4 in Tallinn, listed among the riigi osalusega sihtasutused, the foundations the State holds a stake in, and the only puppet or visual house among them. Its own site gives the address, the puppet museum in the same complex and a 74th season, so the building is its own and the organisation is permanent. Two other puppet houses exist and are both excluded on public backing, not on their work: Vene Nukuteater and Piip ja Tuut Teater are both registered eraetendusasutused, private performing-arts bodies. That makes the Estonian figure exact rather than approximate, hence identical bounds: the register is a closed list, not a search that might have missed something. The previous value was an opening estimate of 1 to 2, made with no source.",
       "lower_bound": 1,
-      "upper_bound": 2
+      "upper_bound": 1,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Eesti Noorsooteater",
+          "city": "Tallinn",
+          "address": "Lai 1 / Nunne 4, 10133 Tallinn",
+          "lat": 59.43824,
+          "lon": 24.74327,
+          "unit": "house",
+          "parent": null,
+          "authority": "Riigi osalusega sihtasutus — a foundation the State holds a stake in",
+          "registration": null,
+          "url": "https://www.eestinoorsooteater.ee",
+          "source": "https://statistika.teater.ee/stat/theatres/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,7 +137,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "NUKU, Tallinn.",
+  "notes": "Eesti Noorsooteater (formerly NUKU), Tallinn. Vene Nukuteater and Piip ja Tuut, private.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."

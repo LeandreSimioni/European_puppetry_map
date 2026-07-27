@@ -8,8 +8,9 @@ the exercise — a preview precise enough to be refutable.
 
 **Two indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
-behind each count. `population_M` is sourced for all 45. Every other indicator
-is still an estimate and must not leave this repository.
+behind each count; that layer is now closed. `population_M` is sourced for all
+45. `venues` and `performances` are being collected, five countries at a time.
+Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
 
@@ -79,6 +80,106 @@ python3 build.py           # regenerates dist/index.html
 
 No dependencies, standard Python 3 is enough. Open `dist/index.html` in a
 browser.
+
+## The venues ruling, 2026-07-27
+
+`venues` counts **the permanent puppetry unit, not the legal person.** A named
+puppet stage or ensemble counts whether or not it has its own legal personality.
+What stays out is a programming strand or an occasional co-production
+maintaining no permanent ensemble.
+
+The old wording asked for a "permanent organisation with a building of its own",
+and three countries stalled on it in two batches — Czechia between 8 and 10,
+Hungary between 12 and 13, Croatia between 4 and 5. Three findings decided it:
+
+- **Output.** In Czechia the integrated stages are the same size as the
+  freestanding houses. Divadlo rozmanitostí in Most plays 276 puppet
+  performances against Alfa's 248 in Plzeň. The distinction separated nothing.
+- **Applicability.** The obvious alternative — a majority-of-repertoire test —
+  needs a performance count per venue. Of the ten countries collected, only
+  Czechia and Croatia publish any puppetry figure at all.
+- **Consistency**, which decided it. `performances` counted by form already
+  includes puppetry made inside drama houses. Excluding those houses from
+  `venues` assigns their output to no venue and breaks every ratio built from
+  the two columns: 479 performances belonging nowhere in Czechia alone.
+
+The old wording also failed in practice. Its own author applied it wrongly
+within a day, counting Czechia at 8 by missing that Divadlo Lampion sits inside
+Divadla Kladno. The strict count was 7.
+
+Every researched value carries a `units` split, and the build refuses one that
+does not:
+
+| | |
+|---|---|
+| `house` | Freestanding organisation whose vocation is puppetry. **This is the strict pre-ruling count, recoverable for ever.** |
+| `stage` | Named puppet stage or ensemble inside a larger organisation. |
+| `unknown` | The source is a statistical aggregate naming no establishment, so the split cannot be read. |
+
+Two cases fell out on **vocation** rather than structure, and they are the ones
+that show where the cursor sits: Hungary's Kolibri and Croatia's Osijek are both
+public children's theatres that play puppetry with a single mixed company and no
+puppet unit named anywhere. A mixed company playing some puppetry is not a
+permanent puppetry unit; a named stage inside a bigger house is.
+
+**Expect the counts to rise in the west.** Germany's Sparten and France's
+labelled structures have not been read under the new wording yet, and the
+east-west gap will narrow when they are. That is a correction: counting legal
+persons rewarded systems whose puppetry was organised into separate
+institutions — the socialist state-theatre legacy above all — and penalised
+those where it lives inside larger houses.
+
+## The activity layer
+
+`performances` is the newest indicator and the first that counts work rather
+than containers. It does not wait on the `dates` ruling: that ruling blocks
+per-performer measures, not per-country ones.
+
+It is also **the first indicator a country is allowed not to have.** Where the
+national statistics isolate no puppetry, the country carries no observation at
+all — not a zero, not an estimate. The map colours it as no-data and says so.
+An estimate here would be indistinguishable from a measurement of a small
+country, and a zero would be a lie about a whole statistical apparatus.
+
+Every observation declares a `basis`, and the build refuses one that does not:
+
+| | |
+|---|---|
+| `form` | The source counts performances by genre of production. A puppetry production staged by a drama theatre is inside; a puppet theatre's straight play is outside. This is the denominator met exactly. |
+| `organisation` | The source counts the output of named puppet theatres, whatever they staged. A proxy: it drops puppetry made elsewhere and picks up non-puppetry made in the right building. |
+
+The distinction is not academic. Czechia counts by form, and its table shows
+puppet performances played by 33 different theatres — two drama houses account
+for 479 of them between them. An organisation-based count throws those away.
+
+### Who played it
+
+Where a source names the producers, the observation carries a `by_venue` list:
+name, value, its own `unit`, and the venue it corresponds to in `venues_list`
+when it is one. A national total is a sum, and a sum hides its distribution.
+
+It is deliberately **not** a field on the venue record, because the two are
+different populations. Thirty-three Czech theatres played puppetry; ten of them
+are counted as venues. Hanging the figures on venue records would make the other
+twenty-three vanish and make every unlisted venue look idle — and those
+twenty-three are the most interesting thing in the list, because they are where
+Czech puppetry overflows its own houses.
+
+`by_venue_covers` is mandatory beside the list and says in words what fraction of
+the headline the parts hold. Czechia's thirty-three sum to 5 628 of 7 596: the
+NIPOS ranking covers only theatres that consented to publication. Germany's
+fifty-one are Inszenierungen against a headline in Aufführungen, and cover
+D-A-CH against a headline for Germany alone. Neither list reconciles, both say
+so, and the build refuses a list of performances summing above its headline.
+
+On the map a venue marker is **sized by the performances it played**, where the
+country publishes them per venue. An unsized marker means unmeasured, never
+small.
+
+These are institutional data and the rule of this repository applies to them in
+full: a house playing 573 performances to school groups is not thereby better
+than one playing 248 on international tour. The lists exist to show a
+distribution and to be contradicted, not to rank anybody.
 
 ## The long format, and why
 
@@ -160,6 +261,17 @@ one.
 Twenty schools across 18 countries. One record stays `disputed`: Belarus, where
 no accessible source reaches stream level.
 
+### The layer is closed, 2026-07-27
+
+Sixteen countries carry a zero with an empty `establishments` list, and that is
+where they stay. The search was made in each of them; recording the candidates
+examined and set aside would document an absence a second time without changing
+a single value. The same ruling closes the follow-ups the ownership decision had
+reopened — the unexamined Italian files, Austrian and Cypriot private provision,
+a first-party Hungarian source, Belarus and North Macedonia. Any of them could
+move a count by one. None of them is worth a session while seven indicators out
+of nine have never been researched at all.
+
 ## The ruling that blocks everything else
 
 The denominator of the `dates` indicator is not settled. Three incompatible
@@ -176,8 +288,9 @@ such.
 
 ## What the map already does
 
-Ten measures across two layers. The institutions layer counts containers; the
-trade layer posits volumes of work. As soon as a trade measure is active, a
+Twelve measures across three layers. The institutions layer counts containers;
+the activity layer counts performances actually played; the trade layer posits
+volumes of work. As soon as a trade measure is active, a
 diagonal hatch covers the map. Inverted-reading measures switch to a cold ramp.
 
 School markers sit at the real coordinates of each establishment, not at the
@@ -187,27 +300,14 @@ link to its website.
 
 ## Next steps
 
-1. Settle the denominator of `dates`.
-2. Settle the Ukrainian denominator — residents, de jure population, or
+1. **Source `venues` and `performances`, five countries at a time.** In progress,
+   Baltic states first. These are the two indicators a desk can reach: national
+   culture statistics count both, and neither waits on the `dates` ruling.
+2. Settle the denominator of `dates`. It blocks 90 observations — `dates` and
+   `share_under_20` for all 45 countries.
+3. Settle the Ukrainian denominator — residents, de jure population, or
    government-controlled territory — then source against a body that publishes
    on that basis. Fetch the Bosnian annual estimate in place of the 2013
    census. Replace the Russian figure with Rosstat when it answers.
-3. Finish what the ownership ruling reopened. Four Italian files are unexamined
-   (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
-   private provision has never been opened, and Cyprus's private drama schools
-   were skipped when private still meant excluded.
-4. Reach a first-party or state source for Hungary. Two passes have failed:
-   szfe.hu and felveteli.szfe.hu answer 403, felvi.hu answered 503. The value
-   rests on an encyclopaedic entry, which is why it stays `estimated`.
-5. Record the candidates examined in the 16 countries whose `establishments`
-   list is still empty (AD, AL, BA, CY, DK, GR, IE, IS, LI, LU, MD, ME, MK, MT,
-   SM, XK). A zero with nothing behind it cannot be audited or reused.
-6. Re-open Belarus and North Macedonia, the two weakest files in the schools
-   pass: neither rests on a real finding.
-7. Show confidence per cell rather than per layer: the payload already carries
-   `confidence[country][indicator]`, the template does not use it yet.
-8. Add the indicators listed under `indicators_to_add` in the schema. Note that
-   **performances per 100,000 inhabitants does not wait on the `dates` ruling**:
-   that ruling blocks per-performer measures, not per-country ones. It needs a
-   volume of performances and a population, both of which national culture
-   statistics and step 2 can supply.
+4. Collect the four remaining trade indicators by declarative survey. No
+   published source gives them; they come from professionals or not at all.

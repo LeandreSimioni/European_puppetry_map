@@ -28,6 +28,93 @@ STATUSES = set(SCHEMA['status'])
 SCHOOL_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'status', 'award',
                  'url', 'description', 'counted', 'source', 'checked_on')
 SCHOOL_STATUSES = {'public', 'private', 'foundation'}
+PERF_BASES = {'form', 'organisation'}
+VENUE_UNITS = ('house', 'stage', 'unknown')
+VENUE_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'unit', 'parent',
+                'authority', 'registration', 'url', 'source', 'checked_on')
+
+
+def check_venues(code, o):
+    """Since the ruling of 2026-07-27 a counted venue may be a stage inside a
+    larger organisation. Any value researched at source has to say how many of
+    each it holds, so that the strict organisation-only reading stays
+    recoverable. Opening estimates are exempt: they count nothing nameable."""
+    if o.get('confidence') == 'estimated':
+        return []
+    u = o.get('units')
+    if not isinstance(u, dict):
+        return [f'{code}/venues: sourced value with no units split. Say how many are '
+                f'house, stage or unknown, or the strict reading is lost.']
+    bad = [k for k in u if k not in VENUE_UNITS]
+    if bad:
+        return [f'{code}/venues: unknown unit kind {bad}, expected {list(VENUE_UNITS)}']
+    low = o.get('lower_bound', o.get('value'))
+    total = sum(u.get(k, 0) for k in VENUE_UNITS)
+    if total != low:
+        return [f'{code}/venues: units sum to {total} but lower_bound = {low}']
+    # A count taken from a statistical aggregate names nobody and cannot be listed.
+    # Everything else must enumerate itself.
+    if u.get('unknown'):
+        return []
+    err, lst = [], o.get('venues_list')
+    if not isinstance(lst, list):
+        return [f'{code}/venues: no venues_list. A count that cannot be enumerated '
+                f'cannot be audited.']
+    tally = {}
+    for v in lst:
+        where = v.get('name') or v.get('city') or '?'
+        missing = [c for c in VENUE_FIELDS if c not in v]
+        if missing:
+            err.append(f'{code}/venues/{where}: missing fields {missing}')
+            continue
+        if v['unit'] not in ('house', 'stage'):
+            err.append(f"{code}/venues/{where}: unit must be house or stage, not '{v['unit']}'")
+        if v['unit'] == 'stage' and not v.get('parent'):
+            err.append(f'{code}/venues/{where}: a stage must name the organisation it sits inside')
+        # A venue absent from the gazetteer keeps its place in the count and
+        # loses only its point on the map. Better an unmapped venue than an
+        # invented coordinate.
+        for c in ('lat', 'lon'):
+            if v[c] is not None and not isinstance(v[c], (int, float)):
+                err.append(f'{code}/venues/{where}: {c} is neither a number nor null')
+        if (v['lat'] is None) != (v['lon'] is None):
+            err.append(f'{code}/venues/{where}: half a coordinate is not a coordinate')
+        if not v.get('source'):
+            err.append(f'{code}/venues/{where}: no source')
+        tally[v['unit']] = tally.get(v['unit'], 0) + 1
+    if len(lst) != low:
+        err.append(f'{code}/venues: {len(lst)} venue(s) listed but lower_bound = {low}')
+    for k in ('house', 'stage'):
+        if u.get(k, 0) != tally.get(k, 0):
+            err.append(f'{code}/venues: units says {k}={u.get(k, 0)} but the list holds '
+                       f'{tally.get(k, 0)}')
+    return err
+
+
+def check_by_venue(code, o):
+    """The optional named list of producers behind a performances count."""
+    lst = o.get('by_venue')
+    if lst is None:
+        return []
+    err = []
+    if not str(o.get('by_venue_covers', '')).strip():
+        err.append(f'{code}/performances: by_venue with no by_venue_covers. A list of parts '
+                   f'that does not say what fraction of the whole it holds invites a wrong sum.')
+    total = 0
+    for e in lst:
+        where = e.get('name') or '?'
+        for f in ('name', 'value', 'unit', 'venue'):
+            if f not in e:
+                err.append(f'{code}/performances/{where}: missing field {f}')
+        if e.get('unit') not in ('performances', 'productions'):
+            err.append(f"{code}/performances/{where}: unit must be performances or productions")
+        if e.get('unit') == 'performances' and isinstance(e.get('value'), int):
+            total += e['value']
+    # Only comparable when the parts count the same thing as the headline.
+    if all(e.get('unit') == 'performances' for e in lst) and total > o['value']:
+        err.append(f'{code}/performances: the named producers sum to {total}, above the '
+                   f"headline {o['value']}. The parts cannot exceed the whole.")
+    return err
 
 
 def check_schools(code, o):
@@ -89,6 +176,14 @@ def load():
                 errors.append(f"{code}/{ind}: confidence '{o['confidence']}' with no source")
             if ind == 'schools':
                 errors += check_schools(code, o)
+            if ind == 'venues':
+                errors += check_venues(code, o)
+            if ind == 'performances':
+                errors += check_by_venue(code, o)
+            if ind == 'performances' and o.get('basis') not in PERF_BASES:
+                errors.append(f"{code}/performances: basis must be one of "
+                              f"{sorted(PERF_BASES)}, a count of puppetry that does not "
+                              f"say whether it counts a form or an institution is unreadable")
             vals[ind] = o
         missing = [r for r in REQUIRED if r not in vals]
         if missing:
@@ -147,6 +242,33 @@ def school_points(countries):
     return pts, shifted, lost
 
 
+def venue_points(countries):
+    """[x, y, name, city, address, unit, parent, authority, url, output] per country.
+    A venue with no coordinate keeps its place in the count and simply does not
+    appear on the map."""
+    pts, lost = {}, []
+    for code, p in countries.items():
+        lst = []
+        out = ((p['obs'].get('performances') or {}).get('by_venue') or [])
+        out = {e['venue']: e['value'] for e in out
+               if e.get('venue') and e['unit'] == 'performances'}
+        for e in p['obs']['venues'].get('venues_list', []):
+            if e['lat'] is None:
+                continue
+            r = locate(code, e['lon'], e['lat'])
+            if r is None:
+                lost.append(f"{code}/{e['name']}")
+                continue
+            x, y, _ = r
+            lst.append([round(x, 1), round(y, 1), e['name'], e.get('city') or '',
+                        e.get('address') or '', e['unit'], e.get('parent') or '',
+                        e.get('authority') or '', e.get('url') or '',
+                        out.get(e['name'], 0)])
+        if lst:
+            pts[code] = lst
+    return pts, lost
+
+
 def payload(countries):
     """Pivots the long format into the structure the template expects."""
     data, job, conf = {}, {}, {}
@@ -162,11 +284,39 @@ def payload(countries):
                      o['share_young_audience']['value'],
                      o['share_income_from_performing']['value']]
         conf[code] = {k: [v['confidence'], v['status']] for k, v in o.items()}
+    # performances is the one optional indicator: a country whose statistics do not
+    # isolate puppetry carries no observation at all, and the map must show that as
+    # an absence rather than as a zero.
+    act = {code: [p['obs']['performances']['value'],
+                  p['obs']['performances'].get('basis')]
+           for code, p in countries.items() if 'performances' in p['obs']}
+    # The house/stage split, so a reader can recompute the strict
+    # organisation-only count the ruling of 2026-07-27 replaced.
+    units = {code: p['obs']['venues']['units']
+             for code, p in countries.items() if p['obs']['venues'].get('units')}
     pts, _, _ = school_points(countries)
+    # Output per named venue, for the marker size. Only where the parts count the
+    # same thing as the headline: productions and performances do not share a scale.
+    vout = {}
+    for code, p in countries.items():
+        o = p['obs'].get('performances') or {}
+        m = {e['venue']: e['value'] for e in o.get('by_venue', [])
+             if e.get('venue') and e['unit'] == 'performances'}
+        if m:
+            vout[code] = m
+    vpts, _ = venue_points(countries)
+    vlist = {code: [{k: e[k] for k in ('name', 'city', 'address', 'unit', 'parent',
+                                       'authority', 'registration', 'url')}
+                    for e in p['obs']['venues'].get('venues_list', [])]
+             for code, p in countries.items() if p['obs']['venues'].get('venues_list')}
     checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
                if p['obs']['schools'].get('checked_on')}
-    return {'geo': GEO, 'data': data, 'job': job, 'confidence': conf,
-            'school_pts': pts, 'checked_on': checked}
+    return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'units': units,
+            'confidence': conf, 'school_pts': pts, 'venue_pts': vpts, 'venue_list': vlist,
+            'by_venue': {c: (p['obs'].get('performances') or {}).get('by_venue')
+                         for c, p in countries.items()
+                         if (p['obs'].get('performances') or {}).get('by_venue')},
+            'checked_on': checked}
 
 
 def tally(countries):
@@ -191,6 +341,11 @@ def main():
     pts, shifted, lost = school_points(countries)
     tot = sum(len(v) for v in pts.values())
     print(f'{tot} establishments located across {len(pts)} countries')
+    vpts, vlost = venue_points(countries)
+    vtot = sum(len(v) for v in vpts.values())
+    nlist = sum(len(p['obs']['venues'].get('venues_list', [])) for p in countries.values())
+    print(f'{vtot} venues located of {nlist} listed, across {len(vpts)} countries')
+    lost += vlost
     if shifted:
         print(f'  pulled inland (generalised coastline): {", ".join(shifted)}')
     if lost:

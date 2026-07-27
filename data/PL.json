@@ -12,15 +12,29 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 36497495 inhabitants, recorded as 36.497 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 7812,
+      "year": 2024,
+      "source": "https://bdl.stat.gov.pl/api/v1/data/by-variable/194944?unit-level=0&format=json&year=2024",
+      "confidence": "sourced",
+      "status": "disputed",
+      "basis": "organisation",
+      "spectators": 935249,
+      "reasoning": "Read on 2026-07-27 from the Local Data Bank of GUS, subject P2874, variable 194944, 'widowiska w stałych salach teatralnych - przedstawienia: teatr lalkowy', national level: 7 812 performances in 2024, seen by 935 249 spectators. The series holds far steadier than the institution count — 8 820 in 2019, 7 863 in 2022, 7 973 in 2023 — so Poland lost seven puppet institutions over five years and about a ninth of its performances. Disputed on scope, and the scope is in the variable's own name. 'W stałych salach teatralnych' means in permanent theatre halls: this counts what the puppet theatres played at home and drops everything they played on tour. For a sector whose companies spend much of the year in school halls that is not a rounding error, and the true figure is above 7 812 by an unknown margin. The broader GUS measures that do count by place of presentation, in subject P1680, carry no breakdown by kind of theatre, so the choice was between the right genre with the wrong scope and the right scope with no genre. The first is recorded, with its scope named. Basis 'organisation': GUS classes the institution, not the production."
+    },
+    {
       "indicator": "venues",
-      "value": 25.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data. Note of 2026-07-27: this observation carried the source 'Exemple de demonstration, a remplacer' with confidence 'sourced', a demonstration placeholder left over from the seeding. A placeholder is not a source, and leaving it in inflated the count of sourced values by two across the repository. Source removed, confidence returned to estimated. The value itself is untouched: it was never sourced to begin with.",
-      "lower_bound": 22,
-      "upper_bound": 28
+      "value": 28.0,
+      "year": 2024,
+      "source": "https://bdl.stat.gov.pl/api/v1/data/by-variable/194943?unit-level=0&format=json&year=2024",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Read on 2026-07-27 from the Local Data Bank of GUS, subject P2874 'Teatry', variable 194943, 'jednostki: teatr lalkowy', national level: 28 puppet theatre institutions in 2024. The series falls steadily — 35 in 2019, 29 in 2022 and 2023, 28 in 2024 — so Poland has lost a fifth of its puppet institutions in five years, which is the most useful thing this figure says. Disputed on one filter, not on the reading. GUS counts the institutions that file the theatre return and classes them by kind of theatre; it does not sort them by who backs them. The denominator here asks for public backing, and 28 is therefore a ceiling: every publicly backed puppet house is inside it, and any private one that files a return is inside it too. What would settle it is the register of instytucje kultury held by the ministry and the local authorities, read against this list of 28. The reading is exact; the question is whether the denominators match. The opening estimate was 22 to 28 and its upper bound turns out to be the sourced ceiling, which is luck rather than method.",
+      "lower_bound": 28,
+      "upper_bound": 28,
+      "units": {
+        "unknown": 28
+      }
     },
     {
       "indicator": "schools",
@@ -122,6 +136,8 @@
   "notes": "State puppet theatres in most voivodeship capitals. Academies in Białystok and Wrocław.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "venues: read the ministry's register of instytucje kultury against the 28 GUS units, to separate the publicly backed houses from any private filer.",
+    "performances: find a Polish source counting puppet performances by place of presentation rather than in permanent halls only. GUS publishes that measure but not by kind of theatre.",
+    "venues: the ruling of 2026-07-27 probably makes 28 an undercount, not just a ceiling on public backing. GUS classes each reporting institution by kind, so a puppet stage inside a drama theatre files under its parent and never appears as a puppet unit. The two errors run in opposite directions and neither is measured."
   ]
 }

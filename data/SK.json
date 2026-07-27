@@ -13,14 +13,89 @@
     },
     {
       "indicator": "venues",
-      "value": 3.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 3,
-      "upper_bound": 4
+      "value": 5.0,
+      "year": 2026,
+      "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Checked on 2026-07-27 against the Register of Legal Persons of the Statistical Office of the Slovak Republic, through its open API. The register carries, for every entity, the register it came from, and that field settles public backing without any need to read a founding charter: the five theatres below all show 'Osobitný právny predpis, ktorým sa zriaďuje orgán verejnej moci alebo verejnoprávna organizácia' — established by a special legal act creating a public authority or a public-law organisation. Bratislavské bábkové divadlo, Dunajská 2319/36, Bratislava, IČO 00164879. Bábkové divadlo Žilina, Kuzmányho 106/6, IČO 36145211. Bábkové divadlo na Rázcestí v Banskej Bystrici, Skuteckého 127/14, IČO 35985381. Bábkové divadlo v Košiciach, Tajovského 736/4, IČO 31297811. Staré divadlo Karola Spišáka v Nitre, 7. pešieho pluku 1560/1, IČO 36103004 in the same register — the Nitra house, which was the Bábkové divadlo Nitra until it was renamed, and which is why a search on 'bábkové divadlo' alone misses it. A control was run in the same register: Združenie BABADLO in Prešov, an active puppet company, comes from the register of civic associations and not from a legal act, so the field does separate the two kinds. Roughly a dozen further entities carrying 'bábkové divadlo' in their name are sole traders or associations and fall outside on the same test. The opening estimate was 3 to 4 while the file's own note already named five towns. The note was right and the number was wrong.",
+      "lower_bound": 5,
+      "upper_bound": 5,
+      "units": {
+        "house": 5
+      },
+      "venues_list": [
+        {
+          "name": "Bratislavské bábkové divadlo",
+          "city": "Bratislava",
+          "address": "Dunajská 2319/36, 811 08 Bratislava",
+          "lat": 48.14509,
+          "lon": 17.1183,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 00164879",
+          "url": "https://www.babkovedivadlo.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo Žilina",
+          "city": "Žilina",
+          "address": "Kuzmányho 106/6, 011 37 Žilina",
+          "lat": 49.22434,
+          "lon": 18.73619,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 36145211",
+          "url": "https://www.bdz.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo na Rázcestí",
+          "city": "Banská Bystrica",
+          "address": "Skuteckého 127/14, 974 01 Banská Bystrica",
+          "lat": 48.73909,
+          "lon": 19.15209,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 35985381",
+          "url": "https://bdnr.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo v Košiciach",
+          "city": "Košice",
+          "address": "Tajovského 736/4, 040 01 Košice",
+          "lat": 48.71898,
+          "lon": 21.25407,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 31297811",
+          "url": "https://www.bdke.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Staré divadlo Karola Spišáka v Nitre",
+          "city": "Nitra",
+          "address": "7. pešieho pluku 1560/1, 949 01 Nitra",
+          "lat": 48.30688,
+          "lon": 18.08498,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 36103004",
+          "url": "https://sdn.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -108,6 +183,6 @@
   "notes": "State puppet theatres in Bratislava, Košice, Banská Bystrica, Nitra, Žilina.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "performances: settled negative, 2026-07-27. The Slovak survey KULT 12-01, run by the Divadelný ústav, publishes national totals only — theatres, ensembles, premieres, performances, spectators — with no breakdown by kind of theatre. The five regional puppet theatres each publish an annual evaluation of their activity, so a figure is reachable by adding five self-reported numbers with five possible reference periods. That was refused as constructing rather than reading. No observation recorded."
   ]
 }

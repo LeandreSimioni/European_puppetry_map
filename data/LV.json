@@ -12,15 +12,68 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 1860565 inhabitants, recorded as 1.861 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 434,
+      "year": 2024,
+      "source": "https://data.stat.gov.lv/api/v1/lv/OSP_PUB/START/IZG/CIN/KUT/KUT020",
+      "confidence": "sourced",
+      "status": "disputed",
+      "basis": "organisation",
+      "spectators": 50897,
+      "reasoning": "Read on 2026-07-27 from table KUT020 of the Latvian official statistics portal, activity indicators of the state culture companies, through the PxWeb dissemination API. Latvijas Leļļu teātris, 2024: 434 performances, 50 897 visits. The series also gives 617 performances in 2019 and 419 in both 2022 and 2023, so 2024 is a recovery and still a fifth below the pre-pandemic level. Disputed on scope, not on the reading. KUT020 covers state culture companies only, and Latvia has two publicly backed puppet houses: this figure is the Riga one and excludes Liepājas Leļļu teātris, which is municipal and files with its city instead. Liepāja's own 2024 non-financial goals report was opened: it records 79 tour performances actually played against a target of 85, and carries an in-house target of 125 performances and events, but no audited actual total. Its annual report for 2024 is a 25-page scan with no text layer. So the second house is worth something in the order of 200 performances and the number cannot be read, which is why nothing was added rather than an addition being guessed at. The Latvian total is therefore understated by roughly one house. Basis 'organisation': the table counts what the puppet theatre did, not what puppetry happened in Latvia.",
+      "by_venue": [
+        {
+          "name": "Latvijas Leļļu teātris",
+          "value": 434,
+          "unit": "performances",
+          "venue": "Latvijas Leļļu teātris"
+        }
+      ],
+      "by_venue_covers": "One producer, and it is the whole headline: table KUT020 reports the state culture companies one by one and Latvia has a single state puppet theatre. The list therefore reconciles exactly, and that exactness is itself the warning — the municipal house in Liepāja is outside the table, so both the headline and this list cover one of the country's two publicly backed puppet houses."
+    },
+    {
       "indicator": "venues",
-      "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 1
+      "value": 2.0,
+      "year": 2026,
+      "source": "https://www.km.gov.lv/lv/teatris-saites",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Checked on 2026-07-27 against the theatre index published by the Latvian Ministry of Culture, which groups the country's theatres by who founded them. Two puppet houses meet the denominator. Latvijas Leļļu teātris, Riga, listed among the state theatres, in its own two-storey building on K. Barona iela; its site gives 4 October 1944 as its founding and records that it carried a Latvian and a Russian troupe until the 2022/23 season. Liepājas Leļļu teātris, Rožu laukums 5/6 in Liepāja, listed among the municipal theatres and registered as Pašvaldības SIA, a municipal limited company, which is public backing under the denominator whatever the corporate form. One candidate was examined and set aside: Rēzeknes teātris 'Joriks' is municipal but is a drama house, and it plays in the Culture House of Rēzekne National Societies rather than a building of its own — it fails the denominator twice. The ministry's index does not list it either. The opening estimate of 1 counted the state house and missed the municipal one, which is the error this indicator will make everywhere until each country's index is read.",
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "units": {
+        "house": 2
+      },
+      "venues_list": [
+        {
+          "name": "Latvijas Leļļu teātris",
+          "city": "Rīga",
+          "address": "Krišjāņa Barona iela 16/18, Rīga",
+          "lat": 56.95128,
+          "lon": 24.12169,
+          "unit": "house",
+          "parent": null,
+          "authority": "State — a valsts kultūras kapitālsabiedrība",
+          "registration": null,
+          "url": "https://www.lelluteatris.lv",
+          "source": "https://www.km.gov.lv/lv/teatris-saites",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Liepājas Leļļu teātris",
+          "city": "Liepāja",
+          "address": "Rožu laukums 5/6, LV-3401 Liepāja",
+          "lat": 56.50766,
+          "lon": 21.01239,
+          "unit": "house",
+          "parent": null,
+          "authority": "Liepāja municipality — a Pašvaldības SIA",
+          "registration": null,
+          "url": "https://liepajaslelles.lv",
+          "source": "https://www.km.gov.lv/lv/teatris-saites",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -105,7 +158,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Latvian Puppet Theatre, Riga.",
+  "notes": "Latvijas Leļļu teātris, Riga (state). Liepājas Leļļu teātris (municipal).",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
