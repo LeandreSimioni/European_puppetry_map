@@ -6,10 +6,31 @@ Everything here started as memory: values produced without research, to serve as
 hypotheses to be confirmed or refuted country by country. That is the point of
 the exercise — a preview precise enough to be refutable.
 
-**One layer has since been checked.** The `schools` indicator has been verified
-against sources for all 45 countries, and carries the named list of the
-establishments behind each count. Every other indicator is still an estimate and
-must not leave this repository.
+**Two indicators have since been checked.** `schools` has been verified against
+sources for all 45 countries and carries the named list of the establishments
+behind each count. `population_M` is sourced for 42 of 45. Every other indicator
+is still an estimate and must not leave this repository.
+
+## The population layer
+
+Sourced on 2026-07-27 from Eurostat's `demo_pjan`, population on 1 January,
+read through the dissemination API. Thirty-seven countries carry the 2025
+figure. The remaining eight are each a separate case, and the exceptions are
+the useful part:
+
+| | |
+|---|---|
+| **GB** | ONS mid-2025. Eurostat's UK row stops at 2020, after the departure from the Union. The reference differs from the rest of the series — a mid-year estimate against a 1 January stock — and the file says so rather than smoothing it over. |
+| **AD, BY** | Eurostat, 1 January 2019. No later row exists there. Sourced, and seven years old. |
+| **XK** | Eurostat, 1 January 2022. Same situation. |
+| **UA** | Eurostat, 1 January 2022 — weeks before the full-scale invasion. `disputed`: the figure is read correctly, the *denominator* is not settled. Residents, the de jure population including those displaced abroad, and the population of government-controlled territory are three different numbers, and "total population" does not choose between them. |
+| **BA** | The 2013 census, read on the front page of the national statistics agency, Eurostat publishing no row at all. `disputed` on its age. |
+| **SM** | **No value.** The Bollettino demografico exists and was not opened. A figure that has not been read is not a source. |
+| **RU, TR** | **No value**, and for Turkey a current Eurostat figure was read and refused. The denominator asks for the European part only. Getting it means summing Rosstat federal districts — after ruling whether the Urals are in — or TÜİK provinces plus a split of Istanbul across the Bosphorus. That is a construction, not a reading, and it needs its method written first. |
+
+Three countries therefore keep an unsourced estimate, on purpose. The working
+rule is that a denominator that cannot be honoured produces a report, not a
+number.
 
 ## What the repository holds
 
@@ -143,10 +164,10 @@ link to its website.
 ## Next steps
 
 1. Settle the denominator of `dates`.
-2. Source `population_M`, the only indicator where a published, annual, citable
-   source exists and all 45 values are still estimates. It carries one snag: the
-   denominator asks for the European part only of Russia and Turkey, which no
-   pan-European table gives.
+2. Rule on the European boundary for Russia and Turkey, then build those two
+   population figures from regional data. Same for the Ukrainian denominator.
+   Open the San Marino bulletin. Three countries and two rulings away from a
+   complete population layer.
 3. Finish what the ownership ruling reopened. Four Italian files are unexamined
    (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
    private provision has never been opened, and Cyprus's private drama schools
