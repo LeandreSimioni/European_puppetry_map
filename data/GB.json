@@ -1,112 +1,114 @@
 {
   "code": "GB",
-  "nom": "Royaume-Uni",
+  "name": "United Kingdom",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 68,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 68,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 5.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 5.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 4,
-      "borne_haute": 6
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 4,
+      "upper_bound": 6
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 0.0,
+      "year": 2026,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, sur une fermeture recente et documentee. La Royal Central School of Speech and Drama, composante de l'Universite de Londres, a porte le premier diplome universitaire de marionnette du Royaume-Uni, le BA Puppetry: Design and Performance, seul BA de marionnette du pays et pilier de la formation de l'ecole pendant plus de vingt-cinq ans. Ce cursus n'accueille plus de nouveaux etudiants depuis l'annee universitaire 2018-19 et n'est plus dispense ; la marionnette subsiste comme composante integree a d'autres cursus, de Theatre Practice a Acting et Applied Theatre. Un master de marionnette est annonce en developpement, sans qu'aucune source ne permette d'etablir qu'il a ouvert. En l'etat aucune formation ne satisfait le denominateur et la valeur passe de 0,5 a 0. Borne haute a 1 pour porter ce master annonce : si son ouverture est confirmee, le Royaume-Uni repasse a 1. Confiance estime, le site de l'ecole renvoyant un refus a la lecture automatisee.",
-      "borne_basse": 0,
-      "borne_haute": 1,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained, on a recent and documented closure. The Royal Central School of Speech and Drama, part of the University of London, carried the United Kingdom's first university puppetry award, the BA in Puppetry: Design and Performance, the country's only puppetry BA and a pillar of the school's training for more than twenty-five years. That course has taken no new students since the 2018-19 academic year and is no longer taught; puppetry survives as a component embedded in other courses, from Theatre Practice to Acting and Applied Theatre. A puppetry master's is announced as in development, with no source establishing that it has opened. As things stand no training satisfies the denominator and the value moves from 0.5 to 0. Upper bound at 1 to carry that announced master's: if its opening is confirmed, the United Kingdom returns to 1. Estimate, the school's site refusing automated reading.",
+      "lower_bound": 0,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "The Royal Central School of Speech and Drama (University of London)",
-          "ville": "London",
-          "adresse": null,
+          "name": "The Royal Central School of Speech and Drama (University of London)",
+          "city": "London",
+          "address": null,
           "lat": 51.5432,
           "lon": -0.1728,
-          "statut": "public",
-          "diplome": "BA Puppetry: Design and Performance, fermé aux inscriptions depuis 2018-19",
-          "compte": false,
-          "motif_exclusion": "ferme",
+          "status": "public",
+          "award": "BA Puppetry: Design and Performance, closed to new entrants since 2018-19",
+          "url": "https://www.cssd.ac.uk/",
+          "description": "Central pioneered the first puppetry degree in the United Kingdom and taught it for over twenty-five years. The course no longer runs; a master's is announced as in development, with no evidence found that it has opened.",
+          "counted": false,
+          "exclusion_reason": "closed",
           "source": "https://www.cssd.ac.uk/subject-area/puppetry",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 45,
-      "annee": null,
+      "indicator": "dates",
+      "value": 45,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 3,
-      "annee": null,
+      "indicator": "titles",
+      "value": 3,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 40,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 40,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 40,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 40,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 80,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 80,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 50,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 50,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Little Angel, Norwich, Puppet Theatre Barge. Parcours à la Royal Central",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Little Angel and Puppet Barge, London. Norwich Puppet Theatre. Handspring UK.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

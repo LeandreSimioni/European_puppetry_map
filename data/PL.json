@@ -1,123 +1,127 @@
 {
   "code": "PL",
-  "nom": "Pologne",
+  "name": "Poland",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 36.8,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 36.8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 25.0,
-      "annee": null,
-      "source": "Exemple de démonstration, à remplacer",
-      "confiance": "declare",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 22,
-      "borne_haute": 28
+      "indicator": "venues",
+      "value": 25.0,
+      "year": null,
+      "source": null,
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data. Note of 2026-07-27: this observation carried the source 'Exemple de demonstration, a remplacer' with confidence 'sourced', a demonstration placeholder left over from the seeding. A placeholder is not a source, and leaving it in inflated the count of sourced values by two across the repository. Source removed, confidence returned to estimated. The value itself is untouched: it was never sourced to begin with.",
+      "lower_bound": 22,
+      "upper_bound": 28
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 2.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 2.0,
+      "year": 2026,
       "source": "https://www.otouczelnie.pl/wydzial/390/Wydzial-Sztuki-Lalkarskiej---Oddzial-w-Bialymstoku ; https://www.wroclaw.pl/akademicki-wroclaw/akademia-sztuk-teatralnych-w-krakowie-filia-we-wroclawiu",
-      "confiance": "sourced",
-      "statut": "ouvert",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Deux etablissements retenus, tous deux lus a la source. Premier : le Wydzial Sztuki Lalkarskiej de l'Akademia Teatralna Aleksandra Zelwerowicza, filiale de Bialystok, avec deux cursus en jednolite studia magisterskie de cinq ans, aktorstwo et rezyseria specialite teatru lalek, plus une licence de trois ans en technologia teatru lalek ouverte en 2018. Second : le Wydzial Lalkarski de l'Akademia Sztuk Teatralnych de Cracovie, filiale de Wroclaw, avec aktorstwo teatru lalek et rezyseria teatru lalek. Les deux relevent de l'enseignement superieur artistique public polonais. Comptage a l'etablissement : cinq cursus au total mais deux ecoles. Borne haute maintenue a 2, aucune troisieme filiere n'ayant ete identifiee. La valeur ne change pas mais passe d'estimee a sourcee.",
-      "borne_basse": 2,
-      "borne_haute": 2,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. Two establishments retained, both read at source. First, the Puppetry Faculty of the Aleksander Zelwerowicz Theatre Academy, Bialystok branch, with two five-year integrated master's courses in puppet theatre acting and directing, plus a three-year degree in puppet theatre technology opened in 2018. Second, the Puppetry Faculty of the Stanislaw Wyspianski Academy of Theatre Arts, Krakow, at its Wroclaw branch, with puppet theatre acting and puppet theatre directing. Both belong to Polish public arts higher education. Counted by establishment: five courses in total but two schools. Upper bound held at 2, no third course identified. The value does not change but moves from estimated to sourced.",
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "Akademia Teatralna im. A. Zelwerowicza, Wydział Sztuki Lalkarskiej",
-          "ville": "Białystok",
-          "adresse": "ul. Sienkiewicza 14, 15-092 Białystok",
+          "name": "Akademia Teatralna im. A. Zelwerowicza, Wydział Sztuki Lalkarskiej",
+          "city": "Białystok",
+          "address": "ul. Sienkiewicza 14, 15-092 Białystok",
           "lat": 53.1358,
           "lon": 23.1571,
-          "statut": "public",
-          "diplome": "Jednolite magisterskie aktorstwo et reżyseria teatru lalek, 5 ans ; licence technologia",
-          "compte": true,
+          "status": "public",
+          "award": "Five-year integrated master's in puppet theatre acting and directing, plus a three-year degree in puppet theatre technology",
+          "url": "https://akademia.at.edu.pl/",
+          "description": "The puppetry faculty of the Aleksander Zelwerowicz Theatre Academy, running in Białystok since 1975. Its puppet theatre technology course, opened in 2018, was the first of its kind in Poland.",
+          "counted": true,
           "source": "https://www.otouczelnie.pl/wydzial/390/Wydzial-Sztuki-Lalkarskiej---Oddzial-w-Bialymstoku",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         },
         {
-          "nom": "Akademia Sztuk Teatralnych im. St. Wyspiańskiego, Filia we Wrocławiu, Wydział Lalkarski",
-          "ville": "Wrocław",
-          "adresse": "ul. Braniborska 59, 53-680 Wrocław",
+          "name": "Akademia Sztuk Teatralnych im. St. Wyspiańskiego, Filia we Wrocławiu, Wydział Lalkarski",
+          "city": "Wrocław",
+          "address": "ul. Braniborska 59, 53-680 Wrocław",
           "lat": 51.1067,
           "lon": 16.9985,
-          "statut": "public",
-          "diplome": "Aktorstwo teatru lalek et reżyseria teatru lalek",
-          "compte": true,
+          "status": "public",
+          "award": "Puppet theatre acting and puppet theatre directing",
+          "url": "https://www.ast.wroc.pl/",
+          "description": "The puppetry faculty of the Stanisław Wyspiański Academy of Theatre Arts, Kraków, based at its Wrocław branch. It hosts the METAFORMY international festival of puppetry schools. Site did not respond from the verification environment on 2026-07-27.",
+          "counted": true,
           "source": "https://www.wroclaw.pl/akademicki-wroclaw/akademia-sztuk-teatralnych-w-krakowie-filia-we-wroclawiu",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 105,
-      "annee": null,
+      "indicator": "dates",
+      "value": 105,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 9,
-      "annee": null,
+      "indicator": "titles",
+      "value": 9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 220,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 220,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 5,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 80,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 80,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 92,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 92,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Réseau dense de théâtres municipaux. Académies de Białystok et Wrocław",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "State puppet theatres in most voivodeship capitals. Academies in Białystok and Wrocław.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

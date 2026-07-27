@@ -1,111 +1,113 @@
 {
   "code": "HU",
-  "nom": "Hongrie",
+  "name": "Hungary",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 9.6,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 9.6,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 7.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 7.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 6,
-      "borne_haute": 8
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 6,
+      "upper_bound": 8
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
       "source": "https://hu.wikipedia.org/wiki/Színház-_és_Filmművészeti_Egyetem",
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement identifie mais un critere du denominateur mis en cause, d'ou le passage en conteste. La Szinhaz- es Filmmuveszeti Egyetem de Budapest porte une specialisation babszinesz, comedien marionnettiste, dont la premiere promotion date de 1995, en cursus non divise, ainsi qu'une specialisation babrendezo ouverte en 2008-09 au sein du cursus de mise en scene. La marionnette est donc une specialisation nommee d'un diplome superieur, et le critere pedagogique est satisfait. Le critere institutionnel ne l'est plus mecaniquement : depuis le 1er septembre 2020 l'universite n'est plus un etablissement public, elle est geree par une fondation privee, la Szinhaz- es Filmmuveszetert Alapitvany, transfert qui avait provoque une contestation prolongee sur l'autonomie academique. Le denominateur exige une formation adossee a une institution d'Etat. Faut-il lire ce critere comme la propriete publique de l'etablissement, auquel cas la Hongrie tombe a 0, ou comme la reconnaissance du diplome par l'Etat et le financement public, auquel cas elle vaut 1 ? La valeur 1 est retenue par defaut, la SZFE restant l'universite nationale de theatre et de cinema delivrant des diplomes reconnus, mais le statut passe en conteste : c'est la methode de comptage qui est en cause, pas l'existence de la formation. Arbitrage a rendre pour toute la serie, car le modele hongrois de transfert a des fondations touche l'ensemble de l'enseignement superieur du pays. Reserve de source : le site de la SZFE renvoie un refus systematique a la lecture automatisee ; la source enregistree est une notice encyclopedique, non l'etablissement lui-meme.",
-      "borne_basse": 1,
-      "borne_haute": 1,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment identified but one criterion of the denominator called into question, hence the move to disputed. The University of Theatre and Film Arts in Budapest carries a puppet actor specialism whose first intake dates from 1995, in an integrated course, together with a puppet director specialism opened in 2008-09 within the directing course. Puppetry is therefore a named specialism of a higher education award, and the teaching criterion is satisfied. The institutional criterion no longer follows automatically: since 1 September 2020 the university is no longer a public institution but is run by a private foundation, a transfer that prompted a prolonged dispute over academic autonomy. The denominator requires a training backed by a state institution. Should that criterion be read as public ownership of the institution, in which case Hungary falls to 0, or as state recognition of the award plus public funding, in which case it counts 1? The value 1 is kept by default, the university remaining the national theatre and film school awarding recognised qualifications, but the status moves to disputed: what is in question is the counting method, not the existence of the training. A ruling is needed for the whole series, since the Hungarian model of transferring institutions to foundations affects the country's entire higher education system. Source caveat: the university's own site systematically refuses automated reading; the source recorded is an encyclopaedic entry, not the institution itself.",
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "Színház- és Filmművészeti Egyetem (SZFE)",
-          "ville": "Budapest",
-          "adresse": "Vas utca 2/c, 1088 Budapest",
+          "name": "Színház- és Filmművészeti Egyetem (SZFE)",
+          "city": "Budapest",
+          "address": "Vas utca 2/c, 1088 Budapest",
           "lat": 47.4952,
           "lon": 19.0678,
-          "statut": "fondation",
-          "diplome": "Spécialisation bábszínész depuis 1995, bábrendező depuis 2008-09",
-          "compte": true,
+          "status": "foundation",
+          "award": "Puppet actor specialism since 1995, puppet director specialism since 2008-09",
+          "url": "https://szfe.hu/",
+          "description": "Hungary's national theatre and film university, teaching puppetry for thirty years. Transferred from state ownership to a private foundation in September 2020, which is why its place in this count is disputed rather than settled.",
+          "counted": true,
           "source": "https://hu.wikipedia.org/wiki/Színház-_és_Filmművészeti_Egyetem",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 100,
-      "annee": null,
+      "indicator": "dates",
+      "value": 100,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 9,
-      "annee": null,
+      "indicator": "titles",
+      "value": 9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 220,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 220,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 7,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 7,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 80,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 80,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 90,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 90,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Budapest Bábszínház, Kolibri, Kecskemét, Debrecen. Filière SzFE",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Budapest Puppet Theatre. Vaskakas, Győr. Ciróka, Kecskemét. Puppet training at SZFE.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

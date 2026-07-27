@@ -1,112 +1,114 @@
 {
   "code": "BY",
-  "nom": "Biélorussie",
+  "name": "Belarus",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 9.2,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 9.2,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 5.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 5.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 4,
-      "borne_haute": 6
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 4,
+      "upper_bound": 6
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 0.0,
+      "year": 2026,
       "source": "https://kudapostupat.by/zavedenie/id/1 ; https://be.wikipedia.org/wiki/Беларуская_дзяржаўная_акадэмія_мастацтваў",
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays, reprise apres une premiere lecture trop rapide. Valeur maintenue a 0 et statut conteste. La Belaruskaja dziarzhaunaja akademija mastactvau de Minsk, pr. Nezalezhnasci 81, est un etablissement d'Etat et a bien porte une specialisation Akcior teatra lialek : la notice encyclopedique lue date la premiere promotion de 1975 et une seconde, en enseignement a distance, de 1987. Un resume de moteur affirme par ailleurs que la filiere est toujours active, en presentiel et a distance. Cette affirmation n'a pas resiste a la verification : les deux portails d'admission consultes et lus n'enumerent au niveau specialite que Akterskoe iskusstvo et Rezhissura teatra, sans direction marionnette visible. Cela ne prouve pas l'absence de la filiere, le systeme biélorusse distinguant la specialite de la direction et les portails ne descendant pas au second niveau ; cela prouve seulement qu'aucune source accessible ne l'etablit. Compter 1 reviendrait a inferer d'une promotion de 1975 l'existence d'un cursus en 2026, ce que le biais connu de l'indicateur interdit. La valeur 1 precedente etait au demeurant une estimation sans recherche. A verifier par une voie qui descend au niveau des directions : catalogue officiel des specialites du ministere, ou contact direct de la commission d'admission de l'academie. C'est le dossier le plus insatisfaisant de cette passe.",
-      "borne_basse": 0,
-      "borne_haute": 1,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. Taken up again after too hasty a first reading. Value kept at 0 and status disputed. The Belarusian State Academy of Arts in Minsk is a state institution and did carry a Puppet Theatre Actor specialism: the encyclopaedic entry read dates the first intake to 1975 and a second, by distance learning, to 1987. A search summary further asserts the course is still active, on site and by distance. That assertion did not survive checking: the two admissions portals consulted and read list, at specialism level, only Acting and Theatre Directing, with no visible puppetry stream. This does not prove the course is gone, since the Belarusian system distinguishes the specialism from the stream within it and these portals do not descend to the second level; it proves only that no accessible source establishes it. Counting 1 would mean inferring from a 1975 intake the existence of a course in 2026, which the indicator's known bias forbids. The previous value of 1 was in any case an estimate made without research. To be checked by a route that reaches stream level: the ministry's official catalogue of specialisms, or direct contact with the academy's admissions board. The least satisfactory file in this pass.",
+      "lower_bound": 0,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "Беларуская дзяржаўная акадэмія мастацтваў (БГАІ)",
-          "ville": "Мінск",
-          "adresse": "пр. Незалежнасці 81, 220012 Мінск",
+          "name": "Беларуская дзяржаўная акадэмія мастацтваў (БГАІ)",
+          "city": "Minsk",
+          "address": "пр. Незалежнасці 81, 220012 Мінск",
           "lat": 53.9209,
           "lon": 27.5978,
-          "statut": "public",
-          "diplome": "Direction marionnette non confirmée : les portails d'admission ne listent au niveau spécialité que Актерское искусство et Режиссура театра",
-          "compte": false,
-          "motif_exclusion": "non_confirme",
+          "status": "public",
+          "award": "Puppetry stream not confirmed: admissions portals list only Acting and Theatre Directing",
+          "url": "https://bdam.by/",
+          "description": "The Belarusian State Academy of Arts enrolled its first puppet acting cohort in 1975 and a distance-learning cohort in 1987. Whether the stream still runs could not be established: published listings stop one level above where the answer would be.",
+          "counted": false,
+          "exclusion_reason": "unconfirmed",
           "source": "https://kudapostupat.by/zavedenie/id/1",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 100,
-      "annee": null,
+      "indicator": "dates",
+      "value": 100,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "titles",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 220,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 220,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 6,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 6,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 92,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 92,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Théâtre d'État de Minsk",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "State puppet theatres in Minsk, Brest, Gomel, Grodno, Mogilev, Vitebsk.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

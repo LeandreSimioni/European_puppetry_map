@@ -1,111 +1,113 @@
 {
   "code": "UA",
-  "nom": "Ukraine",
+  "name": "Ukraine",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 36,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 36,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 22.5,
-      "annee": null,
+      "indicator": "venues",
+      "value": 22.5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 20,
-      "borne_haute": 25
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 20,
+      "upper_bound": 25
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
       "source": "https://knutkt.edu.ua/struktura/fakultet-teatralnoho-mystetstva/kafedra-mystetstva-teatru-lialok/",
-      "confiance": "sourced",
-      "statut": "ouvert",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la Kafedra mystetstva teatru lyalok de l'universite nationale Karpenko-Kary de Kyiv (KNUTKiT), au sein de la faculte des arts du theatre. Criteres lus a la source : departement dont l'intitule nomme explicitement l'art du theatre de marionnettes, rattache a une universite nationale, donc d'Etat. Reserve a porter au dossier : la page lue expose la structure du departement mais n'enumere pas les diplomes ; le niveau licence en art d'acteur du theatre de marionnettes n'a ete vu qu'en resume de moteur, non a la source. Le critere diplomant est donc presume par le rattachement universitaire, non verifie ligne a ligne. Borne haute a 2 : l'academie d'Etat de la culture de Kharkiv n'a pas ete verifiee dans cette passe.",
-      "borne_basse": 1,
-      "borne_haute": 2,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Department of Puppet Theatre Art of the Karpenko-Kary national university of Kyiv, within the faculty of theatre arts. Criteria read at source: a department whose title names puppet theatre art explicitly, attached to a national and therefore state university. Caveat on record: the page read sets out the department's structure but does not enumerate its degrees; the bachelor's level in puppet theatre acting was seen only in a search summary, never at source. The degree-granting criterion is therefore presumed from the university attachment, not verified line by line. Upper bound at 2: the state academy of culture in Kharkiv was not checked in this pass.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "КНУТКіТ ім. І. К. Карпенка-Карого — Кафедра мистецтва театру ляльок",
-          "ville": "Київ",
-          "adresse": "вул. Ярославів Вал 40, 01054 Київ",
+          "name": "КНУТКіТ ім. І. К. Карпенка-Карого — Кафедра мистецтва театру ляльок",
+          "city": "Kyiv",
+          "address": "вул. Ярославів Вал 40, 01054 Київ",
           "lat": 50.4507,
           "lon": 30.5079,
-          "statut": "public",
-          "diplome": "Акторське мистецтво театру ляльок (niveau non vérifié à la source)",
-          "compte": true,
+          "status": "public",
+          "award": "Puppet theatre acting (degree level not verified at source)",
+          "url": "https://knutkt.edu.ua/",
+          "description": "The puppet theatre art department of the Karpenko-Kary national university, within the faculty of theatre arts. The department is clearly constituted; the pages read set out its structure but do not enumerate its degrees.",
+          "counted": true,
           "source": "https://knutkt.edu.ua/struktura/fakultet-teatralnoho-mystetstva/kafedra-mystetstva-teatru-lialok/",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 100,
-      "annee": null,
+      "indicator": "dates",
+      "value": 100,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 9,
-      "annee": null,
+      "indicator": "titles",
+      "value": 9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 230,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 230,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 7,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 7,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 90,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 90,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Maillage régional hérité de l'URSS, situation actuelle inconnue",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "State puppet theatres in every oblast capital.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

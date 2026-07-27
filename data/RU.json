@@ -1,111 +1,113 @@
 {
   "code": "RU",
-  "nom": "Russie (partie européenne)",
+  "name": "Russia (European part)",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 110,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 110,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 80.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 80.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 60,
-      "borne_haute": 100
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 60,
+      "upper_bound": 100
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": 2026,
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
       "source": "https://ru.wikipedia.org/wiki/Российский_государственный_институт_сценических_искусств ; https://gitis.net/education/faculties/",
-      "confiance": "sourced",
-      "statut": "ouvert",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays, partie europeenne uniquement. Un etablissement retenu : le RGISI, institut d'Etat russe des arts de la scene de Saint-Petersbourg, dont la faculte de theatre de marionnettes, Fakultet teatra kukol, figure parmi les huit facultes, l'etablissement etant un organisme budgetaire federal d'enseignement superieur. Resultat notable de cette passe : le GITIS de Moscou, que les resumes de moteur presentaient comme formant a la mise en scene et a la scenographie de marionnettes, a ete verifie a la source et sa page des facultes n'en comporte aucune de ce type, les huit facultes etant acteur, mise en scene, theatre musical, critique, choregraphie, nouvelles directions, production et scenographie. La valeur precedente de 1,5 etait le milieu d'une fourchette estimee ; elle est ramenee a 1, seul etablissement etabli. Borne haute a 2 : le GITIS pourrait porter la marionnette au sein d'une de ses facultes sans que sa page de structure le montre, et les ecoles de theatre de province n'ont pas ete verifiees.",
-      "borne_basse": 1,
-      "borne_haute": 2,
-      "verifie_le": "2026-07-27",
-      "etablissements": [
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. European part only. One establishment retained: RGISI, the Russian State Institute of Performing Arts in Saint Petersburg, whose puppet theatre faculty is one of its eight faculties, the institution being a federal state body of higher education. A notable result of this pass: GITIS in Moscow, which search summaries presented as training puppet directors and designers, was checked at source and its faculties page contains no such faculty, the eight being acting, directing, musical theatre, criticism, choreography, new directions, production and scenography. The previous value of 1.5 was the midpoint of an estimated range; it is brought back to 1, the only established establishment. Upper bound at 2: GITIS could carry puppetry inside one of its faculties without its structure page showing it, and provincial theatre schools were not checked.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
         {
-          "nom": "РГИСИ — Факультет театра кукол",
-          "ville": "Санкт-Петербург",
-          "adresse": "Моховая улица 33/35, 191028 Санкт-Петербург",
+          "name": "РГИСИ — Факультет театра кукол",
+          "city": "Saint Petersburg",
+          "address": "Моховая улица 33/35, 191028 Санкт-Петербург",
           "lat": 59.9424,
           "lon": 30.3441,
-          "statut": "public",
-          "diplome": "Acteur, metteur en scène, scénographe et technologue de théâtre de marionnettes",
-          "compte": true,
+          "status": "public",
+          "award": "Acting, directing, design and technical design for puppet theatre",
+          "url": "https://rgisi.ru/",
+          "description": "The puppet theatre faculty of the Russian State Institute of Performing Arts, a federal state institution, and one of its eight faculties. Site did not respond from the verification environment on 2026-07-27.",
+          "counted": true,
           "source": "https://ru.wikipedia.org/wiki/Российский_государственный_институт_сценических_искусств",
-          "verifie_le": "2026-07-27"
+          "checked_on": "2026-07-27"
         }
       ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 110,
-      "annee": null,
+      "indicator": "dates",
+      "value": 110,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 10,
-      "annee": null,
+      "indicator": "titles",
+      "value": 10,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 250,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 250,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 5,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 80,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 80,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 93,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 93,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Obraztsov (Moscou) et un maillage régional hérité de l'URSS",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "State puppet theatres in every regional capital. Obraztsov, Moscow.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }
