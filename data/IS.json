@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 0.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://www.aurorafoundation.is/project/bruduheimar/",
+      "confidence": "sourced",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Searched on 2026-07-27, in Icelandic, as part of the transversal venues pass over the smallest countries. Zero, and unlike Liechtenstein or San Marino this one is not for want of puppetry: Iceland has puppetry with premises, and none of it is publicly backed. Two organisations were examined. Brúðuheimar in Borgarnes was a puppet museum and theatre in the old Kaupfélag Borgfirðinga buildings at Englendingavík, founded by the puppet artist Bernd Ogrodnik and the director Hilda Jónsdóttir, and built with 8 000 000 krónur from the Aurora Foundation — a private foundation, which is the whole point: the funding read is not public. Its own domain no longer answers, so it is also not clear the house is still open, and the record says so rather than guessing. Handbendi Brúðuleikhús at Hvammstangi is the live one — original productions, an international residency and the Hvammstangi puppetry festival — and its entry in the Icelandic company register is an ehf., a private limited company, with no public ownership shown. Brúðubíllinn, the puppet van that plays Reykjavík gardens in summer, has no venue at all and is excluded by the denominator on that ground alone. Recorded open rather than verified, because the argument is made from the puppetry side and not from the institutional side: Iceland's publicly funded theatres — the National Theatre, the Reykjavík City Theatre, the Akureyri company — were not read one by one for a puppetry unit, and that is the check that would close this. The previous value was 0.5, an opening estimate produced with no research.",
       "lower_bound": 0,
-      "upper_bound": 1
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,8 @@
   "notes": "Brúðuheimar, Borgarnes.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: close the zero from the institutional side. Read Þjóðleikhúsið, Borgarleikhúsið and Menningarfélag Akureyrar for a named puppetry unit; the pass of 2026-07-27 argued only that the two puppetry houses with premises, Brúðuheimar and Handbendi, are private.",
+    "venues: establish whether Brúðuheimar in Borgarnes is still open. Its domain no longer answers and no closure was found; a live private house would still not count, but a closed one changes the story."
   ]
 }
