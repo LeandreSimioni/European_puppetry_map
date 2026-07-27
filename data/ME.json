@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 0.62,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "value": 0.623,
+      "year": 2025,
+      "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&sex=T&age=TOTAL&lang=en&lastTimePeriod=1",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 623327 inhabitants, recorded as 0.623 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
       "indicator": "venues",
