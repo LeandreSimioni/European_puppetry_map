@@ -9,7 +9,8 @@ the exercise — a preview precise enough to be refutable.
 **Two indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
-45. `venues` and `performances` are being collected, five countries at a time.
+45. `venues` and `performances` are being collected, five countries at a time;
+`venues` is sourced for 11 countries, `performances` for 6.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -122,12 +123,16 @@ public children's theatres that play puppetry with a single mixed company and no
 puppet unit named anywhere. A mixed company playing some puppetry is not a
 permanent puppetry unit; a named stage inside a bigger house is.
 
-**Expect the counts to rise in the west.** Germany's Sparten and France's
-labelled structures have not been read under the new wording yet, and the
-east-west gap will narrow when they are. That is a correction: counting legal
+**Expect the counts to rise in the west.** That is a correction: counting legal
 persons rewarded systems whose puppetry was organised into separate
 institutions — the socialist state-theatre legacy above all — and penalised
 those where it lives inside larger houses.
+
+Germany, read under the new wording on 2026-07-27, is the demonstration. Of its
+21 units, **10 are stages inside larger houses** — Halle, Meiningen, Gera,
+Bautzen, Gelsenkirchen, Chemnitz, Dresden, Dessau, Koblenz, Radebeul. The strict
+pre-ruling count would have been 11, and the gap with the east would have been
+an artefact of German theatre law. France, at 7, has not been re-read yet.
 
 ## The activity layer
 
