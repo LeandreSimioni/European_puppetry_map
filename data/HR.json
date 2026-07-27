@@ -24,14 +24,17 @@
     },
     {
       "indicator": "venues",
-      "value": 4.5,
+      "value": 4.0,
       "year": 2026,
       "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
       "confidence": "sourced",
       "status": "disputed",
-      "reasoning": "Checked on 2026-07-27 against the Očevidnik kazališta, the register of theatres kept by the Croatian Ministry of Culture and Media, read through its alphabetical list. Fourteen entries carry a puppetry word in their name. Four are the established public houses: Zagrebačko kazalište lutaka, Trg kralja Tomislava 19/I, register number KAZ-016/4; Gradsko kazalište lutaka Rijeka, Blaža Polića 6, KAZ-034/5; Gradsko kazalište lutaka Split, Tončićeva 1, KAZ-038/12; Kazalište lutaka Zadar, Sokolska 1, KAZ-074/7. Two of the four say gradsko — municipal — in their own names, and Zadar's site names the Ministry of Culture, the Zadar County and the City of Zadar as its backers. The other nine are companies and limited firms in Zagreb, Pula and Brdovec, and one Zagreb entry is in liquidation. Disputed on two counts. The register gives name, register number, city and address but no founder column, so public backing rests on the names and on Zadar's own site rather than on a founding act read for each house — weaker than the Slovak or Slovenian records in this same pass. And Osijek is the open question the bounds carry: the Dječje kazalište Branka Mihaljevića is a children's theatre with a puppet ensemble, it carries no puppetry word so this search cannot see it, and whether it counts is the same ruling that leaves Czechia between 8 and 10 and Hungary between 12 and 13. Three countries in two batches now wait on that one decision. The value is unchanged from the opening estimate. What changed is that the four are now named, addressed and numbered, so the count can be audited instead of believed.",
+      "reasoning": "Re-read on 2026-07-27 under the ruling of the same day. Source: the Očevidnik kazališta, the register of theatres kept by the Croatian Ministry of Culture and Media. Four public puppet houses, all freestanding organisations: Zagrebačko kazalište lutaka, Trg kralja Tomislava 19/I, KAZ-016/4; Gradsko kazalište lutaka Rijeka, Blaža Polića 6, KAZ-034/5; Gradsko kazalište lutaka Split, Tončićeva 1, KAZ-038/12; Kazalište lutaka Zadar, Sokolska 1, KAZ-074/7. Two say gradsko — municipal — in their own names, and Zadar's site names the ministry, the county and the city as its backers. Nine further register entries are companies and limited firms, one in liquidation. Four house, no stage. The Osijek question is closed and the answer is no. The Dječje kazalište Branka Mihaljevića is a public institution founded by the City of Osijek and it does play puppetry, but its own site presents a children's theatre with a drama studio and a ballet studio and names no puppet ensemble or puppet stage. Under the ruling that is the Kolibri case, not the Malé divadlo case: a mixed company that plays some puppetry is not a permanent puppetry unit. Croatia is 4, not 4.5, and the bounds close. What keeps the record disputed is unchanged and has nothing to do with Osijek: the Očevidnik carries no founder column, so public backing here rests on two theatre names and one theatre's own site rather than on a founding act read for each house. That is weaker evidence than the Slovak, Slovenian or Czech records in the same two batches.",
       "lower_bound": 4,
-      "upper_bound": 5
+      "upper_bound": 4,
+      "units": {
+        "house": 4
+      }
     },
     {
       "indicator": "schools",
@@ -116,9 +119,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Zagrebačko kazalište lutaka; Gradsko kazalište lutaka Rijeka; Gradsko kazalište lutaka Split; Kazalište lutaka Zadar. Osijek: Dječje kazalište Branka Mihaljevića, children’s theatre with a puppet ensemble, undecided.",
+  "notes": "Zagrebačko kazalište lutaka; Gradsko kazalište lutaka Rijeka; Gradsko kazalište lutaka Split; Kazalište lutaka Zadar. Osijek examined and set aside: children’s theatre, no puppet unit named.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "venues: rule on the Osijek case, and read a founding act for each of the four counted houses. The Očevidnik carries no founder column."
+    "venues: read a founding act for each of the four counted houses. The Očevidnik carries no founder column."
   ]
 }
