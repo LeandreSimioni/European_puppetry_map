@@ -24,12 +24,12 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
+      "valeur": 0.0,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. La Stockholms konstnarliga hogskola, seule haute ecole artistique publique du domaine apres les fusions de 2014 et 2020, propose deux enseignements de marionnette, Introduktion till dockteater et Introduktion till dockspel, tous deux en fristaende kurser, cours libres hors cursus diplomant, l'un mene en cooperation avec la Marionetteatern du Kulturhuset stadsteatern. Un cours libre n'est pas une formation superieure diplomante specialisee : le denominateur n'est pas satisfait. Le 0,5 precedent etait le milieu d'une fourchette estimee. Reserve : constat etabli sur resumes de moteur, d'ou confiance estime et borne haute a 1.",
       "borne_basse": 0,
       "borne_haute": 1
     },
