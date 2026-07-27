@@ -13,14 +13,17 @@
     },
     {
       "indicator": "venues",
-      "value": 13.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data. Note of 2026-07-27: this observation carried the source 'Exemple de demonstration, a remplacer' with confidence 'sourced', a demonstration placeholder left over from the seeding. A placeholder is not a source, and leaving it in inflated the count of sourced values by two across the repository. Source removed, confidence returned to estimated. The value itself is untouched: it was never sourced to begin with.",
-      "lower_bound": 12,
-      "upper_bound": 15
+      "value": 7.0,
+      "year": 2026,
+      "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Read on 2026-07-27 from the Ministry of Culture's own page for the Centre national de la marionnette label, created by decree on 4 November 2021. Seven structures carry it, each with its postal address on the page: L'Espace Jéliote, Oloron-Sainte-Marie; L'Hectare-Territoires vendômois, Vendôme; Le Mouffetard – Théâtre des arts de la marionnette, 73 rue Mouffetard, Paris; Le Théâtre à la Coque, Hennebont; Le Théâtre de Laval; Le Sablier, which is one structure on two sites at Ifs and Dives-sur-Mer; Le Tas de Sable – Ches Panses Vertes, Rivery. All seven are freestanding organisations, hence seven house and no stage. The page's own text says seven and adds that about ten are expected in the medium term. This is a floor and the map should not be read as though it were a ceiling, which is why the record is disputed. The label is one route to public backing, not the definition of it, and the denominator asks only for a permanent puppetry unit with a venue and a public authority behind it. At least two kinds of French venue meet that and carry no CNMa: the TJP in Strasbourg, a centre dramatique national whose stated vocation is the arts de la marionnette, and the scènes conventionnées d'intérêt national carrying the mention art et création for puppetry, of which Marionnettissimo at Tournefeuille is one. Neither was verified today — the TJP site answered 503 — and neither is counted, because a venue named from memory is not a venue read. The opening estimate was 12 to 15, and it may well prove closer to the truth than this 7. That is not an argument for keeping it: it was produced with no source, and its note listed as CNMa two structures that do not hold the label, Théâtre Jean Arp and Le Bouffou. The seven here can be audited. The estimate could only be believed.",
+      "lower_bound": 7,
+      "upper_bound": 7,
+      "units": {
+        "house": 7
+      }
     },
     {
       "indicator": "schools",
@@ -105,9 +108,10 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "CNMa label: Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou. TJP Strasbourg. ESNAM, Charleville.",
+  "notes": "Seven CNMa: Jéliote (Oloron), L’Hectare (Vendôme), Le Mouffetard (Paris), Théâtre à la Coque (Hennebont), Le Théâtre (Laval), Le Sablier (Ifs/Dives), Le Tas de Sable (Rivery). Outside the label and uncounted: TJP Strasbourg (CDN), Marionnettissimo (Tournefeuille). ESNAM, Charleville.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "venues: 7 is the national label only and is a floor. Sweep the scènes conventionnées d'intérêt national for the mention art et création in puppetry, and settle the TJP Strasbourg, a CDN whose vocation is the arts de la marionnette. Both routes are published by the ministry and by ARTCENA.",
+    "performances: no French source isolating puppetry has been looked for yet. The ministry's statistical department publishes performing-arts data and ARTCENA documents the sector; neither was opened on 2026-07-27."
   ]
 }
