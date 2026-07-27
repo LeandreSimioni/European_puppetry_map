@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. L'Akademija scenskih umjetnosti de l'universite de Sarajevo, principale institution publique du domaine, a ete verifiee departement par departement : jeu ouvert en 1981, mise en scene en 1989, dramaturgie en 1994, production et management en 2010, arts audiovisuels en 2016. Aucun departement de lutkarstvo. Le pays possede pourtant une activite marionnettique institutionnelle, le theatre de marionnettes de Mostar organisant un festival international du genre, mais la production n'est pas la formation et ne se substitue pas a elle pour cet indicateur. Borne haute portee de 0 a 1 : l'academie des arts de Banja Luka n'a pas ete verifiee. Confiance estime, constat etabli sur resumes de moteur.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
