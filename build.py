@@ -167,10 +167,16 @@ def payload(countries):
                      o['share_young_audience']['value'],
                      o['share_income_from_performing']['value']]
         conf[code] = {k: [v['confidence'], v['status']] for k, v in o.items()}
+    # performances is the one optional indicator: a country whose statistics do not
+    # isolate puppetry carries no observation at all, and the map must show that as
+    # an absence rather than as a zero.
+    act = {code: [p['obs']['performances']['value'],
+                  p['obs']['performances'].get('basis')]
+           for code, p in countries.items() if 'performances' in p['obs']}
     pts, _, _ = school_points(countries)
     checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
                if p['obs']['schools'].get('checked_on')}
-    return {'geo': GEO, 'data': data, 'job': job, 'confidence': conf,
+    return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'confidence': conf,
             'school_pts': pts, 'checked_on': checked}
 
 

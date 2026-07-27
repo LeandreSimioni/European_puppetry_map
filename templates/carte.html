@@ -118,12 +118,14 @@
   <header>
     <div class="eyebrow" id="eyebrow">Drawn from memory · no source consulted</div>
     <h1 class="poster">The Europe<br><span class="thin">of puppet booths</span></h1>
-    <p class="standfirst">An institutional geography of puppetry: permanent venues backed by public authorities, specialised higher schools, and what those figures become once set against population. The schools layer has been checked against sources; the rest is still estimate.</p>
+    <p class="standfirst">An institutional geography of puppetry: permanent venues backed by public authorities, specialised higher schools, the volume of performance a country's own statistics record, and what those figures become once set against population. Schools and population are checked against sources, venues and performances are being collected; the trade layer is still estimate.</p>
   </header>
 
   <div class="controls">
     <div class="seggrp"><span class="grplab">Institutions</span>
       <div class="seg" id="mInst" role="group" aria-label="Institutional measures"></div></div>
+    <div class="seggrp"><span class="grplab">Activity</span>
+      <div class="seg" id="mAct" role="group" aria-label="Measures of activity"></div></div>
     <div class="seggrp"><span class="grplab">The trade</span>
       <div class="seg" id="mJob" role="group" aria-label="Measures of the trade"></div></div>
     <button class="toggle" id="tgSchools" aria-pressed="true"><span class="dot"></span>Schools</button>
@@ -133,7 +135,7 @@
 
   <div class="legend">
     <span id="legLo">0</span><div class="ramp"></div><span id="legHi"></span>
-    <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> no venue recorded</span>
+    <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> no value recorded</span>
     <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> school counted · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> uncertain course · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--ocre);vertical-align:-1px"></span> recorded, not counted</span>
     <span style="color:#6E6080">·</span>
     <span>Hatching:
@@ -170,7 +172,7 @@
 
 <script>
 const PAYLOAD = __PAYLOAD__;
-const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, JOBV = PAYLOAD.job;
+const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, JOBV = PAYLOAD.job, ACT = PAYLOAD.act || {};
 const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
 /* The eyebrow line is derived from the data: hard-coded, it goes stale the
    moment a verification pass lands. */
@@ -185,7 +187,8 @@ const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
   const done=Object.keys(par).filter(k=>par[k].s>par[k].n/2);
   const names={schools:'schools',venues:'venues',population_M:'population',dates:'dates',
     titles:'titles',production_life:'production life',share_under_20:'share under 20 dates',
-    share_young_audience:'young-audience share',share_income_from_performing:'income from performing'};
+    share_young_audience:'young-audience share',share_income_from_performing:'income from performing',
+    performances:'performances'};
   el.textContent = (done.length ? done.map(k=>names[k]||k).join(', ')+' checked at source · ' : '')
     + src+' of '+tot+' values sourced · the rest remains an estimate';
 })();
@@ -209,6 +212,13 @@ const METRICS = [
    val:c=>((DATA[c][4]+DATA[c][5])/2)*10/DATA[c][1], fmt:v=>v.toFixed(2),
    hint:'Training capacity against population.'},
 
+  {g:'act', id:'performances', label:'Performances', unit:'puppetry performances a year', pow:.5,
+   val:c=>(ACT[c]?ACT[c][0]:0), fmt:n0,
+   hint:'Counted by the country\'s own statistics. Blank means those statistics isolate no puppetry, which is a fact about the statistical office and not about the activity.'},
+  {g:'act', id:'perf100k', label:'Perf. / 100k pop.', unit:'puppetry performances per 100 000 inhabitants a year', pow:.6,
+   val:c=>(ACT[c]?ACT[c][0]/(DATA[c][1]*10):0), fmt:v=>v.toFixed(1),
+   hint:'The volume of work against the population it is played to. Does not wait on the dates ruling: that one blocks per-performer measures, not per-country ones.'},
+
   {g:'job', id:'dates', label:'Dates / performer', unit:'performances per performer per year', pow:1, j:0, fmt:n0,
    hint:'Estimated median. How often a puppeteer actually gets behind the booth in a year.'},
   {g:'job', id:'titles', label:'Active titles', unit:'active repertoire titles per performer', pow:1, j:1, fmt:n1,
@@ -224,6 +234,7 @@ const METRICS = [
 ];
 METRICS.forEach(m=>{ if(m.g==='job') m.val = c => JOBV[c][m.j]; });
 const IND = {venues:'venues', schools:'schools', venuespop:'venues', schoolspop:'schools',
+  performances:'performances', perf100k:'performances',
   dates:'dates', titles:'titles', life:'production_life', under20:'share_under_20',
   ya:'share_young_audience', income:'share_income_from_performing'};
 const CONF = PAYLOAD.confidence || {};
@@ -442,6 +453,8 @@ function detail(){
       <div class="kv"><span>National schools</span><b>${rg(d[4],d[5])}</b></div>
       <div class="kv"><span>Population</span><b>${d[1]} M</b></div>
       <div class="kv"><span>Venues per million inhabitants</span><b>${(((d[2]+d[3])/2)/d[1]).toFixed(2)}</b></div>
+      <div class="kv"><span>Puppetry performances a year</span><b>${ACT[c]?ACT[c][0].toLocaleString('en')+' <span style="color:#7D6E90;font-size:11px">('+ACT[c][1]+')</span>':'<span style="color:#7D6E90">not isolated by national statistics</span>'}</b></div>
+      ${ACT[c]?`<div class="kv"><span>Performances per 100 000 inhabitants</span><b>${(ACT[c][0]/(d[1]*10)).toFixed(1)}</b></div>`:''}
     </div>
     <h2 style="margin-top:18px">Trade estimates</h2>
     <div>
@@ -494,6 +507,8 @@ function rank(){
     schools:"Two Polish academies, two German schools. Training capacity does not follow demography. Four countries that looked like zeroes turned out to hold a course; two that held one have closed it since 2018.",
     venuespop:"Below a million inhabitants a single venue is enough to top the table. Read Iceland, Malta, Montenegro and Luxembourg with care.",
     schoolspop:"Same caveat: small countries are mechanically favoured by the ratio.",
+    performances:"Blank is not zero. It means the country's statistics isolate no puppetry, which happens far more often than a low count does.",
+    perf100k:"The first measure here that counts work rather than containers. Compare it against venues: the two do not rank the same countries.",
     dates:"Central hypothesis: the gap between permanent employment and intermittent work shows up here before it shows up in budgets.",
     titles:"To be checked first. If the gap holds, it sets an economy of stock against an economy of flow.",
     life:"A production that dies under thirty performances never reached its settled state. To be crossed with the number of new productions a year.",
@@ -507,7 +522,7 @@ function rank(){
 /* ---- controls ---- */
 const allBtns=[];
 METRICS.forEach(m=>{
-  const seg=document.getElementById(m.g==='inst'?'mInst':'mJob');
+  const seg=document.getElementById(m.g==='inst'?'mInst':m.g==='act'?'mAct':'mJob');
   const b=document.createElement('button');
   b.textContent=m.label; b.setAttribute('aria-pressed', m.id===metric.id);
   b.onclick=()=>{ metric=m; allBtns.forEach(x=>x.setAttribute('aria-pressed', x===b)); paint(); };
