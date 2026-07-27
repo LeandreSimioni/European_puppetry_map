@@ -18,7 +18,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Still an opening estimate. Attempted on 2026-07-27 in the transversal venues pass and abandoned on access, not on absence — the note exists so the next attempt starts where this one stopped. Bulgaria is the one country in this batch with a register of exactly the right shape: the Ministry of Culture publishes its list of state drama and drama-puppet theatres, and a separate register of cultural institutes. Three routes into mc.government.bg were tried and all three answered 503, including the print view; a fourth attempt through curl failed on certificate verification rather than reaching the server. The one page that did answer, the Bulgarian theatre directory at theatre.art.bg, returned a partial and garbled reading — four drama-puppet theatres, one of them under a name that does not exist — and was not usable. What surfaced without being read: the country's puppet theatres are the state houses at Sofia, Plovdiv, Varna, Burgas, Ruse, Stara Zagora, Sliven, Yambol, Vidin, Targovishte and Dobrich, with drama-puppet theatres at Silistra, Haskovo and Shumen, and a national puppetry week said to unite state, municipal and private houses across nineteen towns. Every item in that sentence comes from search summaries and none of it is a source. No value produced.",
       "lower_bound": 8,
       "upper_bound": 12
     },
@@ -108,6 +108,7 @@
   "notes": "State puppet theatres in Sofia, Plovdiv, Varna, Burgas and most regional capitals.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: Bulgaria stopped on access on 2026-07-27. The register to reach is the Ministry of Culture's list of state drama and drama-puppet theatres at mc.government.bg, which answered 503 on three routes; the ministry's register of cultural institutes is the second. Both would give public status and town in one document, which is what Poland lacked. The candidate towns are known and the work is one register away."
   ]
 }
