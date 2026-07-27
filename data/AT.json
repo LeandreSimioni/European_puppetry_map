@@ -26,14 +26,30 @@
       "indicator": "schools",
       "value": 0.0,
       "year": 2026,
-      "source": "https://en.wikipedia.org/wiki/University_of_Music_and_Performing_Arts_Vienna",
+      "source": "https://www.mdw.ac.at/institute/",
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained. The mdw, the University of Music and Performing Arts in Vienna and the main public institution in the field, was read at source: its 25 departments include the Max Reinhardt Seminar for drama and the film academy, but no department of figure theatre or puppetry. The only Austrian offerings found belong to private bodies outside the denominator. A trap avoided along the way: the Figurentheater-Kolleg, which search engines return on an Austrian query, is in Bochum, Germany, and has nothing to do with this country. Upper bound raised from 0 to 1: the universities of Graz and Linz were not checked.",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language, revised the same day after the ownership ruling and to record the candidate the first pass had examined without writing it down. No establishment retained. The mdw, the University of Music and Performing Arts in Vienna and the main public institution in the field, was re-read at source, this time on its own site rather than an encyclopaedic entry: its institutes cover composition, conducting, the individual instruments, singing and music theatre, popular and early music, music pedagogy, ethnomusicology and music therapy, plus the Max Reinhardt Seminar for drama and directing and the Filmakademie. No institute of figure theatre, puppetry or object theatre. It is now recorded as an examined and set-aside candidate, which is what the record was missing: it awards state-recognised degrees, simply not in this field, so its reason is outside_denominator. One sentence of the earlier reasoning is withdrawn. It read that the only Austrian offerings found belong to private bodies outside the denominator, which was a valid ground this morning and is not one any more: private bodies are no longer outside by construction, only when they award nothing the State recognises. Those offerings were never opened, so nothing is known about their awards and no claim about them is carried here. Confidence stays at estimated, and not because of the ruling. A source establishing that one institution has no puppetry institute does not establish that the country has no such course; an absence cannot be sourced the way a presence can. Upper bound held at 1: the universities of Graz and Linz were not checked, and the private offerings now need checking too. A trap avoided along the way, kept on record: the Figurentheater-Kolleg, which search engines return on an Austrian query, is in Bochum, Germany, and has nothing to do with this country.",
       "lower_bound": 0,
       "upper_bound": 1,
       "checked_on": "2026-07-27",
-      "establishments": []
+      "establishments": [
+        {
+          "name": "mdw — Universität für Musik und darstellende Kunst Wien",
+          "city": "Vienna",
+          "address": "Anton-von-Webern-Platz 1, 1030 Wien",
+          "lat": 48.1966,
+          "lon": 16.3894,
+          "status": "public",
+          "award": "State-recognised degrees across 25 institutes; no puppetry, figure theatre or object theatre institute among them",
+          "url": "https://www.mdw.ac.at/",
+          "description": "Austria's main public higher education institution for music and the performing arts, holding the Max Reinhardt Seminar for drama and the Filmakademie. Examined and set aside: it awards state-recognised degrees but none in this field, no institute of figure theatre or puppetry appearing among its twenty-five.",
+          "counted": false,
+          "exclusion_reason": "outside_denominator",
+          "source": "https://www.mdw.ac.at/institute/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "dates",
