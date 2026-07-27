@@ -24,12 +24,12 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 1.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://unatc.ro/devunatc/departament/artele-spectacolului-papusi-marionete/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : l'UNATC I.L. Caragiale de Bucarest. Criteres lus a la source : licence Artele spectacolului (Papusi - Marionete), 4 ans, 240 ECTS, 12 places, doublee d'un master Teatru de animatie ; marionnette nommee dans l'intitule du diplome ; universite nationale publique roumaine. Comptage a l'etablissement : licence et master font 1 ecole. La valeur precedente de 1,5 n'etait pas une observation mais le milieu d'une fourchette estimee ; elle est ramenee a la borne basse etablie. Borne haute a 2 : l'universite des arts de Targu Mures n'a pas ete verifiee dans cette passe et reste un candidat non tranche. Aucune source lue n'affirme l'exhaustivite pour la Roumanie.",
       "borne_basse": 1,
       "borne_haute": 2
     },
