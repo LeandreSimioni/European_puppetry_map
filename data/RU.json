@@ -24,12 +24,12 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 1.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://ru.wikipedia.org/wiki/Российский_государственный_институт_сценических_искусств ; https://gitis.net/education/faculties/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays, partie europeenne uniquement. Un etablissement retenu : le RGISI, institut d'Etat russe des arts de la scene de Saint-Petersbourg, dont la faculte de theatre de marionnettes, Fakultet teatra kukol, figure parmi les huit facultes, l'etablissement etant un organisme budgetaire federal d'enseignement superieur. Resultat notable de cette passe : le GITIS de Moscou, que les resumes de moteur presentaient comme formant a la mise en scene et a la scenographie de marionnettes, a ete verifie a la source et sa page des facultes n'en comporte aucune de ce type, les huit facultes etant acteur, mise en scene, theatre musical, critique, choregraphie, nouvelles directions, production et scenographie. La valeur precedente de 1,5 etait le milieu d'une fourchette estimee ; elle est ramenee a 1, seul etablissement etabli. Borne haute a 2 : le GITIS pourrait porter la marionnette au sein d'une de ses facultes sans que sa page de structure le montre, et les ecoles de theatre de province n'ont pas ete verifiees.",
       "borne_basse": 1,
       "borne_haute": 2
     },
