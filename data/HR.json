@@ -12,6 +12,17 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 3874350 inhabitants, recorded as 3.874 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 2014,
+      "year": 2024,
+      "source": "https://podaci.dzs.hr/media/3p0llw4c/kul-2025-2-1_tablice-hr.xlsx",
+      "confidence": "sourced",
+      "status": "verified",
+      "basis": "form",
+      "spectators": 206029,
+      "reasoning": "Read on 2026-07-27 from the tables accompanying release KUL-2025-2-1 of the Croatian Bureau of Statistics, Umjetničko stvaralaštvo i reproduktivno izvođenje, table 1.3. Column 'lutkarska predstava', row 'Predstave, svega': 2 014 performances in 2024, seen by 206 029 visitors, drawn from 215 works of which 31 were premieres. Basis 'form': Croatia classes each work performed by kind, so this is puppetry wherever it was played. The same table shows how far that reaches beyond the puppet houses — of the 2 014, professional theatres account for 939, professional children's theatres for 1 061, and amateur companies for 14. The children's theatres out-perform the professional houses on puppetry, which no organisation-based count would show. The 14 amateur performances are inside the figure because 2 014 is the number the table gives; subtracting them would be a construction, and they are seven tenths of one per cent. One discontinuity to carry forward: this release states that the performing-arts survey moved from a season basis to the calendar year. Croatian figures before 2024 are seasons and are not directly comparable with this one."
+    },
+    {
       "indicator": "venues",
       "value": 4.5,
       "year": null,
