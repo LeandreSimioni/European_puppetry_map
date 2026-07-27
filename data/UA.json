@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 36,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "value": 40.998,
+      "year": 2022,
+      "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&sex=T&age=TOTAL&lang=en&sinceTimePeriod=2019&geo=AD&geo=BA&geo=BY&geo=UK&geo=RU&geo=SM&geo=UA&geo=XK",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "DISPUTED. Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2022: 40997698 inhabitants, Eurostat dataset demo_pjan, read through the dissemination API. That is the last row Eurostat publishes for Ukraine, and the date is the whole problem: it is the stock recorded weeks before the full-scale invasion of February 2022. The status is disputed rather than verified because what is in question is not the figure, which is correctly read, but the denominator behind it. Total population of Ukraine in 2026 has no single answer: the resident population, the de jure population including those displaced abroad, and the population of territory under government control are three different numbers, and the indicator's denominator, written as simple total population, does not say which is meant. Recording 40.998 without that caveat would put a pre-war figure on a 2026 map. To be settled by a ruling on which population is counted, then sourced against a body that publishes on that basis."
     },
     {
       "indicator": "venues",
