@@ -24,12 +24,12 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
+      "valeur": 0.0,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, sur une fermeture recente et documentee. La Royal Central School of Speech and Drama, composante de l'Universite de Londres, a porte le premier diplome universitaire de marionnette du Royaume-Uni, le BA Puppetry: Design and Performance, seul BA de marionnette du pays et pilier de la formation de l'ecole pendant plus de vingt-cinq ans. Ce cursus n'accueille plus de nouveaux etudiants depuis l'annee universitaire 2018-19 et n'est plus dispense ; la marionnette subsiste comme composante integree a d'autres cursus, de Theatre Practice a Acting et Applied Theatre. Un master de marionnette est annonce en developpement, sans qu'aucune source ne permette d'etablir qu'il a ouvert. En l'etat aucune formation ne satisfait le denominateur et la valeur passe de 0,5 a 0. Borne haute a 1 pour porter ce master annonce : si son ouverture est confirmee, le Royaume-Uni repasse a 1. Confiance estime, le site de l'ecole renvoyant un refus a la lecture automatisee.",
       "borne_basse": 0,
       "borne_haute": 1
     },
