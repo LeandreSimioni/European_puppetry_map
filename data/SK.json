@@ -23,7 +23,79 @@
       "upper_bound": 5,
       "units": {
         "house": 5
-      }
+      },
+      "venues_list": [
+        {
+          "name": "Bratislavské bábkové divadlo",
+          "city": "Bratislava",
+          "address": "Dunajská 2319/36, 811 08 Bratislava",
+          "lat": 48.14509,
+          "lon": 17.1183,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 00164879",
+          "url": "https://www.babkovedivadlo.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo Žilina",
+          "city": "Žilina",
+          "address": "Kuzmányho 106/6, 011 37 Žilina",
+          "lat": 49.22434,
+          "lon": 18.73619,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 36145211",
+          "url": "https://www.bdz.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo na Rázcestí",
+          "city": "Banská Bystrica",
+          "address": "Skuteckého 127/14, 974 01 Banská Bystrica",
+          "lat": 48.73909,
+          "lon": 19.15209,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 35985381",
+          "url": "https://bdnr.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Bábkové divadlo v Košiciach",
+          "city": "Košice",
+          "address": "Tajovského 736/4, 040 01 Košice",
+          "lat": 48.71898,
+          "lon": 21.25407,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 31297811",
+          "url": "https://www.bdke.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Staré divadlo Karola Spišáka v Nitre",
+          "city": "Nitra",
+          "address": "7. pešieho pluku 1560/1, 949 01 Nitra",
+          "lat": 48.30688,
+          "lon": 18.08498,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "IČO 36103004",
+          "url": "https://sdn.sk",
+          "source": "https://api.statistics.sk/rpo/v1/search?fullName=b%C3%A1bkov%C3%A9%20divadlo&limit=30",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",

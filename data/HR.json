@@ -34,7 +34,65 @@
       "upper_bound": 4,
       "units": {
         "house": 4
-      }
+      },
+      "venues_list": [
+        {
+          "name": "Zagrebačko kazalište lutaka",
+          "city": "Zagreb",
+          "address": "Trg kralja Tomislava 19/I, Zagreb",
+          "lat": 45.80693,
+          "lon": 15.97776,
+          "unit": "house",
+          "parent": null,
+          "authority": null,
+          "registration": "KAZ-016/4",
+          "url": "https://zkl.hr",
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Gradsko kazalište lutaka Rijeka",
+          "city": "Rijeka",
+          "address": "Blaža Polića 6, Rijeka",
+          "lat": 45.33049,
+          "lon": 14.43455,
+          "unit": "house",
+          "parent": null,
+          "authority": "Grad Rijeka, per the theatre's name",
+          "registration": "KAZ-034/5",
+          "url": null,
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Gradsko kazalište lutaka Split",
+          "city": "Split",
+          "address": "Tončićeva 1, Split",
+          "lat": 43.50983,
+          "lon": 16.43689,
+          "unit": "house",
+          "parent": null,
+          "authority": "Grad Split, per the theatre's name",
+          "registration": "KAZ-038/12",
+          "url": null,
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Kazalište lutaka Zadar",
+          "city": "Zadar",
+          "address": "Sokolska 1, Zadar",
+          "lat": 44.11258,
+          "lon": 15.22743,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministarstvo kulture i medija, Zadarska županija and Grad Zadar, per the theatre's own site",
+          "registration": "KAZ-074/7",
+          "url": "https://www.klz.hr",
+          "source": "https://min-kulture.gov.hr/istaknute-teme/ocevidnik-kazalista-16607/abecedni-popis-kazalista/19979",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",

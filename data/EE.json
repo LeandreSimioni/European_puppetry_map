@@ -35,7 +35,23 @@
       "upper_bound": 1,
       "units": {
         "house": 1
-      }
+      },
+      "venues_list": [
+        {
+          "name": "Eesti Noorsooteater",
+          "city": "Tallinn",
+          "address": "Lai 1 / Nunne 4, 10133 Tallinn",
+          "lat": 59.43824,
+          "lon": 24.74327,
+          "unit": "house",
+          "parent": null,
+          "authority": "Riigi osalusega sihtasutus — a foundation the State holds a stake in",
+          "registration": null,
+          "url": "https://www.eestinoorsooteater.ee",
+          "source": "https://statistika.teater.ee/stat/theatres/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",

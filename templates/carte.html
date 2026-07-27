@@ -50,6 +50,8 @@
      geographic scope or outside the denominator. Hollow and ochre. */
   .school.hors{fill:none;stroke:var(--ocre);stroke-width:1.2;stroke-dasharray:1.5 1.5}
   .schoolhit{fill:transparent;cursor:pointer}
+  .venue{fill:var(--ocre);stroke:#3A2410;stroke-width:.7;pointer-events:none}
+  .venue.stage{fill:none;stroke:var(--ocre);stroke-width:1.4}
   .clabel{fill:var(--os);font-size:11px;text-anchor:middle;pointer-events:none;
     paint-order:stroke;stroke:#1B1329;stroke-width:2.6px;stroke-linejoin:round}
 
@@ -128,6 +130,7 @@
       <div class="seg" id="mAct" role="group" aria-label="Measures of activity"></div></div>
     <div class="seggrp"><span class="grplab">The trade</span>
       <div class="seg" id="mJob" role="group" aria-label="Measures of the trade"></div></div>
+    <button class="toggle" id="tgVenues" aria-pressed="true"><span class="dot"></span>Venues</button>
     <button class="toggle" id="tgSchools" aria-pressed="true"><span class="dot"></span>Schools</button>
     <button class="toggle" id="tgLabels" aria-pressed="false"><span class="dot"></span>Names</button>
   </div>
@@ -175,17 +178,24 @@ const PAYLOAD = __PAYLOAD__;
 const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, JOBV = PAYLOAD.job, ACT = PAYLOAD.act || {};
 const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
 const UNITS = PAYLOAD.units || {};
+const VPTS = PAYLOAD.venue_pts || {};
+const VLIST = PAYLOAD.venue_list || {};
 /* The eyebrow line is derived from the data: hard-coded, it goes stale the
    moment a verification pass lands. */
 (function(){
   const conf=PAYLOAD.confidence||{}; const par={}; let tot=0, src=0;
+  const nCountries=Object.keys(conf).length;
   for(const c in conf) for(const k in conf[c]){
     tot++; par[k]=par[k]||{n:0,s:0}; par[k].n++;
     if(conf[c][k][0]!=='estimated'){ src++; par[k].s++; }
   }
   const el=document.getElementById('eyebrow'); if(!el) return;
   if(!src){ el.textContent='Drawn from memory · no source consulted'; return; }
-  const done=Object.keys(par).filter(k=>par[k].s>par[k].n/2);
+  /* An indicator a country is allowed not to have would otherwise call itself
+     checked on a handful of values: performances exists in six countries and
+     is sourced in all six. Measure coverage against the map, not against the
+     rows that happen to exist. */
+  const done=Object.keys(par).filter(k=>par[k].s>nCountries/2);
   const names={schools:'schools',venues:'venues',population_M:'population',dates:'dates',
     titles:'titles',production_life:'production life',share_under_20:'share under 20 dates',
     share_young_audience:'young-audience share',share_income_from_performing:'income from performing',
@@ -240,7 +250,7 @@ const IND = {venues:'venues', schools:'schools', venuespop:'venues', schoolspop:
   ya:'share_young_audience', income:'share_income_from_performing'};
 const CONF = PAYLOAD.confidence || {};
 function conf(c){ const e = (CONF[c]||{})[IND[metric.id]]; return e || ['estimated','open']; }
-let metric = METRICS[0], showSchools = true, showLabels = false, selected = 'FR';
+let metric = METRICS[0], showSchools = true, showVenues = true, showLabels = false, selected = 'FR';
 
 /* ---- booth curtain ---- */
 (function drape(){
@@ -275,8 +285,9 @@ const NS='http://www.w3.org/2000/svg';
 const gC = document.createElementNS(NS,'g');
 const gH = document.createElementNS(NS,'g');
 const gS = document.createElementNS(NS,'g');
+const gV = document.createElementNS(NS,'g');
 const gL = document.createElementNS(NS,'g');
-map.append(gC,gH,gS,gL);
+map.append(gC,gH,gV,gS,gL);
 
 const codes = Object.keys(GEO.paths).filter(c=>DATA[c]);
 for(const c of codes){
@@ -327,6 +338,38 @@ function drawHatch(){
     q.setAttribute('fill', cf==='sourced' ? 'none' : cf==='declared' ? 'url(#hLight)' : 'url(#hDense)');
     q.setAttribute('opacity', st==='disputed' ? 1 : .82);
   }
+}
+function drawVenues(){
+  gV.innerHTML='';
+  if(!showVenues) return;
+  for(const c of codes){
+    for(const [x,y,name,city,address,unit,parent,authority,url] of (VPTS[c]||[])){
+      const m=document.createElementNS(NS,'rect');
+      const r=unit==='stage'?3.4:3.8;
+      m.setAttribute('x',x-r); m.setAttribute('y',y-r);
+      m.setAttribute('width',r*2); m.setAttribute('height',r*2);
+      m.setAttribute('transform',`rotate(${unit==='stage'?45:0} ${x} ${y})`);
+      m.setAttribute('class','venue'+(unit==='stage'?' stage':''));
+      gV.appendChild(m);
+      const hit=document.createElementNS(NS,'circle');
+      hit.setAttribute('cx',x); hit.setAttribute('cy',y); hit.setAttribute('r',9);
+      hit.setAttribute('class','schoolhit');
+      hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showVenueTip(ev,name,city,unit,parent,authority);});
+      hit.addEventListener('mouseleave',hideTip);
+      hit.addEventListener('click',ev=>{ev.stopPropagation();select(c);});
+      gV.appendChild(hit);
+    }
+  }
+}
+function showVenueTip(ev,name,city,unit,parent,authority){
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  tip.innerHTML=`<div class="t">${unit==='stage'?'puppet stage':'puppet house'}</div>`
+    +`<b>${esc(name)}</b>${city?'<br>'+esc(city):''}`
+    +(parent?`<br><span style="color:#B7A9C4">inside ${esc(parent)}</span>`:'')
+    +(authority?`<br><span style="color:#9C8DAE;font-size:12px">${esc(authority)}</span>`:'');
+  tip.classList.add('on');
+  const x=Math.min(ev.clientX+16, innerWidth-286), y=Math.min(ev.clientY+16, innerHeight-120);
+  tip.style.left=x+'px'; tip.style.top=y+'px';
 }
 function drawSchools(){
   gS.innerHTML='';
@@ -414,7 +457,7 @@ function paint(){
   st.className = 'status '+(solid?'releve':'hypo');
   st.innerHTML = `<span class="badge">${tally.sourced} sourced · ${tally.declared} declared · ${tally.estimated} estimated`
     + (tally.disputed?` · ${tally.disputed} disputed`:'') + `</span><span>${metric.hint}</span>`;
-  drawHatch(); drawSchools(); drawLabels(); rank(); detail();
+  drawHatch(); drawVenues(); drawSchools(); drawLabels(); rank(); detail();
 }
 
 /* ---- tooltip ---- */
@@ -467,8 +510,26 @@ function detail(){
       <div class="kv"><span>Young-audience share</span><b>${e[4]}%</b></div>
       <div class="kv"><span>Income from performing</span><b>${e[5]}%</b></div>
     </div>
+    ${venuesHTML(c)}
     ${schoolsHTML(c)}
     ${d[6]?`<p class="note">${d[6]}</p>`:''}`;
+}
+/* Named list of venues, same purpose as the establishments list below: the
+   count has to be auditable one entry at a time, on the page and not only in
+   the data. */
+function venuesHTML(c){
+  const pts=(VLIST[c]||[]);
+  if(!pts.length) return '';
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const li=pts.map(v=>`
+    <li style="margin-bottom:10px;list-style:none">
+      <div style="font-weight:600;line-height:1.3">${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.name)}</a>`:esc(v.name)}
+        <span style="font-weight:400;color:${v.unit==='stage'?'var(--ocre)':'#9C8DAE'};font-size:12px">${v.unit==='stage'?'stage inside '+esc(v.parent||''):'house'}</span></div>
+      ${v.city||v.address?`<div style="color:#B7A9C4;font-size:12.5px">${esc([v.address,v.city].filter(Boolean)[0]||'')}</div>`:'<div style="color:#7D6E90;font-size:12.5px">no address read</div>'}
+      ${v.authority?`<div style="color:#9C8DAE;font-size:12px">${esc(v.authority)}</div>`:''}
+      ${v.registration?`<div class="mono" style="color:#7D6E90;font-size:11px">${esc(v.registration)}</div>`:''}
+    </li>`).join('');
+  return `<h2 style="margin-top:18px">Venues counted</h2><ul style="padding:0;margin:8px 0 0">${li}</ul>`;
 }
 /* Named list of establishments: the map has to stay usable away from the
    screen, hence city, address, award, description, link and collection date. */
@@ -530,6 +591,8 @@ METRICS.forEach(m=>{
   b.onclick=()=>{ metric=m; allBtns.forEach(x=>x.setAttribute('aria-pressed', x===b)); paint(); };
   allBtns.push(b); seg.appendChild(b);
 });
+const tV=document.getElementById('tgVenues');
+tV.onclick=()=>{ showVenues=!showVenues; tV.setAttribute('aria-pressed',showVenues); drawVenues(); };
 const tS=document.getElementById('tgSchools'), tL=document.getElementById('tgLabels');
 tS.onclick=()=>{ showSchools=!showSchools; tS.setAttribute('aria-pressed',showSchools); drawSchools(); drawLabels(); };
 tL.onclick=()=>{ showLabels=!showLabels; tL.setAttribute('aria-pressed',showLabels); drawLabels(); };

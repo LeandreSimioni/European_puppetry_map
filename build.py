@@ -30,6 +30,8 @@ SCHOOL_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'status', 'award',
 SCHOOL_STATUSES = {'public', 'private', 'foundation'}
 PERF_BASES = {'form', 'organisation'}
 VENUE_UNITS = ('house', 'stage', 'unknown')
+VENUE_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'unit', 'parent',
+                'authority', 'registration', 'url', 'source', 'checked_on')
 
 
 def check_venues(code, o):
@@ -50,7 +52,43 @@ def check_venues(code, o):
     total = sum(u.get(k, 0) for k in VENUE_UNITS)
     if total != low:
         return [f'{code}/venues: units sum to {total} but lower_bound = {low}']
-    return []
+    # A count taken from a statistical aggregate names nobody and cannot be listed.
+    # Everything else must enumerate itself.
+    if u.get('unknown'):
+        return []
+    err, lst = [], o.get('venues_list')
+    if not isinstance(lst, list):
+        return [f'{code}/venues: no venues_list. A count that cannot be enumerated '
+                f'cannot be audited.']
+    tally = {}
+    for v in lst:
+        where = v.get('name') or v.get('city') or '?'
+        missing = [c for c in VENUE_FIELDS if c not in v]
+        if missing:
+            err.append(f'{code}/venues/{where}: missing fields {missing}')
+            continue
+        if v['unit'] not in ('house', 'stage'):
+            err.append(f"{code}/venues/{where}: unit must be house or stage, not '{v['unit']}'")
+        if v['unit'] == 'stage' and not v.get('parent'):
+            err.append(f'{code}/venues/{where}: a stage must name the organisation it sits inside')
+        # A venue absent from the gazetteer keeps its place in the count and
+        # loses only its point on the map. Better an unmapped venue than an
+        # invented coordinate.
+        for c in ('lat', 'lon'):
+            if v[c] is not None and not isinstance(v[c], (int, float)):
+                err.append(f'{code}/venues/{where}: {c} is neither a number nor null')
+        if (v['lat'] is None) != (v['lon'] is None):
+            err.append(f'{code}/venues/{where}: half a coordinate is not a coordinate')
+        if not v.get('source'):
+            err.append(f'{code}/venues/{where}: no source')
+        tally[v['unit']] = tally.get(v['unit'], 0) + 1
+    if len(lst) != low:
+        err.append(f'{code}/venues: {len(lst)} venue(s) listed but lower_bound = {low}')
+    for k in ('house', 'stage'):
+        if u.get(k, 0) != tally.get(k, 0):
+            err.append(f'{code}/venues: units says {k}={u.get(k, 0)} but the list holds '
+                       f'{tally.get(k, 0)}')
+    return err
 
 
 def check_schools(code, o):
@@ -176,6 +214,29 @@ def school_points(countries):
     return pts, shifted, lost
 
 
+def venue_points(countries):
+    """[x, y, name, city, address, unit, parent, authority, url] per country.
+    A venue with no coordinate keeps its place in the count and simply does not
+    appear on the map."""
+    pts, lost = {}, []
+    for code, p in countries.items():
+        lst = []
+        for e in p['obs']['venues'].get('venues_list', []):
+            if e['lat'] is None:
+                continue
+            r = locate(code, e['lon'], e['lat'])
+            if r is None:
+                lost.append(f"{code}/{e['name']}")
+                continue
+            x, y, _ = r
+            lst.append([round(x, 1), round(y, 1), e['name'], e.get('city') or '',
+                        e.get('address') or '', e['unit'], e.get('parent') or '',
+                        e.get('authority') or '', e.get('url') or ''])
+        if lst:
+            pts[code] = lst
+    return pts, lost
+
+
 def payload(countries):
     """Pivots the long format into the structure the template expects."""
     data, job, conf = {}, {}, {}
@@ -202,10 +263,16 @@ def payload(countries):
     units = {code: p['obs']['venues']['units']
              for code, p in countries.items() if p['obs']['venues'].get('units')}
     pts, _, _ = school_points(countries)
+    vpts, _ = venue_points(countries)
+    vlist = {code: [{k: e[k] for k in ('name', 'city', 'address', 'unit', 'parent',
+                                       'authority', 'registration', 'url')}
+                    for e in p['obs']['venues'].get('venues_list', [])]
+             for code, p in countries.items() if p['obs']['venues'].get('venues_list')}
     checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
                if p['obs']['schools'].get('checked_on')}
     return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'units': units,
-            'confidence': conf, 'school_pts': pts, 'checked_on': checked}
+            'confidence': conf, 'school_pts': pts, 'venue_pts': vpts, 'venue_list': vlist,
+            'checked_on': checked}
 
 
 def tally(countries):
@@ -230,6 +297,11 @@ def main():
     pts, shifted, lost = school_points(countries)
     tot = sum(len(v) for v in pts.values())
     print(f'{tot} establishments located across {len(pts)} countries')
+    vpts, vlost = venue_points(countries)
+    vtot = sum(len(v) for v in vpts.values())
+    nlist = sum(len(p['obs']['venues'].get('venues_list', [])) for p in countries.values())
+    print(f'{vtot} venues located of {nlist} listed, across {len(vpts)} countries')
+    lost += vlost
     if shifted:
         print(f'  pulled inland (generalised coastline): {", ".join(shifted)}')
     if lost:

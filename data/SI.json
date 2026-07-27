@@ -23,7 +23,37 @@
       "upper_bound": 2,
       "units": {
         "house": 2
-      }
+      },
+      "venues_list": [
+        {
+          "name": "Lutkovno gledališče Maribor",
+          "city": "Maribor",
+          "address": "Vojašniški trg 2a, 2000 Maribor",
+          "lat": 46.55701,
+          "lon": 15.64203,
+          "unit": "house",
+          "parent": null,
+          "authority": "Mestna občina Maribor — founding decree MUV 22/2004",
+          "registration": "MUV 22/2004",
+          "url": "https://www.lg-mb.si",
+          "source": "https://www.lg-mb.si/f/docs/informacije-javnega-znacaja/2_POROCILO-2025.pdf",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Lutkovno gledališče Ljubljana",
+          "city": "Ljubljana",
+          "address": "Krekov trg 2, Ljubljana",
+          "lat": 46.05013,
+          "lon": 14.5101,
+          "unit": "house",
+          "parent": null,
+          "authority": "Co-financed by the Ministrstvo za kulturo and the Mestna občina Ljubljana",
+          "registration": null,
+          "url": "https://www.lgl.si",
+          "source": "https://www.lgl.si/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",

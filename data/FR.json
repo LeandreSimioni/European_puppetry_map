@@ -23,7 +23,107 @@
       "upper_bound": 7,
       "units": {
         "house": 7
-      }
+      },
+      "venues_list": [
+        {
+          "name": "L'Espace Jéliote",
+          "city": "Oloron-Sainte-Marie",
+          "address": "Rue de la Poste, 64400 Oloron-Sainte-Marie",
+          "lat": 43.19062,
+          "lon": -0.61139,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://jeliote.hautbearn.fr",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "L'Hectare – Territoires vendômois",
+          "city": "Vendôme",
+          "address": "8 rue César de Vendôme, 41100 Vendôme",
+          "lat": 47.79216,
+          "lon": 1.0712,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.lhectare.fr",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Le Mouffetard – Théâtre des arts de la marionnette",
+          "city": "Paris",
+          "address": "73 rue Mouffetard, 75005 Paris",
+          "lat": 48.84221,
+          "lon": 2.34982,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.lemouffetard.com",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Le Théâtre à la Coque",
+          "city": "Hennebont",
+          "address": "3 rue de la Paix, 56700 Hennebont",
+          "lat": 47.80561,
+          "lon": -3.28007,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.theatrealacoque.fr",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Le Théâtre de Laval",
+          "city": "Laval",
+          "address": "34 rue de la Paix, 53013 Laval cedex",
+          "lat": 48.07077,
+          "lon": -0.76757,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.letheatre.laval.fr",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Le Sablier",
+          "city": "Ifs",
+          "address": "Square de Niederwern, 14123 Ifs; second site Hôtel de Ville, rue du Général de Gaulle, 14160 Dives-sur-Mer",
+          "lat": 49.15069,
+          "lon": -0.34907,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.le-sablier.org",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Le Tas de Sable – Ches Panses Vertes",
+          "city": "Rivery",
+          "address": "1 bis rue d'Allonville, 80136 Rivery",
+          "lat": 49.92487,
+          "lon": 2.33394,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture, label Centre national de la marionnette",
+          "registration": null,
+          "url": "https://www.letasdesable-cpv.org",
+          "source": "https://www.culture.gouv.fr/thematiques/theatre-spectacles/le-theatre-et-les-spectacles-en-france/centres-nationaux-de-la-marionnette-cnma",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",

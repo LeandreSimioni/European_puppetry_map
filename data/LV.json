@@ -34,7 +34,37 @@
       "upper_bound": 2,
       "units": {
         "house": 2
-      }
+      },
+      "venues_list": [
+        {
+          "name": "Latvijas Leļļu teātris",
+          "city": "Rīga",
+          "address": "Krišjāņa Barona iela 16/18, Rīga",
+          "lat": 56.95128,
+          "lon": 24.12169,
+          "unit": "house",
+          "parent": null,
+          "authority": "State — a valsts kultūras kapitālsabiedrība",
+          "registration": null,
+          "url": "https://www.lelluteatris.lv",
+          "source": "https://www.km.gov.lv/lv/teatris-saites",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Liepājas Leļļu teātris",
+          "city": "Liepāja",
+          "address": "Rožu laukums 5/6, LV-3401 Liepāja",
+          "lat": 56.50766,
+          "lon": 21.01239,
+          "unit": "house",
+          "parent": null,
+          "authority": "Liepāja municipality — a Pašvaldības SIA",
+          "registration": null,
+          "url": "https://liepajaslelles.lv",
+          "source": "https://www.km.gov.lv/lv/teatris-saites",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
