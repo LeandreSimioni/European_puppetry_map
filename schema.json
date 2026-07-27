@@ -50,6 +50,21 @@
       "known_bias": "The scope of this indicator no longer matches the scope of schools, and that is deliberate rather than an oversight. Population covers the whole country; schools counts only establishments in Europe. Any ratio built from the two is therefore inconsistent for Russia and Turkey. For Turkey the effect is nil, its schools count being zero under either scope. For Russia it inflates the denominator, the counted school being in Saint Petersburg while the population now includes Siberia and the Far East. Read per-inhabitant figures for those two countries with that in mind, or exclude them."
     },
     {
+      "id": "performances",
+      "label": "Performances per year",
+      "unit": "performances",
+      "layer": "activity",
+      "denominator": "Performances of puppetry or object theatre given in the country during the reference year, tour dates and dates played abroad included. What is wanted is the form, whoever produces it.",
+      "basis": "Mandatory field on every observation, and the reason this indicator is not comparable with itself across all countries. Two values. 'form' means the source counts performances by genre of production, so a puppetry production staged by a drama theatre is inside and a puppet theatre's straight play is outside — this is the denominator above, met exactly. 'organisation' means the source counts the output of named puppet theatres whatever they staged, which is a proxy: it drops puppetry made elsewhere and picks up non-puppetry made in the right building. The build refuses an observation that does not say which it is.",
+      "ruling": "Settled 2026-07-27, after Estonia and Latvia disagreed on the first day of collection. The first denominator written that morning was organisation-based, on the assumption that statistical offices count institutions. Estonia refutes it: its table KU091 classes every performance in the country by genre and carries 'nuku- ja objektiteatri lavastus' as its own category. Latvia confirms it: its table KUT020 lists state culture companies by name, and puppetry is whatever the Latvian Puppet Theatre did. Rather than force one country into the other's shape, the target denominator is the one worth having — the form — and each observation declares how far its source falls from it.",
+      "known_bias": "On an 'organisation' basis, measures the institutional segment and only it. Independent companies reporting to nobody are absent, which understates exactly the systems the venues indicator already understates — the same mechanism twice, so the two errors compound rather than cancel. A 'form' basis escapes that only as far as its statistical office reaches, which is usually to the theatres that file returns and no further. And the class travels badly: a country whose statistics isolate no puppetry produces no value here at all, which is a fact about the statistical apparatus and not about the activity. Never read a missing value as a low one.",
+      "no_value": "A country whose statistics do not isolate puppetry carries no observation for this indicator at all, rather than a zero or an estimate. The build treats the indicator as optional for that reason: it is the first indicator in the series a country is allowed not to have. This is deliberate — the alternative was an estimate, and an estimate here would be indistinguishable from a measurement of a small country.",
+      "also_collect": [
+        "spectators",
+        "number of reporting organisations"
+      ]
+    },
+    {
       "id": "dates",
       "label": "Performances per performer per year",
       "unit": "performances",
@@ -134,7 +149,6 @@
     "median number of performances per touring contract",
     "number of distinct applications needed to finance one production",
     "median delay between application and decision",
-    "performances per 100,000 inhabitants per year",
     "share of performances played outside the country of origin"
   ]
 }

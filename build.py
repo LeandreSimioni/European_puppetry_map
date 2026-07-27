@@ -28,6 +28,7 @@ STATUSES = set(SCHEMA['status'])
 SCHOOL_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'status', 'award',
                  'url', 'description', 'counted', 'source', 'checked_on')
 SCHOOL_STATUSES = {'public', 'private', 'foundation'}
+PERF_BASES = {'form', 'organisation'}
 
 
 def check_schools(code, o):
@@ -89,6 +90,10 @@ def load():
                 errors.append(f"{code}/{ind}: confidence '{o['confidence']}' with no source")
             if ind == 'schools':
                 errors += check_schools(code, o)
+            if ind == 'performances' and o.get('basis') not in PERF_BASES:
+                errors.append(f"{code}/performances: basis must be one of "
+                              f"{sorted(PERF_BASES)}, a count of puppetry that does not "
+                              f"say whether it counts a form or an institution is unreadable")
             vals[ind] = o
         missing = [r for r in REQUIRED if r not in vals]
         if missing:
