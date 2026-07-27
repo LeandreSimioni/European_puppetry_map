@@ -13,14 +13,14 @@
     },
     {
       "indicator": "venues",
-      "value": 7.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 6,
-      "upper_bound": 8
+      "value": 12.5,
+      "year": 2026,
+      "source": "https://babmuveszekszovetsege.hu/tagok/kiemelt-minositesu-babszinhazak/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Checked on 2026-07-27 against the directory of the Magyar Bábművészek Szövetsége, the Hungarian puppet artists' association, which sorts its member houses into 'kiemelt minősítésű bábszínházak' — puppet theatres carrying the designation awarded under the 2008 performing arts act, which is what brings central budget support — and houses without it. Thirteen carry the designation: Budapest Bábszínház, Bóbita, Ciróka, Miskolci Csodamalom, Griff, Harlekin, Kabóca, Kolibri Gyermek- és Ifjúsági Színház, Kövér Béla, Mesebolt, Napsugár, Vaskakas, Vojtina. Five further members carry no designation and stay out. Disputed twice over, which is what the bounds carry. One: Kolibri is a children's and youth theatre by name and vocation, listed among puppet houses by the puppet profession itself; counting it gives 13, holding to houses whose vocation is puppetry gives 12. Two, and more serious: this is a membership list, not the statutory register. The register of performing-arts organisations is kept by the Performing Arts Office and published monthly, and it is the document that would settle this — three routes to it were tried and none resolved, one of them failing at DNS. A designated puppet theatre that has not joined the association would be missing here, so 13 is a floor and not a ceiling. No cities are recorded because the directory gives none, and filling them in from memory is how a source stops being one. The opening estimate was 6 to 8, built from a note naming three houses. It is wrong by a factor of nearly two: Hungary carries one of the densest networks of designated puppet theatres in Europe and the file had it as a small one.",
+      "lower_bound": 12,
+      "upper_bound": 13
     },
     {
       "indicator": "schools",
@@ -105,9 +105,10 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Budapest Puppet Theatre. Vaskakas, Győr. Ciróka, Kecskemét. Puppet training at SZFE.",
+  "notes": "Thirteen puppet theatres carry the state designation: Budapest, Bóbita, Ciróka, Miskolci Csodamalom, Griff, Harlekin, Kabóca, Kolibri, Kövér Béla, Mesebolt, Napsugár, Vaskakas, Vojtina.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "venues: reach the statutory register of performing-arts organisations kept by the Előadó-művészeti Iroda and published monthly, and read the designated puppet theatres off it. The association directory used here is a membership list and can only be a floor. Rule on Kolibri at the same time.",
+    "performances: settled negative, 2026-07-27. KSH table 16.1.1.13 gives theatres, performances and attendance for the country as a whole with no breakdown by type of theatre, and no other KSH culture table isolates puppetry. No observation recorded."
   ]
 }
