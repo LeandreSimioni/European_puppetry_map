@@ -1,96 +1,113 @@
 {
   "code": "PT",
-  "nom": "Portugal",
+  "name": "Portugal",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 10.6,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 10.6,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 2.5,
-      "annee": null,
+      "indicator": "venues",
+      "value": 2.5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 2,
-      "borne_haute": 3
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 2,
+      "upper_bound": 3
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://www.eselx.ipl.pt/curso/pos-graduacao/marionetas-e-formas-animadas",
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained, the value moving from 0 to 1: the Lisbon School of Education (ESELx), part of the Lisbon Polytechnic, a public institution. Criterion read at source: a postgraduate course in Puppetry and Animated Forms, 60 ECTS over two semesters, taught on site. Puppetry is the object of the training itself. Qualification caveat on record: this is a postgraduate course rather than a bachelor's or master's degree, making it a degree-granting higher education course but in a shorter format than those counted elsewhere in the series. Since the denominator sets no floor beyond being higher education and degree-granting, it is retained. Upper bound held at 1: the page read states the course is unique in Portugal's advanced training landscape and the country's only entry in the world directory of schools in the field. Read, not inferred.",
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "Escola Superior de Educação de Lisboa (Instituto Politécnico de Lisboa)",
+          "city": "Lisbon",
+          "address": "Campus de Benfica do IPL, 1549-003 Lisboa",
+          "lat": 38.7503,
+          "lon": -9.2027,
+          "status": "public",
+          "award": "Postgraduate course in Puppetry and Animated Forms, 60 ECTS",
+          "url": "https://www.eselx.ipl.pt/",
+          "description": "Part of the public Lisbon Polytechnic. Shorter than the degrees counted elsewhere in this series, but it describes itself as the only advanced puppetry training in Portugal and the country's only entry in the world directory of puppetry schools.",
+          "counted": true,
+          "source": "https://www.eselx.ipl.pt/curso/pos-graduacao/marionetas-e-formas-animadas",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 65,
-      "annee": null,
+      "indicator": "dates",
+      "value": 65,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 4,
-      "annee": null,
+      "indicator": "titles",
+      "value": 4,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 140,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 140,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 28,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 28,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 60,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 60,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Museu da Marioneta (Lisbonne), Teatro de Marionetas do Porto",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "São Lourenço, Lisbon. FIMP festival, Porto. Robertos tradition.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

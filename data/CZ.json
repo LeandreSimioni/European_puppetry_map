@@ -1,96 +1,113 @@
 {
   "code": "CZ",
-  "nom": "Tchéquie",
+  "name": "Czechia",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 10.9,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 10.9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 9.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 9.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 8,
-      "borne_haute": 10
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 8,
+      "upper_bound": 10
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 1,
-      "borne_haute": 1
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://www.damu.cz/cs/katedry-programy/katedra-alternativniho-a-loutkoveho-divadla/",
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Department of Alternative and Puppet Theatre (KALD) of DAMU, the theatre faculty of the Academy of Performing Arts in Prague. All four criteria of the denominator were read at source: higher education across bachelor's, master's and doctoral levels; degree-granting; puppetry named in the department's own title and in each programme title; state institution. Counted by establishment, not by programme: three bachelor's degrees plus a master's are one school, so 1 and not 4. Upper bound raised to 2 because JAMU in Brno was not checked in this pass and remains an unresolved candidate. The value records an establishment proved to exist, not the absence of a second.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "DAMU — Katedra alternativního a loutkového divadla (AMU)",
+          "city": "Prague",
+          "address": "Karlova 26, 116 65 Praha 1",
+          "lat": 50.0862,
+          "lon": 14.4172,
+          "status": "public",
+          "award": "Bachelor's, master's and doctoral degrees in puppet theatre acting, directing and scenography",
+          "url": "https://www.damu.cz/en/",
+          "description": "The puppetry department of the theatre faculty of the Academy of Performing Arts in Prague, heir to the Czech puppet tradition and the largest cluster of puppetry degrees in the country, with four named programmes under one roof.",
+          "counted": true,
+          "source": "https://www.damu.cz/cs/katedry-programy/katedra-alternativniho-a-loutkoveho-divadla/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 95,
-      "annee": null,
+      "indicator": "dates",
+      "value": 95,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "titles",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 200,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 200,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 70,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 70,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 90,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 90,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Drak, Alfa, Naivní divadlo, Minor, Spejbl a Hurvínek. DAMU (KALD)",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Minor and Spejbl & Hurvínek, Prague. DRAK, Hradec Králové. Naïve Theatre, Liberec. Alfa, Plzeň.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

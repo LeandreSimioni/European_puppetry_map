@@ -1,47 +1,69 @@
-# Consignes de travail sur ce dépôt
+# Working rules for this repository
 
-## Nature du projet
+## What this project is
 
-Pré-étude cartographique sur l'écosystème européen de la marionnette. Les
-valeurs actuelles sont des estimations produites sans source. L'objet du travail
-est de les remplacer une à une par des valeurs vérifiées, pas de les défendre.
+A cartographic pre-study of the European puppetry ecosystem. Most values are
+estimates produced without sources. The work consists of replacing them one by
+one with verified values, not of defending them.
 
-## Règles non négociables
+The working language of this repository is English: data, field names, code,
+documentation, commit messages and the map itself.
 
-1. **Une session, un pays.** Ne jamais modifier plusieurs fiches pays dans la
-   même passe. La vérification de la Croatie ne doit pas toucher la ligne France.
-2. **Jamais de valeur sans raisonnement.** Le champ `raisonnement` est
-   obligatoire et le build échoue s'il est vide. Y écrire la méthode de calcul,
-   pas une paraphrase de la valeur.
-3. **Ne jamais inventer une source.** Si aucune source n'est trouvée, la valeur
-   reste en `confiance: "estime"` avec `source: null`. Une source approximative
-   ou reconstruite de mémoire est pire qu'une absence de source.
-4. **Ne jamais éditer `dist/index.html`.** Il est écrasé à chaque build.
-5. **Médiane, pas moyenne**, pour tout indicateur de métier. Les distributions
-   sont bimodales et la moyenne ne décrit personne.
-6. **Un cachet n'est pas une date jouée.** Répétitions, résidences, ateliers et
-   actions culturelles produisent des cachets sans plateau. Toute valeur qui
-   confond les deux est fausse.
-7. **Un commit par valeur modifiée**, avec le raisonnement dans le message.
+## Non-negotiable rules
 
-## Avant de modifier une valeur
+1. **One session, one country.** Never modify several country records in the
+   same pass. Verifying Croatia must not touch the France row.
+   *Exception, and only this one:* a transversal pass over a single indicator
+   across all countries is allowed when it is asked for explicitly. Even then,
+   each country is researched on its own, in its own language, and no value is
+   ever derived from a neighbour.
+2. **Never a value without reasoning.** The `reasoning` field is mandatory and
+   the build fails when it is empty. Write the method that produced the value in
+   it, not a paraphrase of the value.
+3. **Never invent a source.** If no source is found, the value stays at
+   `confidence: "estimated"` with `source: null`. An approximate source, or one
+   reconstructed from memory, is worse than no source at all. A search-engine
+   summary is not a source: only a page actually opened and read counts.
+4. **Never edit `dist/index.html`.** It is overwritten on every build.
+5. **Median, not mean**, for every indicator about the trade. The distributions
+   are bimodal and the mean describes nobody.
+6. **A fee is not a performance.** Rehearsals, residencies, workshops and
+   outreach all generate fees with no show. Any value that conflates the two is
+   wrong.
+7. **One commit per value changed**, with the reasoning in the message.
 
-Lire `schema.json`, en particulier le champ `denominateur` de l'indicateur
-concerné et son `biais_connu`. Si le dénominateur porte la mention
-`A TRANCHER`, ne pas produire de valeur : signaler l'arbitrage manquant.
+## Before changing a value
 
-## Après toute modification
+Read `schema.json`, in particular the `denominator` field of the indicator
+concerned and its `known_bias`. If the denominator carries the note
+`TO BE SETTLED`, do not produce a value: report the missing ruling instead.
+
+## The schools indicator specifically
+
+Counted by establishment, never by programme: an academy carrying four puppetry
+degrees counts 1.
+
+Every `schools` observation carries `checked_on` and an `establishments` list.
+The build fails when the number of entries with `counted: true` does not equal
+`lower_bound`. A country at zero still records the candidates examined and set
+aside, each with an `exclusion_reason`.
+
+Coordinates are locality-level and are validated by containment: the build
+refuses a point falling outside its own country outline. If a newly added
+establishment is rejected, the coordinate is wrong; do not widen the tolerance.
+
+## After any change
 
 ```bash
-python3 build.py --check   # doit sortir sans erreur
-python3 build.py           # régénère la carte
+python3 build.py --check   # must exit without error
+python3 build.py           # regenerates the map
 ```
 
-## Ce qu'il ne faut pas faire
+## What not to do
 
-- Proposer des indicateurs qualitatifs ou catégoriels. Ils ont été écartés
-  explicitement : régime de production, statut d'emploi, traditions, figures.
-  Seul le quantifiable et comparable entre pays est retenu.
-- Raisonner à partir du nombre de lieux ou d'écoles pour en déduire un volume
-  d'activité. C'est le biais que ce dépôt existe pour corriger.
-- Traiter une donnée institutionnelle comme un indicateur de vitalité.
+- Do not propose qualitative or categorical indicators. They were ruled out
+  explicitly: production regime, employment status, traditions, figures. Only
+  what is quantifiable and comparable between countries is kept.
+- Do not reason from the number of venues or schools to infer a volume of
+  activity. That is the bias this repository exists to correct.
+- Do not treat an institutional datum as an indicator of vitality.

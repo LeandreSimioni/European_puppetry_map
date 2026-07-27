@@ -1,62 +1,99 @@
-# Panorama marionnettique européen (de mémoire, sans vérification)
+# European puppetry overview (from memory, unverified)
 
-> **Avertissement méthodologique.** Tout ce qui suit relève du souvenir et de l'estimation, sans aucune consultation de source. Les chiffres de lieux sont des ordres de grandeur, pas des relevés. Le critère retenu : structure permanente, dotée d'un lieu, soutenue par une puissance publique (État, Land, canton, région, municipalité selon les régimes), et exerçant une mission de diffusion et/ou de création. Les compagnies conventionnées sans mur et les festivals sont exclus, ce qui pénalise mécaniquement les pays où la marionnette vit surtout par les compagnies (Italie, Espagne, Pays-Bas).
+> **Method warning.** Everything below is recollection and estimate, with no
+> source consulted at all. The venue figures are orders of magnitude, not
+> counts. The criterion used: a permanent organisation with a building of its
+> own, backed by a public authority (state, Land, canton, region or municipality
+> depending on the system), charged with presenting and/or creating work. Funded
+> companies without a building, and festivals, are excluded, which mechanically
+> penalises countries where puppetry lives mainly through companies (Italy,
+> Spain, the Netherlands).
 >
-> « École nationale » = formation supérieure diplômante spécialisée en arts de la marionnette, adossée à une institution d'État. Les notations `0-1` signalent une filière dont je ne sais pas si elle existe encore ou si elle a le statut d'un cursus autonome.
+> "National school" = specialised, degree-granting higher education course in
+> puppetry arts, backed by a state institution. A `0-1` notation marks a course
+> I did not know whether it still existed, or whether it had the standing of a
+> programme in its own right.
+>
+> **This document is a historical record: it is the starting point, not the
+> current state.** The schools column was checked against sources in July 2026
+> and seven of these values turned out to be wrong. See `data/<CC>.json` for the
+> current values and the reasoning behind them.
 
-| Pays | Lieux structurants (est.) | Population (M, est.) | Écoles nationales | Repères mémoriels |
+| Country | Structuring venues (est.) | Population (M, est.) | National schools | Memory notes |
 |---|---|---|---|---|
-| Albanie | 1 | 2,8 | 0 | Théâtre de marionnettes de Tirana, héritage du modèle socialiste |
-| Allemagne | 20-25 | 84 | 2 | Halle, Magdebourg, Dresde, Erfurt ; FITZ Stuttgart. HfS Ernst Busch (Berlin) et HMDK Stuttgart |
-| Andorre | 0 | 0,08 | 0 | |
-| Autriche | 2-3 | 9,1 | 0 | Salzburger Marionettentheater (patrimoine UNESCO), Schuberttheater Vienne |
-| Belgique | 3-4 | 11,7 | 0-1 | Toone à Bruxelles, Centre de la Marionnette de la FWB à Tournai |
-| Biélorussie | 4-6 | 9,2 | 1 | Théâtre d'État de Minsk ; académie des arts |
-| Bosnie-Herzégovine | 2-3 | 3,2 | 0 | Sarajevo, Mostar |
-| Bulgarie | 8-12 | 6,4 | 1 | Théâtre central de Sofia + réseau régional ; NATFIZ |
-| Chypre | 1 | 1,3 | 0 | tradition de l'ombre karagiozis |
-| Croatie | 4-5 | 3,9 | 1 | Zadar, Rijeka, Osijek, Split ; académie d'Osijek |
-| Danemark | 1-2 | 5,9 | 0 | tissu surtout compagnial |
-| Espagne | 3-5 | 48 | 0-1 | TOPIC Tolosa ; filière à l'Institut del Teatre (Barcelone) |
-| Estonie | 1-2 | 1,4 | 0-1 | NUKU Tallinn, théâtre d'État doublé d'un musée |
-| Finlande | 1-2 | 5,6 | 0-1 | Nukketeatteri Sampo |
-| France | 12-15 | 68 | 1 | label CNMa (Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou…) + TJP Strasbourg ; ESNAM Charleville |
-| Grèce | 1-2 | 10,4 | 0 | Karagiozis, tradition vivante hors institution |
-| Hongrie | 6-8 | 9,6 | 1 | Budapest Bábszínház, Kolibri, Kecskemét, Debrecen ; filière SzFE |
-| Irlande | 1 | 5,3 | 0 | l'héritage Lambert s'est éteint |
-| Islande | 0-1 | 0,39 | 0 | |
-| Italie | 3-5 | 59 | 0 | Teatro Gioco Vita (Piacenza), Teatro del Drago (Ravenne), Colla (Milan) ; force du patrimoine familial |
-| Kosovo | 1 | 1,8 | 0 | |
-| Lettonie | 1 | 1,9 | 0 | Théâtre national de marionnettes de Riga |
-| Liechtenstein | 0 | 0,04 | 0 | |
-| Lituanie | 3-4 | 2,9 | 0-1 | Lėlė (Vilnius), Kaunas, Klaipėda |
-| Luxembourg | 0-1 | 0,66 | 0 | |
-| Macédoine du Nord | 1-2 | 1,8 | 0 | Skopje |
-| Malte | 0-1 | 0,54 | 0 | |
-| Moldavie | 2 | 2,5 | 0 | Licurici (Chișinău) |
-| Monaco | 0 | 0,04 | 0 | |
-| Monténégro | 1 | 0,62 | 0 | Podgorica |
-| Norvège | 1-2 | 5,5 | 0 | Figurteatret i Nordland (Stamsund), centre de compétence national |
-| Pays-Bas | 1-2 | 17,9 | 0 | tradition Jan Klaassen surtout foraine et compagniale |
-| Pologne | 22-28 | 36,8 | 2 | réseau dense de théâtres municipaux (Białystok, Wrocław, Cracovie, Łódź, Poznań…) ; académies de Białystok et Wrocław |
-| Portugal | 2-3 | 10,6 | 0 | Museu da Marioneta (Lisbonne), Teatro de Marionetas do Porto |
-| République tchèque | 8-10 | 10,9 | 1 | Drak, Alfa, Naivní divadlo, Minor, Spejbl a Hurvínek ; DAMU (KALD) |
-| Roumanie | 12-18 | 19 | 1-2 | Țăndărică + réseau de théâtres de comté ; UNATC, Târgu Mureș |
-| Royaume-Uni | 4-6 | 68 | 0-1 | Little Angel, Norwich, Puppet Theatre Barge ; parcours à la Royal Central |
-| Russie (partie européenne) | 60-100 | ~110 | 1+ | Obraztsov (Moscou) et un maillage régional hérité de l'URSS, sans équivalent ailleurs |
-| Saint-Marin | 0 | 0,03 | 0 | |
-| Serbie | 4-6 | 6,6 | 0-1 | Duško Radović, Pinokio, Subotica, Niš |
-| Slovaquie | 3-4 | 5,4 | 1 | Bratislava, Košice, Nitra ; VŠMU |
-| Slovénie | 2 | 2,1 | 0 | Lutkovno gledališče Ljubljana et Maribor |
-| Suède | 2-3 | 10,6 | 0-1 | Marionetteatern (Stockholms stadsteater), Dockteatern Tittut |
-| Suisse | 4-5 | 8,9 | 0 | Genève, Lausanne, Zurich, Bâle ; soutien cantonal et communal |
-| Turquie (partie européenne) | 1-2 | ~12 | 0-1 | Karagöz, patrimoine immatériel plus que réseau de lieux |
-| Ukraine | 20-25 | ~36 | 1 | maillage régional soviétique, situation actuelle inconnue de moi |
-| Vatican | 0 | 0,001 | 0 | |
+| Albania | 1 | 2.8 | 0 | Tirana puppet theatre, socialist-model legacy |
+| Germany | 20-25 | 84 | 2 | Halle, Magdeburg, Dresden, Erfurt; FITZ Stuttgart. HfS Ernst Busch (Berlin) and HMDK Stuttgart |
+| Andorra | 0 | 0.08 | 0 | |
+| Austria | 2-3 | 9.1 | 0 | Salzburger Marionettentheater (UNESCO heritage), Schuberttheater Vienna |
+| Belgium | 3-4 | 11.7 | 0-1 | Toone in Brussels, Puppet Centre of the FWB in Tournai |
+| Belarus | 4-6 | 9.2 | 1 | Minsk state theatre; academy of arts |
+| Bosnia and Herzegovina | 2-3 | 3.2 | 0 | Sarajevo, Mostar |
+| Bulgaria | 8-12 | 6.4 | 1 | Sofia central theatre plus regional network; NATFIZ |
+| Cyprus | 1 | 1.3 | 0 | karagiozis shadow tradition |
+| Croatia | 4-5 | 3.9 | 1 | Zadar, Rijeka, Osijek, Split; Osijek academy |
+| Denmark | 1-2 | 5.9 | 0 | fabric mainly company-based |
+| Spain | 3-5 | 48 | 0-1 | TOPIC Tolosa; course at the Institut del Teatre (Barcelona) |
+| Estonia | 1-2 | 1.4 | 0-1 | NUKU Tallinn, a state theatre doubling as a museum |
+| Finland | 1-2 | 5.6 | 0-1 | Nukketeatteri Sampo |
+| France | 12-15 | 68 | 1 | CNMa label (Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou…) plus TJP Strasbourg; ESNAM Charleville |
+| Greece | 1-2 | 10.4 | 0 | Karagiozis, a living tradition outside the institutions |
+| Hungary | 6-8 | 9.6 | 1 | Budapest Bábszínház, Kolibri, Kecskemét, Debrecen; SzFE course |
+| Ireland | 1 | 5.3 | 0 | the Lambert legacy has died out |
+| Iceland | 0-1 | 0.39 | 0 | |
+| Italy | 3-5 | 59 | 0 | Teatro Gioco Vita (Piacenza), Teatro del Drago (Ravenna), Colla (Milan); strength of family heritage |
+| Kosovo | 1 | 1.8 | 0 | |
+| Latvia | 1 | 1.9 | 0 | Latvian national puppet theatre, Riga |
+| Liechtenstein | 0 | 0.04 | 0 | |
+| Lithuania | 3-4 | 2.9 | 0-1 | Lėlė (Vilnius), Kaunas, Klaipėda |
+| Luxembourg | 0-1 | 0.66 | 0 | |
+| North Macedonia | 1-2 | 1.8 | 0 | Skopje |
+| Malta | 0-1 | 0.54 | 0 | |
+| Moldova | 2 | 2.5 | 0 | Licurici (Chișinău) |
+| Monaco | 0 | 0.04 | 0 | |
+| Montenegro | 1 | 0.62 | 0 | Podgorica |
+| Norway | 1-2 | 5.5 | 0 | Figurteatret i Nordland (Stamsund), national centre of expertise |
+| Netherlands | 1-2 | 17.9 | 0 | Jan Klaassen tradition, mainly fairground and company-based |
+| Poland | 22-28 | 36.8 | 2 | dense network of municipal theatres (Białystok, Wrocław, Kraków, Łódź, Poznań…); academies in Białystok and Wrocław |
+| Portugal | 2-3 | 10.6 | 0 | Museu da Marioneta (Lisbon), Teatro de Marionetas do Porto |
+| Czechia | 8-10 | 10.9 | 1 | Drak, Alfa, Naivní divadlo, Minor, Spejbl a Hurvínek; DAMU (KALD) |
+| Romania | 12-18 | 19 | 1-2 | Țăndărică plus a network of county theatres; UNATC, Târgu Mureș |
+| United Kingdom | 4-6 | 68 | 0-1 | Little Angel, Norwich, Puppet Theatre Barge; course at Royal Central |
+| Russia (European part) | 60-100 | ~110 | 1+ | Obraztsov (Moscow) and a regional mesh inherited from the USSR, with no equivalent anywhere else |
+| San Marino | 0 | 0.03 | 0 | |
+| Serbia | 4-6 | 6.6 | 0-1 | Duško Radović, Pinokio, Subotica, Niš |
+| Slovakia | 3-4 | 5.4 | 1 | Bratislava, Košice, Nitra; VŠMU |
+| Slovenia | 2 | 2.1 | 0 | Lutkovno gledališče Ljubljana and Maribor |
+| Sweden | 2-3 | 10.6 | 0-1 | Marionetteatern (Stockholms stadsteater), Dockteatern Tittut |
+| Switzerland | 4-5 | 8.9 | 0 | Geneva, Lausanne, Zurich, Basel; cantonal and municipal support |
+| Turkey (European part) | 1-2 | ~12 | 0-1 | Karagöz, intangible heritage more than a network of venues |
+| Ukraine | 20-25 | ~36 | 1 | Soviet regional mesh, current situation unknown to me |
+| Vatican | 0 | 0.001 | 0 | |
 
-## Ce que ce tableau dit malgré ses approximations
+## What this table says despite its approximations
 
-1. **La fracture Est/Ouest reste la variable la plus lourde.** Le modèle socialiste a légué un théâtre de marionnettes d'État par ville importante : la Pologne, la Roumanie, l'Ukraine ou la Russie affichent des densités sans commune mesure avec l'Europe occidentale, à population égale ou moindre.
-2. **La France est un cas hybride** : peu de lieux au regard de sa population, mais un dispositif de labellisation récent et une école supérieure unique en son genre, qui lui donnent un poids symbolique supérieur à son poids quantitatif.
-3. **Le modèle latin est compagnial, pas domiciliaire.** L'Italie, l'Espagne et le Portugal apparaissent faibles alors que leur vitalité artistique est réelle ; le critère du lieu les invisibilise.
-4. **Les zones où je suis le moins fiable** : les Balkans, la Scandinavie, les statuts exacts des filières de formation (beaucoup de cursus ouvrent et ferment au gré des promotions), et l'état actuel du réseau ukrainien.
+1. **The East/West divide remains the heaviest variable.** The socialist model
+   bequeathed one state puppet theatre per significant city: Poland, Romania,
+   Ukraine and Russia show densities out of all proportion to Western Europe, at
+   equal or smaller population.
+2. **France is a hybrid case**: few venues for its population, but a recent
+   labelling scheme and a school unique of its kind, which give it a symbolic
+   weight above its quantitative weight.
+3. **The Latin model is company-based, not building-based.** Italy, Spain and
+   Portugal look weak while their artistic vitality is real; the venue criterion
+   makes them invisible.
+4. **Where I am least reliable**: the Balkans, Scandinavia, the exact standing of
+   the training courses (many open and close with each intake), and the current
+   state of the Ukrainian network.
+
+## What the schools pass changed
+
+Point 4 proved to be the sharpest of the four. Checked against sources in July
+2026, the schools column was wrong in seven countries. In both directions:
+Slovenia, Switzerland and Portugal read 0 and hold a course; Belgium was
+understated. The United Kingdom and Finland read as holding one and had closed
+it — Central stopped recruiting to its puppetry BA in 2018, and the Turku course
+no longer exists as a programme in its own right. Norway had one and lost it in
+2018 too.
+
+The intuition that courses "open and close with each intake" was correct, and it
+is the reason this indicator cannot be kept from memory.

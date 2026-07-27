@@ -1,96 +1,113 @@
 {
   "code": "SI",
-  "nom": "Slovénie",
+  "name": "Slovenia",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 2.1,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 2.1,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 2.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 2.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 2,
-      "borne_haute": 2
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 2,
+      "upper_bound": 2
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://www.agrft.uni-lj.si/studij/druga-stopnja/",
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained, the value moving from 0 to 1: the Academy of Theatre, Radio, Film and Television (AGRFT) of the public University of Ljubljana. Criterion read at source: the second-cycle Dramatic Acting programme, one year and 60 ECTS, has four streams, one of which is Puppet Acting. Puppetry is therefore a named specialism of a state award, which satisfies the denominator. The previous 0 was an estimate made without research and was wrong. Upper bound held at 1: AGRFT is the country's only public theatre academy, and the material consulted describes Slovenia's two puppet production houses as employing its graduates, which marks it as the single route. Caveat: that uniqueness is inferred from context, not asserted by a source.",
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "UL AGRFT — Akademija za gledališče, radio, film in televizijo",
+          "city": "Ljubljana",
+          "address": "Trubarjeva cesta 3, 1000 Ljubljana",
+          "lat": 46.053,
+          "lon": 14.51,
+          "status": "public",
+          "award": "Master's in Dramatic Acting, Puppet Acting stream, 60 ECTS",
+          "url": "https://www.agrft.uni-lj.si/",
+          "description": "The academy of theatre, radio, film and television of the public University of Ljubljana. Puppet acting is one of four master's streams, and Slovenia's two public puppet houses now recruit from its graduates.",
+          "counted": true,
+          "source": "https://www.agrft.uni-lj.si/studij/druga-stopnja/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 95,
-      "annee": null,
+      "indicator": "dates",
+      "value": 95,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "titles",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 190,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 190,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 88,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 88,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Lutkovno gledališče Ljubljana et Maribor",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Ljubljana Puppet Theatre and Maribor Puppet Theatre, the country's two public puppet houses.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

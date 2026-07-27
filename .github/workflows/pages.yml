@@ -1,0 +1,54 @@
+name: Publish the map
+
+# Rebuilds the map from data/ and publishes it to GitHub Pages on every push to
+# main. Nothing is deployed unless build.py validates: invalid data exits 1 and
+# the job fails, so the published map can never come from data the build refuses.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deployment finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate the data
+        run: python3 build.py --check
+      - name: Build the map
+        run: python3 build.py
+      - name: Fail if the committed map is stale
+        # dist/index.html is tracked, so a rebuild that changes it means someone
+        # edited data/ without running build.py. Publishing would still work, but
+        # the repository would be lying about its own output.
+        run: |
+          if ! git diff --quiet -- dist/index.html; then
+            echo "::warning::dist/index.html was out of date and has been rebuilt."
+            echo "Run 'python3 build.py' and commit the result."
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

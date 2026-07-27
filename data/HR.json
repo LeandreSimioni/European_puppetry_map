@@ -1,96 +1,113 @@
 {
   "code": "HR",
-  "nom": "Croatie",
+  "name": "Croatia",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 3.9,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 3.9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 4.5,
-      "annee": null,
+      "indicator": "venues",
+      "value": 4.5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 4,
-      "borne_haute": 5
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 4,
+      "upper_bound": 5
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 1,
-      "borne_haute": 1
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "http://www.uaos.unios.hr/preddiplomski-sveucilisni-studij-gluma-i-lutkarstvo/",
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Academy of Arts and Culture in Osijek, part of the public Josip Juraj Strossmayer University. Criteria read at source: a three-year bachelor's degree in Acting and Puppetry awarding the title of baccalaureus of acting and puppetry, registered at level 6 of the Croatian Qualifications Framework; puppetry named in the title; state university programme. The academy also carries master's degrees in puppet animation, design and directing. Counted by establishment: 1. Upper bound at 2: pages not read present Osijek as Croatia's only puppetry school, but that claim was not verified at source and is therefore not used to close the range.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "Akademija za umjetnost i kulturu (Sveučilište J. J. Strossmayera)",
+          "city": "Osijek",
+          "address": "Ulica Kralja Petra Svačića 1f, 31000 Osijek",
+          "lat": 45.555,
+          "lon": 18.6955,
+          "status": "public",
+          "award": "BA in Acting and Puppetry, Croatian Qualifications Framework level 6, plus master's degrees",
+          "url": "http://www.uaos.unios.hr/",
+          "description": "Part of the public Josip Juraj Strossmayer University. Beyond the undergraduate degree it carries master's programmes in puppet animation, puppet design and puppet directing, described as the only ones at that level in the wider region.",
+          "counted": true,
+          "source": "http://www.uaos.unios.hr/preddiplomski-sveucilisni-studij-gluma-i-lutkarstvo/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 110,
-      "annee": null,
+      "indicator": "dates",
+      "value": 110,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 9,
-      "annee": null,
+      "indicator": "titles",
+      "value": 9,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 180,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 180,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 5,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 92,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 92,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Zadar, Rijeka, Osijek, Split. Académie d'Osijek",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Zadar, Rijeka, Osijek, Split. Academy of Osijek.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

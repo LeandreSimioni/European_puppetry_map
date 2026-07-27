@@ -1,96 +1,129 @@
 {
   "code": "IT",
-  "nom": "Italie",
+  "name": "Italy",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 59,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 59,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 4.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 4.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 3,
-      "borne_haute": 5
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 3,
+      "upper_bound": 5
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
+      "indicator": "schools",
+      "value": 0.0,
+      "year": 2026,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained. The Italian trainings identified in teatro di figura all belong to private or association bodies outside the denominator: the two-year academy of the Centro Teatro Internazionale in Florence, the Libera Accademia del Teatro dell'Aria attached to the Perugia festival, the Animateria pathway, the Universita dei Burattini in Cesenatico. The only foothold in public education is the Teatro di figura subject taught within the scenography course of the Academy of Fine Arts in Catania: a subject in a curriculum, not a specialised training, and so it does not satisfy the denominator. No specialised degree was found. Upper bound raised from 0 to 1, the check not having covered the curricula of every academy of fine arts and national drama school. Italy is the case the schema explicitly flags as understated by an institutional indicator.",
+      "lower_bound": 0,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "Centro Teatro Internazionale — Scuola per attori marionettisti",
+          "city": "Florence",
+          "address": null,
+          "lat": 43.7696,
+          "lon": 11.2558,
+          "status": "private",
+          "award": "Two-year private academy",
+          "url": "https://centroteatro.it/",
+          "description": "A private academy training puppeteer-actors and puppet builders across string, rod, hand and body puppet techniques.",
+          "counted": false,
+          "exclusion_reason": "private",
+          "source": "https://centroteatro.it/scuola-per-attori-marionettisti-a-firenze/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Libera Accademia del Teatro dell'Aria (Tieffeu)",
+          "city": "Perugia",
+          "address": null,
+          "lat": 43.1107,
+          "lon": 12.3908,
+          "status": "private",
+          "award": "Professional workshops attached to a festival",
+          "url": "https://www.tieffeu.com/",
+          "description": "A private academy attached to the international festival of animated figures, teaching head carving, marionette animation and vocal technique.",
+          "counted": false,
+          "exclusion_reason": "private",
+          "source": null,
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "dates",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 5,
-      "annee": null,
+      "indicator": "titles",
+      "value": 5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 250,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 250,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 20,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 20,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 65,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 65,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Gioco Vita (Piacenza), Teatro del Drago (Ravenne), Colla (Milan)",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Carlo Colla e Figli, Milan. Teatro del Drago, Ravenna. Sicilian opera dei pupi.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

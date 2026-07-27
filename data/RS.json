@@ -1,96 +1,113 @@
 {
   "code": "RS",
-  "nom": "Serbie",
+  "name": "Serbia",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 6.6,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 6.6,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 5.0,
-      "annee": null,
+      "indicator": "venues",
+      "value": 5.0,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 4,
-      "borne_haute": 6
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 4,
+      "upper_bound": 6
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 1
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://akademija.uns.ac.rs/novi-master-studijski-program-na-akademiji-umetnosti-novi-sad-lutkarstvo/",
+      "confidence": "sourced",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Academy of Arts in Novi Sad, part of the state University of Novi Sad. Criterion read at source: a two-year master's programme in puppetry within the department of dramatic arts; puppetry named in the programme title; public institution. The previous value of 0.5 was the midpoint of an estimated range, not an observation. Upper bound at 2: the source claims a national first, but that claim covers the complete master's programme, not the whole field. It does not rule out an undergraduate stream elsewhere in Serbia and is not enough to close the range.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "Akademija umetnosti (Univerzitet u Novom Sadu)",
+          "city": "Novi Sad",
+          "address": "Đure Jakšića 7, 21000 Novi Sad",
+          "lat": 45.2551,
+          "lon": 19.8452,
+          "status": "public",
+          "award": "Two-year master's in puppetry",
+          "url": "https://akademija.uns.ac.rs/",
+          "description": "The arts academy of the state University of Novi Sad. Its puppetry master's is described by the academy as the first complete programme of its kind in the country.",
+          "counted": true,
+          "source": "https://akademija.uns.ac.rs/novi-master-studijski-program-na-akademiji-umetnosti-novi-sad-lutkarstvo/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 90,
-      "annee": null,
+      "indicator": "dates",
+      "value": 90,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 8,
-      "annee": null,
+      "indicator": "titles",
+      "value": 8,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 200,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 200,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 10,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 10,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 88,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 88,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Duško Radović, Pinokio, Subotica, Niš",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Malo Pozorište Duško Radović, Belgrade. Puppet theatres in Niš and Subotica.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

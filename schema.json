@@ -1,112 +1,133 @@
 {
-  "version": "0.1.0",
-  "principe": "Une observation = un couple pays/indicateur. Aucune valeur n'entre sans son denominateur explicite, son niveau de confiance et le raisonnement qui l'a produite.",
-  "confiance": {
-    "sourced": "Chiffre publie par une source identifiee et citable (rapport annuel, organisme statistique, etude).",
-    "declare": "Chiffre communique directement par un professionnel ou une structure du pays, non publie.",
-    "estime": "Estimation produite par raisonnement, sans source. Ne jamais citer hors du depot."
+  "version": "0.2.0",
+  "principle": "One observation = one country/indicator pair. No value enters without its explicit denominator, its confidence level and the reasoning that produced it.",
+  "confidence": {
+    "sourced": "Figure published by an identified, citable source (annual report, statistical body, study).",
+    "declared": "Figure given directly by a professional or an organisation in the country, unpublished.",
+    "estimated": "Estimate produced by reasoning, with no source. Never to be quoted outside this repository."
   },
-  "statut": {
-    "ouvert": "Valeur en place, non contestee.",
-    "conteste": "Valeur dont la methode a ete mise en cause. Voir le champ raisonnement.",
-    "verifie": "Valeur confrontee a une source et confirmee."
+  "status": {
+    "open": "Value in place, uncontested.",
+    "disputed": "Value whose method has been called into question. See the reasoning field.",
+    "verified": "Value confronted with a source and confirmed."
   },
-  "regles": [
-    "Le denominateur se tranche AVANT la collecte. Comparer des declares francais a des permanents croates n'est pas comparable.",
-    "Toujours preferer la mediane a la moyenne pour les indicateurs de metier : les distributions sont bimodales.",
-    "Une valeur estimee ne se cite jamais en dehors du depot, ni en reunion, ni dans un dossier.",
-    "Un cachet n'est pas une date jouee. Repetitions, residences, ateliers et actions culturelles produisent des cachets sans plateau.",
-    "Une modification de valeur passe par un commit distinct, avec le raisonnement dans le message."
+  "rules": [
+    "The denominator is settled BEFORE collection. Comparing French self-declared performers with Croatian salaried ones is not a comparison.",
+    "Always prefer the median to the mean for indicators about the trade: the distributions are bimodal.",
+    "An estimated value is never quoted outside this repository, not in a meeting, not in an application.",
+    "A fee is not a performance. Rehearsals, residencies, workshops and outreach all generate fees with no show.",
+    "A change of value goes through its own commit, with the reasoning in the message."
   ],
-  "indicateurs": [
+  "indicators": [
     {
-      "id": "lieux",
-      "label": "Lieux structurants",
-      "unite": "nombre",
-      "couche": "institutions",
-      "denominateur": "Structure permanente dotee d'un mur, soutenue par une puissance publique (Etat, Land, canton, region, municipalite), exercant une mission de diffusion ou de creation. Exclut les compagnies conventionnees sans lieu et les festivals.",
-      "biais_connu": "Sous-estime mecaniquement les systemes ou la vitalite passe par les compagnies : Italie, Espagne, Pays-Bas."
+      "id": "venues",
+      "label": "Structuring venues",
+      "unit": "count",
+      "layer": "institutions",
+      "denominator": "Permanent organisation with a building of its own, backed by a public authority (state, Land, canton, region, municipality), charged with presenting or creating work. Excludes funded companies without a building, and festivals.",
+      "known_bias": "Mechanically understates systems where vitality runs through companies: Italy, Spain, the Netherlands."
     },
     {
-      "id": "ecoles",
-      "label": "Ecoles nationales",
-      "unite": "nombre",
-      "couche": "institutions",
-      "denominateur": "Formation superieure diplomante specialisee en arts de la marionnette, adossee a une institution d'Etat.",
-      "biais_connu": "Les filieres ouvrent et ferment au gre des promotions. Preferer a terme le flux annuel de diplomes."
+      "id": "schools",
+      "label": "National schools",
+      "unit": "count",
+      "layer": "institutions",
+      "denominator": "Specialised, degree-granting higher education course in puppetry arts, backed by a state institution.",
+      "known_bias": "Courses open and close with each intake. Prefer the annual flow of graduates in the long run.",
+      "unit_of_count": "The establishment, never the programme. An academy carrying one bachelor's and three master's degrees in puppetry counts 1.",
+      "backing": "This is the only indicator that requires the named list of the establishments composing it, in the 'establishments' field. The build fails when the number of establishments with 'counted': true does not equal 'lower_bound': a count must be justified one at a time."
     },
     {
       "id": "population_M",
       "label": "Population",
-      "unite": "millions d'habitants",
-      "couche": "contexte",
-      "denominateur": "Population totale. Pour la Russie et la Turquie, partie europeenne uniquement.",
-      "biais_connu": "Aucun, hors imprecision des estimations."
+      "unit": "millions of inhabitants",
+      "layer": "context",
+      "denominator": "Total population. For Russia and Turkey, the European part only.",
+      "known_bias": "None, beyond the imprecision of the estimates."
     },
     {
       "id": "dates",
-      "label": "Dates par interprete et par an",
-      "unite": "dates jouees",
-      "couche": "metier",
-      "agregation": "mediane",
-      "denominateur": "A TRANCHER. Trois options incompatibles : (a) toute personne se declarant marionnettiste professionnel, (b) toute personne ayant joue au moins une date dans l'annee, (c) tout interprete sous contrat permanent ou equivalent. L'option retenue change le resultat d'un facteur deux a trois.",
-      "biais_connu": "Piege identifie : compter les cachets au lieu des dates jouees. Le seuil d'ouverture des droits en France s'atteint sans monter au castelet.",
-      "a_collecter_aussi": ["decile superieur", "part sous 20 dates"]
+      "label": "Performances per performer per year",
+      "unit": "performances",
+      "layer": "trade",
+      "aggregation": "median",
+      "denominator": "TO BE SETTLED. Three incompatible options: (a) anyone declaring themselves a professional puppeteer, (b) anyone who performed at least once in the year, (c) any performer on a permanent contract or equivalent. The option chosen changes the result by a factor of two to three.",
+      "known_bias": "Identified trap: counting fees instead of performances. In France the threshold for unemployment insurance can be reached without ever getting behind a booth.",
+      "also_collect": ["top decile", "share under 20 performances"]
     },
     {
-      "id": "titres",
-      "label": "Titres actifs au repertoire par interprete",
-      "unite": "nombre de titres",
-      "couche": "metier",
-      "agregation": "mediane",
-      "denominateur": "Titres qu'un interprete a effectivement joues au moins une fois dans l'annee.",
-      "biais_connu": "Distingue une economie de stock d'une economie de flux. Probablement l'indicateur le plus discriminant de la serie."
+      "id": "titles",
+      "label": "Active repertoire titles per performer",
+      "unit": "count of titles",
+      "layer": "trade",
+      "aggregation": "median",
+      "denominator": "Titles a performer actually played at least once during the year.",
+      "known_bias": "Separates an economy of stock from an economy of flow. Probably the most discriminating indicator in the series."
     },
     {
-      "id": "vie_production",
-      "label": "Vie d'une production",
-      "unite": "dates cumulees",
-      "couche": "metier",
-      "agregation": "mediane",
-      "denominateur": "Dates cumulees sur toute la duree d'exploitation d'une production, jusqu'a son retrait.",
-      "biais_connu": "Necessite un recul de plusieurs annees. Sur les productions recentes, la valeur est tronquee."
+      "id": "production_life",
+      "label": "Life of a production",
+      "unit": "cumulative performances",
+      "layer": "trade",
+      "aggregation": "median",
+      "denominator": "Performances accumulated over the whole exploitation of a production, until it is retired.",
+      "known_bias": "Requires several years of hindsight. On recent productions the value is truncated."
     },
     {
-      "id": "part_sous_20",
-      "label": "Part jouant moins de 20 dates par an",
-      "unite": "pourcentage",
-      "couche": "metier",
-      "lecture": "inversee",
-      "denominateur": "Meme population que l'indicateur dates. Depend donc du meme arbitrage.",
-      "biais_connu": "Indicateur le plus fragile de la serie : la population qui ne joue pas n'est mesuree par personne."
+      "id": "share_under_20",
+      "label": "Share performing fewer than 20 dates a year",
+      "unit": "percentage",
+      "layer": "trade",
+      "reading": "inverted",
+      "denominator": "Same population as the dates indicator. Depends on the same ruling.",
+      "known_bias": "The most fragile indicator in the series: the population that does not perform is measured by nobody."
     },
     {
-      "id": "part_jeune_public",
-      "label": "Part jeune public",
-      "unite": "pourcentage",
-      "couche": "metier",
-      "lecture": "inversee",
-      "denominateur": "Part des dates jouees devant un public d'enfants, scolaire et hors scolaire confondus.",
-      "biais_connu": "Une part tres haute n'est pas une vertu : elle peut signaler l'absence de marche adulte."
+      "id": "share_young_audience",
+      "label": "Young-audience share",
+      "unit": "percentage",
+      "layer": "trade",
+      "reading": "inverted",
+      "denominator": "Share of performances played to audiences of children, in and out of school alike.",
+      "known_bias": "A very high share is not a virtue: it can signal the absence of an adult market."
     },
     {
-      "id": "part_revenu_jeu",
-      "label": "Part du revenu venant du jeu",
-      "unite": "pourcentage",
-      "couche": "metier",
-      "denominateur": "Part du revenu artistique annuel provenant des representations, le complement venant des ateliers, de la transmission et de l'indemnisation.",
-      "biais_connu": "Suppose une comptabilite analytique que peu de professionnels tiennent. A collecter par enquete declarative."
+      "id": "share_income_from_performing",
+      "label": "Share of income from performing",
+      "unit": "percentage",
+      "layer": "trade",
+      "denominator": "Share of annual artistic income coming from performances, the remainder coming from workshops, teaching and unemployment insurance.",
+      "known_bias": "Assumes analytical accounting that few professionals keep. To be collected by declarative survey."
     }
   ],
-  "indicateurs_a_ajouter": [
-    "subvention publique par representation jouee",
-    "representations par ETP salarie de la structure",
-    "ratio ETP artistiques sur ETP non artistiques",
-    "part du budget d'un lieu consacree a l'achat de spectacles",
-    "nombre median de dates par contrat de cession",
-    "nombre de dossiers distincts necessaires pour financer une production",
-    "delai median entre depot et notification",
-    "representations pour 100 000 habitants et par an",
-    "part des dates hors du pays d'origine"
+  "establishment": {
+    "purpose": "Named record of a school, carried by the 'schools' observation. It makes the count auditable and places the points on the map. A country with zero schools can still carry establishments: those are the candidates examined and set aside, and they are often the most useful information in the record.",
+    "fields": {
+      "name": "Name of the establishment in its own language; Latin transcription accepted.",
+      "city": "The city where the teaching actually happens, not the administrative seat when the two differ.",
+      "address": "Postal address read at source. null when not verified, never reconstructed from memory.",
+      "lat": "Latitude in decimal degrees, locality level. Makes no claim to locate a street.",
+      "lon": "Longitude in decimal degrees, same caveat.",
+      "status": "public, private, or foundation. 'foundation' covers institutions transferred from the state to a foundation, as in Hungary: neither quite public nor private.",
+      "award": "Name and level of the qualification granted, or the precise reason when the establishment is set aside.",
+      "url": "Official website of the establishment.",
+      "description": "Two or three sentences in English: what the school is, since when, and what makes its position in the count what it is. Mandatory, the build refuses an empty description.",
+      "counted": "true when the establishment enters the indicator. The number of true values equals lower_bound.",
+      "exclusion_reason": "Mandatory when counted is false. Values: private, closed, not_degree_granting, outside_scope, outside_denominator, unconfirmed.",
+      "source": "URL actually opened and read. Mandatory as soon as counted is true.",
+      "checked_on": "ISO date of the check. A record without a date cannot be reused."
+    },
+    "projection": "Coordinates are converted into the SVG frame by tools/projection.py, fitted on the outlines of the base map. The build refuses a point that falls outside its own country outline, and reports those it had to pull inland, the coastline of the base map being generalised."
+  },
+  "indicators_to_add": [
+    "public subsidy per performance played",
+    "performances per salaried FTE of the organisation",
+    "ratio of artistic to non-artistic FTEs",
+    "share of a venue's budget spent on buying in shows",
+    "median number of performances per touring contract",
+    "number of distinct applications needed to finance one production",
+    "median delay between application and decision",
+    "performances per 100,000 inhabitants per year",
+    "share of performances played outside the country of origin"
   ]
 }

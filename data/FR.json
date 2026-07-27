@@ -1,96 +1,113 @@
 {
   "code": "FR",
-  "nom": "France",
+  "name": "France",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 68,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 68,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 13.5,
-      "annee": null,
-      "source": "Exemple de démonstration, à remplacer",
-      "confiance": "sourced",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 12,
-      "borne_haute": 15
+      "indicator": "venues",
+      "value": 13.5,
+      "year": null,
+      "source": null,
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data. Note of 2026-07-27: this observation carried the source 'Exemple de demonstration, a remplacer' with confidence 'sourced', a demonstration placeholder left over from the seeding. A placeholder is not a source, and leaving it in inflated the count of sourced values by two across the repository. Source removed, confidence returned to estimated. The value itself is untouched: it was never sourced to begin with.",
+      "lower_bound": 12,
+      "upper_bound": 15
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "Recherche web du 2026-07-27, indicateur non resolu. L'ESNAM (Charleville-Mezieres) satisfait les trois criteres du denominateur : superieure, diplomante (DNSPC specialite acteur-marionnettiste), habilitee par le ministere de la Culture. Elle constitue donc une borne basse ferme de 1. Mais un compte n'est pas la verification d'une existence : affirmer 1 exige de prouver l'absence d'une seconde ecole, ce qui n'a jamais ete fait. Un candidat reste non tranche, le DMA arts de la marionnette, diplome d'Etat bac+2 en lycee public, dont je n'ai pas pu etablir s'il a survecu a la reforme DMA vers DNMADE de 2019. D'ou borne_haute portee a 2. Le master URCA Cirque et Marionnette et la licence Arts parcours marionnette sont ecartes : le premier n'est pas specialise marionnette, la seconde est reservee aux laureats du concours ESNAM et ne constitue pas une ecole distincte. Aucune source n'est enregistree car la politique reseau de l'environnement bloque l'ouverture des pages (CONNECT 403 sur tout domaine, Wikipedia comprise) : seuls des titres et resumes de moteur ont pu etre obtenus, jamais lus a la source. Plusieurs pages revendiquent l'unicite de l'ESNAM en France et en Europe, dont culture.gouv.fr et wepa.unima.org, mais elles restent des pistes non lues et non citables en l'etat. Passage en conteste : la methode du comptage, et non la valeur, est ce qui est mis en cause.",
-      "borne_basse": 1,
-      "borne_haute": 2
+      "indicator": "schools",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://marionnette.com/en/esnam-formations/lesnam/lecole/",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Web check of 2026-07-27, resuming the point left open by the previous pass, now settled. One establishment retained: ESNAM Margareta Niculescu, Charleville-Mezieres, within the International Institute of Puppetry. Criteria read at source: a three-year course awarding the DNSPC with the puppeteer-actor specialism, registered at RNCP level 6, the school being accredited by the Ministry of Culture. The previous pass left the upper bound at 2, unable to settle what became of the DMA in puppetry arts after the 2019 reform of that qualification. That candidate is now eliminated: the directory entry still titled DMA in puppetry arts in fact describes ESNAM's own course, a national qualification at RNCP level 6, three years, entry by competition. The DMA title is a stale directory identifier, not a second course. The upper bound therefore comes back to 1. The Institute's page further states that ESNAM is the only school in France given over entirely to initial puppetry training since 1987, a claim this time read at source rather than glimpsed in a search summary. The URCA master's in Circus and Puppetry and the bachelor's in Arts with a puppetry pathway remain excluded as before: the first is not specialised, the second is tied to the ESNAM entrance examination and is not a distinct school. The network blocking that prevented any source being read in the previous pass no longer applies. Status moved from disputed to verified.",
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "ESNAM — École nationale supérieure des arts de la marionnette",
+          "city": "Charleville-Mézières",
+          "address": "16 avenue Jean Jaurès, 08000 Charleville-Mézières",
+          "lat": 49.7628,
+          "lon": 4.7208,
+          "status": "public",
+          "award": "DNSPC, puppeteer-actor specialism, RNCP level 6, 3 years",
+          "url": "https://marionnette.com/en/",
+          "description": "Created in 1987 inside the International Institute of Puppetry, accredited by the Ministry of Culture, and the only school in France given over entirely to initial puppetry training. Entry is by competitive examination held every three years.",
+          "counted": true,
+          "source": "https://marionnette.com/en/esnam-formations/lesnam/lecole/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 35,
-      "annee": null,
+      "indicator": "dates",
+      "value": 35,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 2.5,
-      "annee": null,
+      "indicator": "titles",
+      "value": 2.5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 30,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 30,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 40,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 40,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 75,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 75,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 55,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 55,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Label CNMa : Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou. TJP Strasbourg. ESNAM Charleville",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "CNMa label: Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou. TJP Strasbourg. ESNAM, Charleville.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }

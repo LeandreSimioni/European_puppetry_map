@@ -1,96 +1,114 @@
 {
   "code": "TR",
-  "nom": "Turquie (partie européenne)",
+  "name": "Turkey (European part)",
   "observations": [
     {
-      "indicateur": "population_M",
-      "valeur": 12,
-      "annee": null,
+      "indicator": "population_M",
+      "value": 12,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "lieux",
-      "valeur": 1.5,
-      "annee": null,
+      "indicator": "venues",
+      "value": 1.5,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 1,
-      "borne_haute": 2
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "lower_bound": 1,
+      "upper_bound": 2
     },
     {
-      "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
+      "indicator": "schools",
+      "value": 0.0,
+      "year": 2026,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 1
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained within this record's scope, and the reason deserves reading before the value. Turkey does have a course satisfying the denominator: the Puppet and Shadow Theatre branch of the state conservatoire of Anadolu University. But that university is in Eskisehir, in Anatolia, outside the European part to which the schema explicitly restricts this record. It is therefore not counted here. The performing arts departments checked, Suleyman Demirel, Uludag Bursa and Dokuz Eylul, have acting, dramatic writing and scenography as their specialisms, puppetry appearing only as a technique taught within scenography; none of them is in Eastern Thrace either. No course was identified in the European part, including the European side of Istanbul. The previous 0.5 was the midpoint of an estimated range. Upper bound at 1: Istanbul's universities were not checked one by one. A method point worth keeping for the whole series: the schema's geographical scoping can remove from a record a school that genuinely exists in the country.",
+      "lower_bound": 0,
+      "upper_bound": 1,
+      "checked_on": "2026-07-27",
+      "establishments": [
+        {
+          "name": "Anadolu Üniversitesi, Devlet Konservatuvarı — Kukla ve Gölge Oyunu Sanat Dalı",
+          "city": "Eskişehir",
+          "address": null,
+          "lat": 39.7767,
+          "lon": 30.5206,
+          "status": "public",
+          "award": "Meets the denominator but sits in Anatolia, outside this record's scope",
+          "url": "https://konservatuvar.anadolu.edu.tr/",
+          "description": "The puppet and shadow theatre branch of the state conservatoire of Anadolu University. A genuine state puppetry course, excluded here only because this record covers European Turkey.",
+          "counted": false,
+          "exclusion_reason": "outside_scope",
+          "source": "https://konservatuvar.anadolu.edu.tr/bolumler/sahne-sanatlari-bolumu/sahne-sanatlari-bolumu-programlar/tiyatro-anasanat-dali/kukla-ve-golge-oyunu-sanat-dali",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
-      "indicateur": "dates",
-      "valeur": 60,
-      "annee": null,
+      "indicator": "dates",
+      "value": 60,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "titres",
-      "valeur": 4,
-      "annee": null,
+      "indicator": "titles",
+      "value": 4,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "vie_production",
-      "valeur": 100,
-      "annee": null,
+      "indicator": "production_life",
+      "value": 100,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_sous_20",
-      "valeur": 35,
-      "annee": null,
+      "indicator": "share_under_20",
+      "value": 35,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+      "confidence": "estimated",
+      "status": "disputed",
+      "reasoning": "DISPUTED. First value produced as a mean conditioned on artists who actually tour, which drops from the denominator the makers who do not perform. Method error identified: a fee is not a performance. For France the true median probably sits between 10 and 20, over a bimodal distribution. For countries with permanent companies, recomputed from the top: 250 to 400 performances a year, casts of 3 to 5, a company of about twenty, so on the order of 50 to 90. To be redone in full once the denominator is settled."
     },
     {
-      "indicateur": "part_jeune_public",
-      "valeur": 85,
-      "annee": null,
+      "indicator": "share_young_audience",
+      "value": 85,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     },
     {
-      "indicateur": "part_revenu_jeu",
-      "valeur": 45,
-      "annee": null,
+      "indicator": "share_income_from_performing",
+      "value": 45,
+      "year": null,
       "source": null,
-      "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+      "confidence": "estimated",
+      "status": "open",
+      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Karagöz, patrimoine immatériel plus que réseau de lieux",
-  "a_verifier": [
-    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
-    "Trouver le rapport annuel d'au moins une structure du pays."
+  "notes": "Istanbul. Karagöz shadow theatre. Puppet training at Eskişehir, outside this record's scope.",
+  "to_check": [
+    "Settle the denominator of the dates indicator before collecting anything.",
+    "Find the annual report of at least one organisation in the country."
   ]
 }
