@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
-      "statut": "conteste",
-      "raisonnement": "Recherche web du 2026-07-27, indicateur non resolu. L'ESNAM (Charleville-Mezieres) satisfait les trois criteres du denominateur : superieure, diplomante (DNSPC specialite acteur-marionnettiste), habilitee par le ministere de la Culture. Elle constitue donc une borne basse ferme de 1. Mais un compte n'est pas la verification d'une existence : affirmer 1 exige de prouver l'absence d'une seconde ecole, ce qui n'a jamais ete fait. Un candidat reste non tranche, le DMA arts de la marionnette, diplome d'Etat bac+2 en lycee public, dont je n'ai pas pu etablir s'il a survecu a la reforme DMA vers DNMADE de 2019. D'ou borne_haute portee a 2. Le master URCA Cirque et Marionnette et la licence Arts parcours marionnette sont ecartes : le premier n'est pas specialise marionnette, la seconde est reservee aux laureats du concours ESNAM et ne constitue pas une ecole distincte. Aucune source n'est enregistree car la politique reseau de l'environnement bloque l'ouverture des pages (CONNECT 403 sur tout domaine, Wikipedia comprise) : seuls des titres et resumes de moteur ont pu etre obtenus, jamais lus a la source. Plusieurs pages revendiquent l'unicite de l'ESNAM en France et en Europe, dont culture.gouv.fr et wepa.unima.org, mais elles restent des pistes non lues et non citables en l'etat. Passage en conteste : la methode du comptage, et non la valeur, est ce qui est mis en cause.",
+      "annee": 2026,
+      "source": "https://marionnette.com/en/esnam-formations/lesnam/lecole/",
+      "confiance": "sourced",
+      "statut": "verifie",
+      "raisonnement": "Verification web du 2026-07-27, reprise du point laisse ouvert par la passe precedente, desormais tranche. Un etablissement retenu : l'ESNAM Margareta Niculescu, Charleville-Mezieres, au sein de l'Institut International de la Marionnette. Criteres lus a la source : cursus de 3 ans delivrant le DNSPC specialite acteur-marionnettiste, enregistre RNCP niveau 6, l'etablissement etant accredite par le ministere de la Culture. La passe precedente laissait la borne haute a 2 faute de pouvoir trancher le sort du DMA arts de la marionnette apres la reforme DMA vers DNMADE. Ce candidat est desormais elimine : la fiche d'annuaire encore intitulee DMA arts de la marionnette decrit en realite la formation de l'ESNAM, diplome national RNCP niveau 6, 3 ans, concours d'entree. L'intitule DMA n'est plus qu'un identifiant d'annuaire perime, pas une seconde formation. La borne haute est donc ramenee a 1. La page de l'Institut affirme en outre que l'ESNAM est une ecole unique en France entierement consacree a la formation initiale des marionnettistes depuis 1987 : affirmation cette fois lue a la source, non plus apercue en resume de moteur. Le master URCA Cirque et Marionnette et la licence Arts parcours marionnette restent ecartes comme precedemment, le premier n'etant pas specialise, la seconde etant adossee au concours ESNAM et ne constituant pas une ecole distincte. Le blocage reseau qui avait empeche toute lecture de source lors de la passe precedente n'existe plus. Statut porte de conteste a verifie.",
       "borne_basse": 1,
-      "borne_haute": 2
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
