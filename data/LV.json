@@ -13,14 +13,14 @@
     },
     {
       "indicator": "venues",
-      "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 1
+      "value": 2.0,
+      "year": 2026,
+      "source": "https://www.km.gov.lv/lv/teatris-saites",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Checked on 2026-07-27 against the theatre index published by the Latvian Ministry of Culture, which groups the country's theatres by who founded them. Two puppet houses meet the denominator. Latvijas Leļļu teātris, Riga, listed among the state theatres, in its own two-storey building on K. Barona iela; its site gives 4 October 1944 as its founding and records that it carried a Latvian and a Russian troupe until the 2022/23 season. Liepājas Leļļu teātris, Rožu laukums 5/6 in Liepāja, listed among the municipal theatres and registered as Pašvaldības SIA, a municipal limited company, which is public backing under the denominator whatever the corporate form. One candidate was examined and set aside: Rēzeknes teātris 'Joriks' is municipal but is a drama house, and it plays in the Culture House of Rēzekne National Societies rather than a building of its own — it fails the denominator twice. The ministry's index does not list it either. The opening estimate of 1 counted the state house and missed the municipal one, which is the error this indicator will make everywhere until each country's index is read.",
+      "lower_bound": 2,
+      "upper_bound": 2
     },
     {
       "indicator": "schools",
@@ -105,7 +105,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Latvian Puppet Theatre, Riga.",
+  "notes": "Latvijas Leļļu teātris, Riga (state). Liepājas Leļļu teātris (municipal).",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
