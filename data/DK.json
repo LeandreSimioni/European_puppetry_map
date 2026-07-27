@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. La Den Danske Scenekunstskole, principale institution publique danoise d'enseignement superieur du spectacle vivant, forme a la danse, a la comedie musicale et au theatre, sans filiere de marionnette. Les formations danoises identifiees dans le champ relevent d'un autre registre : le Thy Teater a porte une formation de base de constructeur de marionnettes de deux ans entre 1996 et 2000, aujourd'hui eteinte, et le seminaire de Viborg, antenne de Thisted, porte depuis 2004 une filiere d'animation qui coopere avec le Thy Teater sans etre une formation de marionnettiste. Aucune ne satisfait le denominateur. Borne haute portee de 0 a 1. Confiance estime, constat etabli sur resumes de moteur.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
