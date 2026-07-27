@@ -26,12 +26,28 @@
       "indicateur": "ecoles",
       "valeur": 0.0,
       "annee": 2026,
-      "source": "https://be.wikipedia.org/wiki/Беларуская_дзяржаўная_акадэмія_мастацтваў",
+      "source": "https://kudapostupat.by/zavedenie/id/1 ; https://be.wikipedia.org/wiki/Беларуская_дзяржаўная_акадэмія_мастацтваў",
       "confiance": "estime",
       "statut": "conteste",
-      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Valeur ramenee de 1 a 0 et passee en conteste, faute d'avoir pu etablir que la filiere est encore ouverte. La Belaruskaja dziarzhaunaja akademija mastactvau de Minsk est bien un etablissement d'Etat et a bien porte une specialisation Akcior teatra lialek : la source lue date la premiere promotion de 1975 et une seconde, en enseignement a distance, de 1987. Mais cette specialisation n'apparait pas dans la structure actuelle decrite par la meme source, qui liste quatre facultes, theatrale, beaux-arts, design et arts decoratifs, arts de l'ecran, sans filiere de marionnette identifiable. La preuve disponible est donc historique et non actuelle. Compter 1 reviendrait a inferer d'une promotion de 1975 l'existence d'un cursus en 2026, ce qui est exactement le raisonnement que le denominateur met en garde de faire, les filieres ouvrant et fermant au gre des promotions. La valeur 1 precedente etait au demeurant une estimation sans recherche. A verifier en priorite : la liste d'admission en cours de l'academie, qu'aucune des pages accessibles n'a fournie.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays, reprise apres une premiere lecture trop rapide. Valeur maintenue a 0 et statut conteste. La Belaruskaja dziarzhaunaja akademija mastactvau de Minsk, pr. Nezalezhnasci 81, est un etablissement d'Etat et a bien porte une specialisation Akcior teatra lialek : la notice encyclopedique lue date la premiere promotion de 1975 et une seconde, en enseignement a distance, de 1987. Un resume de moteur affirme par ailleurs que la filiere est toujours active, en presentiel et a distance. Cette affirmation n'a pas resiste a la verification : les deux portails d'admission consultes et lus n'enumerent au niveau specialite que Akterskoe iskusstvo et Rezhissura teatra, sans direction marionnette visible. Cela ne prouve pas l'absence de la filiere, le systeme biélorusse distinguant la specialite de la direction et les portails ne descendant pas au second niveau ; cela prouve seulement qu'aucune source accessible ne l'etablit. Compter 1 reviendrait a inferer d'une promotion de 1975 l'existence d'un cursus en 2026, ce que le biais connu de l'indicateur interdit. La valeur 1 precedente etait au demeurant une estimation sans recherche. A verifier par une voie qui descend au niveau des directions : catalogue officiel des specialites du ministere, ou contact direct de la commission d'admission de l'academie. C'est le dossier le plus insatisfaisant de cette passe.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Беларуская дзяржаўная акадэмія мастацтваў (БГАІ)",
+          "ville": "Мінск",
+          "adresse": "пр. Незалежнасці 81, 220012 Мінск",
+          "lat": 53.9209,
+          "lon": 27.5978,
+          "statut": "public",
+          "diplome": "Direction marionnette non confirmée : les portails d'admission ne listent au niveau spécialité que Актерское искусство et Режиссура театра",
+          "compte": false,
+          "motif_exclusion": "non_confirme",
+          "source": "https://kudapostupat.by/zavedenie/id/1",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",
