@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. Le Tmima Theatrikon Spoudon de l'universite nationale et capodistrienne d'Athenes couvre le theatre de la licence au post-doctorat mais comme science du theatre, sans filiere de marionnette. Les seules occurrences de kouklotheatro identifiees relevent de l'enseignement d'un cours : un cours de koukloteatro au departement d'education de la petite enfance, et un cours ouvert d'introduction au koukloteatro. Un cours de marionnette dans un cursus de pedagogie prescolaire ne satisfait pas un denominateur qui exige une formation superieure specialisee en arts de la marionnette. Borne haute portee de 0 a 1 : les ecoles dramatiques grecques agreees par le ministere de la Culture n'ont pas ete verifiees une a une. Confiance estime, constat etabli sur resumes de moteur.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
