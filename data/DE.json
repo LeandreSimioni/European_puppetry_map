@@ -25,312 +25,270 @@
       "by_venue": [
         {
           "name": "Magdeburg, Puppentheater der Stadt Magdeburg",
-          "value": 39,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Meiningen, Staatstheater Meiningen",
-          "value": 27,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Erfurt, Theater Waidspeicher",
-          "value": 24,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Gera, Theater Altenburg Gera",
-          "value": 18,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Dresden, tjg. theater junge generation dresden",
-          "value": 17,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Frankfurt (Oder), Theater des Lachens",
-          "value": 17,
-          "unit": "productions",
+          "value": 356,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Augsburg, Augsburger Puppenkiste",
-          "value": 17,
-          "unit": "productions",
+          "value": 261,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Radebeul, Landesbühnen Sachsen",
-          "value": 15,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Halle (Saale), Theater, Oper und Orchester Halle",
-          "value": 14,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Koblenz, Theater Koblenz",
-          "value": 14,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "München, Münchner Marionettentheater",
-          "value": 14,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Chemnitz, Städtische Theater Chemnitz",
-          "value": 14,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Neustrelitz, Theater und Orchester Neubrandenburg/Neustrelitz",
-          "value": 12,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Leipzig, Theater der Jungen Welt",
-          "value": 11,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Leipzig, Westflügel",
-          "value": 9,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Düsseldorf, Düsseldorfer Marionetten-Theater",
-          "value": 8,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Dessau-Roßlau, Anhaltisches Theater Dessau",
-          "value": 8,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Aiterhofen, Doctor Döblingers geschmackvolles Kasperltheater",
-          "value": 7,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "München, Pathos",
-          "value": 5,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Ansbach, Theater Ansbach",
-          "value": 4,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Rendsburg, Schleswig-Holsteinisches Landestheater",
-          "value": 4,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Bautzen, Deutsch-Sorbisches Volkstheater Bautzen",
-          "value": 4,
-          "unit": "productions",
+          "name": "Erfurt, Theater Waidspeicher",
+          "value": 190,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Köln, Hänneschen Theater – Puppenspiele der Stadt Köln",
-          "value": 3,
-          "unit": "productions",
+          "value": 175,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Berlin, Deutsches Theater",
-          "value": 3,
-          "unit": "productions",
+          "name": "Chemnitz, Städtische Theater Chemnitz",
+          "value": 170,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Berlin, Hochschule für Schauspielkunst Ernst Busch",
-          "value": 3,
-          "unit": "productions",
+          "name": "München, Münchner Marionettentheater",
+          "value": 157,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Gelsenkirchen, Musiktheater im Revier",
-          "value": 2,
-          "unit": "productions",
+          "name": "Koblenz, Theater Koblenz",
+          "value": 149,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Cottbus, Piccolo Theater",
-          "value": 2,
-          "unit": "productions",
+          "name": "Halle (Saale), Theater, Oper und Orchester Halle",
+          "value": 142,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Köln, Freies Werkstatt Theater Köln",
-          "value": 2,
-          "unit": "productions",
+          "name": "Gera, Theater Altenburg Gera",
+          "value": 141,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Essen, Schauspiel Essen",
-          "value": 2,
-          "unit": "productions",
+          "name": "Düsseldorf, Düsseldorfer Marionetten-Theater",
+          "value": 124,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Mainz, Mainzer Kammerspiele",
-          "value": 2,
-          "unit": "productions",
+          "name": "Radebeul, Landesbühnen Sachsen",
+          "value": 124,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Kiel, Junges Theater im Werftpark",
-          "value": 2,
-          "unit": "productions",
+          "name": "Meiningen, Staatstheater Meiningen",
+          "value": 120,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Leipzig, Theater der Jungen Welt",
+          "value": 119,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Stendal, Theater der Altmark – Landesbühne Sachsen-Anhalt Nord",
-          "value": 2,
-          "unit": "productions",
+          "value": 119,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Nürnberg, Theater Mummpitz",
-          "value": 1,
-          "unit": "productions",
+          "name": "Dresden, tjg. theater junge generation dresden",
+          "value": 109,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Graz, Next Liberty Jugendtheater",
-          "value": 1,
-          "unit": "productions",
+          "name": "Frankfurt (Oder), Theater des Lachens",
+          "value": 90,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Freiburg, Theater Freiburg",
-          "value": 1,
-          "unit": "productions",
+          "name": "Aiterhofen, Doctor Döblingers geschmackvolles Kasperltheater",
+          "value": 86,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Köln, Hänneschen Theater – Puppenspiele der Stadt Köln 32 (32/–) 8.735 (8.735/–) PUPPEN-/FIGURENTHEATER 329 WERKSTATISTIK 2024/25 LEHMANN & WENZEL Wanted Eurydike 28.11.2024 U Leipzig, Westflügel",
-          "value": 1,
-          "unit": "productions",
+          "name": "Dessau-Roßlau, Anhaltisches Theater Dessau",
+          "value": 69,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Augsburg, Junges Theater Augsburg",
-          "value": 1,
-          "unit": "productions",
+          "name": "Rendsburg, Schleswig-Holsteinisches Landestheater",
+          "value": 63,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Rudolstadt, Theater Rudolstadt",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Köln, Hänneschen Theater – Puppenspiele der Stadt Köln 10 (10/–) 2.773 (2.773/–) SCHMEEL, SUSA überALL unterALL 09.09.2023 (U) Leipzig, Westflügel",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Salzburg, Salzburger Festspiele",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Wien, sirene Operntheater",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Berlin, Berliner Ensemble",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Stendal, Theater der Altmark – Landesbühne Sachsen-Anhalt Nord 59 (15/44) 2.984 (674/2.310) WOSZCZAK, ANNA Großmutters Heiliger Abend 16.12.2023 (U) Frankfurt (Oder), Theater des Lachens",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Lahnstein, Städtische Bühne Lahnstein",
-          "value": 1,
-          "unit": "productions",
-          "venue": null
-        },
-        {
-          "name": "Erlangen, schauspiel erlangen",
-          "value": 1,
-          "unit": "productions",
+          "name": "Bautzen, Deutsch-Sorbisches Volkstheater Bautzen",
+          "value": 42,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Regensburg, Theater Regensburg",
-          "value": 1,
-          "unit": "productions",
+          "value": 38,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Eisenach, Landestheater Eisenach",
-          "value": 1,
-          "unit": "productions",
+          "name": "Berlin, Deutsches Theater",
+          "value": 27,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Kiel, Junges Theater im Werftpark",
+          "value": 26,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Neustrelitz, Theater und Orchester Neubrandenburg/Neustrelitz",
+          "value": 26,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Leipzig, Westflügel",
+          "value": 25,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Marburg, Hessisches Landestheater Marburg",
-          "value": 1,
-          "unit": "productions",
+          "value": 25,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Stuttgart, Wilhelma Theater",
-          "value": 1,
-          "unit": "productions",
+          "name": "Mainz, Mainzer Kammerspiele",
+          "value": 18,
+          "unit": "performances",
           "venue": null
         },
         {
-          "name": "Frankfurt (Oder), Theater des Lachens, Titel: Ralf Rüdiger 12 (3/9) 1.434 (214/1.220) NACH SERAGELDINE, WALID Le voisin 19.10.2024 Magdeburg, Puppentheater der Stadt Magdeburg",
-          "value": 1,
-          "unit": "productions",
+          "name": "Gelsenkirchen, Musiktheater im Revier",
+          "value": 16,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Nürnberg, Theater Mummpitz",
+          "value": 16,
+          "unit": "performances",
           "venue": null
         },
         {
           "name": "Erfurt, Theater Erfurt",
-          "value": 1,
-          "unit": "productions",
+          "value": 10,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Essen, Schauspiel Essen",
+          "value": 10,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Ansbach, Theater Ansbach",
+          "value": 9,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Freiburg, Theater Freiburg",
+          "value": 9,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "München, Pathos",
+          "value": 9,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Rudolstadt, Theater Rudolstadt",
+          "value": 9,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Berlin, Berliner Ensemble",
+          "value": 7,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Cottbus, Piccolo Theater",
+          "value": 6,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Stuttgart, Wilhelma Theater",
+          "value": 6,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Augsburg, Junges Theater Augsburg",
+          "value": 5,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Berlin, Hochschule für Schauspielkunst Ernst Busch",
+          "value": 5,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Erlangen, schauspiel erlangen",
+          "value": 5,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Köln, Freies Werkstatt Theater Köln",
+          "value": 3,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Eisenach, Landestheater Eisenach",
+          "value": 2,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Lahnstein, Städtische Bühne Lahnstein",
+          "value": 2,
+          "unit": "performances",
           "venue": null
         }
       ],
-      "by_venue_covers": "Fifty-one producers named, summing to 344 productions. Three mismatches with the headline, all of them structural. The unit differs: these are Inszenierungen, the headline is 3 154 Aufführungen, so no sum check is possible and none should be attempted. The scope differs: this list is the Werkstatistik's whole D-A-CH set and includes Austrian and Swiss entries such as Graz, while the headline is Germany alone. And no entry carries a 'venue' because Germany has no venues_list yet. The list is recorded now because it is the evidence base the German venues pass will start from, and reading it twice would be waste. An earlier note in this file said 66 distinct venues; that was an artefact of the premiere marker (U) splitting entries in the extraction. The figure is 51."
+      "by_venue_covers": "Forty-four German producers named, summing to 3 120 Aufführungen of the headline 3 154, or 98.9 per cent. Re-extracted from the same PDF on 2026-07-27, after the first extraction was found to be wrong in three separate ways. The unit is now the headline's own: Aufführungen, not Inszenierungen, so the sum is a real check and not an incomparable quantity. The same reading gives 282 Inszenierungen of the published 286 and 346 369 Besuche of the published 353 160; the residual is four productions the author-ordered list does not carry, and it is not attributed to anybody. The list is Germany alone. Country assignment follows the Werkstatistik's own rule, stated in its introduction: the seat of the company decides, not the place of performance, so a German theatre's foreign touring stays German. The three non-German producers found in the section are Austrian — Next Liberty Graz, Salzburger Festspiele, sirene Operntheater Wien — and no Swiss producer appears at all. They sum to 24 Aufführungen, 3 Inszenierungen and 5 852 Besuche, which reproduces each of the three published D-A-CH residuals exactly (3 178 - 3 154, 289 - 286, 359 012 - 353 160). That is the check that validates both the extraction and the split. A fourth check is independent of the arithmetic: the publication states on page 13 how many theatres reported each genre, 44 in Germany and 47 across D-A-CH for Puppen-/Figurentheater, which is exactly the number of producers this list holds on each side. Two errors in the first pass are corrected here and are worth naming, because both inflate. The section lists a work once per author, so every adaptation appears twice — under the adapter, and again under NACH plus the original author — with its statistics repeated. Summing the printed lines gives 3 932 Aufführungen against a published 3 178: sixty-nine productions were being counted twice. And four entries had the previous line's statistics read into their venue name, an artefact of entries that name no director; they are gone. The earlier figure of fifty-one distinct producers, itself a correction of an earlier sixty-six, was inflated by the same two faults. The count is forty-four for Germany, forty-seven for D-A-CH. No entry carries a 'venue' because Germany has no venues_list yet. What the list is for is unchanged: it is the audited evidence base the German venues pass starts from."
     },
     {
       "indicator": "venues",
@@ -458,6 +416,6 @@
   "notes": "Municipal puppet theatres in Berlin, Dresden, Magdeburg, Halle, Bochum, Stuttgart.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "venues: not attempted as a value on 2026-07-27, and the reason is scale rather than absence. The Werkstatistik 2024/25 lists every production by genre with the theatre that staged it, and its Puppen-/Figurentheater section names 51 distinct venues across Germany, Austria and Switzerland for 344 productions, now recorded in the by_venue list of the performances observation. That is an auditable starting set, already read. What it does not give is which of the 66 have public backing and which maintain a permanent puppet unit, and under the ruling of 2026-07-27 both questions have to be answered one venue at a time. The volumes point at where to start: Puppentheater der Stadt Magdeburg 34 productions, Theater Waidspeicher Erfurt 22, Staatstheater Meiningen 22, Theater Altenburg Gera 17, Augsburger Puppenkiste 17, tjg. Dresden 15, Theater Halle 11, Städtische Theater Chemnitz 10, Hänneschen Theater der Stadt Köln. Several of those are municipal Sparten rather than freestanding houses and are exactly what the ruling was written for. Germany needs a session of its own."
+    "venues: not attempted as a value on 2026-07-27, and the reason is scale rather than absence. The Werkstatistik 2024/25 names, for the Puppen-/Figurentheater genre, the producer of every production it carries: 44 German producers accounting for 3 120 of the 3 154 German Aufführungen, recorded in the by_venue list of the performances observation and cross-checked against the publication's own totals. That is an auditable starting set, already read. What it does not give is which of the 44 have public backing and which maintain a permanent puppetry unit, and under the ruling of 2026-07-27 both questions have to be answered one venue at a time. The volumes point at where to start: Puppentheater der Stadt Magdeburg 356 Aufführungen, Augsburger Puppenkiste 261, Theater Waidspeicher Erfurt 190, Hänneschen Köln 175, Städtische Theater Chemnitz 170, Münchner Marionettentheater 157, Theater Koblenz 149, Theater Halle 142, Theater Altenburg Gera 141. Several of those are municipal Sparten rather than freestanding houses and are exactly what the ruling was written for. The list is also the wrong shape for the question in one direction that matters: it is a register of who filed returns to the Buehnenverein, so a publicly backed puppet house that does not report to it is absent from the list and must be found elsewhere. Germany needs a session of its own."
   ]
 }
