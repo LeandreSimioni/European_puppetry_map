@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://en.wikipedia.org/wiki/Lambert_Puppet_Theatre",
+      "confidence": "sourced",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 1
+      "reasoning": "Searched on 2026-07-27, in English, in the transversal venues pass. Zero, and it is a recent zero: Ireland had a puppet theatre with a building and lost it. The Lambert Puppet Theatre at Monkstown, County Dublin, was set up in 1972 by Eugene Lambert and run after his death in 2010 by his son Liam; an arson attack in August 2015 did more than 150 000 euro of damage, it reopened that November with rebuilt puppets, and it closed permanently in 2018. It would not have counted in any case on the reading this record uses — the article describes it as a family-run business, and no public backing appears — but its closure is why the question has no other candidate. Irish puppetry today works as companies rather than houses, and a funded company without a venue is excluded by the denominator by name. Recorded open rather than verified because the Arts Council's list of funded organisations was not read: that is the check that would show whether any puppetry company has since acquired a room. The previous value was 1, an opening estimate produced with no research, and it was almost certainly counting the Lambert from memory, four years after it shut.",
+      "lower_bound": 0,
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "Lambert Puppet Theatre, Dublin. Púca Puppets.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: read the Arts Council of Ireland's list of funded organisations for a puppetry company holding a venue of its own. The 2026-07-27 pass established only that the one purpose-built puppet theatre, the Lambert, closed in 2018 and was privately run."
   ]
 }
