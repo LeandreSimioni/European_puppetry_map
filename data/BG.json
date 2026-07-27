@@ -13,14 +13,118 @@
     },
     {
       "indicator": "venues",
-      "value": 10.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate. Attempted on 2026-07-27 in the transversal venues pass and abandoned on access, not on absence — the note exists so the next attempt starts where this one stopped. Bulgaria is the one country in this batch with a register of exactly the right shape: the Ministry of Culture publishes its list of state drama and drama-puppet theatres, and a separate register of cultural institutes. Three routes into mc.government.bg were tried and all three answered 503, including the print view; a fourth attempt through curl failed on certificate verification rather than reaching the server. The one page that did answer, the Bulgarian theatre directory at theatre.art.bg, returned a partial and garbled reading — four drama-puppet theatres, one of them under a name that does not exist — and was not usable. What surfaced without being read: the country's puppet theatres are the state houses at Sofia, Plovdiv, Varna, Burgas, Ruse, Stara Zagora, Sliven, Yambol, Vidin, Targovishte and Dobrich, with drama-puppet theatres at Silistra, Haskovo and Shumen, and a national puppetry week said to unite state, municipal and private houses across nineteen towns. Every item in that sentence comes from search summaries and none of it is a source. No value produced.",
-      "lower_bound": 8,
-      "upper_bound": 12
+      "value": 7.0,
+      "year": 2026,
+      "source": "https://pptheatre.com/bg",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-27, in Bulgarian, in the transversal venues pass, after the first attempt the same day had abandoned the country on access. The ministry register that would settle Bulgaria in one document was never reached — mc.government.bg answered 503 on three routes, curl failed on certificate verification, and the archived copies that exist on the Wayback Machine are refused to both tools available here. The route that worked instead was the slower one: the encyclopedia's categories for puppet and drama-puppet theatres, which give the candidate list, then each theatre's own statement of status. Bulgaria makes that unusually readable, because the status is carried in the name — Държавен куклен театър means state puppet theatre — and the entries say who pays. Seven units, six houses and one stage. Plovdiv states on its own site that it is a repertory theatre financed by the Ministry of Culture; Burgas that it holds state status since 1962; Vidin that it became a state puppet theatre in 1981 and is financed by the ministry; Stara Zagora that it is a repertory theatre on state financing, founded 1957; Gabrovo that it has been a state puppet theatre since 1971; Ruse that it is a state cultural institute specialising in puppet productions. The one stage is Pleven, where the Ivan Radoev drama-puppet theatre is a state establishment with mixed financing from the ministry and the municipality, and the puppet company sits inside it. Seven is a floor, and an unusually low one — this is the country in the record where the gap between what is counted and what exists is widest. Six further drama-puppet theatres are known by name and town and are not counted: Vratsa, Shumen, Kardzhali, Haskovo, Pazardzhik and Silistra, each an institution whose name declares a puppet company, none of which could be read for its status or for the survival of that company. Nor are the puppet houses of Sofia, Varna, Sliven, Yambol, Targovishte and Dobrich, which are named in the same sources. The Sofia case is the sharpest: the Stolichen kuklen teatar, founded 1946 by Mara Penkova with her own money, was the first puppet theatre in the country, and the word stolichen means of the capital — but a designation is not a statement of who funds it, and the theatre's own site answered 403. Under the rule of this repository that is thirteen candidates left out, and the honest reading of 7 is not a count of Bulgarian puppetry but a count of what one day's reachable pages could prove. Vidin carries no coordinate: the geocoder placed its street in Dimovo, a different municipality of the same province, and a wrong point is worse than none.",
+      "lower_bound": 7,
+      "upper_bound": 7,
+      "units": {
+        "house": 6,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Държавен куклен театър – Пловдив",
+          "city": "Пловдив",
+          "address": "ул. Христо Г. Данов 14, 4000 Пловдив",
+          "lat": 42.14824,
+          "lon": 24.74608,
+          "unit": "house",
+          "parent": null,
+          "authority": "Репертоарен театър, финансиран от Министерство на културата",
+          "registration": null,
+          "url": "https://pptheatre.com",
+          "source": "https://pptheatre.com/bg",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Държавен куклен театър – Бургас",
+          "city": "Бургас",
+          "address": null,
+          "lat": 42.4941,
+          "lon": 27.46965,
+          "unit": "house",
+          "parent": null,
+          "authority": "Държавен статут от 1962 г.",
+          "registration": null,
+          "url": "https://www.burgaspuppets.com",
+          "source": "https://www.burgaspuppets.com/index.php",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Държавен куклен театър – Стара Загора",
+          "city": "Стара Загора",
+          "address": null,
+          "lat": 42.42226,
+          "lon": 25.62412,
+          "unit": "house",
+          "parent": null,
+          "authority": "Репертоарен театър на държавно финансиране, основан 1957",
+          "registration": null,
+          "url": null,
+          "source": "https://bg.wikipedia.org/wiki/%D0%94%D1%8A%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D0%BD_%D0%BA%D1%83%D0%BA%D0%BB%D0%B5%D0%BD_%D1%82%D0%B5%D0%B0%D1%82%D1%8A%D1%80_(%D0%A1%D1%82%D0%B0%D1%80%D0%B0_%D0%97%D0%B0%D0%B3%D0%BE%D1%80%D0%B0)",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Куклен театър – Габрово",
+          "city": "Габрово",
+          "address": null,
+          "lat": 42.86874,
+          "lon": 25.31612,
+          "unit": "house",
+          "parent": null,
+          "authority": "Държавен куклен театър от 1971 г.",
+          "registration": null,
+          "url": null,
+          "source": "https://bg.wikipedia.org/wiki/%D0%9A%D1%83%D0%BA%D0%BB%D0%B5%D0%BD_%D1%82%D0%B5%D0%B0%D1%82%D1%8A%D1%80_(%D0%93%D0%B0%D0%B1%D1%80%D0%BE%D0%B2%D0%BE)",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Куклен театър – Русе",
+          "city": "Русе",
+          "address": "ул. Княжеска 9, 7000 Русе",
+          "lat": 43.84809,
+          "lon": 25.94761,
+          "unit": "house",
+          "parent": null,
+          "authority": "Държавен културен институт",
+          "registration": null,
+          "url": "https://puppetruse.com",
+          "source": "https://bg.wikipedia.org/wiki/%D0%9A%D1%83%D0%BA%D0%BB%D0%B5%D0%BD_%D1%82%D0%B5%D0%B0%D1%82%D1%8A%D1%80_%E2%80%93_%D0%A0%D1%83%D1%81%D0%B5",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Държавен куклен театър – Видин",
+          "city": "Видин",
+          "address": "ул. Пазарска 4, Видин",
+          "lat": null,
+          "lon": null,
+          "unit": "house",
+          "parent": null,
+          "authority": "Държавен статут от 1981 г.; финансира се от Министерството на културата",
+          "registration": null,
+          "url": null,
+          "source": "https://bg.wikipedia.org/wiki/%D0%94%D1%8A%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D0%BD_%D0%BA%D1%83%D0%BA%D0%BB%D0%B5%D0%BD_%D1%82%D0%B5%D0%B0%D1%82%D1%8A%D1%80_(%D0%92%D0%B8%D0%B4%D0%B8%D0%BD)",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Кукленият състав на Драматично-куклен театър „Иван Радоев“",
+          "city": "Плевен",
+          "address": null,
+          "lat": 43.41248,
+          "lon": 24.61619,
+          "unit": "stage",
+          "parent": "Драматично-куклен театър „Иван Радоев“, Плевен",
+          "authority": "Държавно учреждение със смесено финансиране от Министерството на културата и Община Плевен",
+          "registration": null,
+          "url": null,
+          "source": "https://bg.wikipedia.org/wiki/%D0%94%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%BE-%D0%BA%D1%83%D0%BA%D0%BB%D0%B5%D0%BD_%D1%82%D0%B5%D0%B0%D1%82%D1%8A%D1%80_%E2%80%9E%D0%98%D0%B2%D0%B0%D0%BD_%D0%A0%D0%B0%D0%B4%D0%BE%D0%B5%D0%B2%E2%80%9C",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -109,6 +213,8 @@
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country.",
-    "venues: Bulgaria stopped on access on 2026-07-27. The register to reach is the Ministry of Culture's list of state drama and drama-puppet theatres at mc.government.bg, which answered 503 on three routes; the ministry's register of cultural institutes is the second. Both would give public status and town in one document, which is what Poland lacked. The candidate towns are known and the work is one register away."
+    "venues: 7 is a floor and thirteen candidates are known by name. Six drama-puppet theatres — Vratsa, Shumen (Vasil Drumev), Kardzhali (Dimitar Dimov), Haskovo (Ivan Dimov), Pazardzhik (Konstantin Velichkov) and Silistra (Sava Dobroplodni) — would each enter as a stage if their status and their puppet company can be read. Seven puppet houses — Sofia, Varna, Sliven, Yambol, Targovishte, Dobrich and the Mala scena cases — would enter as houses.",
+    "venues: the ministry register at mc.government.bg remains the document that settles all of them at once. It answered 503 on every route on 2026-07-27 and its Wayback copies are refused to the tools here; a later session should simply try it again.",
+    "venues: Vidin has no coordinate. The address is ул. Пазарска 4; the geocoder resolved that street to Dimovo, elsewhere in the province."
   ]
 }
