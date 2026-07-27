@@ -29,11 +29,27 @@
       "source": "https://eamt.ee/erialad/lavakunsti-osakond/lavakunst/uldinfo/",
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained. The search covered the Estonian Academy of Music and Theatre, the country's only higher theatre school, whose performing arts department was read at source: the specialisms listed are acting, directing, dramaturgy, theatre arts and pedagogy, and contemporary performing arts. No mention of puppet theatre. The previous value of 0.5 was the midpoint of an estimated range produced without research; it moves to 0. Confidence stays at estimate rather than sourced: the source read establishes the absence of a puppetry stream at the national theatre school, which is not the same as its absence in the country. An absence cannot be sourced the way a presence can. Upper bound held at 1 for that reason.",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language, revised the same day to record the candidate examined. No establishment retained. The Estonian Academy of Music and Theatre, the country's only higher theatre school, had its performing arts department read at source: the specialisms listed are näitleja, lavastaja, dramaturg, teatrikunst ja teatripedagoogika and kaasaegsed etenduskunstid — acting, directing, dramaturgy, theatre art and pedagogy, and contemporary performing arts — at both bachelor's and master's level. No nukuteater and no objektiteater. The object theatre ruling of today was applied before concluding, since it is exactly the ruling that could have turned this file: it does not, no specialism of the department being object or figure theatre under any name. The academy is now recorded as an examined and set-aside candidate, which the record was missing. Its reason is outside_denominator: it awards state-recognised degrees, simply not in this field. Its address is that of the performing arts department on Toom-Kooli, where the teaching happens, and not the academy's seat on Tatari. The previous value of 0.5 was the midpoint of an estimated range produced without research; it stays at 0. Confidence stays at estimated: the source read establishes the absence of a puppetry stream at the national theatre school, which is not the same as its absence in the country. An absence cannot be sourced the way a presence can. Upper bound held at 1 for that reason.",
       "lower_bound": 0,
       "upper_bound": 1,
       "checked_on": "2026-07-27",
-      "establishments": []
+      "establishments": [
+        {
+          "name": "Eesti Muusika- ja Teatriakadeemia, lavakunsti osakond",
+          "city": "Tallinn",
+          "address": "Toom-Kooli 4, 10130 Tallinn",
+          "lat": 59.4372,
+          "lon": 24.7398,
+          "status": "public",
+          "award": "Bachelor's and master's in performing arts; specialisms are acting, directing, dramaturgy, theatre art and pedagogy, contemporary performing arts",
+          "url": "https://eamt.ee/",
+          "description": "The performing arts department of Estonia's only higher theatre school. Examined and set aside: it awards state-recognised degrees at bachelor's and master's level, but none of its five specialisms is puppet or object theatre, which the ruling of 2026-07-27 makes the test rather than the wording of a title.",
+          "counted": false,
+          "exclusion_reason": "outside_denominator",
+          "source": "https://eamt.ee/erialad/lavakunsti-osakond/lavakunst/uldinfo/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "dates",
