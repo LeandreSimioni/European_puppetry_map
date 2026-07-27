@@ -18,7 +18,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Still an opening estimate. Attempted on 2026-07-27 in the transversal venues pass and left unchanged, because the candidate list was established and the test was not. Read at source, in the survey of puppetry on the territory of present-day Serbia: nine professional houses operating today — Pozorište mladih in Novi Sad, founded 1931 and the first professional children's theatre in the country; Dečje pozorište Subotica, 1934, playing in Serbian, Croatian and Hungarian; Pozorište lutaka „Pinokio” in Zemun, 1972; Malo pozorište „Duško Radović” in Belgrade, 1948, which began as the puppet theatre of the Republic; Pozorište za decu i mlade in Kragujevac, 1994; the puppet stage of the Narodno pozorište „Toša Jovanović” in Zrenjanin, 1952, playing in Serbian and Hungarian; Pozorište „Boško Buha” in Belgrade, 1950; Pozorište lutaka Niš; and Pozorištance Puž, 1977. What the survey does not give is who founds or funds any of them, and the denominator turns on exactly that. Two of the nine are also doubtful on vocation rather than on backing — Boško Buha is a children's and youth theatre, Pozorištance Puž a small house — and each would have to be read the way Hungary's Kolibri was. No value produced: a list of names is not a count.",
       "lower_bound": 4,
       "upper_bound": 6
     },
@@ -108,6 +108,8 @@
   "notes": "Malo Pozorište Duško Radović, Belgrade. Puppet theatres in Niš and Subotica.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: Serbia has its candidate list from the 2026-07-27 pass — nine professional houses, named in the reasoning with their founding years. What is missing is the founding authority for each. The route not yet tried is the Geosrbija geoportal, which the government presents as the fullest register of cultural institutions in the country, and which would give status and coordinates together.",
+    "venues: two of the nine need the Kolibri test rather than a funding check — Pozorište „Boško Buha” and Pozorištance Puž are not obviously puppetry units. Zrenjanin is the opposite case and is already a named puppet stage inside a drama theatre, so it would enter as a stage."
   ]
 }
