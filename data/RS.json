@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://akademija.uns.ac.rs/novi-master-studijski-program-na-akademiji-umetnosti-novi-sad-lutkarstvo/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 1
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : l'Akademija umetnosti de Novi Sad, rattachee a l'universite d'Etat de Novi Sad. Critere lu a la source : programme de master Lutkarstvo, deux ans, au sein du departement des arts dramatiques ; marionnette nommee dans l'intitule du programme ; etablissement public. La valeur precedente de 0,5 etait le milieu d'une fourchette estimee, pas une observation. Borne haute a 2 : la source affirme une premiere nationale, mais cette affirmation porte sur le master complet, pas sur l'ensemble du champ. Elle n'exclut donc pas une filiere de licence ailleurs en Serbie et ne suffit pas a fermer la fourchette.",
+      "borne_basse": 1,
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
