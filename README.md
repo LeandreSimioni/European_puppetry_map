@@ -77,23 +77,43 @@ the build fails when the number of entries with `counted: true` does not equal
 `lower_bound`.
 
 Countries at zero still carry establishments: those are the candidates examined
-and set aside, each with an `exclusion_reason` — `private`, `closed`,
+and set aside, each with an `exclusion_reason` — `closed`,
 `not_degree_granting`, `outside_scope`, `outside_denominator`, `unconfirmed`.
 That is frequently the most useful information in the record. The United Kingdom
 reads as zero because Central closed its puppetry BA to new entrants in 2018;
 Turkey reads as zero because its one qualifying course sits in Anatolia, outside
 the European scope this record uses.
 
-Two rulings are still open and are flagged in the data:
+### The two rulings, settled 2026-07-27
 
-- **Does object theatre count as puppetry?** Latvia runs a Physical and Object
-  Theatre specialism built with the national puppet theatre, but no course title
-  contains the word puppet. Excluded for now. If the ruling goes the other way,
-  Latvia moves to 1 and other countries need re-examining.
-- **Does "backed by a state institution" mean public ownership, or state
-  recognition of the award?** Hungary's national theatre university was
-  transferred to a private foundation in 2020. Counted for now, status
-  `disputed`.
+Both questions the pass had left open are now answered, and the denominator was
+rewritten to carry the answers rather than a note.
+
+- **Object theatre counts.** A specialism in object, figure or material theatre
+  enters on the same footing as one whose title carries the word puppet. Latvia
+  had been excluded on nothing but the absence of that word in a course title,
+  while the specialism itself was built with the national puppet theatre. Latvia
+  moves to 1.
+- **The award decides, not the owner.** "Backed by a state institution"
+  conflated two different things — who owns the walls, and who recognises the
+  qualification. Only the second is a fact about the training. Public, private
+  and foundation-run institutions are now treated alike. Hungary's dispute is
+  lifted.
+
+The second ruling withdrew `private` as an exclusion reason, so the three
+establishments that carried it were re-read on their award instead: Bochum and
+Florence stay out for awarding nothing the State recognises, Perugia became
+`unconfirmed` because what it awards could not be read. Austria and Germany
+each had a sentence removed that excluded unopened private provision by
+construction — that provision is now unexamined rather than excluded.
+
+The distinction that decides cases is now **specialism against subject**.
+Latvia counts because object theatre is a named specialisation inside an acting
+degree; Spain's Dantzerti does not, because puppetry there is a module inside
+one.
+
+Twenty schools across 18 countries. One record stays `disputed`: Belarus, where
+no accessible source reaches stream level.
 
 ## The ruling that blocks everything else
 
@@ -123,12 +143,26 @@ link to its website.
 ## Next steps
 
 1. Settle the denominator of `dates`.
-2. Rule on object theatre, and on foundation-run universities.
-3. Re-open Belarus and North Macedonia, the two weakest files in the schools
+2. Source `population_M`, the only indicator where a published, annual, citable
+   source exists and all 45 values are still estimates. It carries one snag: the
+   denominator asks for the European part only of Russia and Turkey, which no
+   pan-European table gives.
+3. Finish what the ownership ruling reopened. Four Italian files are unexamined
+   (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
+   private provision has never been opened, and Cyprus's private drama schools
+   were skipped when private still meant excluded.
+4. Reach a first-party or state source for Hungary. Two passes have failed:
+   szfe.hu and felveteli.szfe.hu answer 403, felvi.hu answered 503. The value
+   rests on an encyclopaedic entry, which is why it stays `estimated`.
+5. Record the candidates examined in the 16 countries whose `establishments`
+   list is still empty (AD, AL, BA, CY, DK, GR, IE, IS, LI, LU, MD, ME, MK, MT,
+   SM, XK). A zero with nothing behind it cannot be audited or reused.
+6. Re-open Belarus and North Macedonia, the two weakest files in the schools
    pass: neither rests on a real finding.
-4. Show confidence per cell rather than per layer: the payload already carries
+7. Show confidence per cell rather than per layer: the payload already carries
    `confidence[country][indicator]`, the template does not use it yet.
-5. Replace an estimated value with a sourced one, one country at a time,
-   starting with those whose organisations publish annual reports.
-6. Add the indicators listed under `indicators_to_add` in the schema, starting
-   with public subsidy per performance played.
+8. Add the indicators listed under `indicators_to_add` in the schema. Note that
+   **performances per 100,000 inhabitants does not wait on the `dates` ruling**:
+   that ruling blocks per-performer measures, not per-country ones. It needs a
+   volume of performances and a population, both of which national culture
+   statistics and step 2 can supply.
