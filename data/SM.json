@@ -14,13 +14,15 @@
     {
       "indicator": "venues",
       "value": 0.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "year": 2026,
+      "source": "https://www.sanmarinoteatro.sm/on-line/home/i-teatri.html",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Searched on 2026-07-27, in Italian, as part of the transversal venues pass over the smallest countries. Zero. The Republic's theatres are run by the Istituti Culturali, Sezione Arti Performative, and their own page names all three: the Teatro Titano in the historic centre, an Italian-style house of about 315 seats; the Teatro Nuovo at Dogana; and the Cinema Teatro Concordia at Borgo Maggiore, 402 seats, back in service since 1997. None is a puppet theatre and none is said to host a permanent puppetry company. The season the section programmes is prose, research, dance, music and poetry. The denominator asks for a permanent puppetry unit with a venue of its own and public backing: the venues exist and are public, the puppetry unit does not. The previous value was the same zero, produced with no research.",
       "lower_bound": 0,
-      "upper_bound": 0
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "No permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: zero recorded against the Istituti Culturali's own list of the three national theatres. Reopen only if a puppetry company with a room of its own appears, or if the section opens a puppetry strand with a permanent ensemble."
   ]
 }
