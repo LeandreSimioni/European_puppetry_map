@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://www.accademiadimitri.ch/en/master",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu, la valeur passant de 0 a 1 : l'Accademia Teatro Dimitri de Verscio, au Tessin, affiliee a la SUPSI, haute ecole specialisee publique de Suisse italienne, integree depuis 2006. Critere lu a la source : Master of Arts in Theatre de quatre semestres et 120 ECTS, dont l'une des trois orientations est Figure Theatre, explicitement definie comme theatre de materiau, d'objet et de marionnette. La marionnette est donc une orientation nommee d'un diplome de master d'une haute ecole publique. Le 0 precedent etait une estimation sans recherche et se trompait. Borne haute a 2 : les offres alemaniques n'ont pas ete verifiees une a une, et la formation continue en Figurentheater identifiee par ailleurs reste hors denominateur, n'etant pas diplomante au sens retenu ici.",
+      "borne_basse": 1,
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
