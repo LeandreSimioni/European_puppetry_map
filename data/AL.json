@@ -14,13 +14,32 @@
     {
       "indicator": "venues",
       "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
+      "year": 2026,
+      "source": "https://www.eeas.europa.eu/delegations/albania/historic-national-puppet-theatre-reopens-following-major-post-earthquake-restoration_en?s=214",
+      "confidence": "sourced",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Searched on 2026-07-27, in Albanian, in the transversal venues pass. One, and it is the country's national puppet theatre in Tirana, in a building of 1924 that was the Officers' House and then Albania's first parliament before becoming the puppet theatre in the 1960s. Read on the EU delegation's announcement of its reopening: the house was badly damaged by the earthquake of November 2019, restored under the EU4Culture programme with UNOPS implementing, and reopened with a capacity of about 130. What makes it public is in the same page — the restoration was run in partnership with Albania's Ministry of Economy, Culture and Innovation, and the theatre is the national one. The value was already 1 as an opening estimate; it is the same number with a source under it and a point on the map. Recorded open rather than verified because the governing body was not read at first hand: the site of the Qendra Kombëtare e Kulturës për Fëmijë, which now carries the theatre, answered 403. The coordinate is geocoded through Nominatim, which returns the building under its own name, Teatri i Kukullave. No second Albanian puppet venue was looked for, and the Pogradec puppetry festival suggests the country's puppetry is not confined to Tirana.",
       "lower_bound": 1,
-      "upper_bound": 1
+      "upper_bound": 1,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Teatri Kombëtar i Kukullave",
+          "city": "Tiranë",
+          "address": null,
+          "lat": 41.31482,
+          "lon": 19.81697,
+          "unit": "house",
+          "parent": null,
+          "authority": "National puppet theatre; restoration run in partnership with Albania's Ministry of Economy, Culture and Innovation",
+          "registration": null,
+          "url": "https://qkkf.gov.al",
+          "checked_on": "2026-07-27",
+          "source": "https://www.eeas.europa.eu/delegations/albania/historic-national-puppet-theatre-reopens-following-major-post-earthquake-restoration_en?s=214"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -93,6 +112,7 @@
   "notes": "National Theatre of Puppets, Tirana.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: read qkkf.gov.al when it answers, to record which body carries the national puppet theatre and whether the centre holds a permanent troupe. Then look outside Tirana — the European puppet festival at Pogradec implies activity the capital does not account for."
   ]
 }
