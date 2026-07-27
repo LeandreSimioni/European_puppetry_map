@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 110,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator. The value stays the opening estimate and confidence stays estimated with source null, because the obstacle here is the denominator and not the availability of data. This indicator's denominator asks, for Russia and Turkey, for the European part only. No pan-European table gives that: Eurostat carries a geo code for Russia in demo_pjan but publishes no row for it in the period queried, and would in any case give the whole federation. Producing the European part means summing Rosstat's federal districts, which is a construction rather than a reading, and it requires a prior choice that nobody has made in this repository: whether the Urals fall inside or outside. That choice moves the figure by millions. What is needed first is a ruling on the boundary, then a sum of published regional figures each read at source, with the method written out."
+      "value": 143.513,
+      "year": 2025,
+      "source": "https://api.worldbank.org/v2/country/RUS/indicator/SP.POP.TOTL?format=json&mrv=1",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27 after the ruling of the same day that counts transcontinental countries entire. 143513328 inhabitants in 2025, World Bank indicator SP.POP.TOTL, Population total, read through the World Bank API. Russia is the one country in the record not served by Eurostat: demo_pjan carries a geo code for it but its last published row is 1 January 2014, eleven years stale, so the pan-European table could not be used here as it was everywhere else. Rosstat was tried first and is the source that should carry this value: rosstat.gov.ru and eng.rosstat.gov.ru both answered 503, twice. The World Bank was taken as the fallback, and what it is should be recorded rather than glossed: a compilation of national and United Nations figures by a statistical body, not the national statistical office itself. It is citable, it is not primary. Note also that this denominator now covers the whole federation while the country's single counted school is in Moscow, so any per-inhabitant reading of Russia is distorted; the schema carries that as a known bias."
     },
     {
       "indicator": "venues",
@@ -109,6 +109,6 @@
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country.",
-    "population_M: rule on where the European boundary runs, Urals in or out, before any figure is summed from Rosstat regions."
+    "population_M: replace the World Bank figure with Rosstat, which answered 503 on 2026-07-27."
   ]
 }
