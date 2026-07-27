@@ -46,6 +46,10 @@
   .country.sel{stroke:var(--ocre);stroke-width:2}
   .school{fill:var(--jade);stroke:#10361F;stroke-width:.7;pointer-events:none}
   .school.maybe{fill:none;stroke:var(--jade);stroke-width:1.4;stroke-dasharray:2 2}
+  /* etablissement recense mais non compte : ecole privee, filiere fermee,
+     hors perimetre geographique ou hors denominateur. Creux et ocre. */
+  .school.hors{fill:none;stroke:var(--ocre);stroke-width:1.2;stroke-dasharray:1.5 1.5}
+  .schoolhit{fill:transparent;cursor:pointer}
   .clabel{fill:var(--os);font-size:11px;text-anchor:middle;pointer-events:none;
     paint-order:stroke;stroke:#1B1329;stroke-width:2.6px;stroke-linejoin:round}
 
@@ -112,7 +116,7 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Relevé de mémoire · aucune source consultée</div>
+    <div class="eyebrow" id="eyebrow">Relevé de mémoire · aucune source consultée</div>
     <h1 class="poster">L'Europe<br><span class="thin">des castelets</span></h1>
     <p class="standfirst">Une géographie institutionnelle de la marionnette, dessinée de mémoire : lieux permanents soutenus par la puissance publique, écoles supérieures spécialisées, et ce que ces chiffres deviennent une fois rapportés à la population. Les valeurs sont des estimations, pas des relevés.</p>
   </header>
@@ -130,7 +134,7 @@
   <div class="legend">
     <span id="legLo">0</span><div class="ramp"></div><span id="legHi"></span>
     <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> aucun lieu recensé</span>
-    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> école · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> filière incertaine</span>
+    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> école comptée · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> filière incertaine · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--ocre);vertical-align:-1px"></span> recensée, non comptée</span>
     <span style="color:#6E6080">·</span>
     <span>Trame :
       <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/></svg> sourcé
@@ -167,6 +171,25 @@
 <script>
 const PAYLOAD = __PAYLOAD__;
 const GEO = PAYLOAD.geo, DATA = PAYLOAD.data, METIER = PAYLOAD.metier;
+const PTS = PAYLOAD.ecoles_pts || {}, VERIF = PAYLOAD.verifie_le || {};
+/* Le bandeau d'accroche se deduit des donnees : ecrit en dur, il redevient
+   faux des qu'une passe de verification aboutit. */
+(function(){
+  const conf=PAYLOAD.confiance||{}; const par={}; let tot=0, src=0;
+  for(const c in conf) for(const k in conf[c]){
+    tot++; par[k]=par[k]||{n:0,s:0}; par[k].n++;
+    if(conf[c][k][0]!=='estime'){ src++; par[k].s++; }
+  }
+  const el=document.getElementById('eyebrow'); if(!el) return;
+  if(!src){ el.textContent='Relevé de mémoire · aucune source consultée'; return; }
+  const faits=Object.keys(par).filter(k=>par[k].s>par[k].n/2);
+  const noms={ecoles:'écoles',lieux:'lieux',population_M:'population',dates:'dates',
+    titres:'titres',vie_production:'vie des productions',part_sous_20:'part sous 20 dates',
+    part_jeune_public:'part jeune public',part_revenu_jeu:'revenu du jeu'};
+  el.textContent = (faits.length ? faits.map(k=>noms[k]||k).join(', ')+' relevés à la source · '
+                                 : '')
+    + src+' valeurs sourcées sur '+tot+' · le reste demeure une estimation';
+})();
 const RAMP = ['#3B2E52','#5C2F70','#9B3560','#D0512E','#F0AB3E'];
 const COLD = ['#22314A','#2A5573','#3B8299','#5FB3AE','#A9DFCB'];
 const NODATA = '#3A2E4C';
@@ -298,11 +321,40 @@ function drawSchools(){
   gS.innerHTML='';
   if(!showSchools) return;
   for(const c of codes){
+    const pts = PTS[c];
+    if(pts){
+      /* position reelle de chaque etablissement recense */
+      for(const [x,y,nom,ville,adresse,compte,motif,diplome] of pts){
+        const dot=document.createElementNS(NS,'circle');
+        dot.setAttribute('cx',x); dot.setAttribute('cy',y);
+        dot.setAttribute('r', compte?4.2:3.4);
+        dot.setAttribute('class','school'+(compte?'':' hors'));
+        gS.appendChild(dot);
+        const hit=document.createElementNS(NS,'circle');
+        hit.setAttribute('cx',x); hit.setAttribute('cy',y); hit.setAttribute('r',9);
+        hit.setAttribute('class','schoolhit');
+        hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showEcoleTip(ev,c,nom,ville,compte,motif);});
+        hit.addEventListener('mouseleave',hideTip);
+        hit.addEventListener('click',ev=>{ev.stopPropagation();select(c);});
+        gS.appendChild(hit);
+      }
+      /* l'incertitude du comptage reste portee au centroide */
+      const inc = DATA[c][5]-DATA[c][4];
+      for(let i=0;i<inc;i++){
+        const [cx,cy]=GEO.centroids[c];
+        const dot=document.createElementNS(NS,'circle');
+        dot.setAttribute('cx', cx+i*11); dot.setAttribute('cy', cy);
+        dot.setAttribute('r',4.2); dot.setAttribute('class','school maybe');
+        gS.appendChild(dot);
+      }
+      continue;
+    }
+    /* aucun etablissement localise : ancien rendu au centroide */
     const lo=DATA[c][4], hi=DATA[c][5];
     const [x,y]=GEO.centroids[c];
     const full=lo, maybe=(hi>lo)?1:0, tot=full+maybe;
     for(let i=0;i<tot;i++){
-      const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      const dot=document.createElementNS(NS,'circle');
       dot.setAttribute('cx', x+(i-(tot-1)/2)*11);
       dot.setAttribute('cy', y);
       dot.setAttribute('r', 4.2);
@@ -310,6 +362,21 @@ function drawSchools(){
       gS.appendChild(dot);
     }
   }
+}
+const MOTIFS={prive:'école privée',ferme:'filière fermée',
+  hors_perimetre:'hors périmètre géographique de la fiche',
+  hors_denominateur:'hors dénominateur',non_diplomant:'non diplômante',
+  non_confirme:'existence non confirmée'};
+function showEcoleTip(e,c,nom,ville,compte,motif){
+  tip.innerHTML=`<div class="t">${nom}</div>
+    <div class="mono" style="font-size:12.5px;margin-top:3px">
+      ${ville} · ${DATA[c][0]}<br>
+      <span style="color:${compte?'#6FBFB0':'var(--ocre)'}">${compte?'comptée dans l\'indicateur':'recensée, non comptée : '+(MOTIFS[motif]||motif)}</span>
+      ${VERIF[c]?`<br><span style="color:#9C8DAE">vérifiée le ${VERIF[c]}</span>`:''}
+    </div>`;
+  tip.classList.add('on');
+  const x=Math.min(e.clientX+16, innerWidth-286), y=Math.min(e.clientY+16, innerHeight-120);
+  tip.style.left=x+'px'; tip.style.top=y+'px';
 }
 function drawLabels(){
   gL.innerHTML='';
@@ -385,7 +452,26 @@ function detail(){
       <div class="kv"><span>Part jeune public</span><b>${e[4]} %</b></div>
       <div class="kv"><span>Revenu venant du jeu</span><b>${e[5]} %</b></div>
     </div>
+    ${ecolesHTML(c)}
     ${d[6]?`<p class="note">${d[6]}</p>`:''}`;
+}
+/* liste nominative des etablissements : la carte doit rester exploitable
+   hors de l'ecran, donc ville, adresse, diplome et date de collecte. */
+function ecolesHTML(c){
+  const pts=PTS[c];
+  if(!pts||!pts.length) return '';
+  const li=pts.map(([x,y,nom,ville,adresse,compte,motif,diplome])=>`
+    <li style="margin-bottom:9px;list-style:none">
+      <div style="font-weight:600;line-height:1.3">${nom}</div>
+      <div class="mono" style="font-size:11.5px;color:#9C8DAE">
+        ${ville}${adresse?' · '+adresse:''}
+        ${diplome?`<br>${diplome}`:''}
+        <br><span style="color:${compte?'#6FBFB0':'var(--ocre)'}">${compte?'comptée':'non comptée : '+(MOTIFS[motif]||motif)}</span>
+      </div>
+    </li>`).join('');
+  return `<h2 style="margin-top:18px">Établissements recensés</h2>
+    <ul style="padding:0;margin:8px 0 0">${li}</ul>
+    ${VERIF[c]?`<div class="mono" style="font-size:11px;color:#9C8DAE;margin-top:4px">Relevé du ${VERIF[c]}</div>`:''}`;
 }
 
 /* ---- classement ---- */

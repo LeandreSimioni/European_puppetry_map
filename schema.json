@@ -33,7 +33,9 @@
       "unite": "nombre",
       "couche": "institutions",
       "denominateur": "Formation superieure diplomante specialisee en arts de la marionnette, adossee a une institution d'Etat.",
-      "biais_connu": "Les filieres ouvrent et ferment au gre des promotions. Preferer a terme le flux annuel de diplomes."
+      "biais_connu": "Les filieres ouvrent et ferment au gre des promotions. Preferer a terme le flux annuel de diplomes.",
+      "unite_de_compte": "L'etablissement, jamais le programme. Une academie portant une licence et trois masters de marionnette compte 1.",
+      "adossement": "Cet indicateur est le seul a exiger la liste nominative des etablissements qui le composent, dans le champ 'etablissements'. Le build echoue si le nombre d'etablissements 'compte': true ne vaut pas 'borne_basse' : un comptage doit se justifier un par un."
     },
     {
       "id": "population_M",
@@ -98,6 +100,23 @@
       "biais_connu": "Suppose une comptabilite analytique que peu de professionnels tiennent. A collecter par enquete declarative."
     }
   ],
+  "etablissement": {
+    "propos": "Fiche nominative d'une ecole, portee par l'observation 'ecoles'. Sert a rendre le comptage verifiable et a poser les points sur la carte. Un pays a zero ecole peut avoir des etablissements recenses : ce sont les candidats examines et ecartes, et c'est souvent l'information la plus utile de la fiche.",
+    "champs": {
+      "nom": "Intitule de l'etablissement dans sa langue, transcription latine admise.",
+      "ville": "Ville reelle de la formation, pas le siege administratif quand ils different.",
+      "adresse": "Adresse postale relevee a la source. null si non verifiee, jamais reconstruite de memoire.",
+      "lat": "Latitude en degres decimaux, niveau localite. Ne pretend pas situer une rue.",
+      "lon": "Longitude en degres decimaux, meme reserve.",
+      "statut": "public, prive, ou fondation. 'fondation' vise les etablissements transferes du public a une fondation, cas hongrois : ni tout a fait publics ni prives.",
+      "diplome": "Intitule et niveau du diplome delivre, ou motif precis quand l'etablissement est ecarte.",
+      "compte": "true si l'etablissement entre dans l'indicateur. La somme des true vaut borne_basse.",
+      "motif_exclusion": "Obligatoire si compte vaut false. Valeurs : prive, ferme, non_diplomant, hors_perimetre, hors_denominateur, non_confirme.",
+      "source": "URL effectivement ouverte et lue. Obligatoire des que compte vaut true.",
+      "verifie_le": "Date ISO du relevé. Une fiche sans date n'est pas reutilisable."
+    },
+    "projection": "Les coordonnees sont converties en repere SVG par tools/projection.py, ajuste sur les traces du fond. Le build refuse un point qui tombe hors du trace de son pays et signale ceux qu'il a du recaler, la cote du fond etant simplifiee."
+  },
   "indicateurs_a_ajouter": [
     "subvention publique par representation jouee",
     "representations par ETP salarie de la structure",
