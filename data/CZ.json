@@ -24,14 +24,18 @@
     },
     {
       "indicator": "venues",
-      "value": 9.0,
+      "value": 10.0,
       "year": 2026,
       "source": "https://unima.idu.cz/prakticke-informace/adresar/",
       "confidence": "sourced",
-      "status": "disputed",
-      "reasoning": "Checked on 2026-07-27 against the directory of Czech puppet theatres kept by the Czech UNIMA centre and hosted by the Institut umění – Divadelní ústav. It sorts the field into 'profesionální loutková divadla (městská)' and 'nezávislé skupiny', the latter split again by whether the group has a venue of its own. Ten entries sit in the municipal professional category: Divadlo Alfa, Divadlo Lampion, Loutkové divadlo Radost, Divadlo loutek Ostrava, Divadlo Drak, Naivní divadlo Liberec, Divadlo Minor, Divadlo Spejbla a Hurvínka, Malé divadlo and Divadlo rozmanitostí. Their cities are not in the directory and were read from NIPOS table 4.2, which names each theatre with its town: Plzeň, Kladno, Brno, Ostrava, Hradec Králové, Liberec, Prague twice, České Budějovice and Most. Disputed, and the bounds carry the reason. Eight of the ten are freestanding organisations. Two are not: Malé divadlo is a stage of the Jihočeské divadlo in České Budějovice and Divadlo rozmanitostí is a stage of the Městské divadlo v Mostě — which is why NIPOS table 4.2 credits those two parent companies with 203 and 276 puppet performances rather than listing the puppet stages separately. Each has a building and public backing and plays puppetry all year; neither is an organisation of its own. Read strictly, the denominator asks for an organisation and Czechia is 8. Read as the specialist directory reads it, Czechia is 10. This is not a Czech quirk and should be settled before the next batch, because the same question decides France, where the CNMa label attaches to organisations, and Germany, where puppetry often lives as a Sparte inside a municipal theatre. The opening estimate was 8 to 10 and lands on the same interval, which is a coincidence: it was drawn from a note listing four theatres.",
-      "lower_bound": 8,
-      "upper_bound": 10
+      "status": "verified",
+      "reasoning": "Re-read on 2026-07-27 under the ruling of the same day, which counts the permanent puppetry unit rather than the legal person. Source: the directory of Czech puppet theatres kept by the Czech UNIMA centre and hosted by the Institut umění – Divadelní ústav, ten entries under 'profesionální loutková divadla (městská)', cross-read against NIPOS table 4.2, which gives each reporting theatre's performances split by genre. The two sources sort the ten by themselves, and the split is clean enough to be worth recording. Seven report as their own organisation and play puppetry and nothing else — Minor 573 performances of 573, Divadlo loutek Ostrava 546 of 546, Radost in Brno 419 of 419, Spejbla a Hurvínka 383 of 383, DRAK in Hradec Králové 333 of 333, Naivní divadlo Liberec 315 of 315, Alfa in Plzeň 248 of 248. Three do not report separately at all, and appear inside a mixed parent: Divadlo Lampion within Divadla Kladno, 210 puppet performances of 353; Malé divadlo within the Jihočeské divadlo in České Budějovice, 203 of 747; Divadlo rozmanitostí within the Městské divadlo v Mostě, 276 of 462. Seven house, three stage. Two corrections to the record of earlier the same day. The count was 8 to 10 and is now 10 flat. And the strict figure was wrong: it was given as 8, counting Lampion as a freestanding house, when Divadla Kladno s.r.o. is the reporting organisation and carries both the puppet and the drama company. The strict reading was 7. That error is one of the three reasons the ruling was made — a criterion its own author misapplies within a day is not a criterion — and it stays recoverable here as the 'house' figure. Most, at 276, plays more puppetry than Alfa in Plzeň at 248. The old denominator counted Alfa and not Most.",
+      "lower_bound": 10,
+      "upper_bound": 10,
+      "units": {
+        "house": 7,
+        "stage": 3
+      }
     },
     {
       "indicator": "schools",
@@ -118,7 +122,6 @@
   ],
   "notes": "Minor and Spejbl & Hurvínek, Prague. DRAK, Hradec Králové. Naïve Theatre, Liberec. Alfa, Plzeň. Radost, Brno. Divadlo loutek, Ostrava. Lampion, Kladno. Two puppet stages inside larger municipal theatres: Malé divadlo (České Budějovice), Divadlo rozmanitostí (Most).",
   "to_check": [
-    "Settle the denominator of the dates indicator before collecting anything.",
-    "venues: rule on whether a puppet stage inside a larger municipal theatre counts as a venue. Czechia is 8 or 10 depending on the answer, and the same ruling decides France and Germany."
+    "Settle the denominator of the dates indicator before collecting anything."
   ]
 }
