@@ -29,7 +29,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained. Spain has fifteen official higher schools of dramatic art, accredited by the education ministry and awarding qualifications recognised at European level, but their specialisms are Acting, Scenography, and Stage Directing and Dramaturgy: no puppetry specialism. The only foothold identified is the Puppets and Objects module taught at Dantzerti, the Basque higher school of dramatic art in Bilbao. A module within an acting course does not satisfy a denominator that requires a specialised training rather than a subject appearing in a curriculum. The previous value of 0.5 was the midpoint of an estimated range. Caveat: this finding rests on search summaries and an encyclopaedic page, without reading the curricula of all fifteen institutions; confidence therefore stays at estimate and the upper bound at 1.",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained. Spain has fifteen official higher schools of dramatic art, accredited by the education ministry and awarding qualifications recognised at European level, but their specialisms are Acting, Scenography, and Stage Directing and Dramaturgy: no puppetry specialism. The only foothold identified is the Puppets and Objects module taught at Dantzerti, the Basque higher school of dramatic art in Bilbao. A module within an acting course does not satisfy a denominator that requires a specialised training rather than a subject appearing in a curriculum. The previous value of 0.5 was the midpoint of an estimated range. Caveat: this finding rests on search summaries and an encyclopaedic page, without reading the curricula of all fifteen institutions; confidence therefore stays at estimate and the upper bound at 1. Revisited on 2026-07-27 after the object theatre ruling, which does not change the value but changes what the exclusion has to say. Latvia now counts because object theatre is a named specialisation inside an acting degree; Dantzerti stays out because puppetry there is a subject inside one. That line is now load-bearing for the whole series, so it was checked rather than assumed: the Dantzerti site was opened and lists two degrees, Grado en Arte Dramático and Grado en Danza, with no puppetry or object theatre specialisation named. The exclusion reason is corrected accordingly, from not_degree_granting to outside_denominator, which is the accurate one: Dantzerti does award a state-recognised degree, it simply does not award one in this field. The caveat on the other fourteen ESADs stands unchanged, their curricula having still not been read, and confidence stays at estimated for that reason.",
       "lower_bound": 0,
       "upper_bound": 1,
       "checked_on": "2026-07-27",
@@ -41,12 +41,12 @@
           "lat": 43.263,
           "lon": -2.935,
           "status": "public",
-          "award": "Puppets and Objects taught as a module within the acting degree",
+          "award": "Grado en Arte Dramático; puppets and objects taught as a module, no puppetry or object theatre specialisation named",
           "url": "https://dantzerti.eus/",
-          "description": "The Basque higher school of dramatic art, one of Spain's fifteen official ESADs. Its puppetry teaching is a module inside an acting curriculum, not a specialism.",
+          "description": "The Basque higher school of dramatic art, one of Spain's fifteen official ESADs. It awards a state-recognised Grado en Arte Dramático, but names no puppetry or object theatre specialisation: the teaching is a module inside the acting curriculum. That is the distinction that separates it from the Latvian case, where object theatre is a specialisation.",
           "counted": false,
-          "exclusion_reason": "not_degree_granting",
-          "source": null,
+          "exclusion_reason": "outside_denominator",
+          "source": "https://dantzerti.eus/",
           "checked_on": "2026-07-27"
         }
       ]
