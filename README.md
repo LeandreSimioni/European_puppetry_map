@@ -58,17 +58,24 @@ geo/europe.json           projected outlines (Natural Earth 1:50 M, public domai
 templates/carte.html      the map template, without data
 build.py                  validates the data and regenerates dist/index.html
 tools/projection.py       (lon, lat) -> SVG frame, fitted on the base map
+tools/make_artifact.py    repackages the built map for artifact publishing
 tools/seed_data.py        initial seeding, no longer to be run
 dist/index.html           generated map, never to be edited by hand
+dist/artifact.html        same map as a page body, also generated
 docs/                     method note, protocol, initial table
 ```
 
 ## Usage
 
 ```bash
-python3 build.py --check   # validates the data, writes nothing
-python3 build.py           # regenerates dist/index.html
+python3 build.py --check         # validates the data, writes nothing
+python3 build.py                 # regenerates dist/index.html
+python3 tools/make_artifact.py   # regenerates dist/artifact.html from it
 ```
+
+The third command is a separate step on purpose but is easy to forget, and
+nothing catches the omission: `build.py` does not touch `artifact.html` and the
+publish workflow does not check it.
 
 No dependencies, standard Python 3 is enough. Open `dist/index.html` in a
 browser.
