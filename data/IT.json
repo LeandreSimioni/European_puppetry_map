@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. Les formations italiennes identifiees en teatro di figura relevent toutes de structures associatives ou privees hors du denominateur : l'academie de deux ans du Centro Teatro Internazionale a Florence, la Libera Accademia del Teatro dell'Aria adossee au festival de Perouse, le parcours Animateria, l'Universita dei Burattini de Cesenatico. Le seul point d'accroche dans l'enseignement public est la discipline Teatro di figura enseignee au sein du cursus de scenographie de l'Accademia di Belle Arti de Catane : c'est une discipline dans une maquette, pas une formation specialisee, et elle ne satisfait donc pas le denominateur. Aucune laurea specialisee n'a ete trouvee. Borne haute portee de 0 a 1, la verification n'ayant pas couvert les maquettes de l'ensemble des academies des beaux-arts et ecoles nationales d'art dramatique. L'Italie est le cas explicitement signale au schema comme sous-estime par un indicateur institutionnel.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
