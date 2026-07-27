@@ -47,7 +47,7 @@
       "layer": "context",
       "denominator": "Total population of the country, its whole territory included. Transcontinental countries are counted entire.",
       "ruling": "Settled 2026-07-27, replacing an earlier denominator that asked for the European part alone of Russia and Turkey. Splitting a country along a continental line cost more precision than it bought: the figures involved are not precise enough to carry the distinction, and building Eastern Thrace out of provincial tables, or European Russia out of federal districts, meant constructing a number rather than reading one.",
-      "known_bias": "The scope of this indicator no longer matches the scope of schools, and that is deliberate rather than an oversight. Population covers the whole country; schools counts only establishments in Europe. Any ratio built from the two is therefore inconsistent for Russia and Turkey. For Turkey the effect is nil, its schools count being zero under either scope. For Russia it inflates the denominator, the counted school being in Moscow while the population now includes Siberia and the Far East. Read per-inhabitant figures for those two countries with that in mind, or exclude them."
+      "known_bias": "The scope of this indicator no longer matches the scope of schools, and that is deliberate rather than an oversight. Population covers the whole country; schools counts only establishments in Europe. Any ratio built from the two is therefore inconsistent for Russia and Turkey. For Turkey the effect is nil, its schools count being zero under either scope. For Russia it inflates the denominator, the counted school being in Saint Petersburg while the population now includes Siberia and the Far East. Read per-inhabitant figures for those two countries with that in mind, or exclude them."
     },
     {
       "id": "dates",
@@ -57,7 +57,10 @@
       "aggregation": "median",
       "denominator": "TO BE SETTLED. Three incompatible options: (a) anyone declaring themselves a professional puppeteer, (b) anyone who performed at least once in the year, (c) any performer on a permanent contract or equivalent. The option chosen changes the result by a factor of two to three.",
       "known_bias": "Identified trap: counting fees instead of performances. In France the threshold for unemployment insurance can be reached without ever getting behind a booth.",
-      "also_collect": ["top decile", "share under 20 performances"]
+      "also_collect": [
+        "top decile",
+        "share under 20 performances"
+      ]
     },
     {
       "id": "titles",

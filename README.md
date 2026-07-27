@@ -8,7 +8,7 @@ the exercise — a preview precise enough to be refutable.
 
 **Two indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
-behind each count. `population_M` is sourced for 42 of 45. Every other indicator
+behind each count. `population_M` is sourced for 44 of 45. Every other indicator
 is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -45,7 +45,7 @@ Bosphorus — rather than reading one.
 establishments only, which is why Anadolu Üniversitesi stays outside Turkey's
 count. Any ratio built from the two is inconsistent for those two countries:
 nil effect for Turkey, which counts zero schools either way, and an inflated
-denominator for Russia, whose one counted school is in Moscow while the
+denominator for Russia, whose one counted school is in Saint Petersburg while the
 population now includes Siberia. Both indicators carry the warning in
 `schema.json` so neither can be read without meeting it.
 
