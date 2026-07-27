@@ -24,13 +24,13 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 1.0,
-      "annee": null,
-      "source": null,
+      "valeur": 0.0,
+      "annee": 2026,
+      "source": "https://be.wikipedia.org/wiki/Беларуская_дзяржаўная_акадэмія_мастацтваў",
       "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 1,
+      "statut": "conteste",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Valeur ramenee de 1 a 0 et passee en conteste, faute d'avoir pu etablir que la filiere est encore ouverte. La Belaruskaja dziarzhaunaja akademija mastactvau de Minsk est bien un etablissement d'Etat et a bien porte une specialisation Akcior teatra lialek : la source lue date la premiere promotion de 1975 et une seconde, en enseignement a distance, de 1987. Mais cette specialisation n'apparait pas dans la structure actuelle decrite par la meme source, qui liste quatre facultes, theatrale, beaux-arts, design et arts decoratifs, arts de l'ecran, sans filiere de marionnette identifiable. La preuve disponible est donc historique et non actuelle. Compter 1 reviendrait a inferer d'une promotion de 1975 l'existence d'un cursus en 2026, ce qui est exactement le raisonnement que le denominateur met en garde de faire, les filieres ouvrant et fermant au gre des promotions. La valeur 1 precedente etait au demeurant une estimation sans recherche. A verifier en priorite : la liste d'admission en cours de l'academie, qu'aucune des pages accessibles n'a fournie.",
+      "borne_basse": 0,
       "borne_haute": 1
     },
     {
