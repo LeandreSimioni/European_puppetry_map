@@ -72,6 +72,13 @@
   .toggle[aria-pressed="true"] .dot{background:var(--jade)}
 
   .seggrp{display:flex;align-items:center;gap:8px}
+  .rowlab{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:#6E6080;width:118px;flex:0 0 118px;
+    padding-right:14px;border-right:1px solid #2E2440;margin-right:4px}
+  .controls.layers{margin-top:10px;padding-top:10px;border-top:1px solid #2E2440}
+  .legend.markers{margin-top:8px;display:block}
+  .legend.markers > span{display:block;line-height:1.8;margin-top:2px}
+  .legend.markers b{display:inline-block;width:66px}
   .grplab{font-family:ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7D6E90}
   .hatchpath{pointer-events:none}
   .status{display:flex;align-items:baseline;gap:8px;margin:14px 0 0;flex-wrap:wrap;
@@ -124,28 +131,46 @@
   </header>
 
   <div class="controls">
+    <span class="rowlab">Colour the map by</span>
     <div class="seggrp"><span class="grplab">Institutions</span>
       <div class="seg" id="mInst" role="group" aria-label="Institutional measures"></div></div>
     <div class="seggrp"><span class="grplab">Activity</span>
       <div class="seg" id="mAct" role="group" aria-label="Measures of activity"></div></div>
     <div class="seggrp"><span class="grplab">The trade</span>
       <div class="seg" id="mJob" role="group" aria-label="Measures of the trade"></div></div>
-    <button class="toggle" id="tgVenues" aria-pressed="true"><span class="dot"></span>Venues</button>
-    <button class="toggle" id="tgSchools" aria-pressed="true"><span class="dot"></span>Schools</button>
-    <button class="toggle" id="tgLabels" aria-pressed="false"><span class="dot"></span>Names</button>
+  </div>
+
+  <div class="controls layers">
+    <span class="rowlab">Draw on top</span>
+    <button class="toggle" id="tgVenues" aria-pressed="true">
+      <svg width="13" height="13" aria-hidden="true"><rect x="3" y="3" width="7" height="7" fill="var(--ocre)"/></svg>Venues</button>
+    <button class="toggle" id="tgSchools" aria-pressed="true">
+      <svg width="13" height="13" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4" fill="var(--jade)"/></svg>Schools</button>
+    <button class="toggle" id="tgLabels" aria-pressed="false">
+      <span class="dot"></span>Country names</button>
   </div>
   <div class="status releve" id="status"></div>
 
   <div class="legend">
     <span id="legLo">0</span><div class="ramp"></div><span id="legHi"></span>
-    <span style="color:#6E6080">·</span><span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> no value recorded</span>
-    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--jade);vertical-align:-1px"></span> school counted · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--jade);vertical-align:-1px"></span> uncertain course · <span style="display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px dashed var(--ocre);vertical-align:-1px"></span> recorded, not counted</span>
+    <span style="color:#6E6080">·</span>
+    <span><span style="display:inline-block;width:9px;height:9px;background:var(--nodata);vertical-align:-1px"></span> no value recorded</span>
     <span style="color:#6E6080">·</span>
     <span>Hatching:
       <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/></svg> sourced
       <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hLight)"/></svg> declared
       <svg width="18" height="11" style="vertical-align:-1px"><rect width="18" height="11" fill="#9B3560"/><rect width="18" height="11" fill="url(#hDense)"/></svg> estimated
     </span>
+  </div>
+  <div class="legend markers">
+    <span><b style="color:var(--ocre)">Venues</b>
+      <svg width="13" height="13" style="vertical-align:-2px"><rect x="3" y="3" width="7" height="7" fill="var(--ocre)"/></svg> freestanding house
+      <svg width="15" height="13" style="vertical-align:-2px"><rect x="3.5" y="3.5" width="7" height="7" fill="none" stroke="var(--ocre)" stroke-width="1.4" transform="rotate(45 7 7)"/></svg> puppet stage inside a larger organisation
+      · sized by performances played where the country publishes them, so a marker of base size is unmeasured and not small</span>
+    <span><b style="color:var(--jade)">Schools</b>
+      <svg width="13" height="13" style="vertical-align:-2px"><circle cx="6.5" cy="6.5" r="4" fill="var(--jade)"/></svg> counted
+      <svg width="13" height="13" style="vertical-align:-2px"><circle cx="6.5" cy="6.5" r="4" fill="none" stroke="var(--jade)" stroke-width="1.4" stroke-dasharray="2 2"/></svg> uncertain course
+      <svg width="13" height="13" style="vertical-align:-2px"><circle cx="6.5" cy="6.5" r="4" fill="none" stroke="var(--ocre)" stroke-width="1.2" stroke-dasharray="1.5 1.5"/></svg> recorded, not counted</span>
   </div>
 
   <div class="stage">
