@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://www.agrft.uni-lj.si/studij/druga-stopnja/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 0
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu, la valeur passant de 0 a 1 : l'Akademija za gledalisce, radio, film in televizijo (AGRFT) de l'Universite publique de Ljubljana. Critere lu a la source : le programme de deuxieme cycle Dramska igra, d'un an et 60 ECTS, comporte quatre orientations dont Igra z lutko, jeu de marionnette. La marionnette est donc une specialisation nommee d'un diplome d'Etat, ce qui satisfait le denominateur. Le 0 precedent etait une estimation sans recherche et se trompait. Borne haute maintenue a 1 : l'AGRFT est la seule academie publique de theatre du pays et le materiel consulte decrit les deux institutions slovenes de production marionnettique comme employant ses diplomes, ce qui la designe comme voie unique. Reserve : cette unicite est deduite du contexte, non affirmee par une source.",
+      "borne_basse": 1,
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
