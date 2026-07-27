@@ -13,14 +13,76 @@
     },
     {
       "indicator": "venues",
-      "value": 5.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate. Attempted on 2026-07-27 in the transversal venues pass and left unchanged, because the candidate list was established and the test was not. Read at source, in the survey of puppetry on the territory of present-day Serbia: nine professional houses operating today — Pozorište mladih in Novi Sad, founded 1931 and the first professional children's theatre in the country; Dečje pozorište Subotica, 1934, playing in Serbian, Croatian and Hungarian; Pozorište lutaka „Pinokio” in Zemun, 1972; Malo pozorište „Duško Radović” in Belgrade, 1948, which began as the puppet theatre of the Republic; Pozorište za decu i mlade in Kragujevac, 1994; the puppet stage of the Narodno pozorište „Toša Jovanović” in Zrenjanin, 1952, playing in Serbian and Hungarian; Pozorište „Boško Buha” in Belgrade, 1950; Pozorište lutaka Niš; and Pozorištance Puž, 1977. What the survey does not give is who founds or funds any of them, and the denominator turns on exactly that. Two of the nine are also doubtful on vocation rather than on backing — Boško Buha is a children's and youth theatre, Pozorištance Puž a small house — and each would have to be read the way Hungary's Kolibri was. No value produced: a list of names is not a count.",
+      "value": 4.0,
+      "year": 2026,
+      "source": "https://www.ni.rs/pozoriste-lutaka-nis/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-27, in Serbian, in the transversal venues pass. Four units, two houses and two stages, each read at source. The opening estimate was 5, produced with no research. The candidate list came from the survey of puppetry on the territory of present-day Serbia, which names nine professional houses; the survey gives founding years and nothing about who backs them, so each was then taken separately. Four passed. Pozorište lutaka Niš is carried by the City of Niš among its javne ustanove, and it is the only professional puppet theatre for children and young people in the city. Pozorište lutaka „Pinokio”, founded 1972 in Belgrade and the only puppet theatre in the capital, is under the patronage of the Belgrade City Assembly. Both are houses: their vocation is puppetry and nothing else. The two stages are the more interesting half. The Scena za decu of the Pozorište mladih in Novi Sad is what remains of the oldest puppet theatre in Serbia, founded 1931, after a drama stage was added in 1991: the city's culture administration carries the theatre as one of its cultural institutions, and the puppetry is now one scene of two, which is exactly the case the units split exists to record. The Lutkarska scena of the Narodno pozorište „Toša Jovanović” in Zrenjanin was a professional puppet theatre founded in 1956 and integrated into the drama house in 1975; the theatre's own page says the puppet ensemble is permanent and that it plays four premieres a year in Serbian and two in Hungarian, which makes it the only professional puppet stage in the country working in two languages. Disputed, because five of the nine candidates are unresolved and they fail on two different tests. Dečje pozorište Subotica and Malo pozorište „Duško Radović” in Belgrade fail the vocation test rather than the backing test: both are public, both began as puppet theatres — Subotica in 1934, Duško Radović in 1948 as the puppet theatre of the Republic — and both present themselves today as children's theatres with no puppet unit named. That is precisely the case Hungary's Kolibri and Croatia's Osijek settled by exclusion, and they are excluded here for the same reason and with the same discomfort: a house that was a puppet theatre and no longer says so is not the same as a house that never was. Pozorište „Boško Buha”, Pozorištance Puž and the Pozorište za decu i mlade in Kragujevac were not resolved at all, the first two having no reachable first-party account. Four is therefore a floor, and the two most likely additions are the two that were excluded on how they describe themselves rather than on what they do.",
       "lower_bound": 4,
-      "upper_bound": 6
+      "upper_bound": 4,
+      "units": {
+        "house": 2,
+        "stage": 2
+      },
+      "venues_list": [
+        {
+          "name": "Позориште лутака Ниш",
+          "city": "Ниш",
+          "address": "Булевар др Зорана Ђинђића 7, 18000 Ниш",
+          "lat": 43.31978,
+          "lon": 21.90707,
+          "unit": "house",
+          "parent": null,
+          "authority": "Јавна установа of the City of Niš, listed among its public cultural institutions",
+          "registration": null,
+          "url": "https://www.ni.rs/pozoriste-lutaka-nis/",
+          "source": "https://www.ni.rs/pozoriste-lutaka-nis/",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Позориште лутака „Пинокио”",
+          "city": "Београд",
+          "address": "Булевар маршала Толбухина 1, Нови Београд",
+          "lat": 44.83013,
+          "lon": 20.41186,
+          "unit": "house",
+          "parent": null,
+          "authority": "Под покровитељством Скупштине Града Београда",
+          "registration": null,
+          "url": "https://pinokio.rs",
+          "source": "https://sr.wikipedia.org/sr-ec/%D0%9F%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5_%D0%BB%D1%83%D1%82%D0%B0%D0%BA%D0%B0_%E2%80%9E%D0%9F%D0%B8%D0%BD%D0%BE%D0%BA%D0%B8%D0%BE%E2%80%9D",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Сцена за децу, Позориште младих",
+          "city": "Нови Сад",
+          "address": "Игњата Павласа 4, 21000 Нови Сад",
+          "lat": 45.25527,
+          "lon": 19.84885,
+          "unit": "stage",
+          "parent": "Позориште младих, Нови Сад",
+          "authority": "Установа културе of the City of Novi Sad",
+          "registration": null,
+          "url": "https://kultura.novisad.rs/cyr/pozorishte-mladikh",
+          "source": "https://kultura.novisad.rs/cyr/pozorishte-mladikh",
+          "checked_on": "2026-07-27"
+        },
+        {
+          "name": "Луткарска сцена, Народно позориште „Тоша Јовановић”",
+          "city": "Зрењанин",
+          "address": "Трг слободе 7, 23101 Зрењанин",
+          "lat": 45.37989,
+          "lon": 20.39053,
+          "unit": "stage",
+          "parent": "Народно позориште „Тоша Јовановић”, Зрењанин",
+          "authority": "Municipal cultural institution, founded 1946 by the district people's committee; puppet theatre integrated 1975",
+          "registration": null,
+          "url": "https://www.tosajovanovic.org.rs/lutkarska-scena/",
+          "source": "https://www.tosajovanovic.org.rs/lutkarska-scena/",
+          "checked_on": "2026-07-27"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -109,7 +171,7 @@
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country.",
-    "venues: Serbia has its candidate list from the 2026-07-27 pass — nine professional houses, named in the reasoning with their founding years. What is missing is the founding authority for each. The route not yet tried is the Geosrbija geoportal, which the government presents as the fullest register of cultural institutions in the country, and which would give status and coordinates together.",
-    "venues: two of the nine need the Kolibri test rather than a funding check — Pozorište „Boško Buha” and Pozorištance Puž are not obviously puppetry units. Zrenjanin is the opposite case and is already a named puppet stage inside a drama theatre, so it would enter as a stage."
+    "venues: re-read Dečje pozorište Subotica and Malo pozorište „Duško Radović” for a named puppet unit. Both are public and both began as puppet theatres; both were excluded on 2026-07-27 for presenting themselves as children's theatres, which is the Kolibri reading. If either names puppeteers, it enters.",
+    "venues: resolve Pozorište „Boško Buha”, Pozorištance Puž and the Pozorište za decu i mlade in Kragujevac. None had a reachable first-party account on 2026-07-27."
   ]
 }
