@@ -14,13 +14,15 @@
     {
       "indicator": "venues",
       "value": 0.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "year": 2026,
+      "source": "https://www.altaveu.com/actualitat/cultura/escena-nacional-impulsa-produeix-nou-projecte-teatre-titelles-en-temporada-2026_75466_102.html",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Searched on 2026-07-27, in Catalan, as part of the transversal venues pass over the smallest countries. Zero, and it is the most recent of the three because Andorra is in the act of acquiring puppetry rather than lacking it. The Escena Nacional d'Andorra is launching a puppet theatre project for the 2026 season, with the Valencian company Abast Teatre, a small cast to be recruited locally and a first showing at the Ànima festival. What makes this a zero rather than a one is what the article says about the starting point: its director calls puppetry a world largely unknown in the country until now, and the piece names no Andorran puppetry venue and no Andorran puppetry company, the craft being brought in from Valencia. A project with a foreign partner and no permanent ensemble is what the denominator excludes by name. The country's theatre rooms — the Teatre Comunal in Andorra la Vella, the Teatre de les Fontetes in La Massana, the Valireta hall in Encamp — are municipal general-purpose venues, and none is a puppetry unit. The previous value was the same zero, produced with no research.",
       "lower_bound": 0,
-      "upper_bound": 0
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "No permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: zero recorded on 2026-07-27, with a caveat that has a date on it. The Escena Nacional's puppetry project runs in the 2026 season with Abast Teatre. If it produces a permanent Andorran ensemble with a room, this becomes a one; re-read the ENA season after the Ànima festival."
   ]
 }
