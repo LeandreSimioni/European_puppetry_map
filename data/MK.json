@@ -18,7 +18,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Still an opening estimate, and this note records why. Searched on 2026-07-27, in Macedonian, in the transversal venues pass. The candidate is the Teatar za deca i mladinci in Skopje, at ulica Dimitrija Chupovski 4, read on its own site, and its lineage is exactly the question: puppetry in Skopje began as the puppet stage of the Macedonian National Theatre in 1946, became the City Puppet Theatre in 1949, and was reorganised in 1957/58 into a youth and children's theatre playing on two stages. What could not be read is whether a puppetry unit survived that reorganisation. The theatre's own site names an ensemble of actors and no puppetry stage; the Ministry of Culture page announcing a puppet premiere there answered 503, and the Macedonian encyclopedia article 404. So the case sits precisely on the line Hungary's Kolibri settled — a children's theatre that plays puppetry is not a puppetry unit — and it cannot be settled from what was reachable. No value produced.",
       "lower_bound": 1,
       "upper_bound": 2
     },
@@ -93,6 +93,7 @@
   "notes": "Puppet theatre in Skopje.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: settle whether the Teatar za deca i mladinci in Skopje holds a puppetry unit or plays puppetry with its acting ensemble. Its own site names actors only; the ministry page that would say answered 503. Look also for a second Macedonian house outside Skopje, which this pass did not."
   ]
 }
