@@ -1,0 +1,96 @@
+{
+  "code": "HU",
+  "nom": "Hongrie",
+  "observations": [
+    {
+      "indicateur": "population_M",
+      "valeur": 9.6,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "lieux",
+      "valeur": 7.0,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "borne_basse": 6,
+      "borne_haute": 8
+    },
+    {
+      "indicateur": "ecoles",
+      "valeur": 1.0,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "borne_basse": 1,
+      "borne_haute": 1
+    },
+    {
+      "indicateur": "dates",
+      "valeur": 100,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "conteste",
+      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+    },
+    {
+      "indicateur": "titres",
+      "valeur": 9,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "vie_production",
+      "valeur": 220,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "part_sous_20",
+      "valeur": 7,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "conteste",
+      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+    },
+    {
+      "indicateur": "part_jeune_public",
+      "valeur": 80,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "part_revenu_jeu",
+      "valeur": 90,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    }
+  ],
+  "notes": "Budapest Bábszínház, Kolibri, Kecskemét, Debrecen. Filière SzFE",
+  "a_verifier": [
+    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
+    "Trouver le rapport annuel d'au moins une structure du pays."
+  ]
+}

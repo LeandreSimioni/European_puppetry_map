@@ -1,0 +1,96 @@
+{
+  "code": "MD",
+  "nom": "Moldavie",
+  "observations": [
+    {
+      "indicateur": "population_M",
+      "valeur": 2.5,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "lieux",
+      "valeur": 2.0,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "borne_basse": 2,
+      "borne_haute": 2
+    },
+    {
+      "indicateur": "ecoles",
+      "valeur": 0.0,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "borne_basse": 0,
+      "borne_haute": 0
+    },
+    {
+      "indicateur": "dates",
+      "valeur": 90,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "conteste",
+      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+    },
+    {
+      "indicateur": "titres",
+      "valeur": 8,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "vie_production",
+      "valeur": 210,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "part_sous_20",
+      "valeur": 10,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "conteste",
+      "raisonnement": "CONTESTE. Premiere valeur produite comme moyenne conditionnee aux artistes qui tournent, en excluant du denominateur les createurs qui ne jouent pas. Erreur de methode identifiee : confusion entre cachet et date jouee. Pour la France, la mediane reelle est probablement dans la fourchette 10 a 20, avec une distribution bimodale. Pour les pays a troupes permanentes, recalcul par le haut : 250 a 400 representations annuelles, distributions de 3 a 5, troupe d'une vingtaine, soit de l'ordre de 50 a 90. Valeur a reprendre integralement une fois le denominateur tranche."
+    },
+    {
+      "indicateur": "part_jeune_public",
+      "valeur": 85,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    },
+    {
+      "indicateur": "part_revenu_jeu",
+      "valeur": 88,
+      "annee": null,
+      "source": null,
+      "confiance": "estime",
+      "statut": "ouvert",
+      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee."
+    }
+  ],
+  "notes": "Licurici (Chișinău)",
+  "a_verifier": [
+    "Trancher le denominateur de l'indicateur dates avant toute collecte.",
+    "Trouver le rapport annuel d'au moins une structure du pays."
+  ]
+}

@@ -1,0 +1,407 @@
+{
+ "AL": [
+  "Albanie",
+  2.8,
+  1,
+  1,
+  0,
+  0,
+  "Théâtre de marionnettes de Tirana"
+ ],
+ "DE": [
+  "Allemagne",
+  84,
+  20,
+  25,
+  2,
+  2,
+  "Halle, Magdebourg, Dresde, Erfurt, FITZ Stuttgart. Écoles : Ernst Busch (Berlin), HMDK Stuttgart"
+ ],
+ "AD": [
+  "Andorre",
+  0.08,
+  0,
+  0,
+  0,
+  0,
+  ""
+ ],
+ "AT": [
+  "Autriche",
+  9.1,
+  2,
+  3,
+  0,
+  0,
+  "Salzburger Marionettentheater, Schuberttheater Vienne"
+ ],
+ "BE": [
+  "Belgique",
+  11.7,
+  3,
+  4,
+  0,
+  1,
+  "Toone à Bruxelles, Centre de la Marionnette de la FWB à Tournai"
+ ],
+ "BY": [
+  "Biélorussie",
+  9.2,
+  4,
+  6,
+  1,
+  1,
+  "Théâtre d'État de Minsk"
+ ],
+ "BA": [
+  "Bosnie-Herzégovine",
+  3.2,
+  2,
+  3,
+  0,
+  0,
+  "Sarajevo, Mostar"
+ ],
+ "BG": [
+  "Bulgarie",
+  6.4,
+  8,
+  12,
+  1,
+  1,
+  "Théâtre central de Sofia et réseau régional. NATFIZ"
+ ],
+ "CY": [
+  "Chypre",
+  1.3,
+  1,
+  1,
+  0,
+  0,
+  "Tradition de l'ombre karagiozis"
+ ],
+ "HR": [
+  "Croatie",
+  3.9,
+  4,
+  5,
+  1,
+  1,
+  "Zadar, Rijeka, Osijek, Split. Académie d'Osijek"
+ ],
+ "DK": [
+  "Danemark",
+  5.9,
+  1,
+  2,
+  0,
+  0,
+  "Tissu surtout compagnial"
+ ],
+ "ES": [
+  "Espagne",
+  48,
+  3,
+  5,
+  0,
+  1,
+  "TOPIC Tolosa. Filière à l'Institut del Teatre"
+ ],
+ "EE": [
+  "Estonie",
+  1.4,
+  1,
+  2,
+  0,
+  1,
+  "NUKU Tallinn, théâtre d'État doublé d'un musée"
+ ],
+ "FI": [
+  "Finlande",
+  5.6,
+  1,
+  2,
+  0,
+  1,
+  "Nukketeatteri Sampo"
+ ],
+ "FR": [
+  "France",
+  68,
+  12,
+  15,
+  1,
+  1,
+  "Label CNMa : Mouffetard, Laval, Tas de Sable, Jean Arp, Sablier, Jéliote, Bouffou. TJP Strasbourg. ESNAM Charleville"
+ ],
+ "GR": [
+  "Grèce",
+  10.4,
+  1,
+  2,
+  0,
+  0,
+  "Karagiozis, tradition vivante hors institution"
+ ],
+ "HU": [
+  "Hongrie",
+  9.6,
+  6,
+  8,
+  1,
+  1,
+  "Budapest Bábszínház, Kolibri, Kecskemét, Debrecen. Filière SzFE"
+ ],
+ "IE": [
+  "Irlande",
+  5.3,
+  1,
+  1,
+  0,
+  0,
+  "L'héritage Lambert s'est éteint"
+ ],
+ "IS": [
+  "Islande",
+  0.39,
+  0,
+  1,
+  0,
+  0,
+  ""
+ ],
+ "IT": [
+  "Italie",
+  59,
+  3,
+  5,
+  0,
+  0,
+  "Gioco Vita (Piacenza), Teatro del Drago (Ravenne), Colla (Milan)"
+ ],
+ "XK": [
+  "Kosovo",
+  1.8,
+  1,
+  1,
+  0,
+  0,
+  ""
+ ],
+ "LV": [
+  "Lettonie",
+  1.9,
+  1,
+  1,
+  0,
+  0,
+  "Théâtre national de marionnettes de Riga"
+ ],
+ "LI": [
+  "Liechtenstein",
+  0.04,
+  0,
+  0,
+  0,
+  0,
+  ""
+ ],
+ "LT": [
+  "Lituanie",
+  2.9,
+  3,
+  4,
+  0,
+  1,
+  "Lėlė (Vilnius), Kaunas, Klaipėda"
+ ],
+ "LU": [
+  "Luxembourg",
+  0.66,
+  0,
+  1,
+  0,
+  0,
+  ""
+ ],
+ "MK": [
+  "Macédoine du Nord",
+  1.8,
+  1,
+  2,
+  0,
+  0,
+  "Skopje"
+ ],
+ "MT": [
+  "Malte",
+  0.54,
+  0,
+  1,
+  0,
+  0,
+  ""
+ ],
+ "MD": [
+  "Moldavie",
+  2.5,
+  2,
+  2,
+  0,
+  0,
+  "Licurici (Chișinău)"
+ ],
+ "ME": [
+  "Monténégro",
+  0.62,
+  1,
+  1,
+  0,
+  0,
+  "Podgorica"
+ ],
+ "NO": [
+  "Norvège",
+  5.5,
+  1,
+  2,
+  0,
+  0,
+  "Figurteatret i Nordland (Stamsund), centre de compétence national"
+ ],
+ "NL": [
+  "Pays-Bas",
+  17.9,
+  1,
+  2,
+  0,
+  0,
+  "Tradition Jan Klaassen surtout foraine et compagniale"
+ ],
+ "PL": [
+  "Pologne",
+  36.8,
+  22,
+  28,
+  2,
+  2,
+  "Réseau dense de théâtres municipaux. Académies de Białystok et Wrocław"
+ ],
+ "PT": [
+  "Portugal",
+  10.6,
+  2,
+  3,
+  0,
+  0,
+  "Museu da Marioneta (Lisbonne), Teatro de Marionetas do Porto"
+ ],
+ "CZ": [
+  "Tchéquie",
+  10.9,
+  8,
+  10,
+  1,
+  1,
+  "Drak, Alfa, Naivní divadlo, Minor, Spejbl a Hurvínek. DAMU (KALD)"
+ ],
+ "RO": [
+  "Roumanie",
+  19,
+  12,
+  18,
+  1,
+  2,
+  "Țăndărică et réseau de théâtres de comté. UNATC, Târgu Mureș"
+ ],
+ "GB": [
+  "Royaume-Uni",
+  68,
+  4,
+  6,
+  0,
+  1,
+  "Little Angel, Norwich, Puppet Theatre Barge. Parcours à la Royal Central"
+ ],
+ "RU": [
+  "Russie (partie européenne)",
+  110,
+  60,
+  100,
+  1,
+  2,
+  "Obraztsov (Moscou) et un maillage régional hérité de l'URSS"
+ ],
+ "SM": [
+  "Saint-Marin",
+  0.03,
+  0,
+  0,
+  0,
+  0,
+  ""
+ ],
+ "RS": [
+  "Serbie",
+  6.6,
+  4,
+  6,
+  0,
+  1,
+  "Duško Radović, Pinokio, Subotica, Niš"
+ ],
+ "SK": [
+  "Slovaquie",
+  5.4,
+  3,
+  4,
+  1,
+  1,
+  "Bratislava, Košice, Nitra. VŠMU"
+ ],
+ "SI": [
+  "Slovénie",
+  2.1,
+  2,
+  2,
+  0,
+  0,
+  "Lutkovno gledališče Ljubljana et Maribor"
+ ],
+ "SE": [
+  "Suède",
+  10.6,
+  2,
+  3,
+  0,
+  1,
+  "Marionetteatern (Stockholms stadsteater), Dockteatern Tittut"
+ ],
+ "CH": [
+  "Suisse",
+  8.9,
+  4,
+  5,
+  0,
+  0,
+  "Genève, Lausanne, Zurich, Bâle. Soutien cantonal et communal"
+ ],
+ "TR": [
+  "Turquie (partie européenne)",
+  12,
+  1,
+  2,
+  0,
+  1,
+  "Karagöz, patrimoine immatériel plus que réseau de lieux"
+ ],
+ "UA": [
+  "Ukraine",
+  36,
+  20,
+  25,
+  1,
+  1,
+  "Maillage régional hérité de l'URSS, situation actuelle inconnue"
+ ]
+}
