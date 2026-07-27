@@ -18,7 +18,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Still an opening estimate. Searched on 2026-07-27, in German and French, in the transversal venues pass, and no value produced: the searches returned the Théâtre des marionnettes du jardin du Luxembourg, which is in Paris and belongs to the French Senate, and nothing in the Grand Duchy. The country's theatre landscape as it surfaced — the Grand Théâtre and the Kasemattentheater in Luxembourg City, the Kulturhaus in Niederanven, the regional centres funded by their communes — carries no puppet or figure theatre, but that is an absence in search results, not in a source: the official panorama of Luxembourg theatre answered 403 and 503 on both its German and English pages, and UNIMA's own encyclopedia answered 503. An absence read on no page is not a finding, so the 0.5 stays where it was rather than becoming a sourced zero it has not earned.",
       "lower_bound": 0,
       "upper_bound": 1
     },
@@ -93,6 +93,7 @@
   "notes": "No dedicated permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: retry luxembourg.public.lu and kulturlx.lu, both of which refused the pass of 2026-07-27, and UNIMA's Luxembourg entry. The expected answer is zero; what is missing is a page that says so."
   ]
 }
