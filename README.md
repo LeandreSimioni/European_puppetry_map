@@ -81,6 +81,54 @@ python3 build.py           # regenerates dist/index.html
 No dependencies, standard Python 3 is enough. Open `dist/index.html` in a
 browser.
 
+## The venues ruling, 2026-07-27
+
+`venues` counts **the permanent puppetry unit, not the legal person.** A named
+puppet stage or ensemble counts whether or not it has its own legal personality.
+What stays out is a programming strand or an occasional co-production
+maintaining no permanent ensemble.
+
+The old wording asked for a "permanent organisation with a building of its own",
+and three countries stalled on it in two batches — Czechia between 8 and 10,
+Hungary between 12 and 13, Croatia between 4 and 5. Three findings decided it:
+
+- **Output.** In Czechia the integrated stages are the same size as the
+  freestanding houses. Divadlo rozmanitostí in Most plays 276 puppet
+  performances against Alfa's 248 in Plzeň. The distinction separated nothing.
+- **Applicability.** The obvious alternative — a majority-of-repertoire test —
+  needs a performance count per venue. Of the ten countries collected, only
+  Czechia and Croatia publish any puppetry figure at all.
+- **Consistency**, which decided it. `performances` counted by form already
+  includes puppetry made inside drama houses. Excluding those houses from
+  `venues` assigns their output to no venue and breaks every ratio built from
+  the two columns: 479 performances belonging nowhere in Czechia alone.
+
+The old wording also failed in practice. Its own author applied it wrongly
+within a day, counting Czechia at 8 by missing that Divadlo Lampion sits inside
+Divadla Kladno. The strict count was 7.
+
+Every researched value carries a `units` split, and the build refuses one that
+does not:
+
+| | |
+|---|---|
+| `house` | Freestanding organisation whose vocation is puppetry. **This is the strict pre-ruling count, recoverable for ever.** |
+| `stage` | Named puppet stage or ensemble inside a larger organisation. |
+| `unknown` | The source is a statistical aggregate naming no establishment, so the split cannot be read. |
+
+Two cases fell out on **vocation** rather than structure, and they are the ones
+that show where the cursor sits: Hungary's Kolibri and Croatia's Osijek are both
+public children's theatres that play puppetry with a single mixed company and no
+puppet unit named anywhere. A mixed company playing some puppetry is not a
+permanent puppetry unit; a named stage inside a bigger house is.
+
+**Expect the counts to rise in the west.** Germany's Sparten and France's
+labelled structures have not been read under the new wording yet, and the
+east-west gap will narrow when they are. That is a correction: counting legal
+persons rewarded systems whose puppetry was organised into separate
+institutions — the socialist state-theatre legacy above all — and penalised
+those where it lives inside larger houses.
+
 ## The activity layer
 
 `performances` is the newest indicator and the first that counts work rather
