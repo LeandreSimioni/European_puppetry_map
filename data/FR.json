@@ -28,10 +28,10 @@
       "annee": null,
       "source": null,
       "confiance": "estime",
-      "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "statut": "conteste",
+      "raisonnement": "Recherche web du 2026-07-27, indicateur non resolu. L'ESNAM (Charleville-Mezieres) satisfait les trois criteres du denominateur : superieure, diplomante (DNSPC specialite acteur-marionnettiste), habilitee par le ministere de la Culture. Elle constitue donc une borne basse ferme de 1. Mais un compte n'est pas la verification d'une existence : affirmer 1 exige de prouver l'absence d'une seconde ecole, ce qui n'a jamais ete fait. Un candidat reste non tranche, le DMA arts de la marionnette, diplome d'Etat bac+2 en lycee public, dont je n'ai pas pu etablir s'il a survecu a la reforme DMA vers DNMADE de 2019. D'ou borne_haute portee a 2. Le master URCA Cirque et Marionnette et la licence Arts parcours marionnette sont ecartes : le premier n'est pas specialise marionnette, la seconde est reservee aux laureats du concours ESNAM et ne constitue pas une ecole distincte. Aucune source n'est enregistree car la politique reseau de l'environnement bloque l'ouverture des pages (CONNECT 403 sur tout domaine, Wikipedia comprise) : seuls des titres et resumes de moteur ont pu etre obtenus, jamais lus a la source. Plusieurs pages revendiquent l'unicite de l'ESNAM en France et en Europe, dont culture.gouv.fr et wepa.unima.org, mais elles restent des pistes non lues et non citables en l'etat. Passage en conteste : la methode du comptage, et non la valeur, est ce qui est mis en cause.",
       "borne_basse": 1,
-      "borne_haute": 1
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
