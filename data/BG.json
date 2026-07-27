@@ -25,11 +25,11 @@
     {
       "indicateur": "ecoles",
       "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "annee": 2026,
+      "source": "https://ksk.natfiz.bg/specialnosti/aktiorstvo-kuklen-teatar/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la NATFIZ Krastyo Sarafov de Sofia, Academie nationale des arts du theatre et du cinema. Criteres lus a la source : enseignement superieur, diplomant avec degre bakalavar et qualification professionnelle nommee Aktyor za kuklen teatar, marionnette explicite dans l'intitule, academie nationale relevant de l'Etat. La meme institution porte aussi une filiere de mise en scene pour le theatre de marionnettes ; comptage a l'etablissement, donc 1 et non 2. Borne haute maintenue a 1 : la page lue indique que la specialite ne s'obtient qu'a la NATFIZ, ce qui constitue une affirmation d'exhaustivite lue et non deduite. Reserve : cette affirmation ne couvre que la filiere d'interpretation.",
       "borne_basse": 1,
       "borne_haute": 1
     },
