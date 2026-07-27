@@ -25,11 +25,11 @@
     {
       "indicateur": "ecoles",
       "valeur": 2.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "annee": 2026,
+      "source": "https://www.otouczelnie.pl/wydzial/390/Wydzial-Sztuki-Lalkarskiej---Oddzial-w-Bialymstoku ; https://www.wroclaw.pl/akademicki-wroclaw/akademia-sztuk-teatralnych-w-krakowie-filia-we-wroclawiu",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Deux etablissements retenus, tous deux lus a la source. Premier : le Wydzial Sztuki Lalkarskiej de l'Akademia Teatralna Aleksandra Zelwerowicza, filiale de Bialystok, avec deux cursus en jednolite studia magisterskie de cinq ans, aktorstwo et rezyseria specialite teatru lalek, plus une licence de trois ans en technologia teatru lalek ouverte en 2018. Second : le Wydzial Lalkarski de l'Akademia Sztuk Teatralnych de Cracovie, filiale de Wroclaw, avec aktorstwo teatru lalek et rezyseria teatru lalek. Les deux relevent de l'enseignement superieur artistique public polonais. Comptage a l'etablissement : cinq cursus au total mais deux ecoles. Borne haute maintenue a 2, aucune troisieme filiere n'ayant ete identifiee. La valeur ne change pas mais passe d'estimee a sourcee.",
       "borne_basse": 2,
       "borne_haute": 2
     },
