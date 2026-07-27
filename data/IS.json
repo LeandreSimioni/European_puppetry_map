@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27. Aucun etablissement retenu, et aucun candidat d'aucune sorte n'a ete identifie : la recherche n'a renvoye aucune formation islandaise en arts de la marionnette, ni diplomante ni sous forme d'atelier. L'Islande ne compte qu'une ecole superieure d'art, la Listahaskoli Islands, dont le departement d'arts de la scene n'a pas ete lu a la source dans cette passe. La valeur 0 est donc conservee mais elle repose sur une absence de resultat, ce qui est l'etat de preuve le plus faible de cette serie : ne rien trouver n'est pas constater une absence. Borne haute portee de 0 a 1 pour porter cette faiblesse. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
