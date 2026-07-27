@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 0.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://www.critical-stages.org/20/theatre-in-malta-amateur-practice-and-professional-aspirations/",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Searched on 2026-07-27, in English and Maltese, as part of the transversal venues pass over the smallest countries. Zero. The survey of Maltese theatre read here enumerates the country's theatre spaces — the state-owned Manoel Theatre of 1732 and its 572 seats, the university's Valletta campus theatre, the 1 400-seat hall of the Malta Conference Centre, the 186-seat theatre-in-the-round at Spazju Kreattiv, and a majority of the remaining rooms belonging to the Catholic Church — and names no puppet theatre among them. Its single mention of puppetry is a technique inside one festival production, Theatre Anon's Daqxejn ta' Requiem lil Leli at the Malta International Arts Festival in 2018. Puppetry in Malta is programmed rather than housed: the Valletta Cultural Agency puts on a children's puppet show, which is an event in a public venue and not a puppetry unit in it. The national theatre bodies, Teatru Manoel and Teatru Malta, are public and neither is a puppetry institution. The denominator asks for a permanent puppetry unit with a venue of its own and public backing, and the first term is missing. The previous value was 0.5, an opening estimate produced with no research; the half was hedging, and there is nothing to hedge.",
       "lower_bound": 0,
-      "upper_bound": 1
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "No dedicated permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: zero recorded against a survey that enumerates the island's theatre spaces. The route not taken is the Arts Council Malta list of funded cultural organisations, which would show whether any puppetry company holds structural funding — it would still need a venue of its own to count."
   ]
 }
