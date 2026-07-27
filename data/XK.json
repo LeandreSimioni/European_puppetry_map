@@ -14,13 +14,32 @@
     {
       "indicator": "venues",
       "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "year": 2026,
+      "source": "https://sq.wikipedia.org/wiki/Teatri_Dodona",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Searched on 2026-07-27, in Albanian, in the transversal venues pass. One, and it is disputed on vocation rather than on existence. Teatri Dodona in Prishtina was founded on 12 November 1986 by decision of the municipal assembly, under the name Teatri i të rinjve, fëmijëve dhe i kukullave — the theatre of youth, children and puppets. Its own encyclopedia entry says it runs a puppet theatre with an acting ensemble and has staged more than thirty-three puppet premieres, and OpenStreetMap carries the building as Teatri i Pupetave Dodona, on Rruga Xhelal Mitrovica in the quarter the theatre gave its name to. Recorded as a stage rather than a house, and the distinction is the whole difficulty: Dodona is not an organisation whose vocation is puppetry, it is a youth and children's theatre with a puppetry line inside it, which is why the puppetry is the unit and Dodona is the parent. That reading sits one step away from the case Hungary's Kolibri and Croatia's Osijek settled the other way — a public children's theatre playing puppetry with one mixed company is not a puppetry unit. What keeps Dodona in is that its puppet line is named, continuous and separately counted, where Kolibri's was none of the three. It stays disputed until the theatre's own site is read for a puppetry ensemble distinct from the acting one.",
       "lower_bound": 1,
-      "upper_bound": 1
+      "upper_bound": 1,
+      "units": {
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Teatri i kukullave, Teatri Dodona",
+          "city": "Prishtinë",
+          "address": "Rruga Xhelal Mitrovica, Prishtinë",
+          "lat": 42.66453,
+          "lon": 21.17052,
+          "unit": "stage",
+          "parent": "Teatri Dodona",
+          "authority": "Founded 1986 by decision of the municipal assembly of Prishtina",
+          "registration": null,
+          "url": null,
+          "checked_on": "2026-07-27",
+          "source": "https://sq.wikipedia.org/wiki/Teatri_Dodona"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -93,6 +112,7 @@
   "notes": "Puppet theatre in Pristina.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: read Teatri Dodona's own site. The question that decides between 1 and 0 is narrow — does the puppetry line hold puppeteers of its own, or is it the acting ensemble playing with puppets? The second answer puts Kosovo where Hungary put Kolibri."
   ]
 }
