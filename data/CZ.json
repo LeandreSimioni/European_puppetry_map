@@ -12,6 +12,17 @@
       "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. Population on 1 January 2025: 10909500 inhabitants, recorded as 10.909 million. Eurostat dataset demo_pjan, Population on 1 January by age and sex, read through the dissemination API on 2026-07-27, dataset last updated 2026-07-09. Total population, both sexes, all ages, which is exactly what this indicator's denominator asks for. Read as one table covering every country in the record, so no value here is derived from a neighbour: each is that country's own row. The previous value was an opening estimate produced with no source and no research."
     },
     {
+      "indicator": "performances",
+      "value": 7596,
+      "year": 2024,
+      "source": "https://www.statistikakultury.cz/wp-content/uploads/2025/11/ZSU_2024_Divadla.xlsx",
+      "confidence": "sourced",
+      "status": "verified",
+      "basis": "form",
+      "spectators": 620349,
+      "reasoning": "Read on 2026-07-27 from the NIPOS workbook ZSU_2024_Divadla, the theatre volume of the Czech basic cultural statistics, tables 1.6 and 1.7. Genre 'loutková představení': 7 364 performances given in Czechia, on the theatres' own stages and on other people's alike, plus 232 given abroad. Total 7 596, which is the denominator's scope exactly — the denominator asks for tour dates and dates abroad to be included, and NIPOS publishes the two figures separately in the same workbook, so this is an addition of two read numbers rather than a construction. Table 1.3 gives 620 349 spectators for the domestic 7 364. Basis 'form'. Table 4.2 shows why that matters here more than anywhere: puppet performances in Czechia are played by 33 different theatres, and the largest single block after the puppet houses comes from drama companies — Jihočeské divadlo in České Budějovice played 203 and Městské divadlo v Mostě 276. An organisation-based count would have thrown those away. The 2020 comparison in the same table is worth keeping in view: 2 641 domestic puppet performances that year against 7 364 now. The base year is a closed-theatre year, so the ratio measures the pandemic and not a trend."
+    },
+    {
       "indicator": "venues",
       "value": 9.0,
       "year": null,
