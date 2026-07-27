@@ -20,8 +20,8 @@
 > **This document is a historical record: it is the starting point, not the
 > current state.** Two of its columns have since been checked against sources.
 > The schools column was verified in July 2026 and seven of these values turned
-> out to be wrong; the population column was sourced on 2026-07-27 for 44 of the
-> 45 countries. Only the venues column is still what it was: recollection. See
+> out to be wrong; the population column was sourced on 2026-07-27 for all 45
+> countries. Only the venues column is still what it was: recollection. See
 > `data/<CC>.json` for the current values and the reasoning behind them.
 
 | Country | Structuring venues (est.) | Population (M, est.) | National schools | Memory notes |

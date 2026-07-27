@@ -8,7 +8,7 @@ the exercise — a preview precise enough to be refutable.
 
 **Two indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
-behind each count. `population_M` is sourced for 44 of 45. Every other indicator
+behind each count. `population_M` is sourced for all 45. Every other indicator
 is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -27,10 +27,18 @@ the useful part:
 | **BA** | The 2013 census, read on the front page of the national statistics agency, Eurostat publishing no row at all. `disputed` on its age. |
 | **TR** | Eurostat 2025, whole country. Read and refused earlier in the day under the old denominator, recorded once the transcontinental ruling removed the requirement. |
 | **RU** | World Bank `SP.POP.TOTL`, 2025. The only country Eurostat does not serve — its last Russian row is 1 January 2014. Rosstat answered 503 twice and is what should carry this value; the World Bank is a compilation, citable but not primary. |
-| **SM** | **No value.** The Bollettino demografico exists and was not opened. A figure that has not been read is not a source. |
+| **SM** | The national statistics office's `Bollettino di Statistica`, I trimestre 2026, table 1.1 — 34 172 residents on 1 January 2026. A first pass had reported it unreachable, which was true of the route and not of the document: the front page is a hub and the figure sits in a quarterly PDF two levels down. |
 
-One country therefore keeps an unsourced estimate, on purpose. The working rule
-is that a figure which has not been read produces a report, not a number.
+**All 45 countries are sourced.** Two remain `disputed` — Ukraine and Bosnia —
+and the dispute is about the denominator, not the reading.
+
+Where a source offered a choice, the file records which was taken and why. San
+Marino's bulletin also gives a fresher 31 March figure, not used: 1 January is
+the stock convention the Eurostat countries follow, and a third reference date
+for one country costs more than three months of freshness are worth. The same
+bulletin distinguishes `popolazione residente` from `popolazione presente`,
+which adds people staying without residence and reaches 35 589; the resident
+concept is the one recorded, being what `demo_pjan` measures.
 
 ### The transcontinental ruling, 2026-07-27
 
@@ -183,8 +191,7 @@ link to its website.
 2. Settle the Ukrainian denominator — residents, de jure population, or
    government-controlled territory — then source against a body that publishes
    on that basis. Fetch the Bosnian annual estimate in place of the 2013
-   census. Open the San Marino bulletin. Replace the Russian figure with
-   Rosstat when it answers.
+   census. Replace the Russian figure with Rosstat when it answers.
 3. Finish what the ownership ruling reopened. Four Italian files are unexamined
    (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
    private provision has never been opened, and Cyprus's private drama schools

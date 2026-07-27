@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 0.03,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator, and this is reported rather than filled. The value stays the opening estimate, made with no source and no research, and confidence stays estimated with source null. Two routes were tried. Eurostat carries a geo code for San Marino in demo_pjan but publishes no row for it in the period queried. The national statistical office at statistica.sm was then opened: its front page is a navigation hub and announces a Bollettino demografico for the first quarter of 2026, but the figure itself sits in a document that was not opened, and a figure that has not been read is not a source. Rather than carry an approximate number, the record keeps the estimate and states where the real one is."
+      "value": 0.034,
+      "year": 2026,
+      "source": "https://www.statistica.sm/pub2/StatisticaSM/dam/jcr:4db9a7f4-ea0b-4753-b58a-8ed47c7bd98f/Bollettino_202603.pdf",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27, closing the one gap the population pass had left. 34172 resident inhabitants on 1 January 2026, recorded as 0.034 million. Read in the Bollettino di Statistica, I trimestre 2026, published by the Ufficio Informatica, Tecnologia, Dati e Statistica, Tavola 1.1, Bilancio Demografico (movimento della popolazione residente), row Popolazione Residente ad inizio periodo, column Gen 2026. The earlier attempt reported the figure as unreachable and that was accurate about the route, not the document: statistica.sm's front page is a navigation hub, and the number sits in the quarterly bulletin, a PDF two levels down. The bulletin was found through the site's own publications page and opened. Two choices are recorded because the document permits others. First, the reference date: the bulletin also gives 34154 residents at 31 March 2026, which is fresher, but 1 January is the stock convention the forty-one Eurostat countries use, and a third reference date for one country would cost more than three months of freshness are worth. Second, the concept: the bulletin distinguishes popolazione residente, those registered as resident, from popolazione presente, which adds soggiornanti staying in the territory and reaches 35589. The resident figure is the one recorded, being the concept Eurostat's demo_pjan uses. The previous 0.03 was an opening estimate made with no source."
     },
     {
       "indicator": "venues",
@@ -93,7 +93,6 @@
   "notes": "No permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country.",
-    "population_M: open the Bollettino demografico of statistica.sm, the figure is there and was not read."
+    "Find the annual report of at least one organisation in the country."
   ]
 }
