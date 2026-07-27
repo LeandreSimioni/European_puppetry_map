@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 0.0,
-      "annee": null,
+      "annee": 2026,
       "source": null,
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. La School of Performing Arts de l'Universite de Malte, seule structure d'enseignement superieur du domaine dans le pays, propose une licence Theatre Studies with English, une licence Performing Arts combinant danse, musique et theatre, et un master Theatre and Performance. Aucune filiere ni orientation de marionnette. Borne haute portee de 0 a 1, les maquettes n'ayant pas ete lues unite par unite. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 1
     },
     {
       "indicateur": "dates",
