@@ -180,6 +180,7 @@ const PTS = PAYLOAD.school_pts || {}, CHECKED = PAYLOAD.checked_on || {};
 const UNITS = PAYLOAD.units || {};
 const VPTS = PAYLOAD.venue_pts || {};
 const VLIST = PAYLOAD.venue_list || {};
+const BYV = PAYLOAD.by_venue || {};
 /* The eyebrow line is derived from the data: hard-coded, it goes stale the
    moment a verification pass lands. */
 (function(){
@@ -343,9 +344,13 @@ function drawVenues(){
   gV.innerHTML='';
   if(!showVenues) return;
   for(const c of codes){
-    for(const [x,y,name,city,address,unit,parent,authority,url] of (VPTS[c]||[])){
+    for(const [x,y,name,city,address,unit,parent,authority,url,output] of (VPTS[c]||[])){
       const m=document.createElementNS(NS,'rect');
-      const r=unit==='stage'?3.4:3.8;
+      /* Sized by performances played, where the country publishes them per venue.
+         Square-root so the area reads as the volume, not the side. Venues in
+         countries that publish nothing keep the base size: an unsized marker
+         means unmeasured, never small. */
+      const r=(unit==='stage'?3.4:3.8)*(output?Math.min(2.1,0.62+Math.sqrt(output/300)):1);
       m.setAttribute('x',x-r); m.setAttribute('y',y-r);
       m.setAttribute('width',r*2); m.setAttribute('height',r*2);
       m.setAttribute('transform',`rotate(${unit==='stage'?45:0} ${x} ${y})`);
@@ -354,19 +359,21 @@ function drawVenues(){
       const hit=document.createElementNS(NS,'circle');
       hit.setAttribute('cx',x); hit.setAttribute('cy',y); hit.setAttribute('r',9);
       hit.setAttribute('class','schoolhit');
-      hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showVenueTip(ev,name,city,unit,parent,authority);});
+      hit.setAttribute('r',Math.max(9,r+5));
+      hit.addEventListener('mousemove',ev=>{ev.stopPropagation();showVenueTip(ev,name,city,unit,parent,authority,output);});
       hit.addEventListener('mouseleave',hideTip);
       hit.addEventListener('click',ev=>{ev.stopPropagation();select(c);});
       gV.appendChild(hit);
     }
   }
 }
-function showVenueTip(ev,name,city,unit,parent,authority){
+function showVenueTip(ev,name,city,unit,parent,authority,output){
   const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   tip.innerHTML=`<div class="t">${unit==='stage'?'puppet stage':'puppet house'}</div>`
     +`<b>${esc(name)}</b>${city?'<br>'+esc(city):''}`
     +(parent?`<br><span style="color:#B7A9C4">inside ${esc(parent)}</span>`:'')
-    +(authority?`<br><span style="color:#9C8DAE;font-size:12px">${esc(authority)}</span>`:'');
+    +(authority?`<br><span style="color:#9C8DAE;font-size:12px">${esc(authority)}</span>`:'')
+    +(output?`<br><span style="color:var(--ocre)">${output} performances</span>`:'');
   tip.classList.add('on');
   const x=Math.min(ev.clientX+16, innerWidth-286), y=Math.min(ev.clientY+16, innerHeight-120);
   tip.style.left=x+'px'; tip.style.top=y+'px';
@@ -511,8 +518,21 @@ function detail(){
       <div class="kv"><span>Income from performing</span><b>${e[5]}%</b></div>
     </div>
     ${venuesHTML(c)}
+    ${producersHTML(c)}
     ${schoolsHTML(c)}
     ${d[6]?`<p class="note">${d[6]}</p>`:''}`;
+}
+/* The producers behind the performances count. Deliberately not merged into the
+   venues list: they are a different population, and most of them are not venues. */
+function producersHTML(c){
+  const lst=BYV[c]; if(!lst||!lst.length) return '';
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const li=lst.map(e=>`
+    <div class="kv" style="font-size:13px">
+      <span>${esc(e.name)}${e.venue?' <span style="color:var(--ocre);font-size:11px">counted venue</span>':''}</span>
+      <b>${e.value} <span style="color:#7D6E90;font-size:11px">${e.unit==='productions'?'prod.':'perf.'}</span></b></div>`).join('');
+  return `<h2 style="margin-top:18px">Who played the puppetry</h2>
+    <div style="max-height:320px;overflow:auto">${li}</div>`;
 }
 /* Named list of venues, same purpose as the establishments list below: the
    count has to be auditable one entry at a time, on the page and not only in

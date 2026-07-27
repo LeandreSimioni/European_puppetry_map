@@ -20,7 +20,208 @@
       "status": "verified",
       "basis": "form",
       "spectators": 620349,
-      "reasoning": "Read on 2026-07-27 from the NIPOS workbook ZSU_2024_Divadla, the theatre volume of the Czech basic cultural statistics, tables 1.6 and 1.7. Genre 'loutková představení': 7 364 performances given in Czechia, on the theatres' own stages and on other people's alike, plus 232 given abroad. Total 7 596, which is the denominator's scope exactly — the denominator asks for tour dates and dates abroad to be included, and NIPOS publishes the two figures separately in the same workbook, so this is an addition of two read numbers rather than a construction. Table 1.3 gives 620 349 spectators for the domestic 7 364. Basis 'form'. Table 4.2 shows why that matters here more than anywhere: puppet performances in Czechia are played by 33 different theatres, and the largest single block after the puppet houses comes from drama companies — Jihočeské divadlo in České Budějovice played 203 and Městské divadlo v Mostě 276. An organisation-based count would have thrown those away. The 2020 comparison in the same table is worth keeping in view: 2 641 domestic puppet performances that year against 7 364 now. The base year is a closed-theatre year, so the ratio measures the pandemic and not a trend."
+      "reasoning": "Read on 2026-07-27 from the NIPOS workbook ZSU_2024_Divadla, the theatre volume of the Czech basic cultural statistics, tables 1.6 and 1.7. Genre 'loutková představení': 7 364 performances given in Czechia, on the theatres' own stages and on other people's alike, plus 232 given abroad. Total 7 596, which is the denominator's scope exactly — the denominator asks for tour dates and dates abroad to be included, and NIPOS publishes the two figures separately in the same workbook, so this is an addition of two read numbers rather than a construction. Table 1.3 gives 620 349 spectators for the domestic 7 364. Basis 'form'. Table 4.2 shows why that matters here more than anywhere: puppet performances in Czechia are played by 33 different theatres, and the largest single block after the puppet houses comes from drama companies — Jihočeské divadlo in České Budějovice played 203 and Městské divadlo v Mostě 276. An organisation-based count would have thrown those away. The 2020 comparison in the same table is worth keeping in view: 2 641 domestic puppet performances that year against 7 364 now. The base year is a closed-theatre year, so the ratio measures the pandemic and not a trend.",
+      "by_venue": [
+        {
+          "name": "Divadlo Minor, Praha",
+          "value": 573,
+          "unit": "performances",
+          "venue": "Divadlo Minor"
+        },
+        {
+          "name": "Divadlo loutek Ostrava",
+          "value": 546,
+          "unit": "performances",
+          "venue": "Divadlo loutek Ostrava"
+        },
+        {
+          "name": "Divadlo Radost, Brno",
+          "value": 419,
+          "unit": "performances",
+          "venue": "Loutkové divadlo Radost"
+        },
+        {
+          "name": "Studio Damúza, Praha",
+          "value": 399,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo Spejbla a Hurvínka, Praha",
+          "value": 383,
+          "unit": "performances",
+          "venue": "Divadlo Spejbla a Hurvínka"
+        },
+        {
+          "name": "Divadlo DRAK a Mezinárodní institut figurálního divadla, Hradec Králové",
+          "value": 333,
+          "unit": "performances",
+          "venue": "Divadlo DRAK"
+        },
+        {
+          "name": "Naivní divadlo Liberec",
+          "value": 315,
+          "unit": "performances",
+          "venue": "Naivní divadlo Liberec"
+        },
+        {
+          "name": "Městské divadlo v Mostě",
+          "value": 276,
+          "unit": "performances",
+          "venue": "Divadlo rozmanitostí"
+        },
+        {
+          "name": "Divadlo Alfa, Plzeň",
+          "value": 248,
+          "unit": "performances",
+          "venue": "Divadlo Alfa"
+        },
+        {
+          "name": "Mikro-teatro, Omice",
+          "value": 225,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Těšínské divadlo Český Těšín",
+          "value": 212,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadla Kladno",
+          "value": 210,
+          "unit": "performances",
+          "venue": "Divadlo Lampion"
+        },
+        {
+          "name": "Jihočeské divadlo, České Budějovice",
+          "value": 203,
+          "unit": "performances",
+          "venue": "Malé divadlo"
+        },
+        {
+          "name": "Loutky bez hranic, Praha",
+          "value": 198,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Buchty a loutky, Praha",
+          "value": 192,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo Víti Marčíka, Hluboká nad Vltavou",
+          "value": 184,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadélko Romaneto (Jaroslava Nárožná), Praha",
+          "value": 102,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo Puk, Vysoké nad Jizerou",
+          "value": 89,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo b, Praha",
+          "value": 87,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo Říše loutek",
+          "value": 85,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo KAKA",
+          "value": 84,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo Bořivoj (Miroslava Vydrová), Praha",
+          "value": 80,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo DIP, Dětenice",
+          "value": 59,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadelní spolek OUKEJ",
+          "value": 31,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Docela velké divadlo, Litvínov",
+          "value": 28,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "JEDEFRAU.ORG, Praha",
+          "value": 21,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo DISK, Praha",
+          "value": 13,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "BR divadlo, Libořice",
+          "value": 8,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Centrum experimentálního divadla, p. o.",
+          "value": 7,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Vyšší odborná škola herecká, Praha",
+          "value": 7,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Bezhlaví, Spitfire Company",
+          "value": 7,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "Divadlo bratří Formanů, Praha",
+          "value": 3,
+          "unit": "performances",
+          "venue": null
+        },
+        {
+          "name": "bazmek entertainment, Kuřim",
+          "value": 1,
+          "unit": "performances",
+          "venue": null
+        }
+      ],
+      "by_venue_covers": "Thirty-three producers named, summing to 5628 of the headline 7 596. The gap is not an error: NIPOS table 4.2 lists only the theatres that consented to publication, while the national total in table 1.6 covers every reporting theatre. Do not add these up and expect the headline. Ten of the thirty-three are counted as Czech venues and carry the 'venue' name; the other twenty-three are drama houses, independents and studios that played puppetry without being puppetry venues, which is the most interesting thing in the list. For the three integrated stages NIPOS names the parent organisation — Divadla Kladno, Jihočeské divadlo, Městské divadlo v Mostě — because the stage files no return of its own; the 'venue' field resolves each to the stage."
     },
     {
       "indicator": "venues",

@@ -20,7 +20,16 @@
       "status": "disputed",
       "basis": "organisation",
       "spectators": 50897,
-      "reasoning": "Read on 2026-07-27 from table KUT020 of the Latvian official statistics portal, activity indicators of the state culture companies, through the PxWeb dissemination API. Latvijas Leļļu teātris, 2024: 434 performances, 50 897 visits. The series also gives 617 performances in 2019 and 419 in both 2022 and 2023, so 2024 is a recovery and still a fifth below the pre-pandemic level. Disputed on scope, not on the reading. KUT020 covers state culture companies only, and Latvia has two publicly backed puppet houses: this figure is the Riga one and excludes Liepājas Leļļu teātris, which is municipal and files with its city instead. Liepāja's own 2024 non-financial goals report was opened: it records 79 tour performances actually played against a target of 85, and carries an in-house target of 125 performances and events, but no audited actual total. Its annual report for 2024 is a 25-page scan with no text layer. So the second house is worth something in the order of 200 performances and the number cannot be read, which is why nothing was added rather than an addition being guessed at. The Latvian total is therefore understated by roughly one house. Basis 'organisation': the table counts what the puppet theatre did, not what puppetry happened in Latvia."
+      "reasoning": "Read on 2026-07-27 from table KUT020 of the Latvian official statistics portal, activity indicators of the state culture companies, through the PxWeb dissemination API. Latvijas Leļļu teātris, 2024: 434 performances, 50 897 visits. The series also gives 617 performances in 2019 and 419 in both 2022 and 2023, so 2024 is a recovery and still a fifth below the pre-pandemic level. Disputed on scope, not on the reading. KUT020 covers state culture companies only, and Latvia has two publicly backed puppet houses: this figure is the Riga one and excludes Liepājas Leļļu teātris, which is municipal and files with its city instead. Liepāja's own 2024 non-financial goals report was opened: it records 79 tour performances actually played against a target of 85, and carries an in-house target of 125 performances and events, but no audited actual total. Its annual report for 2024 is a 25-page scan with no text layer. So the second house is worth something in the order of 200 performances and the number cannot be read, which is why nothing was added rather than an addition being guessed at. The Latvian total is therefore understated by roughly one house. Basis 'organisation': the table counts what the puppet theatre did, not what puppetry happened in Latvia.",
+      "by_venue": [
+        {
+          "name": "Latvijas Leļļu teātris",
+          "value": 434,
+          "unit": "performances",
+          "venue": "Latvijas Leļļu teātris"
+        }
+      ],
+      "by_venue_covers": "One producer, and it is the whole headline: table KUT020 reports the state culture companies one by one and Latvia has a single state puppet theatre. The list therefore reconciles exactly, and that exactness is itself the warning — the municipal house in Liepāja is outside the table, so both the headline and this list cover one of the country's two publicly backed puppet houses."
     },
     {
       "indicator": "venues",

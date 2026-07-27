@@ -91,6 +91,32 @@ def check_venues(code, o):
     return err
 
 
+def check_by_venue(code, o):
+    """The optional named list of producers behind a performances count."""
+    lst = o.get('by_venue')
+    if lst is None:
+        return []
+    err = []
+    if not str(o.get('by_venue_covers', '')).strip():
+        err.append(f'{code}/performances: by_venue with no by_venue_covers. A list of parts '
+                   f'that does not say what fraction of the whole it holds invites a wrong sum.')
+    total = 0
+    for e in lst:
+        where = e.get('name') or '?'
+        for f in ('name', 'value', 'unit', 'venue'):
+            if f not in e:
+                err.append(f'{code}/performances/{where}: missing field {f}')
+        if e.get('unit') not in ('performances', 'productions'):
+            err.append(f"{code}/performances/{where}: unit must be performances or productions")
+        if e.get('unit') == 'performances' and isinstance(e.get('value'), int):
+            total += e['value']
+    # Only comparable when the parts count the same thing as the headline.
+    if all(e.get('unit') == 'performances' for e in lst) and total > o['value']:
+        err.append(f'{code}/performances: the named producers sum to {total}, above the '
+                   f"headline {o['value']}. The parts cannot exceed the whole.")
+    return err
+
+
 def check_schools(code, o):
     """The schools indicator must be justifiable one establishment at a time."""
     err = []
@@ -152,6 +178,8 @@ def load():
                 errors += check_schools(code, o)
             if ind == 'venues':
                 errors += check_venues(code, o)
+            if ind == 'performances':
+                errors += check_by_venue(code, o)
             if ind == 'performances' and o.get('basis') not in PERF_BASES:
                 errors.append(f"{code}/performances: basis must be one of "
                               f"{sorted(PERF_BASES)}, a count of puppetry that does not "
@@ -215,12 +243,15 @@ def school_points(countries):
 
 
 def venue_points(countries):
-    """[x, y, name, city, address, unit, parent, authority, url] per country.
+    """[x, y, name, city, address, unit, parent, authority, url, output] per country.
     A venue with no coordinate keeps its place in the count and simply does not
     appear on the map."""
     pts, lost = {}, []
     for code, p in countries.items():
         lst = []
+        out = ((p['obs'].get('performances') or {}).get('by_venue') or [])
+        out = {e['venue']: e['value'] for e in out
+               if e.get('venue') and e['unit'] == 'performances'}
         for e in p['obs']['venues'].get('venues_list', []):
             if e['lat'] is None:
                 continue
@@ -231,7 +262,8 @@ def venue_points(countries):
             x, y, _ = r
             lst.append([round(x, 1), round(y, 1), e['name'], e.get('city') or '',
                         e.get('address') or '', e['unit'], e.get('parent') or '',
-                        e.get('authority') or '', e.get('url') or ''])
+                        e.get('authority') or '', e.get('url') or '',
+                        out.get(e['name'], 0)])
         if lst:
             pts[code] = lst
     return pts, lost
@@ -263,6 +295,15 @@ def payload(countries):
     units = {code: p['obs']['venues']['units']
              for code, p in countries.items() if p['obs']['venues'].get('units')}
     pts, _, _ = school_points(countries)
+    # Output per named venue, for the marker size. Only where the parts count the
+    # same thing as the headline: productions and performances do not share a scale.
+    vout = {}
+    for code, p in countries.items():
+        o = p['obs'].get('performances') or {}
+        m = {e['venue']: e['value'] for e in o.get('by_venue', [])
+             if e.get('venue') and e['unit'] == 'performances'}
+        if m:
+            vout[code] = m
     vpts, _ = venue_points(countries)
     vlist = {code: [{k: e[k] for k in ('name', 'city', 'address', 'unit', 'parent',
                                        'authority', 'registration', 'url')}
@@ -272,6 +313,9 @@ def payload(countries):
                if p['obs']['schools'].get('checked_on')}
     return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'units': units,
             'confidence': conf, 'school_pts': pts, 'venue_pts': vpts, 'venue_list': vlist,
+            'by_venue': {c: (p['obs'].get('performances') or {}).get('by_venue')
+                         for c, p in countries.items()
+                         if (p['obs'].get('performances') or {}).get('by_venue')},
             'checked_on': checked}
 
 

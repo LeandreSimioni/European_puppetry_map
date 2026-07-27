@@ -152,6 +152,35 @@ The distinction is not academic. Czechia counts by form, and its table shows
 puppet performances played by 33 different theatres — two drama houses account
 for 479 of them between them. An organisation-based count throws those away.
 
+### Who played it
+
+Where a source names the producers, the observation carries a `by_venue` list:
+name, value, its own `unit`, and the venue it corresponds to in `venues_list`
+when it is one. A national total is a sum, and a sum hides its distribution.
+
+It is deliberately **not** a field on the venue record, because the two are
+different populations. Thirty-three Czech theatres played puppetry; ten of them
+are counted as venues. Hanging the figures on venue records would make the other
+twenty-three vanish and make every unlisted venue look idle — and those
+twenty-three are the most interesting thing in the list, because they are where
+Czech puppetry overflows its own houses.
+
+`by_venue_covers` is mandatory beside the list and says in words what fraction of
+the headline the parts hold. Czechia's thirty-three sum to 5 628 of 7 596: the
+NIPOS ranking covers only theatres that consented to publication. Germany's
+fifty-one are Inszenierungen against a headline in Aufführungen, and cover
+D-A-CH against a headline for Germany alone. Neither list reconciles, both say
+so, and the build refuses a list of performances summing above its headline.
+
+On the map a venue marker is **sized by the performances it played**, where the
+country publishes them per venue. An unsized marker means unmeasured, never
+small.
+
+These are institutional data and the rule of this repository applies to them in
+full: a house playing 573 performances to school groups is not thereby better
+than one playing 248 on international tour. The lists exist to show a
+distribution and to be contradicted, not to rank anybody.
+
 ## The long format, and why
 
 A wide table mixes sourced figures and invented ones on the same row, with no
