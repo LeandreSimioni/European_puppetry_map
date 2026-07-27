@@ -81,6 +81,29 @@ python3 build.py           # regenerates dist/index.html
 No dependencies, standard Python 3 is enough. Open `dist/index.html` in a
 browser.
 
+## The activity layer
+
+`performances` is the newest indicator and the first that counts work rather
+than containers. It does not wait on the `dates` ruling: that ruling blocks
+per-performer measures, not per-country ones.
+
+It is also **the first indicator a country is allowed not to have.** Where the
+national statistics isolate no puppetry, the country carries no observation at
+all — not a zero, not an estimate. The map colours it as no-data and says so.
+An estimate here would be indistinguishable from a measurement of a small
+country, and a zero would be a lie about a whole statistical apparatus.
+
+Every observation declares a `basis`, and the build refuses one that does not:
+
+| | |
+|---|---|
+| `form` | The source counts performances by genre of production. A puppetry production staged by a drama theatre is inside; a puppet theatre's straight play is outside. This is the denominator met exactly. |
+| `organisation` | The source counts the output of named puppet theatres, whatever they staged. A proxy: it drops puppetry made elsewhere and picks up non-puppetry made in the right building. |
+
+The distinction is not academic. Czechia counts by form, and its table shows
+puppet performances played by 33 different theatres — two drama houses account
+for 479 of them between them. An organisation-based count throws those away.
+
 ## The long format, and why
 
 A wide table mixes sourced figures and invented ones on the same row, with no
@@ -188,8 +211,9 @@ such.
 
 ## What the map already does
 
-Ten measures across two layers. The institutions layer counts containers; the
-trade layer posits volumes of work. As soon as a trade measure is active, a
+Twelve measures across three layers. The institutions layer counts containers;
+the activity layer counts performances actually played; the trade layer posits
+volumes of work. As soon as a trade measure is active, a
 diagonal hatch covers the map. Inverted-reading measures switch to a cold ramp.
 
 School markers sit at the real coordinates of each establishment, not at the
