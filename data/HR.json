@@ -25,13 +25,13 @@
     {
       "indicateur": "ecoles",
       "valeur": 1.0,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "annee": 2026,
+      "source": "http://www.uaos.unios.hr/preddiplomski-sveucilisni-studij-gluma-i-lutkarstvo/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : l'Akademija za umjetnost i kulturu u Osijeku, rattachee a l'universite publique Josip Juraj Strossmayer. Criteres lus a la source : licence Gluma i lutkarstvo, 3 ans, 6 semestres, delivrant le titre sveucilisni prvostupnik glume i lutkarstva, inscrite au cadre croate des certifications HKO niveau 6 ; marionnette nommee dans l'intitule ; programme universitaire d'Etat. L'etablissement porte en outre des masters d'animation, de scenographie et de mise en scene de marionnettes. Comptage a l'etablissement : 1. Borne haute a 2 : des pages non lues presentent Osijek comme la seule ecole de marionnette de Croatie, mais cette affirmation n'a pas ete verifiee a la source et n'est donc pas retenue pour fermer la fourchette.",
       "borne_basse": 1,
-      "borne_haute": 1
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
