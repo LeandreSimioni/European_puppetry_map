@@ -29,7 +29,7 @@
       "source": "https://de.wikipedia.org/wiki/Staatliche_Hochschule_für_Musik_und_Darstellende_Kunst_Stuttgart ; https://www.hfs-berlin.de/studium/puppenspielkunst/der-studiengang-puppenspielkunst/",
       "confidence": "sourced",
       "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. Two establishments retained, both read at source. First, the Ernst Busch drama school in Berlin, puppetry department, a four-year course awarding a diploma in puppetry and performing arts, founded in 1971-72. Second, the state academy of music and performing arts in Stuttgart, whose figure theatre programme was created in 1983 and is awarded at bachelor level only, in an institution explicitly state-run and funded by Baden-Wurttemberg. The German source states Stuttgart is the only conservatoire in the country offering figure theatre, which does not contradict Berlin, a drama school rather than a music school: both count. Upper bound held at 2: both courses are documented and no third appears, training in Germany being otherwise largely carried by private bodies outside the denominator.",
+      "reasoning": "Web check of 2026-07-27, searched in the country's own language. Two establishments retained, both read at source. First, the Ernst Busch drama school in Berlin, puppetry department, a four-year course awarding a diploma in puppetry and performing arts, founded in 1971-72. Second, the state academy of music and performing arts in Stuttgart, whose figure theatre programme was created in 1983 and is awarded at bachelor level only, in an institution explicitly state-run and funded by Baden-Wurttemberg. The German source states Stuttgart is the only conservatoire in the country offering figure theatre, which does not contradict Berlin, a drama school rather than a music school: both count. Upper bound held at 2: both courses are documented and no third appears, training in Germany being otherwise largely carried by private bodies outside the denominator. Re-examined on 2026-07-27 after the ownership ruling, which withdrew private status as a ground for exclusion. The value does not move, but the third entry had to be re-argued rather than left standing on a motive that no longer exists. The Figurentheater-Kolleg in Bochum was re-read at source. Its own site presents an Ausbildungsgang, a training course in the fundamentals of figure theatre, and names no qualification: no Hochschulabschluss, no staatlich anerkannter Abschluss, no diploma or certificate specified anywhere on the page. It sits outside state higher education, and what excludes it is that absence of a state-recognised award, not the fact that it is private. The exclusion reason moves from private to not_degree_granting. The upper bound stays at 2 for the same reason as before, but the phrase carried in the earlier reasoning, that German training is otherwise largely carried by private bodies outside the denominator, no longer holds as written: private bodies are no longer outside by construction. They are outside when they award nothing the State recognises, which is what was checked here and would have to be checked one by one elsewhere.",
       "lower_bound": 2,
       "upper_bound": 2,
       "checked_on": "2026-07-27",
@@ -69,12 +69,12 @@
           "lat": 51.4818,
           "lon": 7.2162,
           "status": "private",
-          "award": "Eight-semester professional training, outside state higher education",
+          "award": "Ausbildungsgang in the fundamentals of figure theatre; no state-recognised qualification named at source",
           "url": "https://figurentheater-kolleg.de/",
-          "description": "A long-established private college for puppet, material and object theatre. Recorded here because it is often mistaken for a state school, including by search engines answering queries about Austria.",
+          "description": "A long-established private college for puppet, material and object theatre. Its site presents an Ausbildungsgang and names no qualification, which is why it is excluded: since the ruling of 2026-07-27 private ownership is no ground, the absence of a state-recognised award is. Recorded here also because it is often mistaken for a state school, including by search engines answering queries about Austria.",
           "counted": false,
-          "exclusion_reason": "private",
-          "source": "https://figurentheater-kolleg.de/teachers/",
+          "exclusion_reason": "not_degree_granting",
+          "source": "https://figurentheater-kolleg.de/",
           "checked_on": "2026-07-27"
         }
       ]
