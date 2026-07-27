@@ -13,14 +13,14 @@
     },
     {
       "indicator": "venues",
-      "value": 3.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://www.lithuaniantheatre.com/org_kategorijos/savivaldybiu-teatrai-s/",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Checked on 2026-07-27 against the two register pages of the Teatro informacijos centras, which sorts Lithuanian theatres by founder: national and state theatres on one page, municipal theatres on the other. Three puppet houses appear across the two. Kauno valstybinis lėlių teatras, Laisvės al. 87A in Kaunas, on the state list. Vilniaus teatras 'Lėlė', Arklių g. 5 in Vilnius, on the municipal list, registered as a biudžetinė įstaiga — a budgetary institution — and carrying a page on the history of its own building. Klaipėdos lėlių teatras, Vežėjų g. 4 in Klaipėda, on the municipal list, founded 13 September 2000. The Klaipėda entry carries a caveat worth stating rather than burying: the body is registered as a VšĮ, a public establishment, a form that can also be founded privately. What places it inside the count is the register, which files it under municipal theatres; if that classification is wrong the Lithuanian figure is 2. The opening estimate of 3 to 4 came from a note listing Vilnius, Kaunas, Klaipėda and Panevėžys as state puppet theatres. Two of the four claims were wrong. Only Kaunas is a state theatre — Vilnius and Klaipėda are municipal — and Panevėžys appears on neither register, so the Panevėžio lėlių vežimo teatras has no public founder and falls outside the denominator. The note has been corrected.",
       "lower_bound": 3,
-      "upper_bound": 4
+      "upper_bound": 3
     },
     {
       "indicator": "schools",
@@ -105,9 +105,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "State puppet theatres in Vilnius, Kaunas, Klaipėda, Panevėžys.",
+  "notes": "Kauno valstybinis lėlių teatras (state). Vilniaus teatras \"Lėlė\" and Klaipėdos lėlių teatras (municipal). Panevėžys: no public founder.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "performances: settled negative, 2026-07-27. Statistics Lithuania does not isolate puppetry. Its 'Teatro tipas' dimension means state against non-state, not genre (S3R512, S3R513), and the two performance tables S3R575 and S3R810 carry no type dimension at all. A figure would have to be built by adding the three houses' own reports, which is constructing a number rather than reading one. No observation recorded."
   ]
 }
