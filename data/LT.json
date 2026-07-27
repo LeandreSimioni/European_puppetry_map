@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://lmta.lt/lt/leliu-ir-objektu-teatras-nuolatinis-gyvenimo-saves-ir-teatro-tyrinejimas/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 1
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la Lietuvos muzikos ir teatro akademija, sur son campus de Klaipeda. Critere lu a la source : specialisation Leliu ir objektu teatras ouverte au sein de la licence Teatro menas, avec un cursus nommant l'histoire du theatre de marionnettes, la dramaturgie de marionnettes et le travail d'animation. Le diplome est donc Teatro menas et la marionnette y est une specialisation nommee, ce qui satisfait le denominateur sans en occuper l'intitule principal. La valeur precedente de 0,5 etait le milieu d'une fourchette estimee. Reserve : la page lue ne confirme pas le statut d'etablissement d'Etat de la LMTA, presume ici de son caractere d'academie nationale mais non verifie. Borne haute a 2, aucune source lue n'affirmant l'exhaustivite.",
+      "borne_basse": 1,
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
