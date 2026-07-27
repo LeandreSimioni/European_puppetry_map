@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. L'Academia de Muzica, Teatru si Arte Plastice de Chisinau, presentee comme le seul etablissement d'Etat d'enseignement superieur artistique de Moldavie, forme dans les domaines arts plastiques, culturologie, design, multimedia, musique et theatre. Aucune specialite de teatru de papusi n'a ete identifiee. Le pays disposant d'un theatre de marionnettes d'Etat, l'absence de filiere merite verification directe. Borne haute portee de 0 a 1. Confiance estime, constat etabli sur resumes de moteur.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

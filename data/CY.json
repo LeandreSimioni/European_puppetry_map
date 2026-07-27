@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. L'offre chypriote identifiee en etudes theatrales est le master Theatrikes Spoudes de l'Universite ouverte de Chypre, delivrant un Magister Artium et organise en trois orientations : survivance du drame antique, education theatrale, jeu et mise en scene. Aucune orientation de marionnette. Il s'agit au demeurant d'un cursus d'etudes theatrales a visee scientifique, non d'une ecole de metier. Borne haute portee de 0 a 1, l'Universite de Chypre et les ecoles dramatiques privees n'ayant pas ete verifiees. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,23 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, mais le cas documente une fermeture plutot qu'une absence. La Taideakatemia de la Turun ammattikorkeakoulu a longtemps porte la filiere de reference : une part importante des quelque 160 marionnettistes professionnels finlandais en sont diplomes. Cette filiere n'existe plus comme cursus dedie ; la marionnette n'y subsiste que comme cours integrables au parcours de teatteri-ilmaisun ohjaaja. La Teatterikorkeakoulu de l'universite des arts propose de meme des cours et non un cursus. Le denominateur exige une formation specialisee, pas des cours dans une maquette : la valeur passe donc a 0. Le 0,5 precedent etait le milieu d'une fourchette estimee. Ce pays illustre exactement le biais que le schema signale pour cet indicateur, les filieres ouvrant et fermant au gre des promotions. Reserve : constat etabli sur resumes de moteur, sans lecture des maquettes a la source, d'ou confiance estime et borne haute a 1.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Turun ammattikorkeakoulu, Taideakatemia",
+          "ville": "Turku",
+          "adresse": null,
+          "lat": 60.4518,
+          "lon": 22.2666,
+          "statut": "public",
+          "diplome": "Filière marionnette éteinte comme cursus dédié ; subsiste en cours intégrables",
+          "compte": false,
+          "motif_exclusion": "ferme",
+          "source": null,
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. L'Universiteti i Arteve de Tirana, seul etablissement public d'enseignement superieur artistique du pays, ne comporte au Fakulteti i Artit Skenik que les programmes Aktrim, Regji, Skenografi et Koreografi. Aucune filiere de marionnette. Borne haute portee de 0 a 1, la maquette detaillee du cursus de jeu n'ayant pas ete lue. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,23 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu pour le perimetre de cette fiche, et la raison merite d'etre lue avant la valeur. La Turquie possede bien une filiere satisfaisant le denominateur : la Kukla ve Golge Oyunu Sanat Dali, branche marionnette et theatre d'ombres du Devlet Konservatuvari de l'universite Anadolu, conservatoire d'Etat. Mais cette universite est a Eskisehir, en Anatolie, soit hors de la partie europeenne a laquelle le schema restreint explicitement cette fiche. Elle n'est donc pas comptee ici. Les departements de sahne sanatlari verifies, Suleyman Demirel, Uludag Bursa, Dokuz Eylul, ont pour specialites le jeu, l'ecriture dramatique et la scenographie, la marionnette n'y apparaissant que comme technique enseignee en scenographie ; aucun n'est du reste en Thrace orientale. Aucune filiere n'a ete identifiee dans la partie europeenne, Istanbul rive europeenne comprise. Le 0,5 precedent etait le milieu d'une fourchette estimee. Borne haute a 1 : les universites stambouliotes n'ont pas ete verifiees une a une. Point de methode a retenir pour toute la serie : le decoupage geographique du schema peut retirer d'une fiche une ecole qui existe bel et bien dans le pays.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Anadolu Üniversitesi, Devlet Konservatuvarı — Kukla ve Gölge Oyunu Sanat Dalı",
+          "ville": "Eskişehir",
+          "adresse": null,
+          "lat": 39.7767,
+          "lon": 30.5206,
+          "statut": "public",
+          "diplome": "Filière conforme au dénominateur mais située en Anatolie, hors périmètre de la fiche",
+          "compte": false,
+          "motif_exclusion": "hors_perimetre",
+          "source": "https://konservatuvar.anadolu.edu.tr/bolumler/sahne-sanatlari-bolumu/sahne-sanatlari-bolumu-programlar/tiyatro-anasanat-dali/kukla-ve-golge-oyunu-sanat-dali",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,22 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : l'Akademija za umjetnost i kulturu u Osijeku, rattachee a l'universite publique Josip Juraj Strossmayer. Criteres lus a la source : licence Gluma i lutkarstvo, 3 ans, 6 semestres, delivrant le titre sveucilisni prvostupnik glume i lutkarstva, inscrite au cadre croate des certifications HKO niveau 6 ; marionnette nommee dans l'intitule ; programme universitaire d'Etat. L'etablissement porte en outre des masters d'animation, de scenographie et de mise en scene de marionnettes. Comptage a l'etablissement : 1. Borne haute a 2 : des pages non lues presentent Osijek comme la seule ecole de marionnette de Croatie, mais cette affirmation n'a pas ete verifiee a la source et n'est donc pas retenue pour fermer la fourchette.",
       "borne_basse": 1,
-      "borne_haute": 2
+      "borne_haute": 2,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Akademija za umjetnost i kulturu (Sveučilište J. J. Strossmayera)",
+          "ville": "Osijek",
+          "adresse": "Ulica Kralja Petra Svačića 1f, 31000 Osijek",
+          "lat": 45.555,
+          "lon": 18.6955,
+          "statut": "public",
+          "diplome": "Licence Gluma i lutkarstvo, HKO niveau 6, plus masters d'animation et de mise en scène",
+          "compte": true,
+          "source": "http://www.uaos.unios.hr/preddiplomski-sveucilisni-studij-gluma-i-lutkarstvo/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

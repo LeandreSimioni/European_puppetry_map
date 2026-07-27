@@ -31,7 +31,23 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. L'Espagne compte quinze Escuelas Superiores de Arte Dramatico officielles, habilitees par le ministere de l'Education et delivrant des titres reconnus au niveau europeen, mais leurs specialites sont Interpretacion, Escenografia et Direccion escenica y Dramaturgia : aucune specialite marionnette. Le seul point d'accroche identifie est la matiere Titeres y Objetos enseignee a la Escuela Superior de Arte Dramatico de Euskadi, Dantzerti, a Bilbao. Une matiere au sein d'un cursus d'interpretation ne satisfait pas le denominateur, qui exige une formation specialisee et non un enseignement present dans une maquette. La valeur precedente de 0,5 etait le milieu d'une fourchette estimee. Reserve : constat etabli sur resume de moteur et page encyclopedique, sans lecture des maquettes des quinze etablissements ; la confiance reste donc estime et la borne haute a 1.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Dantzerti — Escuela Superior de Arte Dramático de Euskadi",
+          "ville": "Bilbao",
+          "adresse": null,
+          "lat": 43.263,
+          "lon": -2.935,
+          "statut": "public",
+          "diplome": "Matière Títeres y Objetos dans le cursus d'interprétation",
+          "compte": false,
+          "motif_exclusion": "non_diplomant",
+          "source": null,
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

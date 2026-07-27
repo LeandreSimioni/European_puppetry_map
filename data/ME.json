@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. Le Fakultet dramskih umjetnosti de Cetinje, unite de l'universite d'Etat du Montenegro, autonome depuis 1997, propose en licence et en specialisation le jeu, la mise en scene theatrale et de cinema, la production et la dramaturgie. Aucun programme de lutkarstvo. Borne haute portee de 0 a 1, la maquette detaillee n'ayant pas ete lue. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,22 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la Katedra babkarskej tvorby de la Divadelna fakulta de la VSMU, Bratislava. Criteres du denominateur lus a la source : enseignement superieur sur trois niveaux (Bc., Mgr. art., ArtD.), diplomant, marionnette nommee dans les trois programmes (babkoherectvo, babkarska rezia a dramaturgia, babkarska scenografia a technologia), etablissement d'enseignement superieur public. Comptage a l'etablissement : six programmes Bc. et Mgr. relevent d'une seule ecole. Borne haute maintenue a 1, et non elargie par precaution comme ailleurs, parce que la page lue porte une affirmation explicite d'exhaustivite : la katedra y est dite jedinym pracoviskom na Slovensku, ktore poskytuje vzdelanie v oblasti divadla animovanej formy. C'est une declaration de l'etablissement sur lui-meme, non un recensement independant, mais elle vaut mieux qu'une absence de preuve.",
       "borne_basse": 1,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "VŠMU — Divadelná fakulta, Katedra bábkarskej tvorby",
+          "ville": "Bratislava",
+          "adresse": "Zochova 1, 813 01 Bratislava (enseignement Svoradova 4)",
+          "lat": 48.147,
+          "lon": 17.105,
+          "statut": "public",
+          "diplome": "Bc., Mgr. art. et ArtD. en jeu, mise en scène et scénographie de marionnettes",
+          "compte": true,
+          "source": "https://www.vsmu.sk/df/katedry-a-pracoviska/katedra-babkarskej-tvorby/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

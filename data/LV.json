@@ -31,7 +31,23 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu, mais le cas est limite et merite arbitrage. La Latvijas Kulturas akademija ouvre au sein de sa licence Dramatiska teatra aktiera maksla une specialisation unique, Fiziskais un objektu teatris, theatre physique et d'objet, sur 4 ans et 8 semestres, concue en cooperation etroite avec le Latvijas Lellu teatris, le theatre national de marionnettes. La page a ete lue : le mot lellu, marionnette, n'apparait dans aucun intitule de specialisation. L'exclusion tient donc a la lettre du denominateur, qui exige une specialisation en arts de la marionnette, et non a l'absence de lien avec le champ, lien qui est au contraire explicite par le partenariat. Arbitrage a trancher pour l'ensemble de la serie : le theatre d'objet compte-t-il comme art de la marionnette. S'il compte, la Lettonie passe a 1 et d'autres pays sont a reexaminer. En l'etat la reponse retenue est non, et la borne haute reste a 1 pour porter ce doute.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Latvijas Kultūras akadēmija",
+          "ville": "Rīga",
+          "adresse": null,
+          "lat": 56.9563,
+          "lon": 24.1885,
+          "statut": "public",
+          "diplome": "Spécialisation Fiziskais un objektu teātris, conçue avec le Latvijas Leļļu teātris",
+          "compte": false,
+          "motif_exclusion": "hors_denominateur",
+          "source": "https://lka.edu.lv/lv/gribu-studet-akademija/studijas/bak1/dramatiska-teatra-aktiera-maksla/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

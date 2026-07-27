@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27. Aucun etablissement retenu. L'Andorre ne compte qu'un etablissement d'enseignement superieur, l'Universitat d'Andorra, dont l'offre porte sur l'infirmerie, l'informatique, l'administration et l'education, sans faculte d'art dramatique ni ecole superieure d'art. En l'absence de tout enseignement superieur artistique dans le pays, il ne peut exister de formation superieure specialisee en arts de la marionnette. Borne haute maintenue a 0 pour cette raison, et non portee a 1 comme dans les pays disposant d'un enseignement theatral ou un candidat aurait pu echapper a la recherche. Confiance estime : l'argument porte sur la taille du systeme d'enseignement superieur, non sur une source lue.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 0,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

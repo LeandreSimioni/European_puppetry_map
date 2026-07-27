@@ -31,7 +31,34 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Deux etablissements retenus, tous deux lus a la source. Premier : le Wydzial Sztuki Lalkarskiej de l'Akademia Teatralna Aleksandra Zelwerowicza, filiale de Bialystok, avec deux cursus en jednolite studia magisterskie de cinq ans, aktorstwo et rezyseria specialite teatru lalek, plus une licence de trois ans en technologia teatru lalek ouverte en 2018. Second : le Wydzial Lalkarski de l'Akademia Sztuk Teatralnych de Cracovie, filiale de Wroclaw, avec aktorstwo teatru lalek et rezyseria teatru lalek. Les deux relevent de l'enseignement superieur artistique public polonais. Comptage a l'etablissement : cinq cursus au total mais deux ecoles. Borne haute maintenue a 2, aucune troisieme filiere n'ayant ete identifiee. La valeur ne change pas mais passe d'estimee a sourcee.",
       "borne_basse": 2,
-      "borne_haute": 2
+      "borne_haute": 2,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Akademia Teatralna im. A. Zelwerowicza, Wydział Sztuki Lalkarskiej",
+          "ville": "Białystok",
+          "adresse": "ul. Sienkiewicza 14, 15-092 Białystok",
+          "lat": 53.1358,
+          "lon": 23.1571,
+          "statut": "public",
+          "diplome": "Jednolite magisterskie aktorstwo et reżyseria teatru lalek, 5 ans ; licence technologia",
+          "compte": true,
+          "source": "https://www.otouczelnie.pl/wydzial/390/Wydzial-Sztuki-Lalkarskiej---Oddzial-w-Bialymstoku",
+          "verifie_le": "2026-07-27"
+        },
+        {
+          "nom": "Akademia Sztuk Teatralnych im. St. Wyspiańskiego, Filia we Wrocławiu, Wydział Lalkarski",
+          "ville": "Wrocław",
+          "adresse": "ul. Braniborska 59, 53-680 Wrocław",
+          "lat": 51.1067,
+          "lon": 16.9985,
+          "statut": "public",
+          "diplome": "Aktorstwo teatru lalek et reżyseria teatru lalek",
+          "compte": true,
+          "source": "https://www.wroclaw.pl/akademicki-wroclaw/akademia-sztuk-teatralnych-w-krakowie-filia-we-wroclawiu",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

@@ -31,7 +31,22 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la Katedra alternativniho a loutkoveho divadla (KALD) de la DAMU, faculte de theatre de l'Akademie muzickych umeni v Praze. Les quatre criteres du denominateur sont satisfaits et lus a la source : enseignement superieur (bakalarske, magisterske et doktorske), diplomant, marionnette nommee dans l'intitule meme du departement et des programmes (Herectvi / Rezie a dramaturgie / Scenografie alternativniho a loutkoveho divadla), etablissement public d'Etat (AMU, IC 61384984). Comptage a l'etablissement et non au programme : les trois licences plus le master relevent d'une seule ecole, d'ou 1 et non 4. Borne haute portee a 2 : la JAMU de Brno n'a pas ete verifiee dans cette passe et reste un candidat non tranche, l'exhaustivite n'etant pas demontree. La valeur porte donc sur l'existence etablie d'un etablissement, pas sur la preuve d'absence d'un second.",
       "borne_basse": 1,
-      "borne_haute": 2
+      "borne_haute": 2,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "DAMU — Katedra alternativního a loutkového divadla (AMU)",
+          "ville": "Praha",
+          "adresse": "Karlova 26, 116 65 Praha 1",
+          "lat": 50.0862,
+          "lon": 14.4172,
+          "statut": "public",
+          "diplome": "Bc. et Mgr. en jeu, mise en scène et scénographie de théâtre de marionnettes",
+          "compte": true,
+          "source": "https://www.damu.cz/cs/katedry-programy/katedra-alternativniho-a-loutkoveho-divadla/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

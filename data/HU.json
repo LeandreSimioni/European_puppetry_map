@@ -31,7 +31,22 @@
       "statut": "conteste",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement identifie mais un critere du denominateur mis en cause, d'ou le passage en conteste. La Szinhaz- es Filmmuveszeti Egyetem de Budapest porte une specialisation babszinesz, comedien marionnettiste, dont la premiere promotion date de 1995, en cursus non divise, ainsi qu'une specialisation babrendezo ouverte en 2008-09 au sein du cursus de mise en scene. La marionnette est donc une specialisation nommee d'un diplome superieur, et le critere pedagogique est satisfait. Le critere institutionnel ne l'est plus mecaniquement : depuis le 1er septembre 2020 l'universite n'est plus un etablissement public, elle est geree par une fondation privee, la Szinhaz- es Filmmuveszetert Alapitvany, transfert qui avait provoque une contestation prolongee sur l'autonomie academique. Le denominateur exige une formation adossee a une institution d'Etat. Faut-il lire ce critere comme la propriete publique de l'etablissement, auquel cas la Hongrie tombe a 0, ou comme la reconnaissance du diplome par l'Etat et le financement public, auquel cas elle vaut 1 ? La valeur 1 est retenue par defaut, la SZFE restant l'universite nationale de theatre et de cinema delivrant des diplomes reconnus, mais le statut passe en conteste : c'est la methode de comptage qui est en cause, pas l'existence de la formation. Arbitrage a rendre pour toute la serie, car le modele hongrois de transfert a des fondations touche l'ensemble de l'enseignement superieur du pays. Reserve de source : le site de la SZFE renvoie un refus systematique a la lecture automatisee ; la source enregistree est une notice encyclopedique, non l'etablissement lui-meme.",
       "borne_basse": 1,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "Színház- és Filmművészeti Egyetem (SZFE)",
+          "ville": "Budapest",
+          "adresse": "Vas utca 2/c, 1088 Budapest",
+          "lat": 47.4952,
+          "lon": 19.0678,
+          "statut": "fondation",
+          "diplome": "Spécialisation bábszínész depuis 1995, bábrendező depuis 2008-09",
+          "compte": true,
+          "source": "https://hu.wikipedia.org/wiki/Színház-_és_Filmművészeti_Egyetem",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

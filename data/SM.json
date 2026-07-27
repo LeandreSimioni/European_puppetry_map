@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27. Aucun etablissement retenu. Saint-Marin ne compte qu'un etablissement d'enseignement superieur, l'Universita degli Studi della Repubblica di San Marino, sans faculte d'art dramatique ni ecole superieure d'art. En l'absence de tout enseignement superieur artistique dans le pays, il ne peut exister de formation superieure specialisee en arts de la marionnette. Borne haute maintenue a 0 pour cette raison. Confiance estime : l'argument porte sur la taille du systeme d'enseignement superieur, non sur une source lue.",
       "borne_basse": 0,
-      "borne_haute": 0
+      "borne_haute": 0,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

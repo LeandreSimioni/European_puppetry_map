@@ -31,7 +31,22 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu, la valeur passant de 0 a 1 : l'Akademija za gledalisce, radio, film in televizijo (AGRFT) de l'Universite publique de Ljubljana. Critere lu a la source : le programme de deuxieme cycle Dramska igra, d'un an et 60 ECTS, comporte quatre orientations dont Igra z lutko, jeu de marionnette. La marionnette est donc une specialisation nommee d'un diplome d'Etat, ce qui satisfait le denominateur. Le 0 precedent etait une estimation sans recherche et se trompait. Borne haute maintenue a 1 : l'AGRFT est la seule academie publique de theatre du pays et le materiel consulte decrit les deux institutions slovenes de production marionnettique comme employant ses diplomes, ce qui la designe comme voie unique. Reserve : cette unicite est deduite du contexte, non affirmee par une source.",
       "borne_basse": 1,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "UL AGRFT — Akademija za gledališče, radio, film in televizijo",
+          "ville": "Ljubljana",
+          "adresse": "Trubarjeva cesta 3, 1000 Ljubljana",
+          "lat": 46.053,
+          "lon": 14.51,
+          "statut": "public",
+          "diplome": "Master Dramska igra, orientation Igra z lutko, 60 ECTS",
+          "compte": true,
+          "source": "https://www.agrft.uni-lj.si/studij/druga-stopnja/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

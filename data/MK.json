@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu et, il faut le dire nettement, aucun resultat exploitable : la recherche visant la faculte des arts dramatiques de Skopje n'a renvoye aucune information sur une eventuelle filiere de marionnette, ni positive ni negative. La valeur 0 est conservee mais elle ne repose sur aucun constat, seulement sur l'absence de resultat, ce qui est l'etat de preuve le plus faible de cette serie. Borne haute portee de 0 a 1 pour porter cette faiblesse. A reprendre avec une requete ciblee sur la Faculte des arts dramatiques de l'universite Saints-Cyrille-et-Methode. Confiance estime.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",

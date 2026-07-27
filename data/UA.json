@@ -31,7 +31,22 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu : la Kafedra mystetstva teatru lyalok de l'universite nationale Karpenko-Kary de Kyiv (KNUTKiT), au sein de la faculte des arts du theatre. Criteres lus a la source : departement dont l'intitule nomme explicitement l'art du theatre de marionnettes, rattache a une universite nationale, donc d'Etat. Reserve a porter au dossier : la page lue expose la structure du departement mais n'enumere pas les diplomes ; le niveau licence en art d'acteur du theatre de marionnettes n'a ete vu qu'en resume de moteur, non a la source. Le critere diplomant est donc presume par le rattachement universitaire, non verifie ligne a ligne. Borne haute a 2 : l'academie d'Etat de la culture de Kharkiv n'a pas ete verifiee dans cette passe.",
       "borne_basse": 1,
-      "borne_haute": 2
+      "borne_haute": 2,
+      "verifie_le": "2026-07-27",
+      "etablissements": [
+        {
+          "nom": "КНУТКіТ ім. І. К. Карпенка-Карого — Кафедра мистецтва театру ляльок",
+          "ville": "Київ",
+          "adresse": "вул. Ярославів Вал 40, 01054 Київ",
+          "lat": 50.4507,
+          "lon": 30.5079,
+          "statut": "public",
+          "diplome": "Акторське мистецтво театру ляльок (niveau non vérifié à la source)",
+          "compte": true,
+          "source": "https://knutkt.edu.ua/struktura/fakultet-teatralnoho-mystetstva/kafedra-mystetstva-teatru-lialok/",
+          "verifie_le": "2026-07-27"
+        }
+      ]
     },
     {
       "indicateur": "dates",

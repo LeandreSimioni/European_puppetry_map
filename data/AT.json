@@ -31,7 +31,9 @@
       "statut": "ouvert",
       "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. La mdw, Universitaet fuer Musik und darstellende Kunst de Vienne, principale universite publique du domaine, a ete lue a la source : ses 25 departements comprennent le Max Reinhardt Seminar pour l'art dramatique et l'academie de cinema, mais aucun departement de Figurentheater ou de Puppenspiel. Les seules offres reperees en Autriche relevent de structures privees hors du denominateur. Piege ecarte au passage : le Figurentheater-Kolleg, souvent renvoye par les moteurs sur une requete autrichienne, est situe a Bochum en Allemagne et ne concerne pas ce pays. Borne haute portee de 0 a 1 : l'universite de Graz et l'Anton Bruckner de Linz n'ont pas ete verifiees.",
       "borne_basse": 0,
-      "borne_haute": 1
+      "borne_haute": 1,
+      "verifie_le": "2026-07-27",
+      "etablissements": []
     },
     {
       "indicateur": "dates",
