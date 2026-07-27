@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 68,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "value": 69.487,
+      "year": 2025,
+      "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27, transversal pass over the population indicator. United Kingdom mid-2025 population estimate of the Office for National Statistics, 69 487 000 inhabitants, published 27 November 2025, read on the ONS population estimates page. Eurostat was deliberately not used here: its demo_pjan series stops at 1 January 2020 for the United Kingdom, a consequence of the country leaving the Union, and a five-year-old figure was refused when the national statistical institute publishes a current one. Note the reference differs from the rest of the series: ONS gives a mid-year estimate, Eurostat a 1 January stock. The gap is a few months of growth and is not material at the precision this indicator uses, but it is recorded rather than hidden."
     },
     {
       "indicator": "venues",
