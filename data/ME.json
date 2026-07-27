@@ -18,7 +18,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "reasoning": "Still an opening estimate, and this note exists so the next pass does not start from nothing. Researched on 2026-07-27 in the transversal venues pass and left unchanged, because what was established and what was not fall on either side of the value. Established, on the Capital City's own page listing its public institutions: JU Gradsko pozorište in Podgorica, Bokeška 2, is a javna ustanova of Podgorica, so a public institution with a venue. Not established: that it holds a permanent puppetry unit. Every account of a puppet stage and of a drama stage for children comes from second-hand summaries, and the theatre's own site answered 503 on every attempt through the day, as did the site of the Podgorica international puppetry festival. Under the rule of this repository a summary is not a source, so the value stays where it was rather than moving on a reading that was never made. The likely answer is 1, a stage inside a larger organisation; it is not recorded because likely is not read.",
       "lower_bound": 1,
       "upper_bound": 1
     },
@@ -93,6 +93,7 @@
   "notes": "Puppet theatre in Podgorica.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: re-read pgpozoriste.me when it answers. The question is narrow — does JU Gradsko pozorište name a permanent lutkarska scena, and does it hold puppeteers? The public status and the address are already established from podgorica.me. If the puppet stage is confirmed the value becomes 1, unit stage, parent JU Gradsko pozorište, at Bokeška 2."
   ]
 }
