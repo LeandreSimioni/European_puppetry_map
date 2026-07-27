@@ -53,8 +53,12 @@ def check_venues(code, o):
     if total != low:
         return [f'{code}/venues: units sum to {total} but lower_bound = {low}']
     # A count taken from a statistical aggregate names nobody and cannot be listed.
-    # Everything else must enumerate itself.
-    if u.get('unknown'):
+    # Everything else must enumerate itself. A count may be partly of each: the
+    # aggregate gives the total, and part of it has since been named one venue at
+    # a time. What is named is validated like any other list; only the residue
+    # under 'unknown' is exempt, because there is nothing to validate.
+    named = sum(u.get(k, 0) for k in ('house', 'stage'))
+    if u.get('unknown') and named == 0:
         return []
     err, lst = [], o.get('venues_list')
     if not isinstance(lst, list):
@@ -82,8 +86,9 @@ def check_venues(code, o):
         if not v.get('source'):
             err.append(f'{code}/venues/{where}: no source')
         tally[v['unit']] = tally.get(v['unit'], 0) + 1
-    if len(lst) != low:
-        err.append(f'{code}/venues: {len(lst)} venue(s) listed but lower_bound = {low}')
+    if len(lst) != named:
+        err.append(f'{code}/venues: {len(lst)} venue(s) listed but house + stage = {named}. '
+                   f'A venue that is not named belongs under unknown, not in the list.')
     for k in ('house', 'stage'):
         if u.get(k, 0) != tally.get(k, 0):
             err.append(f'{code}/venues: units says {k}={u.get(k, 0)} but the list holds '
