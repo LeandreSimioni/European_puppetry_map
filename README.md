@@ -25,12 +25,29 @@ the useful part:
 | **XK** | Eurostat, 1 January 2022. Same situation. |
 | **UA** | Eurostat, 1 January 2022 — weeks before the full-scale invasion. `disputed`: the figure is read correctly, the *denominator* is not settled. Residents, the de jure population including those displaced abroad, and the population of government-controlled territory are three different numbers, and "total population" does not choose between them. |
 | **BA** | The 2013 census, read on the front page of the national statistics agency, Eurostat publishing no row at all. `disputed` on its age. |
+| **TR** | Eurostat 2025, whole country. Read and refused earlier in the day under the old denominator, recorded once the transcontinental ruling removed the requirement. |
+| **RU** | World Bank `SP.POP.TOTL`, 2025. The only country Eurostat does not serve — its last Russian row is 1 January 2014. Rosstat answered 503 twice and is what should carry this value; the World Bank is a compilation, citable but not primary. |
 | **SM** | **No value.** The Bollettino demografico exists and was not opened. A figure that has not been read is not a source. |
-| **RU, TR** | **No value**, and for Turkey a current Eurostat figure was read and refused. The denominator asks for the European part only. Getting it means summing Rosstat federal districts — after ruling whether the Urals are in — or TÜİK provinces plus a split of Istanbul across the Bosphorus. That is a construction, not a reading, and it needs its method written first. |
 
-Three countries therefore keep an unsourced estimate, on purpose. The working
-rule is that a denominator that cannot be honoured produces a report, not a
-number.
+One country therefore keeps an unsourced estimate, on purpose. The working rule
+is that a figure which has not been read produces a report, not a number.
+
+### The transcontinental ruling, 2026-07-27
+
+The denominator used to ask for the European part alone of Russia and Turkey.
+It no longer does: splitting a country along a continental line cost more
+precision than it bought, and producing those figures meant constructing a
+number — Eastern Thrace out of provincial tables with Istanbul cut across the
+Bosphorus — rather than reading one.
+
+**This deliberately breaks the scope match between two indicators.**
+`population_M` now covers the whole country; `schools` still counts European
+establishments only, which is why Anadolu Üniversitesi stays outside Turkey's
+count. Any ratio built from the two is inconsistent for those two countries:
+nil effect for Turkey, which counts zero schools either way, and an inflated
+denominator for Russia, whose one counted school is in Moscow while the
+population now includes Siberia. Both indicators carry the warning in
+`schema.json` so neither can be read without meeting it.
 
 ## What the repository holds
 
@@ -164,10 +181,11 @@ link to its website.
 ## Next steps
 
 1. Settle the denominator of `dates`.
-2. Rule on the European boundary for Russia and Turkey, then build those two
-   population figures from regional data. Same for the Ukrainian denominator.
-   Open the San Marino bulletin. Three countries and two rulings away from a
-   complete population layer.
+2. Settle the Ukrainian denominator — residents, de jure population, or
+   government-controlled territory — then source against a body that publishes
+   on that basis. Fetch the Bosnian annual estimate in place of the 2013
+   census. Open the San Marino bulletin. Replace the Russian figure with
+   Rosstat when it answers.
 3. Finish what the ownership ruling reopened. Four Italian files are unexamined
    (Perugia, Animateria, Cesenatico, plus the academies of fine arts), Austria's
    private provision has never been opened, and Cyprus's private drama schools

@@ -72,9 +72,16 @@ polling loop waiting on one spins silently until it hits its timeout. That
 cost five minutes on 2026-07-27 while a workflow run had in fact already
 finished, in success, twenty-five seconds after the push.
 
-If a check must be waited on rather than read once, poll through the
-authenticated tool, and make the loop exit on a missing field rather than
-treat it as "not ready yet".
+Do not poll a workflow run, and do not check one after every push. Push the
+whole batch, then look once at the end, and read one thing: did it pass or
+fail. The run details are only worth opening when it failed — which is the only
+case where the logs say anything you did not already know.
+
+Two practical reasons to keep it to one look. The authenticated call returns
+the full repository object with every run, tens of thousands of characters for
+a single yes-or-no answer. And the answer is almost always yes: the build
+validates the data locally before the commit is even made, so a red run means
+something the local check cannot see, not a data error.
 
 ## What not to do
 
