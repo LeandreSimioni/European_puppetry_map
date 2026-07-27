@@ -9,7 +9,7 @@
       "source": null,
       "confidence": "estimated",
       "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator, and a figure was read and deliberately refused. Eurostat's demo_pjan gives Türkiye 85664944 inhabitants on 1 January 2025, a current and citable figure. It is not recorded, because it is the whole country and this indicator's denominator asks for the European part only, that is Eastern Thrace. Taking it would have made Turkey the second most populous country on the map on a definition the schema explicitly excludes. Producing the right figure means TÜİK provincial populations for Edirne, Kırklareli, Tekirdağ and the part of Çanakkale on the European shore, plus a split of Istanbul across the Bosphorus, which no province-level table publishes as such. That is a construction and it needs its method written out first. The value stays the opening estimate, made with no source, and confidence stays estimated. Note that the same European-part scope is what excludes Anadolu Üniversitesi from this country's schools count, so the two records are consistent."
     },
     {
       "indicator": "venues",
@@ -109,6 +109,7 @@
   "notes": "Istanbul. Karagöz shadow theatre. Puppet training at Eskişehir, outside this record's scope.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "population_M: build the Eastern Thrace figure from TUIK provinces, including a stated method for splitting Istanbul across the Bosphorus."
   ]
 }
