@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 12,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "No value produced on 2026-07-27, transversal pass over the population indicator, and a figure was read and deliberately refused. Eurostat's demo_pjan gives Türkiye 85664944 inhabitants on 1 January 2025, a current and citable figure. It is not recorded, because it is the whole country and this indicator's denominator asks for the European part only, that is Eastern Thrace. Taking it would have made Turkey the second most populous country on the map on a definition the schema explicitly excludes. Producing the right figure means TÜİK provincial populations for Edirne, Kırklareli, Tekirdağ and the part of Çanakkale on the European shore, plus a split of Istanbul across the Bosphorus, which no province-level table publishes as such. That is a construction and it needs its method written out first. The value stays the opening estimate, made with no source, and confidence stays estimated. Note that the same European-part scope is what excludes Anadolu Üniversitesi from this country's schools count, so the two records are consistent."
+      "value": 85.665,
+      "year": 2025,
+      "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?format=JSON&sex=T&age=TOTAL&lang=en&lastTimePeriod=1",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Sourced on 2026-07-27 after the ruling of the same day that counts transcontinental countries entire. Population on 1 January 2025: 85664944 inhabitants, recorded as 85.665 million. Eurostat dataset demo_pjan, read through the dissemination API, the same table and the same call as every other country here. This figure had already been read earlier in the day and refused, the denominator then asking for Eastern Thrace alone; the ruling removed that requirement and the figure is now simply recorded. Note what the ruling does not change: the schools indicator still counts European establishments only, which is why Anadolu Üniversitesi in Eskişehir stays excluded from this country's count. The two indicators no longer share a scope. Here that costs nothing, Turkey's schools count being zero under either reading, but the mismatch is real and is documented in the schema."
     },
     {
       "indicator": "venues",
@@ -109,7 +109,6 @@
   "notes": "Istanbul. Karagöz shadow theatre. Puppet training at Eskişehir, outside this record's scope.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country.",
-    "population_M: build the Eastern Thrace figure from TUIK provinces, including a stated method for splitting Istanbul across the Bosphorus."
+    "Find the annual report of at least one organisation in the country."
   ]
 }
