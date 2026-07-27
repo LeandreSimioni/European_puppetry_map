@@ -24,14 +24,14 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
-      "source": null,
-      "confiance": "estime",
+      "valeur": 1.0,
+      "annee": 2026,
+      "source": "https://www.artsaucarre.be/theatre-conservatoire-royal/master-marionnette/",
+      "confiance": "sourced",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
-      "borne_basse": 0,
-      "borne_haute": 1
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Un etablissement retenu, la valeur passant de 0,5 a 1 : ARTS2 Mons, Ecole superieure des Arts de la Federation Wallonie-Bruxelles. Critere lu a la source : Master en arts de la marionnette, master orphelin de 60 credits, ouvert en septembre 2020, porte conjointement avec l'Academie des Beaux-Arts de Tournai et la Maison de la Marionnette de Tournai, equipe de 15 enseignants. La marionnette est l'objet meme du diplome et l'etablissement releve du ministere de l'Enseignement superieur de la Communaute francaise. Comptage a l'etablissement porteur du diplome : le partenariat tournaisien ne fait pas trois ecoles. Le 0,5 precedent etait le milieu d'une fourchette estimee. Borne haute a 2 : la verification a porte sur la Federation Wallonie-Bruxelles et n'a pas couvert l'enseignement superieur artistique flamand, ou une filiere pourrait exister sous un autre intitule.",
+      "borne_basse": 1,
+      "borne_haute": 2
     },
     {
       "indicateur": "dates",
