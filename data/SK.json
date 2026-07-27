@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.vsmu.sk/df/katedry-a-pracoviska/katedra-babkarskej-tvorby/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Department of Puppetry of the theatre faculty of VSMU, Bratislava. Criteria read at source: higher education across three levels (Bc., Mgr. art., ArtD.), degree-granting, puppetry named in all three programmes, public institution. Counted by establishment: six programmes, one school. Upper bound held at 1 rather than widened as a precaution, because the page read carries an explicit claim of exhaustiveness: the department is stated to be the only place in Slovakia teaching animated theatre. That is an institution's claim about itself, not an independent census, but it beats no evidence at all.",
       "lower_bound": 1,
       "upper_bound": 1,

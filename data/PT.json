@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.eselx.ipl.pt/curso/pos-graduacao/marionetas-e-formas-animadas",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained, the value moving from 0 to 1: the Lisbon School of Education (ESELx), part of the Lisbon Polytechnic, a public institution. Criterion read at source: a postgraduate course in Puppetry and Animated Forms, 60 ECTS over two semesters, taught on site. Puppetry is the object of the training itself. Qualification caveat on record: this is a postgraduate course rather than a bachelor's or master's degree, making it a degree-granting higher education course but in a shorter format than those counted elsewhere in the series. Since the denominator sets no floor beyond being higher education and degree-granting, it is retained. Upper bound held at 1: the page read states the course is unique in Portugal's advanced training landscape and the country's only entry in the world directory of schools in the field. Read, not inferred.",
       "lower_bound": 1,
       "upper_bound": 1,

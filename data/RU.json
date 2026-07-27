@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://ru.wikipedia.org/wiki/Российский_государственный_институт_сценических_искусств ; https://gitis.net/education/faculties/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. European part only. One establishment retained: RGISI, the Russian State Institute of Performing Arts in Saint Petersburg, whose puppet theatre faculty is one of its eight faculties, the institution being a federal state body of higher education. A notable result of this pass: GITIS in Moscow, which search summaries presented as training puppet directors and designers, was checked at source and its faculties page contains no such faculty, the eight being acting, directing, musical theatre, criticism, choreography, new directions, production and scenography. The previous value of 1.5 was the midpoint of an estimated range; it is brought back to 1, the only established establishment. Upper bound at 2: GITIS could carry puppetry inside one of its faculties without its structure page showing it, and provincial theatre schools were not checked.",
       "lower_bound": 1,
       "upper_bound": 2,

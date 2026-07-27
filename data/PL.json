@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.otouczelnie.pl/wydzial/390/Wydzial-Sztuki-Lalkarskiej---Oddzial-w-Bialymstoku ; https://www.wroclaw.pl/akademicki-wroclaw/akademia-sztuk-teatralnych-w-krakowie-filia-we-wroclawiu",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. Two establishments retained, both read at source. First, the Puppetry Faculty of the Aleksander Zelwerowicz Theatre Academy, Bialystok branch, with two five-year integrated master's courses in puppet theatre acting and directing, plus a three-year degree in puppet theatre technology opened in 2018. Second, the Puppetry Faculty of the Stanislaw Wyspianski Academy of Theatre Arts, Krakow, at its Wroclaw branch, with puppet theatre acting and puppet theatre directing. Both belong to Polish public arts higher education. Counted by establishment: five courses in total but two schools. Upper bound held at 2, no third course identified. The value does not change but moves from estimated to sourced.",
       "lower_bound": 2,
       "upper_bound": 2,

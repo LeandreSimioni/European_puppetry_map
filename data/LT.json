@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://lmta.lt/lt/leliu-ir-objektu-teatras-nuolatinis-gyvenimo-saves-ir-teatro-tyrinejimas/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Lithuanian Academy of Music and Theatre, on its Klaipeda campus. Criterion read at source: a Puppet and Object Theatre specialism open within the Theatre Arts bachelor's degree, with a curriculum naming puppet theatre history, puppet dramaturgy and animation work. The award is therefore Theatre Arts, with puppetry as a named specialism inside it, which satisfies the denominator without occupying the main title. The previous value of 0.5 was the midpoint of an estimated range. Caveat: the page read does not confirm the academy's state status, presumed here from its national character but not verified. Upper bound at 2, no source read claiming exhaustiveness.",
       "lower_bound": 1,
       "upper_bound": 2,

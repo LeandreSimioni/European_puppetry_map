@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.artsaucarre.be/theatre-conservatoire-royal/master-marionnette/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained, the value moving from 0.5 to 1: ARTS2 Mons, a higher arts school of the Wallonia-Brussels Federation. Criterion read at source: a master's in puppetry arts, a standalone 60-credit master's opened in September 2020, run jointly with the Academy of Fine Arts and the Puppet House in Tournai, with a teaching team of fifteen. Puppetry is the object of the award itself and the school reports to the higher education ministry of the French Community. Counted at the establishment carrying the award: the Tournai partnership does not make three schools. The previous 0.5 was the midpoint of an estimated range. Upper bound at 2: the check covered the Wallonia-Brussels Federation and did not cover Flemish arts higher education, where a course could exist under another name.",
       "lower_bound": 1,
       "upper_bound": 2,

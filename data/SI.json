@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.agrft.uni-lj.si/studij/druga-stopnja/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained, the value moving from 0 to 1: the Academy of Theatre, Radio, Film and Television (AGRFT) of the public University of Ljubljana. Criterion read at source: the second-cycle Dramatic Acting programme, one year and 60 ECTS, has four streams, one of which is Puppet Acting. Puppetry is therefore a named specialism of a state award, which satisfies the denominator. The previous 0 was an estimate made without research and was wrong. Upper bound held at 1: AGRFT is the country's only public theatre academy, and the material consulted describes Slovenia's two puppet production houses as employing its graduates, which marks it as the single route. Caveat: that uniqueness is inferred from context, not asserted by a source.",
       "lower_bound": 1,
       "upper_bound": 1,

@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://unatc.ro/devunatc/departament/artele-spectacolului-papusi-marionete/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: UNATC I.L. Caragiale, Bucharest. Criteria read at source: a bachelor's degree in Performing Arts (Puppets and Marionettes), four years, 240 ECTS, twelve places, paired with a master's in Animation Theatre; puppetry named in the award title; Romanian public national university. Counted by establishment: bachelor's and master's make one school. The previous value of 1.5 was not an observation but the midpoint of an estimated range; it is brought back to the established lower bound. Upper bound at 2: the arts university of Targu Mures was not checked in this pass. No source read claims exhaustiveness for Romania.",
       "lower_bound": 1,
       "upper_bound": 2,

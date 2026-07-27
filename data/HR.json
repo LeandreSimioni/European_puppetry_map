@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "http://www.uaos.unios.hr/preddiplomski-sveucilisni-studij-gluma-i-lutkarstvo/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Academy of Arts and Culture in Osijek, part of the public Josip Juraj Strossmayer University. Criteria read at source: a three-year bachelor's degree in Acting and Puppetry awarding the title of baccalaureus of acting and puppetry, registered at level 6 of the Croatian Qualifications Framework; puppetry named in the title; state university programme. The academy also carries master's degrees in puppet animation, design and directing. Counted by establishment: 1. Upper bound at 2: pages not read present Osijek as Croatia's only puppetry school, but that claim was not verified at source and is therefore not used to close the range.",
       "lower_bound": 1,
       "upper_bound": 2,

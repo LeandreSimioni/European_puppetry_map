@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://www.damu.cz/cs/katedry-programy/katedra-alternativniho-a-loutkoveho-divadla/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Department of Alternative and Puppet Theatre (KALD) of DAMU, the theatre faculty of the Academy of Performing Arts in Prague. All four criteria of the denominator were read at source: higher education across bachelor's, master's and doctoral levels; degree-granting; puppetry named in the department's own title and in each programme title; state institution. Counted by establishment, not by programme: three bachelor's degrees plus a master's are one school, so 1 and not 4. Upper bound raised to 2 because JAMU in Brno was not checked in this pass and remains an unresolved candidate. The value records an establishment proved to exist, not the absence of a second.",
       "lower_bound": 1,
       "upper_bound": 2,

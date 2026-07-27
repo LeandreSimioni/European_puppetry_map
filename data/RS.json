@@ -28,7 +28,7 @@
       "year": 2026,
       "source": "https://akademija.uns.ac.rs/novi-master-studijski-program-na-akademiji-umetnosti-novi-sad-lutkarstvo/",
       "confidence": "sourced",
-      "status": "open",
+      "status": "verified",
       "reasoning": "Web check of 2026-07-27, searched in the country's own language. One establishment retained: the Academy of Arts in Novi Sad, part of the state University of Novi Sad. Criterion read at source: a two-year master's programme in puppetry within the department of dramatic arts; puppetry named in the programme title; public institution. The previous value of 0.5 was the midpoint of an estimated range, not an observation. Upper bound at 2: the source claims a national first, but that claim covers the complete master's programme, not the whole field. It does not rule out an undergraduate stream elsewhere in Serbia and is not enough to close the range.",
       "lower_bound": 1,
       "upper_bound": 2,
