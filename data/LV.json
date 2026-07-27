@@ -24,13 +24,13 @@
     },
     {
       "indicator": "schools",
-      "value": 0.0,
+      "value": 1.0,
       "year": 2026,
       "source": "https://lka.edu.lv/lv/gribu-studet-akademija/studijas/bak1/dramatiska-teatra-aktiera-maksla/",
       "confidence": "sourced",
-      "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained, but the case is borderline and deserves a ruling. The Latvian Academy of Culture opens, within its bachelor's degree in dramatic theatre acting, a single specialism in Physical and Object Theatre, over four years and eight semesters, designed in close cooperation with the Latvian Puppet Theatre, the national puppet house. The page was read: the word puppet appears in no specialism title. The exclusion therefore rests on the letter of the denominator, which requires a specialism in puppetry arts, and not on any absence of connection to the field, a connection the partnership makes explicit. Ruling needed for the whole series: does object theatre count as puppetry arts? If it does, Latvia moves to 1 and other countries need re-examining. For now the answer taken is no, and the upper bound stays at 1 to carry that doubt.",
-      "lower_bound": 0,
+      "status": "verified",
+      "reasoning": "Web check of 2026-07-27, in the country's own language, redone after the object theatre ruling of the same day. Latvia moves from 0 to 1. The previous pass had found the establishment, read its page and described it correctly, then excluded it on the sole ground that no course title contained the word puppet. That ground no longer exists: object theatre now enters the denominator. The page was re-opened to test what the ruling requires of it, which is not what the previous pass had asked. Read at source: the Latvian Academy of Culture awards a bakalaura grāds dramatiskā teātra aktiera mākslā, four years and eight semesters, and carries within it a named specialisation, Specializācija “Fiziskais un objektu teātris”. Two criteria are satisfied that the earlier reading had not tested. Object theatre is a specialisation of the course and not a subject inside it, which is what separates this case from the Spanish one, where puppetry is a module within an acting curriculum. And the award is state-recognised: the page situates the programme in a valsts akreditētajā studiju virzienā, a state-accredited study direction. Ownership did not have to be argued, the Academy being a state one, but under today's ruling it would not have mattered either way. Lower bound rises from 0 to 1. The upper bound stays at 1 but changes meaning: it carried the object theatre question, which is now answered, and no second Latvian candidate was found by the previous pass.",
+      "lower_bound": 1,
       "upper_bound": 1,
       "checked_on": "2026-07-27",
       "establishments": [
@@ -41,11 +41,10 @@
           "lat": 56.9563,
           "lon": 24.1885,
           "status": "public",
-          "award": "Physical and Object Theatre specialism, built with the Latvian Puppet Theatre",
+          "award": "Bakalaura grāds dramatiskā teātra aktiera mākslā, specialisation Fiziskais un objektu teātris, 4 years / 8 semesters",
           "url": "https://lka.edu.lv/",
-          "description": "The Latvian Academy of Culture runs a single acting specialism in physical and object theatre, designed with the national puppet theatre. No specialism title uses the word puppet, which is the sole reason it is excluded.",
-          "counted": false,
-          "exclusion_reason": "outside_denominator",
+          "description": "The Latvian Academy of Culture runs a four-year bachelor's degree in dramatic theatre acting carrying a named specialisation in physical and object theatre, designed with the Latvian Puppet Theatre. It counts since the ruling of 2026-07-27: the specialism is object theatre taught as a specialism, and the degree sits in a state-accredited study direction.",
+          "counted": true,
           "source": "https://lka.edu.lv/lv/gribu-studet-akademija/studijas/bak1/dramatiska-teatra-aktiera-maksla/",
           "checked_on": "2026-07-27"
         }
