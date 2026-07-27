@@ -4,12 +4,12 @@
   "observations": [
     {
       "indicator": "population_M",
-      "value": 3.2,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
+      "value": 3.531,
+      "year": 2013,
+      "source": "https://bhas.gov.ba/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "DISPUTED. Sourced on 2026-07-27, transversal pass over the population indicator. 3531159 inhabitants, the 2013 census figure, read on the front page of the Agency for Statistics of Bosnia and Herzegovina, which displays it as Populacija 2013. Eurostat carries a geo code for the country but publishes no row for it at all in demo_pjan, which is why the national agency was opened instead. Status disputed on the age of the figure: thirteen years, and a census rather than an estimate, in a country whose population is widely held to have fallen substantially since through emigration. Using it as a denominator for a per-inhabitant indicator would understate the rate by whatever that fall amounts to. The agency publishes annual estimates that were not reached from the front page in this pass; they are the thing to fetch."
     },
     {
       "indicator": "venues",
