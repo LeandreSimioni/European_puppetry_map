@@ -14,13 +14,15 @@
     {
       "indicator": "venues",
       "value": 0.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "year": 2026,
+      "source": "https://www.tak.li/das-tak",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Searched on 2026-07-27, in German, as part of the transversal venues pass over the smallest countries. Zero, and for once a zero that can be argued rather than assumed, because the country's whole professional theatre infrastructure is one house. The TAK in Schaan, read on its own page, states that it fulfils the role of a state theatre for Liechtenstein, that it has been organised under private law as a cooperative since 1972, and that since 2019/20 it holds an ensemble of its own — a drama ensemble. No puppetry or figure theatre unit appears anywhere on that page. Puppetry reaches Liechtenstein as guest programming, the visiting companies being Swiss and Austrian, which is a fact about touring and not about a Liechtenstein venue. The denominator asks for a permanent puppetry unit with a venue of its own and public backing; there is no puppetry unit at all, so the two other conditions never arise. The previous value was the same zero, produced with no research: the number does not move, the standing behind it does.",
       "lower_bound": 0,
-      "upper_bound": 0
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -93,6 +95,7 @@
   "notes": "No permanent venue recorded.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "venues: zero recorded against the TAK's own page, the country holding a single professional theatre. Reopen only if the TAK announces a figure theatre unit, or if a company with its own room appears."
   ]
 }
