@@ -24,12 +24,12 @@
     },
     {
       "indicateur": "ecoles",
-      "valeur": 0.5,
-      "annee": null,
-      "source": null,
+      "valeur": 0.0,
+      "annee": 2026,
+      "source": "https://eamt.ee/erialad/lavakunsti-osakond/lavakunst/uldinfo/",
       "confiance": "estime",
       "statut": "ouvert",
-      "raisonnement": "Estimation de depart, produite sans source ni recherche. Sert d'hypothese a falsifier, pas de donnee.",
+      "raisonnement": "Verification web du 2026-07-27, dans la langue du pays. Aucun etablissement retenu. La recherche a porte sur l'Eesti Muusika- ja Teatriakadeemia, seule ecole superieure de theatre d'Estonie, dont le departement lavakunst a ete lu a la source : les specialisations listees sont acteur, metteur en scene, dramaturge, arts theatraux et pedagogie theatrale, arts de la performance contemporains. Aucune mention de nukuteater. La valeur precedente de 0,5 etait le milieu d'une fourchette estimee, sans recherche. Elle passe a 0. La confiance reste estime et non sourced : la source lue etablit l'absence de filiere marionnette dans l'ecole nationale de theatre, ce qui n'est pas la meme chose que l'absence d'une filiere dans le pays. Une absence ne se source pas comme une presence. Borne haute maintenue a 1 pour cette raison.",
       "borne_basse": 0,
       "borne_haute": 1
     },
