@@ -24,10 +24,7 @@ documentation, commit messages and the map itself.
    `confidence: "estimated"` with `source: null`. An approximate source, or one
    reconstructed from memory, is worse than no source at all. A search-engine
    summary is not a source: only a page actually opened and read counts.
-4. **Never edit anything in `dist/`.** Both files there are build output and are
-   overwritten. `index.html` comes from `build.py`, `artifact.html` from
-   `tools/make_artifact.py`, which reads `index.html` and must therefore run
-   after it.
+4. **Never edit `dist/index.html`.** It is overwritten on every build.
 5. **Median, not mean**, for every indicator about the trade. The distributions
    are bimodal and the mean describes nobody.
 6. **A fee is not a performance.** Rehearsals, residencies, workshops and
@@ -58,15 +55,9 @@ establishment is rejected, the coordinate is wrong; do not widen the tolerance.
 ## After any change
 
 ```bash
-python3 build.py --check         # must exit without error
-python3 build.py                 # regenerates dist/index.html
-python3 tools/make_artifact.py   # regenerates dist/artifact.html from it
+python3 build.py --check   # must exit without error
+python3 build.py           # regenerates the map
 ```
-
-The third line is easy to forget and nothing catches it: `build.py` does not
-produce `artifact.html`, and the publish workflow does not check it. It drifted
-out of date once on 2026-07-27 and was only found by comparing file timestamps.
-Run all three, or `artifact.html` silently shows an older map than the data.
 
 ## Talking to GitHub
 
