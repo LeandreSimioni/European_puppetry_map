@@ -34,6 +34,7 @@
       "layer": "institutions",
       "denominator": "Higher education course in puppetry or object theatre arts whose award is recognised by the State. Puppetry or object theatre must be a named specialism of the course, not a subject taught inside a broader curriculum.",
       "ownership": "Not a criterion. Public, private and foundation-run institutions are treated alike: what is asked of the establishment is that the qualification it awards be state-recognised, not that the State own the walls. Settled 2026-07-27, after the Hungarian case, where a national theatre university transferred to a private foundation in 2020 was blocking the count.",
+      "scope": "European establishments only. A course meeting every other criterion but sitting outside Europe does not enter the count, which is what excludes Anadolu Üniversitesi in Eskişehir from Turkey's. This scope is deliberately narrower than population_M, which since the ruling of 2026-07-27 counts transcontinental countries entire: see that indicator's known_bias for what the mismatch does to any ratio built from the two.",
       "object_theatre": "Counts. A specialism in object theatre, figure theatre or material theatre enters the indicator on the same footing as one whose title carries the word puppet. Settled 2026-07-27, after the Latvian case, where a four-year specialism built with the national puppet theatre was excluded on the sole ground that no course title used the word. The naming of the field varies by country and is not evidence about what is taught.",
       "known_bias": "Courses open and close with each intake. Prefer the annual flow of graduates in the long run.",
       "unit_of_count": "The establishment, never the programme. An academy carrying one bachelor's and three master's degrees in puppetry counts 1.",
@@ -44,8 +45,9 @@
       "label": "Population",
       "unit": "millions of inhabitants",
       "layer": "context",
-      "denominator": "Total population. For Russia and Turkey, the European part only.",
-      "known_bias": "None, beyond the imprecision of the estimates."
+      "denominator": "Total population of the country, its whole territory included. Transcontinental countries are counted entire.",
+      "ruling": "Settled 2026-07-27, replacing an earlier denominator that asked for the European part alone of Russia and Turkey. Splitting a country along a continental line cost more precision than it bought: the figures involved are not precise enough to carry the distinction, and building Eastern Thrace out of provincial tables, or European Russia out of federal districts, meant constructing a number rather than reading one.",
+      "known_bias": "The scope of this indicator no longer matches the scope of schools, and that is deliberate rather than an oversight. Population covers the whole country; schools counts only establishments in Europe. Any ratio built from the two is therefore inconsistent for Russia and Turkey. For Turkey the effect is nil, its schools count being zero under either scope. For Russia it inflates the denominator, the counted school being in Moscow while the population now includes Siberia and the Far East. Read per-inhabitant figures for those two countries with that in mind, or exclude them."
     },
     {
       "id": "dates",
