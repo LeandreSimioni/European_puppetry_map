@@ -31,7 +31,10 @@
       "status": "disputed",
       "reasoning": "Read on 2026-07-27 from the Local Data Bank of GUS, subject P2874 'Teatry', variable 194943, 'jednostki: teatr lalkowy', national level: 28 puppet theatre institutions in 2024. The series falls steadily — 35 in 2019, 29 in 2022 and 2023, 28 in 2024 — so Poland has lost a fifth of its puppet institutions in five years, which is the most useful thing this figure says. Disputed on one filter, not on the reading. GUS counts the institutions that file the theatre return and classes them by kind of theatre; it does not sort them by who backs them. The denominator here asks for public backing, and 28 is therefore a ceiling: every publicly backed puppet house is inside it, and any private one that files a return is inside it too. What would settle it is the register of instytucje kultury held by the ministry and the local authorities, read against this list of 28. The reading is exact; the question is whether the denominators match. The opening estimate was 22 to 28 and its upper bound turns out to be the sourced ceiling, which is luck rather than method.",
       "lower_bound": 28,
-      "upper_bound": 28
+      "upper_bound": 28,
+      "units": {
+        "unknown": 28
+      }
     },
     {
       "indicator": "schools",
@@ -134,6 +137,7 @@
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "venues: read the ministry's register of instytucje kultury against the 28 GUS units, to separate the publicly backed houses from any private filer.",
-    "performances: find a Polish source counting puppet performances by place of presentation rather than in permanent halls only. GUS publishes that measure but not by kind of theatre."
+    "performances: find a Polish source counting puppet performances by place of presentation rather than in permanent halls only. GUS publishes that measure but not by kind of theatre.",
+    "venues: the ruling of 2026-07-27 probably makes 28 an undercount, not just a ceiling on public backing. GUS classes each reporting institution by kind, so a puppet stage inside a drama theatre files under its parent and never appears as a puppet unit. The two errors run in opposite directions and neither is measured."
   ]
 }

@@ -20,7 +20,10 @@
       "status": "verified",
       "reasoning": "Checked on 2026-07-27 against the Register of Legal Persons of the Statistical Office of the Slovak Republic, through its open API. The register carries, for every entity, the register it came from, and that field settles public backing without any need to read a founding charter: the five theatres below all show 'Osobitný právny predpis, ktorým sa zriaďuje orgán verejnej moci alebo verejnoprávna organizácia' — established by a special legal act creating a public authority or a public-law organisation. Bratislavské bábkové divadlo, Dunajská 2319/36, Bratislava, IČO 00164879. Bábkové divadlo Žilina, Kuzmányho 106/6, IČO 36145211. Bábkové divadlo na Rázcestí v Banskej Bystrici, Skuteckého 127/14, IČO 35985381. Bábkové divadlo v Košiciach, Tajovského 736/4, IČO 31297811. Staré divadlo Karola Spišáka v Nitre, 7. pešieho pluku 1560/1, IČO 36103004 in the same register — the Nitra house, which was the Bábkové divadlo Nitra until it was renamed, and which is why a search on 'bábkové divadlo' alone misses it. A control was run in the same register: Združenie BABADLO in Prešov, an active puppet company, comes from the register of civic associations and not from a legal act, so the field does separate the two kinds. Roughly a dozen further entities carrying 'bábkové divadlo' in their name are sole traders or associations and fall outside on the same test. The opening estimate was 3 to 4 while the file's own note already named five towns. The note was right and the number was wrong.",
       "lower_bound": 5,
-      "upper_bound": 5
+      "upper_bound": 5,
+      "units": {
+        "house": 5
+      }
     },
     {
       "indicator": "schools",

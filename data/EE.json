@@ -32,7 +32,10 @@
       "status": "verified",
       "reasoning": "Checked on 2026-07-27, from the register of performing-arts institutions kept by the Estonian Theatre Agency, which classes every Estonian theatre by legal form. One establishment meets the denominator: Eesti Noorsooteater, Lai 1 / Nunne 4 in Tallinn, listed among the riigi osalusega sihtasutused, the foundations the State holds a stake in, and the only puppet or visual house among them. Its own site gives the address, the puppet museum in the same complex and a 74th season, so the building is its own and the organisation is permanent. Two other puppet houses exist and are both excluded on public backing, not on their work: Vene Nukuteater and Piip ja Tuut Teater are both registered eraetendusasutused, private performing-arts bodies. That makes the Estonian figure exact rather than approximate, hence identical bounds: the register is a closed list, not a search that might have missed something. The previous value was an opening estimate of 1 to 2, made with no source.",
       "lower_bound": 1,
-      "upper_bound": 1
+      "upper_bound": 1,
+      "units": {
+        "house": 1
+      }
     },
     {
       "indicator": "schools",

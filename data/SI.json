@@ -20,7 +20,10 @@
       "status": "open",
       "reasoning": "Checked on 2026-07-27, one house at a time, no register of Slovenian public cultural institutions having been reached. Lutkovno gledališče Maribor: its own 2025 annual report, filed under informacije javnega značaja, opens by calling itself a javni zavod, gives the address Vojašniški trg 2 A in Maribor and cites the founding decree, Odlok o ustanovitvi javnega zavoda Lutkovno gledališče Maribor, MUV no. 22/2004. That is public establishment in a document the theatre is legally obliged to publish. Lutkovno gledališče Ljubljana: its own site states in the footer that the theatre is co-financed by the Ministry of Culture and the Mestna občina Ljubljana. That is public backing on its face, which is what the denominator asks for, though it is weaker evidence than Maribor's — a funding statement rather than a founding act. Its address was not recorded because no page giving it was opened. The value is unchanged at 2 and the change is what stands behind it: two named houses with documents rather than a note. Status left open rather than verified for one reason worth stating — this was a check of two candidates already named in the file, not a sweep of a register. A third publicly backed puppet house, if one exists, would not have shown up. Two is confirmed as a floor and not proven as a ceiling.",
       "lower_bound": 2,
-      "upper_bound": 2
+      "upper_bound": 2,
+      "units": {
+        "house": 2
+      }
     },
     {
       "indicator": "schools",
