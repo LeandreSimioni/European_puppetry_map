@@ -10,7 +10,7 @@ the exercise — a preview precise enough to be refutable.
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
 45. `venues` and `performances` are being collected, five countries at a time;
-`venues` is sourced for 42 countries, `performances` for 6.
+`venues` is sourced for 44 countries, `performances` for 6.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -310,7 +310,7 @@ Latvia counts because object theatre is a named specialisation inside an acting
 degree; Spain's Dantzerti does not, because puppetry there is a module inside
 one.
 
-Twenty schools across 18 countries. One record stays `disputed`: Belarus, where
+Twenty-one schools across 19 countries. One record stays `disputed`: Belarus, where
 no accessible source reaches stream level.
 
 ### The layer is closed, 2026-07-27
@@ -354,16 +354,17 @@ link to its website.
 
 1. **Source `venues` and `performances`, five countries at a time.** In progress.
    These are the two indicators a desk can reach: national culture statistics
-   count both, and neither waits on the `dates` ruling. Three countries are left
-   on `venues`, and they are the three hardest, each blocked on something other
-   than research time:
-   - **Turkey and Russia.** The `venues` denominator says nothing about
-     transcontinental countries. `population_M` counts them entire since
-     2026-07-27 and `schools` counts European establishments only; these two
-     records are still named "European part" and the indicator has never chosen.
-     Choose before collecting, not after.
-   - **Belarus.** No accessible first-party source, the same wall the `schools`
-     record hit.
+   count both, and neither waits on the `dates` ruling. One country is left on
+   `venues`, and it is a session of its own:
+   - **Russia**, European part, under the scope ruling of 2026-07-28. No register
+     could be read — the federal culture portal's catalogue answers 404 and the
+     Wikipedia category misses Kazan and Rostov. What exists is a directory
+     indexed by region and city, whose 54 European regions and 175 city pages
+     were read on 2026-07-28 and yielded 63 puppet entries; four more were
+     confirmed elsewhere. That list is kept in `data/RU.json` and it is not a
+     count: thirteen regions return nothing, the list mixes state houses with
+     private Moscow troupes, and Vyborg plays drama and puppets with one company.
+     Sixty-seven candidates to open one at a time.
 2. Settle the denominator of `dates`. It blocks 90 observations — `dates` and
    `share_under_20` for all 45 countries.
 3. Settle the Ukrainian denominator — residents, de jure population, or
