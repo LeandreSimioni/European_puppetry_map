@@ -50,14 +50,38 @@ precision than it bought, and producing those figures meant constructing a
 number — Eastern Thrace out of provincial tables with Istanbul cut across the
 Bosphorus — rather than reading one.
 
-**This deliberately breaks the scope match between two indicators.**
-`population_M` now covers the whole country; `schools` still counts European
-establishments only, which is why Anadolu Üniversitesi stays outside Turkey's
-count. Any ratio built from the two is inconsistent for those two countries:
-nil effect for Turkey, which counts zero schools either way, and an inflated
-denominator for Russia, whose one counted school is in Saint Petersburg while the
-population now includes Siberia. Both indicators carry the warning in
-`schema.json` so neither can be read without meeting it.
+For a day this broke the scope match between indicators: population covered the
+whole country while `schools` counted European establishments only, which is what
+kept Anadolu Üniversitesi outside Turkey's count.
+
+### The scope ruling, 2026-07-28
+
+`venues` had never ruled on transcontinental countries and was following
+`schools` out of habit. Both now say the same thing, and it is the shortest rule
+in the schema: **a country is counted entire, and Russia is the single
+exception** — European Russia only, to the Urals.
+
+Counting a country entire is readable and honest. Registers, ministry lists and
+federation memberships enumerate countries, not continental fragments of them,
+and an hour spent cutting Istanbul along the Bosphorus is an hour not spent
+reading a source; a puppet theatre in Bursa belongs to the same system of
+funding, training and touring as one in Edirne. Russia is excepted because the
+alternative is not a bigger count but a meaningless one: the network runs to
+Vladivostok, eight time zones past anything this study can compare, and a Russian
+total would swamp every European figure beside it. The line is the conventional
+one — Urals, Ural river, Caspian, Caucasus watershed — keeping Perm, Ufa,
+Orenburg and Kirov inside, Yekaterinburg and Chelyabinsk outside.
+
+This reopened the schools layer for **exactly one establishment**, the puppet and
+shadow theatre branch of Anadolu University's state conservatoire in Eskişehir,
+which the old scope deleted although it satisfied every other criterion. Turkey
+moves to 1. Widening `venues` to the whole of Turkey, by contrast, produced
+nothing at all: that record is a sourced zero over the entire country.
+
+The mismatch with `population_M` now survives for **Russia alone**, which counts
+entire for population and stops at the Urals for schools and venues. Both
+indicators carry the warning in `schema.json` so neither can be read without
+meeting it.
 
 ## What the repository holds
 
