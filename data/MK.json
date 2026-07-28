@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate, and this note records why. Searched on 2026-07-27, in Macedonian, in the transversal venues pass. The candidate is the Teatar za deca i mladinci in Skopje, at ulica Dimitrija Chupovski 4, read on its own site, and its lineage is exactly the question: puppetry in Skopje began as the puppet stage of the Macedonian National Theatre in 1946, became the City Puppet Theatre in 1949, and was reorganised in 1957/58 into a youth and children's theatre playing on two stages. What could not be read is whether a puppetry unit survived that reorganisation. The theatre's own site names an ensemble of actors and no puppetry stage; the Ministry of Culture page announcing a puppet premiere there answered 503, and the Macedonian encyclopedia article 404. So the case sits precisely on the line Hungary's Kolibri settled — a children's theatre that plays puppetry is not a puppetry unit — and it cannot be settled from what was reachable. No value produced.",
-      "lower_bound": 1,
-      "upper_bound": 2
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://aspi.mk/imateli/436/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Macedonian, in the transversal venues pass, and it closes the case the pass of 2026-07-27 left open. Zero, and the zero is a judgement, which is why it is disputed rather than open. The population was settled first, which the earlier attempt could not do. The state agency for free access to public information publishes the list of public-institution theatres in the country, and there are twelve: the Tetovo and Gostivar theatres, the Albanian theatre, the Drama theatre, the Macedonian National Theatre, the National Theatre in Bitola, the National Opera and Ballet, the Theatre for Children and Youth, Teatar Komedija, the Turkish theatre, the Jordan Hadži Konstantinov Džinot theatre in Veles, and the Albanian theatre for children and young people. Not one of the twelve carries the word куклен in its name, and none of the general houses was found to name a puppet stage. So the whole country turns on one institution, the НУ Театар за деца и младинци in Skopje, at Dimitrija Čupovski 4, financed by the Ministry of Culture in its own words. It is the strongest case this record has yet refused. Its domain is literally puppet.com.mk. Its lineage is the national puppetry lineage: the puppet stage of the Macedonian National Theatre from 21 April 1946, independent as the City Puppet Theatre from 1949 under Lazar Balabanov, reorganised in the 1957/58 season into a youth and children's theatre playing on two stages. It keeps a куклар on the staff, it played the puppet production Тоби, and it announced a puppet project for adults made with its own funds. It is refused because none of that is a permanent puppetry unit. The theatre lists one ensemble, fourteen актери, with no puppet ensemble and no puppet stage beside it, and its own description of itself puts puppetry inside a range rather than at the centre: a broad choice of productions, куклени and играни for children, through to full-evening youth productions. That is the line Kolibri settled and it is the same shape refused in Sarajevo in this pass — a children's and youth theatre descended from a puppet theatre, playing puppetry with one mixed company. A domain name is not a structure and a puppet master is a workshop post, present in drama houses that count nothing. What would overturn this is a staff register or a founding act showing a puppetry unit inside ТДМ, and neither was reached: the Ministry of Culture's site resets the connection from here, as it refused the earlier pass, so nothing was read at the level where an establishment act would be. The value is a zero produced by applying the denominator to what the institutions publish about themselves, and it should be read as that and not as a statement that Skopje has no puppetry. It plainly has some. It has no unit.",
+      "lower_bound": 0,
+      "upper_bound": 0,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
@@ -90,7 +92,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Puppet theatre in Skopje.",
+  "notes": "Twelve public theatres in the country and not one named for puppets. The Theatre for Children and Youth in Skopje is the puppet theatre's successor and plays puppetry with one mixed company of fourteen.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country.",
