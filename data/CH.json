@@ -13,14 +13,76 @@
     },
     {
       "indicator": "venues",
-      "value": 4.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 4.0,
+      "year": 2026,
+      "source": "https://www.marionnettes.ch/partenaires-et-soutiens",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in French and German, in the transversal venues pass. Four units, three houses and one stage, against an opening estimate of 4.5 produced with no research. Switzerland is the country where the diffusion test does the most work, because its puppetry is unusually well organised and almost none of it holds a public hall. The candidate list came from Figurentheaterszene Schweiz, the platform founded in 2020 for the field, and most of its members with a fixed address are small private stages: the Puppentheater Felicia at the Goetheanum in Dornach, the Kasperlikeller in Steffisburg, the Puppentheater Ins, the Rapperswiler Marionetten, the Theater am runde Egg in Thun. Each has a room and a repertoire and none of them showed public backing. Two more are museums and go out under the ruling of 2026-07-28 — the Figurentheater-Museum in Herisau, which programmes beside its collection, and the Musée Suisse de la Marionnette in Fribourg. The four that count all show a public authority naming them, and three of the four say so in a contract rather than a logo. The Théâtre des Marionnettes de Genève, rue Rodo 3, is the clearest case in the country: the company began as Les Petits Tréteaux in 1929, settled in 1939, and became a theatre in 1984 when it moved into a hall built expressly for it; its own page of soutiens financiers names the Ville de Genève and the Canton de Genève. The FigurenTheater St. Gallen is a children's and youth theatre with a fixed house at Lämmlisbrunnenstrasse 34, supported under a Leistungsvereinbarung with the city and the canton of St. Gallen, and it holds a permanent ensemble working alongside guests from the free scene. The Basler Marionetten Theater has played since 1956 in the Zehntenkeller at Münsterplatz 8 beside the minster, founded 1943, and thanks the Kanton Basel-Stadt for the subsidy under its Leistungsvereinbarung and the Region Leimental Plus, nine municipalities together, for its contribution. The stage is Lucerne. The Luzerner Theater lists its Figurentheater in der Box among the places it plays, beside the Haus an der Reuss and the UG at Winkelriedstrasse; the theatre was converted into a Stiftung in 1995 in which the canton of Lucerne and the agglomeration municipalities sit beside the city. A named puppetry unit inside a larger public organisation is exactly what the ruling of 2026-07-27 counts as a stage, and the Box is the only Swiss instance of it found. Four is a floor and the reason is structural rather than a gap in the search. Switzerland funds culture canton by canton and its puppetry lives in associations with their own small rooms; a private stage that plays every week is invisible to this indicator, and there are at least five of them. The record is disputed on that: the number counts halls with a public authority behind them, not the density of Swiss puppetry, and the two are further apart here than in any country read so far.",
       "lower_bound": 4,
-      "upper_bound": 5
+      "upper_bound": 4,
+      "units": {
+        "house": 3,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Théâtre des Marionnettes de Genève",
+          "city": "Genève",
+          "address": "Rue Rodo 3, 1205 Genève",
+          "lat": 46.19323,
+          "lon": 6.14069,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ville de Genève and Canton de Genève, named under soutiens financiers",
+          "registration": null,
+          "url": "https://www.marionnettes.ch",
+          "source": "https://www.marionnettes.ch/partenaires-et-soutiens",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "FigurenTheater St. Gallen",
+          "city": "St. Gallen",
+          "address": "Lämmlisbrunnenstrasse 34, 9000 St. Gallen",
+          "lat": 47.42492,
+          "lon": 9.38197,
+          "unit": "house",
+          "parent": null,
+          "authority": "Leistungsvereinbarung with the Stadt and Kanton St. Gallen, plus its Trägerverein",
+          "registration": null,
+          "url": "https://figurentheater-sg.ch",
+          "source": "https://figurentheater-sg.ch/ueber-uns/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Basler Marionetten Theater",
+          "city": "Basel",
+          "address": "Münsterplatz 8, 4051 Basel",
+          "lat": 47.55685,
+          "lon": 7.59212,
+          "unit": "house",
+          "parent": null,
+          "authority": "Kanton Basel-Stadt, subsidy under a Leistungsvereinbarung; Region Leimental Plus, nine municipalities",
+          "registration": null,
+          "url": "https://www.bmtheater.ch",
+          "source": "https://www.bmtheater.ch/spenden/wir-danken/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Figurentheater in der Box, Luzerner Theater",
+          "city": "Luzern",
+          "address": "Theaterstrasse 2, 6003 Luzern",
+          "lat": 47.05059,
+          "lon": 8.30617,
+          "unit": "stage",
+          "parent": "Luzerner Theater",
+          "authority": "Stiftung Luzerner Theater since 1995, with the Stadt Luzern, the Kanton Luzern and the agglomeration municipalities",
+          "registration": null,
+          "url": "https://www.luzernertheater.ch",
+          "source": "https://www.luzernertheater.ch/unsertheater",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -105,7 +167,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Zurich, Basel, Geneva, Lausanne. Teatro Dimitri, Verscio.",
+  "notes": "Geneva, St. Gallen and Basel hold puppet houses with a public authority behind them; Lucerne holds the one puppet stage inside a bigger theatre. Five private stages with their own rooms and no public backing are outside.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
