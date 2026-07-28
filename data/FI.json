@@ -13,14 +13,61 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 2
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://www.tinfo.fi/documents/vos_valtionosuudet_2025_tinfo.pdf",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Finnish, in the transversal venues pass. Three units, three houses, against an opening estimate of 1.5 produced with no research. Finland is the first country in the pass where the count can be read off a single national table, because the state subsidy system enumerates its members: the Teatterin tiedotuskeskus TINFO publishes the esittävän taiteen valtionosuudet, and the 2025 table names exactly three puppet theatres among the hundred toimintayksiköt. Teatteri Hevosenkenkä in Espoo carries 19.5 henkilötyövuotta and 523 497 euros, Nukketeatteri Sampo in Helsinki 19.5 and 508 484, Teatteri Mukamas in Tampere 16.5 and 451 043. The Ministry of Education and Culture confirmed the same system for 2026 at a hundred units and 99.2 million euros, without publishing the names on the page opened. All three hold a stage of their own and all three are freestanding organisations whose vocation is puppetry, so all three are houses and none is a stage. Sampo, founded 1977, plays at Erottajankatu 7 in central Helsinki in premises holding a theatre space, a café and a puppet gallery, with a small stage and workshop called Pikku Sampo at Iso Roobertinkatu 10 B, and names regular support from the ministry and from the City of Helsinki. Mukamas, founded 1979, plays in the old volunteer fire brigade house at Pispalan valtatie 30 in Tampere and gives about 250 performances a year to some 25 000 spectators. Hevosenkenkä, founded 1975 and the first professional theatre in Espoo, plays at Juhannusmäki 2 in Mankkaa, in a nineteenth-century school building extended for it. That one needed the vocation test rather than the structure test, because its repertoire is aimed at children and Kolibri in Hungary and Osijek in Croatia were both refused on exactly that shape. It passes where they failed: the Association of Finnish Theatres describes it as a nukketeatteriin erikoistunut ammattiteatteri, a professional theatre specialised in puppetry whose programming is mainly for children, which is a puppetry vocation playing for children and not a children's theatre that sometimes plays puppetry. Three is a floor and the whole difficulty of Finland sits under it, because the field here is enormous and almost entirely without walls: the Suomen UNIMA list of operators names some fifty companies and solo theatres across nineteen regions, of which these three are the only ones inside the subsidy system. Three named candidates were examined and left out. Akseli Klonk in Oulu is the closest call in the country and the one to reopen first: a professional puppet theatre since 1998, it rents a stage in the municipal Kulttuuritalo Valve and, since 2023, a space of its own at Hallituskatu 20 which it calls a pop-up näyttämö. It is left out on the backing and not on the walls, its basic subsidies having collapsed from 128 000 to 35 000 euros when the arts agency refused its general grant and Oulu ended its long-standing cultural partnership in 2025, leaving a capped 3 000 euros a month against receipts. Tehdas Teatteri in Turku is a venue and is described in Finnish as one of the main stages of the new Finnish puppet theatre, but it is a vapaan kentän ammattiteatteri whose vocation is experimental stage art at large and which presents visiting work: that is the programming strand the denominator excludes, not a permanent puppetry unit. Aura of Puppets, the national network, is not refused as a venue but has none — its Puppet Studio at Manilla is an office, a rehearsal room and a puppet workshop, and the network is on record proposing that a performance space be created in Turku. The upper bound of 5 holds Akseli Klonk and Tehdas Teatteri. What has not been done is a reading of TINFO's Teatteritilastot, which counts performances and spectators theatre by theatre for the subsidised field and is the door to the performances indicator for this country.",
+      "lower_bound": 3,
+      "upper_bound": 5,
+      "units": {
+        "house": 3
+      },
+      "venues_list": [
+        {
+          "name": "Nukketeatteri Sampo",
+          "city": "Helsinki",
+          "address": "Erottajankatu 7, 00130 Helsinki",
+          "lat": 60.16490,
+          "lon": 24.94419,
+          "unit": "house",
+          "parent": null,
+          "authority": "Valtionosuus in the Ministry of Education and Culture system, 19.5 henkilötyövuotta and 508 484 euros for 2025; the theatre names regular support from the ministry and from the City of Helsinki",
+          "registration": null,
+          "url": "https://nukketeatterisampo.fi",
+          "source": "https://nukketeatterisampo.fi/teatterimme/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatteri Mukamas",
+          "city": "Tampere",
+          "address": "Pispalan valtatie 30, 33250 Tampere",
+          "lat": 61.50662,
+          "lon": 23.69863,
+          "unit": "house",
+          "parent": null,
+          "authority": "Valtionosuus in the Ministry of Education and Culture system, 16.5 henkilötyövuotta and 451 043 euros for 2025",
+          "registration": null,
+          "url": "https://teatterimukamas.com",
+          "source": "https://teatterimukamas.com/teatteri-mukamas/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatteri Hevosenkenkä",
+          "city": "Espoo",
+          "address": "Juhannusmäki 2, 02200 Espoo",
+          "lat": 60.18485,
+          "lon": 24.75549,
+          "unit": "house",
+          "parent": null,
+          "authority": "Valtionosuus in the Ministry of Education and Culture system, 19.5 henkilötyövuotta and 523 497 euros for 2025",
+          "registration": null,
+          "url": "https://www.hevosenkenka.fi",
+          "source": "https://suomenteatterit.fi/jasenteatterit/teatteri-hevosenkenka/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
