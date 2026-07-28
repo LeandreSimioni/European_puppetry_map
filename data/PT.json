@@ -13,14 +13,33 @@
     },
     {
       "indicator": "venues",
-      "value": 2.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 2,
-      "upper_bound": 3
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://marionetasdoporto.pt/en/company/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Portuguese, in the transversal venues pass. One unit, one house, against an opening estimate of 2.5 produced with no research. Portugal is the clearest case yet of a country whose puppetry is entirely companies, and the indicator sees one of them because one of them holds an auditorium. The Teatro de Marionetas do Porto was formed in September 1988, on the date of its first appearance at Charleville-Mézières, and its repertoire begins with the Teatro Dom Roberto, the traditional Portuguese glove puppets that João Paulo Seara Cardoso inherited in 1980 from António Dias, the last of the itinerant puppet masters. It holds the Teatro de Belomonte at Rua de Belomonte 57 in the historic centre — a small auditorium of 41 seats with office and workshop — the Museu das Marionetas opened in 2013 for the company's twenty-fifth year and moved in 2016 to the building next door, and the Polo das Marionetas at the Quinta de Bonjóia. It carries the sustained support of the Direção-Geral das Artes. The museum sits beside the theatre and not the reverse, so the ruling of 2026-07-28 leaves it standing. Two are left out and both are companies of the first rank. A Tarumba, founded in Lisbon in 1993, holds CAMa, the Centro de Artes da Marioneta at Rua da Esperança 152, and its own pages describe it as the place the company is based, home to its theatrical, bibliographic and iconographic estate, and a puppetry documentation centre — a creation and research space, not a hall open to a public. What A Tarumba diffuses is FIMFA, the international festival it produces and programmes every year in Lisbon, and festivals are excluded by name. Teatro e Marionetas de Mandrágora, founded in Gondomar in 2002, is installed at the FACE arts forum in Espinho, runs the Casa Educativa da Marioneta at the Casa Branca de Gramido — an educational house giving workshops — and creates the Ei! Marionetas meeting. It carries the DGArtes and the municipalities of Gondomar and Espinho, and it may well hold a hall inside FACE that this pass did not establish. That is the likeliest second unit and the reason the upper bound is 3. One is a hard number for a country with this much puppetry, and it should be read as what it is: a statement about how Portuguese puppetry is housed, not about how much of it there is. The Museu da Marioneta in Lisbon, which is what most lists offer first, is a museum and does not count.",
+      "lower_bound": 1,
+      "upper_bound": 3,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Teatro de Marionetas do Porto — Teatro de Belomonte",
+          "city": "Porto",
+          "address": "Rua de Belomonte 57, 4050-097 Porto",
+          "lat": 41.14247,
+          "lon": -8.61668,
+          "unit": "house",
+          "parent": null,
+          "authority": "Sustained support of the Direção-Geral das Artes, Ministério da Cultura",
+          "registration": null,
+          "url": "https://marionetasdoporto.pt",
+          "source": "https://marionetasdoporto.pt/en/company/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -105,8 +124,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "São Lourenço, Lisbon. FIMP festival, Porto. Robertos tradition.",
+  "notes": "The Teatro de Belomonte in Porto, 41 seats, with the puppet museum next door. A Tarumba's CAMa in Lisbon is a creation and documentation space, and what it diffuses is a festival.",
   "to_check": [
+    "venues: establish whether Teatro e Marionetas de Mandrágora holds a hall inside FACE in Espinho with its own programming. That is the likeliest second Portuguese unit. Check too whether CAMa in Lisbon has since opened to a public.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
