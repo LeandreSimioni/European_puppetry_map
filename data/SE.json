@@ -13,14 +13,62 @@
     },
     {
       "indicator": "venues",
-      "value": 2.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 2,
-      "upper_bound": 3
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://dockteaterntittut.se/faq/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Swedish, in the transversal venues pass. Three units, two houses and one stage, against an opening estimate of 2.5 produced with no research. All three are in Stockholm, which is itself the finding. Dockteatern Tittut has held its own stage at Lundagatan 33 by Zinkensdamm since 1994. It was founded in 1977 by Ing-Mari Tirén and Eva Gumpert as the first theatre in the world made for children from the age of two, and it names Kulturrådet, Stockholms Stad and Region Stockholm as its supporters — state, city and region together, which is as clean as the backing test gets anywhere in this record. Pygméteatern has a fixed stage on Vegagatan by Odenplan, has worked in puppetry since Sten Wallin and Michael Koitzsch founded it in 1976, pioneered modern shadow theatre in Sweden and now works in a mixed form of puppets, shadow play and actors; it draws most of its money from touring and carries support from Kultur Stockholm and the county, its Kulturrådet grant having been withdrawn some years ago. That withdrawal is worth recording rather than hiding: the venue survives on the box office and the remaining municipal support is what counts it. The stage is Marionetteatern, founded in 1958 by Michael Meschke, which since 2003 has been part of Stockholms stadsteater and keeps its home stage in the Kulturhuset at Sergels torg while also playing Skärholmen, Vällingby and Parkteatern. A named puppetry unit inside a municipal theatre, which is a stage exactly as the ruling of 2026-07-27 defines it, and the clearest instance of the pattern the ruling was written to catch. One refusal decides the shape of the count and it is a real loss. Byteatern in Kalmar was founded in 1971 and began as a puppet theatre for children, sailing the Swedish coast in the ship Helene with a café, film, music and puppetry; it has been the Kalmar county theatre since 1992, is funded by Region Kalmar län and Kulturrådet, and plays in a newly built performance house on Barlastgatan. It is not counted because it no longer describes itself as a puppet theatre: its own words are that it shall be a theatre for the whole of Kalmar county, producing for children, young people and adults. A theatre that came out of puppetry is not a puppetry unit, which is the line Kolibri settled and the same reading that removed Sarajevo and Skopje earlier in this pass. Three, and all three in the capital. Sweden funds its regional theatres well and none of them is a puppet house; what puppetry holds outside Stockholm, it holds without a hall.",
+      "lower_bound": 3,
+      "upper_bound": 4,
+      "units": {
+        "house": 2,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Dockteatern Tittut",
+          "city": "Stockholm",
+          "address": "Lundagatan 33, Södermalm, Stockholm",
+          "lat": 59.31845,
+          "lon": 18.04767,
+          "unit": "house",
+          "parent": null,
+          "authority": "Kulturrådet, Stockholms Stad and Region Stockholm, named on the theatre's own pages",
+          "registration": null,
+          "url": "https://dockteaterntittut.se",
+          "source": "https://dockteaterntittut.se/faq/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Pygméteatern",
+          "city": "Stockholm",
+          "address": "Vegagatan, Odenplan, Stockholm",
+          "lat": 59.34225,
+          "lon": 18.05008,
+          "unit": "house",
+          "parent": null,
+          "authority": "Kultur Stockholm and the Stockholm county council; the Kulturrådet grant was withdrawn some years ago",
+          "registration": null,
+          "url": "https://www.pygmeteatern.se",
+          "source": "https://sv.wikipedia.org/wiki/Pygm%C3%A9teatern",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Marionetteatern",
+          "city": "Stockholm",
+          "address": "Kulturhuset, Sergels torg, Stockholm",
+          "lat": 59.33204,
+          "lon": 18.06507,
+          "unit": "stage",
+          "parent": "Kulturhuset Stadsteatern, Stockholms stadsteater",
+          "authority": "Part of Stockholms stadsteater since 2003; founded 1958 by Michael Meschke",
+          "registration": null,
+          "url": "https://kulturhusetstadsteatern.se/stadsteatern/marionetteatern",
+          "source": "https://kulturhusetstadsteatern.se/om-marionetteatern",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,8 +154,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Marionetteatern, Stockholm. Regional companies.",
+  "notes": "Tittut and Pygméteatern hold their own stages in Stockholm, Marionetteatern is the puppet unit of the city theatre. Byteatern in Kalmar came out of puppetry and now calls itself a county theatre.",
   "to_check": [
+    "venues: check the UNIMA Sverige list of dockteatergrupper for any group outside Stockholm holding a hall. All three counted units are in the capital, which may be a fact about the search as much as about Sweden.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
