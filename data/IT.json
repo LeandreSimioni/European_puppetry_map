@@ -13,14 +13,61 @@
     },
     {
       "indicator": "venues",
-      "value": 4.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://www.accettellateatro.it/il-teatro/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Italian, in the transversal venues pass. Three units, three houses, against an opening estimate of 4. This is a floor and a low one, and the record is disputed on that rather than on any of the three. Italy is the country the known_bias of this indicator names first, and the pass confirms the mechanism exactly. Italian teatro di figura is organised in companies — compagnie and famiglie d'arte, several of them recognised by the Ministero della Cultura and by their regions — and the Ministry funds organisations rather than licensing halls, so no national list of puppetry venues exists to read. What had to be done instead was to take known figure-theatre organisations one at a time and ask which of them holds a hall. Most do not. The three that do. Teatro Mongiovino, via Giovanni Genocchi 15 in the Garbatella, has been the house of the Teatro delle Marionette degli Accettella since 1987, when the company bought and rebuilt it as its production seat; two hundred seats, a season of family performances and weekday matinées for schools, four hundred marionettes shown inside the hall itself, and the MiC and the Regione Lazio on its pages. Teatro Gioco Vita in Piacenza is recognised as a Centro di Produzione Teatrale by the Ministry and by the Emilia-Romagna region, has worked in shadow theatre since the late 1970s and holds the artistic and organisational direction of three halls in the city — the Teatro Municipale, the Teatro Filodrammatici and the Teatro Gioia. It is counted once: the indicator counts the permanent puppetry unit, not the buildings it runs. The Teatro Bruno Munari in via Giovanni Bovio 5 in Milan is two thousand square metres of hall, workshops and rehearsal rooms built by the Comune di Milano and run by the Teatro del Buratto, which won the city's public tender for its multi-year management in 2017 and has played actor theatre and figure theatre since 1975, carrying the black-theatre technique. Munari is the weakest of the three on vocation, because Buratto is a children's theatre company that does figure theatre rather than a puppetry company, and it sits close to the line Kolibri settled. One case shows why the count is low and it is the clearest refusal of the pass. The Teatro delle Briciole has held the Teatro al Parco in the Parco Ducale as its stable venue since 1987 by agreement with the Comune di Parma, is funded by the city, the Ministry and the region, and hosts the Festival Impertinente devoted to teatro di figura. It is not counted: a children's theatre that programmes a figure-theatre festival is a house with a puppetry strand, and a strand is what the denominator excludes. Two more fall on the museum ruling of the same day or on unread backing — the Casa delle Marionette of the Teatro del Drago in Ravenna is a museum, and the Casa Gianduja of the Marionette Grilli in Turin, opened in December 2024 as a museum-theatre with halls and a workshop, was not read for public support. Three is what one pass could prove and Italy is certainly larger. The organisations to take next, one by one and each on the question of whether it holds a hall, are the Teatro del Drago beyond its museum, the Marionette Grilli, the Compagnia Carlo Colla e Figli in Milan, Teatro Verde in Rome, Le Nuvole in Naples, and the Fondazione Sipario Toscana. The upper bound is set at 8 to say so.",
       "lower_bound": 3,
-      "upper_bound": 5
+      "upper_bound": 8,
+      "units": {
+        "house": 3
+      },
+      "venues_list": [
+        {
+          "name": "Teatro Mongiovino",
+          "city": "Roma",
+          "address": "Via Giovanni Genocchi 15, 00147 Roma",
+          "lat": 41.85964,
+          "lon": 12.49543,
+          "unit": "house",
+          "parent": null,
+          "authority": "MiC and Regione Lazio shown on the theatre's pages; the hall is owned by the company since 1987",
+          "registration": null,
+          "url": "https://www.accettellateatro.it",
+          "source": "https://www.accettellateatro.it/il-teatro/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatro Gioco Vita",
+          "city": "Piacenza",
+          "address": "Via San Siro 9, 29121 Piacenza; directs the Teatro Municipale, the Teatro Filodrammatici and the Teatro Gioia",
+          "lat": 45.04942,
+          "lon": 9.69117,
+          "unit": "house",
+          "parent": null,
+          "authority": "Centro di Produzione Teatrale recognised by the Ministero della Cultura and the Regione Emilia-Romagna",
+          "registration": null,
+          "url": "https://www.teatrogiocovita.it",
+          "source": "https://www.teatrogiocovita.it/chi-siamo/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatro Bruno Munari",
+          "city": "Milano",
+          "address": "Via Giovanni Bovio 5, 20159 Milano",
+          "lat": 45.50271,
+          "lon": 9.1827,
+          "unit": "house",
+          "parent": null,
+          "authority": "Built by the Comune di Milano; multi-year management won by Teatro del Buratto in a public tender, 2017",
+          "registration": null,
+          "url": "https://www.teatrodelburatto.com",
+          "source": "https://www.teatrodelburatto.com/il-teatro-bruno-munari",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -121,8 +168,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Carlo Colla e Figli, Milan. Teatro del Drago, Ravenna. Sicilian opera dei pupi.",
+  "notes": "Mongiovino in Rome, Gioco Vita in Piacenza, the Munari in Milan. Italian puppetry is organised in companies and the Ministry funds organisations, not halls, so there is no national list of venues to read.",
   "to_check": [
+    "venues: three is a floor. Take one at a time and ask only whether it holds a hall: Teatro del Drago in Ravenna beyond its museum, the Marionette Grilli's Casa Gianduja in Turin and whether it carries public support, the Compagnia Carlo Colla e Figli in Milan, Teatro Verde in Rome, Le Nuvole in Naples, the Fondazione Sipario Toscana.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
