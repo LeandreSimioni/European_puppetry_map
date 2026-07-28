@@ -10,7 +10,7 @@ the exercise — a preview precise enough to be refutable.
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
 45. `venues` and `performances` are being collected, five countries at a time;
-`venues` is sourced for 37 countries, `performances` for 6.
+`venues` is sourced for 41 countries, `performances` for 6.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -324,9 +324,25 @@ link to its website.
 
 ## Next steps
 
-1. **Source `venues` and `performances`, five countries at a time.** In progress,
-   Baltic states first. These are the two indicators a desk can reach: national
-   culture statistics count both, and neither waits on the `dates` ruling.
+1. **Source `venues` and `performances`, five countries at a time.** In progress.
+   These are the two indicators a desk can reach: national culture statistics
+   count both, and neither waits on the `dates` ruling. Four countries are left
+   on `venues`, and they are the four hardest, each blocked on something other
+   than research time:
+   - **Ukraine.** The spine is read and the count is not. UNIMA-Ukraine lists
+     twenty-five state puppet theatres, which is a first-party enumeration of
+     exactly this denominator, but two questions have to be settled before a
+     value: what to do with an institution driven out of its own walls — the
+     Kherson theatre left the occupied city and works from Kolomyia — and
+     whether the theatres of the occupied territories belong in a count of the
+     country. Neither is a research question.
+   - **Turkey and Russia.** The `venues` denominator says nothing about
+     transcontinental countries. `population_M` counts them entire since
+     2026-07-27 and `schools` counts European establishments only; these two
+     records are still named "European part" and the indicator has never chosen.
+     Choose before collecting, not after.
+   - **Belarus.** No accessible first-party source, the same wall the `schools`
+     record hit.
 2. Settle the denominator of `dates`. It blocks 90 observations — `dates` and
    `share_under_20` for all 45 countries.
 3. Settle the Ukrainian denominator — residents, de jure population, or
