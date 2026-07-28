@@ -13,14 +13,33 @@
     },
     {
       "indicator": "venues",
-      "value": 0.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate. Searched on 2026-07-27, in German and French, in the transversal venues pass, and no value produced: the searches returned the Théâtre des marionnettes du jardin du Luxembourg, which is in Paris and belongs to the French Senate, and nothing in the Grand Duchy. The country's theatre landscape as it surfaced — the Grand Théâtre and the Kasemattentheater in Luxembourg City, the Kulturhaus in Niederanven, the regional centres funded by their communes — carries no puppet or figure theatre, but that is an absence in search results, not in a source: the official panorama of Luxembourg theatre answered 403 and 503 on both its German and English pages, and UNIMA's own encyclopedia answered 503. An absence read on no page is not a finding, so the 0.5 stays where it was rather than becoming a sourced zero it has not earned.",
-      "lower_bound": 0,
-      "upper_bound": 1
+      "value": 1.0,
+      "year": 2026,
+      "source": "http://www.poppespennchen.lu/fr/a-propos-de-nous.html",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in French and German, reopening the pass that stalled here on 2026-07-27. One unit, one house, where the opening estimate was 0.5 and where the previous session produced nothing. The stop on 27 July was correct in method and wrong in fact, and the reason is worth keeping: every search in French and German returned the Théâtre des marionnettes du jardin du Luxembourg, which is in Paris and belongs to the French Senate, and the noise of that one Parisian park buried the Grand Duchy entirely. What found the house was searching in the language of the thing rather than the name of the country — Figurentheater, Puppentheater, Marionettentheater — which surfaced the German Wikipedia list of standing figure theatres, whose criterion is exactly this indicator's: permanent stages, touring companies excluded. It carries one Luxembourgish entry. Poppespënnchen is a marionette theatre at 1, place Saintignon in Lasauvage, a village of the commune of Differdange, and it says on every page of its own site that it works with the financial support of the Ministry of Culture of the Grand Duchy and of the Ville de Differdange. It has existed since 2015 and was founded by the puppeteers Pit Vinandy, of the Bimbotheater and the Poppentheater Hoplabum, by Michael and Andrey Schneider of the Theater Favoletta, and by Georges Liesch. Its own account of itself is the denominator almost word for word: to offer families and adults a place where they can regularly enjoy the art, and from the beginning to present not only their own stages but other companies too, so that the diversity of the form can be seen. That last sentence would have made it a strand under the old wording and makes it a house under the new one, decided on 2026-07-28: a house that programmes and takes responsibility for the work is a venue whether or not it holds a company of its own. It also runs the Marionnettes Sauvages festival, which invites companies from all of Europe; the festival itself is outside the denominator, the house that holds it is not. The theatre played it again in May 2026, when a Luxembourg daily went to Lasauvage and found Pit Vinandy running the place and the festival deliberately built against the idea that puppetry is for children only. Two things keep the record disputed. The theatre's own season page carried no programme when read, and its ticketing link showed no dates, which in late July is what a small house looks like out of season but is not proof of a season; and the count rests on one venue whose only readable backing is a line the venue writes about itself, no ministerial award having been opened. Everything else in the country was read and is empty. The Theater Federatioun, the federation of the profession since 1996, lists twenty-three members — the municipal theatres of Esch and the capital, the TOL, the TNL, the Centaure, the Kasemattentheater, the regional cultural centres, Rotondes, Neimënster, the independent companies — and not one is a puppet, figure or object theatre. Its own nineteen-page panorama of the performing arts in Luxembourg, published in 2022, does not contain the word marionnette once. The doubt in this country runs downward, not upward: if Poppespënnchen has stopped playing, Luxembourg is a sourced zero.",
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Figurentheaterhaus Poppespënnchen",
+          "city": "Lasauvage",
+          "address": "1, place Saintignon, L-4698 Lasauvage, Differdange",
+          "lat": 49.52399,
+          "lon": 5.83498,
+          "unit": "house",
+          "parent": null,
+          "authority": "Ministère de la Culture du Grand-Duché de Luxembourg and Ville de Differdange, named as financial supporters on every page of the theatre's own site",
+          "registration": "Poppespënnchen a.s.b.l.",
+          "url": "http://www.poppespennchen.lu",
+          "source": "http://www.poppespennchen.lu/fr/a-propos-de-nous.html",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
