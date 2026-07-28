@@ -13,14 +13,62 @@
     },
     {
       "indicator": "venues",
-      "value": 2.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 2,
-      "upper_bound": 3
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://www.mostar.ba/gradske-ustanove-i-poduzeca/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Bosnian and Croatian, in the transversal venues pass. Three units, two houses and one stage. The opening estimate was 2.5 and named Mostar, Sarajevo and Banja Luka; it lands near the right number by getting two of those three cities wrong and by missing that Mostar holds two puppet theatres rather than one. The candidate list did not come from a ministry — culture in Bosnia and Herzegovina is an entity and cantonal competence and no register spans the country — but from the national puppet festival, the Susret pozorišta/kazališta lutaka BiH, held in Bugojno since 1979 and the oldest in the country. Its organiser, the public KSC Bugojno, names the theatres that come: Dječije pozorište Republike Srpske in Banja Luka, Pozorište lutaka Mostar, Lutkarsko kazalište Mostar, Bosansko narodno pozorište Zenica, Pozorište mladih Sarajevo, and its own Eko Art Bugojno. Six candidates, each then read on its own pages, and only three survive the denominator. Mostar carries two, and the war is the reason: the Gradsko pozorište lutaka founded in 1952 has two successors on either side of the city, both of them on the City of Mostar's own list of gradske ustanove with their addresses and telephone numbers, so both are city institutions and neither is a programming strand. Pozorište lutaka Mostar plays in the former synagogue in Braće Ćišića; Lutkarsko kazalište Mostar plays on Trg hrvatskih velikana and lists its own ansambl. Both are houses whose vocation is puppetry and both count, which is what the denominator says and not a comment on the division. The stage is Zenica. Javna ustanova Bosansko narodno pozorište Zenica, financed by the Zeničko-dobojski kanton and founded by the Grad Zenica, carries a named permanent unit since 1951, the Dječija, omladinska i lutkarska scena, which has its own head, its own site at dols.bnp.ba and its own line in the parent's structure. It produces puppetry now, not historically: its Prodani smijeh opened the 23rd Susret and took a prize for puppet animation, and BNP played the puppet production Grad svjetlosti in Mostar on 2 July 2026. This is the weakest of the three and the reason the observation is disputed. The scene is not exclusively a puppet unit — it is children's, youth and puppet in one, and the word lutkarska entered its name only in 2004/05 — and it shows no puppeteers of its own, distinct from the acting ensemble of the house. It is counted because the ruling counts a named stage inside a larger organisation, and this one is named, permanent and currently producing. Someone applying the same ruling could refuse it. Three fall out on vocation, on the line Kolibri settled. Pozorište mladih Sarajevo is the sharpest loss and the one that will look wrong: it is the direct successor of the Sarajevo Pozorište lutaka of 1950, which Adolf Pomezny built on marionettes and Jurislav Korenić developed, and it plays at the puppet festival. But that puppet theatre was merged into the Pionirsko pozorište in 1977, and what came out has one company. Its own site lists a single kolektiv with no puppet scene, no puppet ensemble and no puppet department, and the Canton Sarajevo ministry page for the institution names none either. A theatre descended from a puppet theatre is not a puppet unit. Dječije pozorište Republike Srpske goes the same way and it costs more: it holds the only museum of theatre puppets in southeastern Europe, five hundred of them from its own productions, and it has run an international children's theatre festival since 2002. Its ansambl page still shows one company of sixteen actors, described one by one, with a single member noted for puppetry. A museum is an archive of a practice, not a permanent unit of it. JU Pozorište Prijedor, fully financed by the city, took two prizes at the last Susret and names no puppet unit on its own pages or on the city's. Eko Art Bugojno is the festival organiser's own children's theatre, playing with its mentors and young performers, so it is not a professional permanent ensemble. Three is a floor and a narrow one. Nothing here was read in a register, only on the institutions' own pages and their founders'; the entity-level ministries were not reached and the strict test — does a permanent puppetry unit exist inside this house — is exactly the one an institutional website is least reliable about. Prijedor and Banja Luka are the two that would move first if their staff lists were read.",
+      "lower_bound": 3,
+      "upper_bound": 3,
+      "units": {
+        "house": 2,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Pozorište lutaka Mostar",
+          "city": "Mostar",
+          "address": "Braće Ćišića 15, 88000 Mostar",
+          "lat": 43.34088,
+          "lon": 17.81725,
+          "unit": "house",
+          "parent": null,
+          "authority": "Gradska ustanova of the Grad Mostar, listed among the city's institutions",
+          "registration": null,
+          "url": "https://www.plm.ba",
+          "source": "https://www.mostar.ba/gradske-ustanove-i-poduzeca/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Lutkarsko kazalište Mostar",
+          "city": "Mostar",
+          "address": "Trg hrvatskih velikana bb, 88000 Mostar",
+          "lat": 43.34279,
+          "lon": 17.80214,
+          "unit": "house",
+          "parent": null,
+          "authority": "Gradska ustanova of the Grad Mostar, listed among the city's institutions",
+          "registration": null,
+          "url": "https://lutkamo.com",
+          "source": "https://www.mostar.ba/gradske-ustanove-i-poduzeca/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Dječija, omladinska i lutkarska scena",
+          "city": "Zenica",
+          "address": "Trg Bosne i Hercegovine 3, 72000 Zenica",
+          "lat": 44.20177,
+          "lon": 17.90589,
+          "unit": "stage",
+          "parent": "Javna ustanova Bosansko narodno pozorište Zenica",
+          "authority": "Zeničko-dobojski kanton (glavni finansijer), Grad Zenica (osnivač i sufinansijer)",
+          "registration": null,
+          "url": "https://dols.bnp.ba",
+          "source": "https://www.bnp.ba/bnp/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -90,7 +138,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Puppet theatres in Mostar, Sarajevo, Banja Luka.",
+  "notes": "Two puppet houses in Mostar, one on either side of the city, and a named puppet scene inside the Zenica national theatre. Sarajevo and Banja Luka play puppetry with one mixed company each.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
