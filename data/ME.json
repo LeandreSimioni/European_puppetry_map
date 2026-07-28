@@ -14,13 +14,32 @@
     {
       "indicator": "venues",
       "value": 1.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate, and this note exists so the next pass does not start from nothing. Researched on 2026-07-27 in the transversal venues pass and left unchanged, because what was established and what was not fall on either side of the value. Established, on the Capital City's own page listing its public institutions: JU Gradsko pozorište in Podgorica, Bokeška 2, is a javna ustanova of Podgorica, so a public institution with a venue. Not established: that it holds a permanent puppetry unit. Every account of a puppet stage and of a drama stage for children comes from second-hand summaries, and the theatre's own site answered 503 on every attempt through the day, as did the site of the Podgorica international puppetry festival. Under the rule of this repository a summary is not a source, so the value stays where it was rather than moving on a reading that was never made. The likely answer is 1, a stage inside a larger organisation; it is not recorded because likely is not read.",
+      "year": 2026,
+      "source": "https://podgorica.me/repertoar-gradskog-pozorista-za-april/",
+      "confidence": "sourced",
+      "status": "verified",
+      "reasoning": "Collected on 2026-07-28, in Montenegrin, in the transversal venues pass, and it closes the case the pass of 2026-07-27 had to leave open. One unit, a stage. The value does not move — the previous pass had guessed 1 and refused to record it — but it stops being a guess, which is the whole of the change. What blocked the first attempt was a dead domain, not a dead server. Every route tried then went through gradskopozoriste.me, which answers a launching-soon page, and through the festival site, and both were read as 503. The theatre's live site is pgpozoriste.me, and it is unreachable from here on any tool — the connection is reset before TLS. So the reading was made entirely off the founder, which is better anyway: the Glavni grad Podgorica lists JU Gradsko pozorište among its javne ustanove, at Bokeška 2, with its director named, and the city's own repertoire notice for April 2026 sets out the scenes one by one — the Dramska scena za djecu, the Index scena, and the Lutkarska scena za djecu, which played Ružno pače on 18 April, Čarobni kamen on 24 and 25, and Pomelo, mali ružičasti slon on 26. A named puppet scene, currently producing, inside a municipal public institution: that is the denominator met. The lineage was read in Radoslav Lazić's survey of puppetry in Montenegro, and it is worth having because it dates the scene rather than the theatre. Šćućkin founded the first children's theatre at Cetinje in 1939; the Pionirsko pozorište followed in Podgorica on 12 January 1951; it merged into the Pionirski kulturni centar in 1959; in 1994 it separated again as the Dječije pozorište and took a Večernja scena beside the Dramska scena za djecu and the Lutkarska scena za djecu; in 2002 it became the Gradsko pozorište with those three scenes. The puppet scene is therefore at least thirty-two years old under that name and was not invented by the 2002 reorganisation. One thing does not fit the denominator cleanly and is recorded rather than smoothed over: the venue. Gradsko pozorište has no house of its own — one is under construction, sixty-five years after the founding — and the puppet scene plays in the Dodest hall of the KIC Budo Tomović, a different municipal institution. The point on the map is the theatre's seat at Bokeška 2, not where the puppets play. Under the old wording, which asked for a building of its own, this unit would have failed on the parent rather than on itself; under the ruling of 2026-07-27 a named permanent stage counts, and it does. Nothing else in the country reaches the denominator, and Lazić's survey is what makes that a finding rather than an absence of searching, because it is looking for exactly this. The Nikšićko lutkarsko pozorište Šćućkin was launched in 2013 on the initiative of the Ćano Koprivica foundation and played its first production in a music school; Pozorištance Škatula in Igalo is one animator, Željko Vavić, twenty years and five thousand performances, and no institution; the Herceg Novi work of 2013 came out of the Podi art puppet colony as a one-off; the Kotor children's theatre festival, running since 1993, is a festival, and festivals are excluded by name; the puppetry studies at the Cetinje drama faculty were introduced in 2009-10 and discontinued for want of staff. Four of those five are real puppetry and none of them is a permanent unit with public backing.",
       "lower_bound": 1,
-      "upper_bound": 1
+      "upper_bound": 1,
+      "units": {
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Lutkarska scena za djecu",
+          "city": "Podgorica",
+          "address": "Bokeška 2, 81000 Podgorica",
+          "lat": 42.44204,
+          "lon": 19.26192,
+          "unit": "stage",
+          "parent": "JU Gradsko pozorište, Podgorica",
+          "authority": "Javna ustanova of the Glavni grad Podgorica, listed among the capital's public institutions",
+          "registration": null,
+          "url": "https://pgpozoriste.me",
+          "source": "https://podgorica.me/ju-gradsko-pozoriste/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -90,7 +109,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Puppet theatre in Podgorica.",
+  "notes": "The puppet scene of the Podgorica city theatre, one of its three scenes since 2002 and named as such since 1994. It plays in the KIC Budo Tomović; the theatre's own house is still being built.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country.",
