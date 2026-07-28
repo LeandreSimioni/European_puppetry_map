@@ -13,14 +13,33 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://ayla.culture.gr/wp-content/uploads/2016/11/%CE%98%CE%AD%CE%B1%CF%84%CF%81%CE%BF_%CE%A3%CE%BA%CE%B9%CF%8E%CE%BD_%CE%9A%CE%B1%CF%81%CE%B1%CE%B3%CE%BA%CE%B9%CF%8C%CE%B6%CE%B7%CF%82.pdf",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Greek, in the transversal venues pass. One unit, one house, against an opening estimate of 1.5 produced with no research. Greece is the country where this indicator measures least, and the ministry says so itself. The national inventory of intangible cultural heritage carries a dossier on the shadow theatre, Karagiozis, filed by the Ministry of Culture, and it describes where the form is played: a permanent shadow-theatre venue has the specifications of any theatre, box office, foyer, equipped stage, and performances are also given in every space where a performance can be given at all — squares, car parks, yards, waste ground, and indoors in theatres, cinemas, clubs, cafés, schools and houses. The same dossier lists the institutions holding the form and every one of them is a museum, an archive or a collection: the Spathario museum of the municipality of Marousi, the Spyropouleio, the Charidimos museum inside the City of Athens's Melina cultural centre, the folklore museums of Ilion and Stemnitsa, the municipal gallery of Patras. Under the ruling of this repository a museum that programmes shows is not a venue of diffusion and creation, so none of them counts. And the safeguarding measures proposed by the national association of shadow theatre artists themselves end with a request for the creation of permanent stages in Athens and the regions — which is a first-party statement, in a ministry document, that they do not exist. What is counted is Πράσσειν Άλογα, the visual puppet theatre working since 1997, which holds its own place, the Κουκλόσπιτο at Β. Βουλγαροκτόνου 60 in Neapoli, Athens, where it shows performances, keeps a permanent exhibition of the puppets of its earlier productions and runs its seminars and workshops, and which names the Ministry of Culture, the Ministry of Education, the Region of Attica and the Institute of Educational Policy as its backers on its own pages. That is the same evidentiary standard on which LILARUM was counted in Vienna: funders declared by the venue, not read in an award decision. Two candidates are left out, and they are the two that show where the line falls. The Δημοτικό Θέατρο Σκιών Παλαιού Φαλήρου, in the Floisvos park on the seafront, is a municipal venue given over entirely to shadow theatre, and Tassos Konstas plays there from 1 July 2026, Wednesday to Sunday at half past eight, seven euros a ticket, as he has done for fifteen summers. It is left out under the clause that excludes a hall hosting a visiting company's series: the venue is the municipality's, but the puppetry is Konstas's own company's, brought in and taken away, which is the shape that decided Lahnstein in Germany. The reading is refutable and the whole disagreement is worth having: if the municipality is shown to programme and take responsibility for the season rather than to lend a stage, this counts and Greece is 2. The other is the Θέατρο της Κούκλας in Kato Patisia, at Ψαρουδάκη 34, a small puppet theatre in its own hall made by Takis and Mina Sarri in 1978, which the Athens listings now show with no performances at all; it is left out because nothing readable says it still plays, not because it fails the denominator. The upper bound of 3 holds both. Nothing here should be read as a measure of the activity: Greece has a shadow theatre inscribed on the national inventory of intangible heritage, a new generation of karagiozopaiktes entering the trade, and annual festivals in Athens at the Spathario museum, on Strefi hill and in Nea Ionia, and it has almost no walls. That is exactly the bias this indicator carries and cannot correct.",
       "lower_bound": 1,
-      "upper_bound": 2
+      "upper_bound": 3,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Εικαστικό Θέατρο Κούκλας Πράσσειν Άλογα",
+          "city": "Αθήνα",
+          "address": "Β. Βουλγαροκτόνου 60, 11473 Νεάπολη, Αθήνα",
+          "lat": 37.98837,
+          "lon": 23.74116,
+          "unit": "house",
+          "parent": null,
+          "authority": "Υπουργείο Πολιτισμού, Υπουργείο Παιδείας, Περιφέρεια Αττικής and the Institute of Educational Policy, named as backers by the theatre itself; no award decision opened",
+          "registration": null,
+          "url": "https://prasinaloga.gr",
+          "source": "https://prasinaloga.gr/en/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
