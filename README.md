@@ -128,6 +128,25 @@ persons rewarded systems whose puppetry was organised into separate
 institutions — the socialist state-theatre legacy above all — and penalised
 those where it lives inside larger houses.
 
+### The permanent-ensemble test removed, 2026-07-28
+
+The exclusion clause used to end "programming strands or occasional co-productions
+**that maintain no permanent ensemble**". Those five words are gone.
+
+They asked whether a venue keeps a standing troupe, which is the socialist
+state-theatre model restated — the very bias the ruling above was written to
+remove. A house that commissions and takes responsibility for productions is a
+venue, whether or not it employs actors by the year. The clause was also the only
+place in the whole schema where "ensemble" was a test, and the record already
+contradicted it: Schaubude Berlin and Figurentheater Osnabrück hold no permanent
+ensemble and are counted, and several French Centres nationaux de la marionnette
+programme and co-produce rather than hold a company.
+
+The strand exclusion stays and is now unqualified, which is what it always meant
+to say: a hall that hosts a visiting company's series has no puppetry of its own.
+Lahnstein — a municipal stage playing a series brought by a private company from
+Koblenz — is still out. No counted value changes.
+
 Germany, read under the new wording on 2026-07-27, is the demonstration. Of its
 21 units, **10 are stages inside larger houses** — Halle, Meiningen, Gera,
 Bautzen, Gelsenkirchen, Chemnitz, Dresden, Dessau, Koblenz, Radebeul. The strict
