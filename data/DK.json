@@ -13,14 +13,48 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 2
+      "value": 2.0,
+      "year": 2026,
+      "source": "https://detlilleteater.dk/historie",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Danish, in the transversal venues pass. Two units, one house and one stage, against an opening estimate of 1.5 produced with no research. Teater Refleksion works at Jyllandsgaarden, Frederiksgade 72b in Aarhus, and was founded in 1990 by Bjarne Sandborg with, in its own account, the dream of making a children's theatre specialising in puppet and animation theatre; it has built twenty-five years of craft in that form and plays without words. Aarhus Kommune counts it among the children's theatres it funds and granted it 1.2 million kroner of bridge financing to hold its place in the city's cultural life until its move to Gellerup. The address recorded is the present one and the move is known to be coming. The stage is the Marionetteatret in Kronprinsessegade, at the edge of the Kongens Have, founded in 1966 and, since the death of Birthe Norst, run in one organisation with Det Lille Teater in Lavendelstræde. The two divide the year — Det Lille Teater from September to May, the Marionetteatret from June to September — and together they are a lille storbyteater of the City of Copenhagen, carrying an operating grant of 4.5 million kroner a year for 2021 to 2024, reduced from 5.1 when the scheme was widened. The små storbyteatre are municipally financed with a state contribution, which makes the backing here as explicit as anywhere in the record. Only the Marionetteatret is counted: Det Lille Teater is a children's theatre and the puppetry is the other half of the house, which is a named puppet stage inside a larger organisation and therefore a stage. Two is a floor and the Danish case is thin on candidates rather than on evidence. The reference article on Danish puppetry describes a field where performances are often given in private homes as a pastime while others try to professionalise, and names no company holding a hall. Denmark's professional figure theatre — Sofie Krog, Gruppe 38 and the rest — tours, and touring companies are outside the denominator by construction. What has not been done is a reading of Dansk UNIMA's own membership list, which is what corrected Sweden the same day and would be the first thing to open here.",
+      "lower_bound": 2,
+      "upper_bound": 4,
+      "units": {
+        "house": 1,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Teater Refleksion",
+          "city": "Aarhus",
+          "address": "Jyllandsgaarden, Frederiksgade 72b, 8000 Aarhus C",
+          "lat": 56.15419,
+          "lon": 10.20365,
+          "unit": "house",
+          "parent": null,
+          "authority": "Aarhus Kommune, among the children's theatres it funds; 1.2 million kroner of bridge financing before the Gellerup move",
+          "registration": null,
+          "url": "https://refleksion.dk",
+          "source": "https://refleksion.dk/om-teatret/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Marionetteatret",
+          "city": "København",
+          "address": "Kronprinsessegade 21, 1306 København K",
+          "lat": 55.68549,
+          "lon": 12.58299,
+          "unit": "stage",
+          "parent": "Det Lille Teater & Marionetteatret",
+          "authority": "Lille storbyteater of Københavns Kommune, operating grant of 4.5 million kroner a year, 2021-2024",
+          "registration": null,
+          "url": "https://detlilleteater.dk",
+          "source": "https://detlilleteater.dk/historie",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -90,8 +124,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Thy Teater. Copenhagen.",
+  "notes": "Teater Refleksion in Aarhus and the Marionetteatret by the Kongens Have, which shares a lille storbyteater with Det Lille Teater and plays June to September.",
   "to_check": [
+    "venues: open Dansk UNIMA's membership list. Reading the Swedish equivalent the same day found two houses outside the capital that institutional sources had missed, and nothing equivalent was read for Denmark.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
