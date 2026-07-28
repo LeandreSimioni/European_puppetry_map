@@ -14,13 +14,46 @@
     {
       "indicator": "venues",
       "value": 2.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "year": 2026,
+      "source": "https://www.licurici.md/contacte/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Romanian and Russian, in the transversal venues pass. Two units, both houses, both in Chișinău, and a third that exists and is deliberately not counted. The opening estimate was 2 and lands on the right number for the wrong reason. The two counted are the state theatre and the city one, and they are a generation apart. Instituția Publică Teatrul Republican de Păpuși „Licurici” gives its own legal form and address on its contact page, str. 31 August 1989 nr. 121, and the Ministry of Culture publishes and runs the competition for its directorship, which is a ministry behaving as founder even though the notice does not use the word. Teatrul Municipal de Păpuși „Guguță” is described by the City of Chișinău on the city's own culture pages, at strada Maria Drăgan 1, founded on 27 November 1992 out of a group that included the mayor Nicolae Costin, the director Veniamin Apostol and the actor Victor Ștefaniuc. Both are freestanding organisations whose vocation is puppetry, so both are houses, and the Nominatim gazetteer carries each under its own name at its own address. The third is in Tiraspol and it is a real puppet stage, not a doubt. The programme of the Приднестровский государственный театр драмы и комедии им. Н.С. Аронецкой, at ул. 25 Октября 130, names Театр кукол as one of its sections and schedules four puppet productions under it for March 2026 — Чиполлино, Просто, да не просто, Халиф-Аист and Умка. Under the wording of this indicator that is a named puppet stage inside a larger organisation, and it would count. It is not counted, and the reason is the denominator rather than the theatre. The population figure this record carries for Moldova is Eurostat's 2.416 million on 1 January 2025, which is the figure Moldova's own statistics produce for the right bank alone: Transnistria is outside it. Counting a Transnistrian venue against a population that excludes Transnistria is the exact scope mismatch this repository documented for Turkey and Russia after the transcontinental ruling, and there it at least chose knowingly. Here there is no ruling at all. The backing is also a question the denominator does not answer: it asks for a public authority — state, Land, canton, region, municipality — and a государственное учреждение of an unrecognised administration is not obviously any of those, while Kosovo, the one comparable case in the record, was given a row of its own rather than folded into a neighbour. So this is reported and not resolved. A ruling on Transnistria would move Moldova from 2 to 3 and would have to move the population figure with it. Nothing else in the country reaches the denominator, and one case is worth naming because it nearly did. The Cahul theatre was created by order 102 of the culture ministry of the Moldavian SSR on 25 March 1987 and was conceived then as a complex of theatres including a puppet theatre; it is now the B. P. Hasdeu theatre and its own pages show a drama repertoire for adults and children with no puppet section left. The national theatre in Bălți and the theatres of Comrat were looked for and produced no puppet unit. Two is therefore a floor for the right bank, and the reachable evidence for it is first-party in both cases.",
       "lower_bound": 2,
-      "upper_bound": 2
+      "upper_bound": 3,
+      "units": {
+        "house": 2
+      },
+      "venues_list": [
+        {
+          "name": "Teatrul Republican de Păpuși „Licurici”",
+          "city": "Chișinău",
+          "address": "str. 31 August 1989 nr. 121, Chișinău",
+          "lat": 47.02217,
+          "lon": 28.82913,
+          "unit": "house",
+          "parent": null,
+          "authority": "Instituție publică; the Ministerul Culturii runs the competition for its directorship",
+          "registration": null,
+          "url": "https://www.licurici.md",
+          "source": "https://www.licurici.md/contacte/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatrul Municipal de Păpuși „Guguță”",
+          "city": "Chișinău",
+          "address": "strada Maria Drăgan 1, MD-2052 Chișinău",
+          "lat": 47.03025,
+          "lon": 28.88506,
+          "unit": "house",
+          "parent": null,
+          "authority": "Municipal institution of Chișinău, described on the city's culture pages; founded 27 November 1992",
+          "registration": null,
+          "url": "https://cultura.chisinau.md/teatrul-municipal-de-papusi-guguta/",
+          "source": "https://cultura.chisinau.md/teatrul-municipal-de-papusi-guguta/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -90,9 +123,10 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Licurici State Puppet Theatre, Chișinău.",
+  "notes": "A state puppet theatre and a municipal one, both in Chișinău. A third puppet stage plays in Tiraspol, inside the Aronetskaya theatre, and is left out because the population denominator excludes Transnistria.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
-    "Find the annual report of at least one organisation in the country."
+    "Find the annual report of at least one organisation in the country.",
+    "Rule on Transnistria: the venues pass found a named puppet stage in Tiraspol that the population denominator's territory excludes. Deciding it moves venues from 2 to 3 and requires moving population_M with it."
   ]
 }
