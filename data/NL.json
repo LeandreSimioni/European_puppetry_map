@@ -13,14 +13,33 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
+      "value": 1.0,
+      "year": 2026,
+      "source": "https://www.amstelveenz.nl/nieuws/ook-financiele-steun-voor-amstelveens-poppentheater.html",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Dutch, in the transversal venues pass. One unit, one house, against an opening estimate of 1.5 produced with no research. The Netherlands is named in this indicator's known_bias beside Italy and Spain as a system whose vitality runs through companies, and the pass confirms it without needing to argue: the country has a dense figure-theatre field and almost none of it holds a publicly backed hall. The Amstelveens Poppentheater, Wolfert van Borsselenweg 85A, has played for more than fifty years in a former kindergarten, holds 130 seats, and programmes puppet, object and visual theatre as a professional youth theatre; it is a stichting, and the gemeente Amstelveen granted it a guarantee subsidy of 42 000 euros alongside its other cultural institutions. A hall of its own, a puppetry programme, a municipality behind it. What is left out is the interesting part. Poppentheater Koos Kneus has its own room at Iepenplein 40 in Amsterdam-Oost, moved there in 2004 after seven years on the Commelinstraat, and plays every Sunday in two slots for two age groups — a diffusion venue by any reading, and it names no public funder anywhere on its pages, so it fails on backing and not on merit. The Ulrike Quade Company works from the Broedplaats De Vlugt in Amsterdam-West and Feikes Huis is a production platform; both are companies without a hall. Poppentheater Koekla from Edam plays some 150 performances a year in theatres, schools, community centres, libraries and festivals, which is a touring company and exactly what the denominator excludes. Theater De Krakeling in Amsterdam programmes puppetry among the genres of a youth theatre, which is a strand. One is what the denominator can prove and the upper bound is 3. The Nederlands Marionettentheater, which plays in the Zoldertheater in Amsterdam-Oost, and Poppentheater Diridas in Utrecht were not read for backing and either could raise it. The number should be read as a statement about how Dutch puppetry is housed. It is not a statement about how much of it there is, and in this country the gap between the two is at its widest.",
       "lower_bound": 1,
-      "upper_bound": 2
+      "upper_bound": 3,
+      "units": {
+        "house": 1
+      },
+      "venues_list": [
+        {
+          "name": "Amstelveens Poppentheater",
+          "city": "Amstelveen",
+          "address": "Wolfert van Borsselenweg 85A, 1181 PH Amstelveen",
+          "lat": 52.31073,
+          "lon": 4.8513,
+          "unit": "house",
+          "parent": null,
+          "authority": "Stichting; guarantee subsidy of 42 000 euros from the gemeente Amstelveen alongside its other cultural institutions",
+          "registration": null,
+          "url": "https://amstelveenspoppentheater.nl",
+          "source": "https://www.amstelveenz.nl/nieuws/ook-financiele-steun-voor-amstelveens-poppentheater.html",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,8 +125,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Vitality runs through companies: Ulrike Quade, Duda Paiva, Hotel Modern.",
+  "notes": "The Amstelveens Poppentheater, 130 seats in a former kindergarten. Koos Kneus in Amsterdam has a hall and plays every Sunday and names no public funder.",
   "to_check": [
+    "venues: read the Nederlands Marionettentheater in the Zoldertheater and Poppentheater Diridas in Utrecht for public backing, and look again at Koos Kneus, which has a hall and a weekly programme and failed only on backing.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
