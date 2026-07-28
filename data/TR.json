@@ -13,14 +13,16 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 2
+      "value": 0.0,
+      "year": 2026,
+      "source": "https://tiyatroylailgilihersey.com/turkiyede-kukla-tiyatrosu-2/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Turkish, in the transversal venues pass, and the first country read under the scope ruling of the same day, which counts Turkey entire — Bursa, Ankara, İzmir and the Asian side of Istanbul included. Zero units, against an opening estimate of 1.5 produced with no research, and the widened scope did not produce a single one: this is a zero over the whole country, not a zero over Eastern Thrace. Turkey is the country in this series where the gap between the tradition and the indicator is widest. Karagöz, the shadow theatre, is on UNESCO's list; the schools layer counts a state conservatoire branch teaching it; Bursa has run an international Karagöz, puppet and shadow play festival since 1993, the second oldest theatre festival in the country, and Istanbul has run its own since 1998. None of that is a venue. A field reading of Turkish puppet theatre published by a theatre review, measured through the festivals, says the thing plainly: the art is carried in Turkey by individual wills and personal labour rather than by institutional policy, the Istanbul festival's own director fights for hall access and against the absence of public support, and the places where puppetry is played are schools and municipal buildings taken as they come. Three candidates were examined and none is counted. The Karagöz Müzesi in Bursa, opened in 2007 by the metropolitan municipality at Çekirge Caddesi 159, is the strongest: it holds 119 figures from the masters, a specialised library, a workshop for children and a performance hall of 69 seats where professionals play live Karagöz at weekends. It is refused under the rule settled for Belgium on this indicator — a museum that programmes shows is not a venue of diffusion and creation, whatever the quality of what it programmes, while a theatre that also keeps a museum is. That rule cost Belgium two units and it costs Turkey the only permanent puppetry hall in the country. The İstanbul Karagöz Kukla Vakfı, led by Cengiz Özek at Faik Paşa Caddesi 22 in Çukurcuma, Beyoğlu, is a foundation with a workshop rather than a house: its own pages name no public funder and describe the İstanbul Kukla Müzesi-Tiyatrosu as something founded in intention, not a theatre now open. The third is the one to reopen first and the only one refused on the reading rather than on the merits: the city theatres of Kocaeli, a municipal company in İzmit, carry a Kukla Tiyatrosu Birimi written into the regulation of their own şube müdürlüğü, which would be a named puppet unit inside a larger municipal organisation and therefore a stage. The regulation is published by the municipality and the municipality's server refused every attempt to read it today, and a search-engine summary of a document is not the document. It is worth an hour when the site answers. The upper bound of 2 holds Kocaeli and the Bursa museum, the second only if the museum rule is ever revisited.",
+      "lower_bound": 0,
+      "upper_bound": 2,
+      "units": {},
+      "venues_list": []
     },
     {
       "indicator": "schools",
