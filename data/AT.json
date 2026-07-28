@@ -13,14 +13,61 @@
     },
     {
       "indicator": "venues",
-      "value": 2.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Still an opening estimate, and this note exists so the next pass does not start from nothing. Researched on 2026-07-28, in German, in the transversal venues pass, and stopped without a value — not on sources, which answered, but on the denominator, which does not decide the only question Austria asks. This is the first country in the pass where that has happened, and it is the western re-read the venues ruling predicted, arriving with a problem the ruling did not anticipate. The denominator asks for a permanent puppetry unit with a venue of its own and the backing of a public authority. Every country counted so far answered that on founding or ownership: state puppet theatres in Bulgaria and Romania, municipal ustanove in Mostar and Chișinău, cantonal and city institutions in Zenica, a capital's javna ustanova in Podgorica. Austria has almost none of that shape. Its puppetry is carried by associations and companies that hold their own houses and receive structural public money, and the word backing has to be read one way or the other before any of them can be counted or refused. What was established, each on the institution's own pages or in the reporting: Figurentheater LILARUM plays in its own house at Göllnergasse 8 in Vienna, reopened for that purpose in 1997 after a full reconstruction, and carries Stadt Wien Kultur and the federal arts ministry on its own site as funders. The Salzburger Marionettentheater, founded 1913, is a GmbH whose shares were placed in a non-profit association in 2019 to save it from closure; the city and the Land, with the International Salzburg Association, took an Ausfallshaftung of 300 000 euros and the city advanced money so the puppeteers could be paid, and no public body owns it. The Linzer Puppentheater has played since 1970 and holds a fixed stage and rehearsal rooms inside the Kuddelmuddel children's culture centre in Linz, which is the closest thing in the country to a stage inside a public organisation, and its own legal form was not read. The Wiener Urania-Puppentheater has played in the Urania since 1950 with Kasperl and Pezi and a continuous ensemble, and is privately owned: André Heller bought it for 100 000 euros in 2019. The Schubert Theater in Vienna carries a figure-theatre ensemble and is private. Read as public founding or ownership, Austria counts nought or one and the map would say the country has almost no puppetry, which is false and is precisely the bias the indicator's known_bias already names for Italy, Spain and the Netherlands — Austria belongs on that list. Read as structural public subsidy, Austria counts four or more, and the figure stops being comparable with the east, where subsidised associations were never looked for because the state institutions were there to find. Neither reading is available to a single country: whichever is chosen has to be applied backwards over all twenty-five countries already collected. So no value is produced, and what is needed is a ruling and not another day of searching. Once it exists, the sources to read are Vienna's Kunst- und Kulturbericht for the subsidies to LILARUM and the Schubert Theater, the City of Linz on the status of the Kuddelmuddel and of the puppet theatre inside it, and the Salzburg city and Land subsidy decisions since the 2019 rescue. The old estimate of 2.5 stands untouched and remains worthless.",
-      "lower_bound": 2,
-      "upper_bound": 3
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://lilarum.at/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in German, in the transversal venues pass. Three units, three houses, and two named candidates left out. The opening estimate was 2.5, produced with no research, and it happens to sit just under. Austria has almost no puppetry in public ownership, and that is the whole difficulty of the country: there is no register of state puppet theatres to read, because the work is carried by associations and companies. What settles it is the part of the denominator that was there all along — a venue of its own, charged with presenting or creating work, and funded companies without a venue excluded. The test is the place where puppetry is shown, not the subsidy, because nearly every European company holds some public money and a count built on subsidy alone never terminates. Figurentheater LILARUM plays in its own house at Göllnergasse 8 in Vienna, a hundred-year-old theatre space rebuilt for it and reopened on 8 November 1997 by a State Secretary and the city's culture councillor, and it is now the largest children's theatre in Vienna. It shows Stadt Wien Kultur and the federal arts ministry as its funders. The Salzburger Marionettentheater has played at Schwarzstraße 24 since 1913, holds its own ensemble of puppeteers, and its playing practice was recognised by UNESCO as intangible cultural heritage in 2016; it is a GmbH whose shares were placed in a non-profit association in 2019, when the city, the Land and the International Salzburg Association took a 300 000 euro Ausfallshaftung and the city advanced money so the puppeteers could be paid. The Linzer Puppentheater has played since 1970, is in its 55th season, and holds a fixed stage and rehearsal rooms in the Kinderkulturzentrum Kuddelmuddel, which is a facility of LIVA and therefore an enterprise of the City of Linz; the city granted it money by council decision to secure its continued operation. All three are freestanding organisations whose vocation is puppetry, so all three are houses and none is a stage. Two are left out and both are arguable. The Wiener Urania-Puppentheater has played in the Urania since 1950 with Kasperl and Pezi and an unbroken ensemble, which makes it on the face of it the most continuous puppetry venue in the country; it was bound to the Wiener Volkshochschulen by a cooperation agreement under its former management, but since 2019 it belongs to Kasperl und Pezi GmbH under André Heller, who bought it for 100 000 euros, and no current public backing could be read. The Schubert Theater at Währinger Straße 46 in Vienna is a figure theatre with its own venue, its own ensemble and its own festival, and names no public funder anywhere on its pages. Neither is refused on the merits: both would count the moment a subsidy is read, and neither was found. That is why the upper bound is 5 and the record is disputed. What none of the three counted entries rests on is a document from the authority itself. LILARUM's funders are logos on its own site; Salzburg's rescue was read in the Salzburger Nachrichten; the Linz council decision is archived behind a 404. Vienna's Kunst-, Kultur- und Wissenschaftsbericht carries every subsidy of past years and lives in the Wienbibliothek Digital, and it was not opened today. A multi-year award of 600 000 euros to Theater Lilarum GmbH, 300 000 for 2024 and 300 000 for 2025, decided by Vienna's Gemeinderatsausschuss für Kultur und Wissenschaft, appeared in a search-engine summary and is deliberately not used here, because a summary is not a source. It is the first thing to read next.",
+      "lower_bound": 3,
+      "upper_bound": 5,
+      "units": {
+        "house": 3
+      },
+      "venues_list": [
+        {
+          "name": "Figurentheater LILARUM",
+          "city": "Wien",
+          "address": "Göllnergasse 8, 1030 Wien",
+          "lat": 48.20073,
+          "lon": 16.39919,
+          "unit": "house",
+          "parent": null,
+          "authority": "Stadt Wien Kultur and the federal arts ministry, named as funders on the theatre's own site",
+          "registration": null,
+          "url": "https://lilarum.at",
+          "source": "https://lilarum.at/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Salzburger Marionettentheater",
+          "city": "Salzburg",
+          "address": "Schwarzstraße 24, 5020 Salzburg",
+          "lat": 47.80333,
+          "lon": 13.04247,
+          "unit": "house",
+          "parent": null,
+          "authority": "Stadt und Land Salzburg with the ISA, 300 000 euro Ausfallshaftung in the 2019 rescue; GmbH held by a non-profit association",
+          "registration": null,
+          "url": "https://marionetten.at",
+          "source": "https://www.sn.at/salzburg/kultur/salzburger-marionettentheater-gerettet-verein-wird-neu-gegruendet-64509727",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Linzer Puppentheater",
+          "city": "Linz",
+          "address": "Langgasse 13, 4020 Linz, im Kinderkulturzentrum Kuddelmuddel",
+          "lat": 48.29864,
+          "lon": 14.28964,
+          "unit": "house",
+          "parent": null,
+          "authority": "Plays in the Kuddelmuddel, a facility of LIVA and an enterprise of the City of Linz; city council subsidy to secure continued operation",
+          "registration": null,
+          "url": "https://www.puppentheater.at",
+          "source": "https://www.puppentheater.at/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,9 +153,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Salzburg Marionette Theatre, LILARUM and the Urania puppet theatre in Vienna, the Linzer Puppentheater in the Kuddelmuddel. Associations and companies with their own houses and public money, not public institutions.",
+  "notes": "LILARUM in Vienna, the Salzburg marionette theatre, the Linzer Puppentheater in the municipal Kuddelmuddel. The Urania puppet theatre and the Schubert Theater hold venues too and no public backing could be read for either.",
   "to_check": [
-    "venues: rule on what 'backing of a public authority' means before Austria, and before the west generally — public founding or ownership, or structural public subsidy. Austria answers 0-1 on the first reading and 4+ on the second. Whichever is chosen applies backwards to the 25 countries already collected.",
+    "venues: read Vienna's Kunst-, Kultur- und Wissenschaftsbericht in the Wienbibliothek Digital for the LILARUM and Schubert Theater subsidies, and the Linz Gemeinderat decision for the Linzer Puppentheater. A 600 000 euro multi-year award to Theater Lilarum GmbH was seen in a search summary and not used. If the Schubert Theater or the Urania puppet theatre turn out to be publicly supported, Austria rises to 4 or 5.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "performances: the Werkstatistik of the Deutscher Bühnenverein was read on 2026-07-27 and covers Austria alongside Germany and Switzerland, but publishes the split as Germany against the D-A-CH total only. The residual is 24 puppet performances for Austria and Switzerland together, which cannot be divided and is in any case a statement about which Austrian theatres file returns to a German association. An Austrian source is needed; none was looked for."
   ]
