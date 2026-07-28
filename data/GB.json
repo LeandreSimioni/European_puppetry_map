@@ -13,14 +13,61 @@
     },
     {
       "indicator": "venues",
-      "value": 5.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 4,
-      "upper_bound": 6
+      "value": 3.0,
+      "year": 2026,
+      "source": "https://www.britishpuppetguild.com/ukpuppettheatres",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in English, in the transversal venues pass. Three units, three houses, against an opening estimate of 5 produced with no research. The candidate list is unusually clean for once: the British Puppet Guild keeps a register of UK puppet theatres and seven of them hold a building. All seven were then read one at a time, and the split between the three that count and the four that do not is almost entirely a split on public money rather than on puppetry. The Little Angel Theatre has stood in Dagmar Passage in Islington since 1961, calls itself the home of British puppetry, and is one of only three building-based puppet theatres in England; a hundred seats with the workshop beside them where the puppets are carved, and Arts Council England behind it. The Norwich Puppet Theatre occupies the medieval church of St James the Less at Whitefriars, Grade I listed, has made work for more than forty years, and carries annual core funding of 7 250 pounds from Norwich City Council beside Arts Council project grants of 28 908 pounds for the year to 31 March 2024. The Scottish Mask & Puppet Centre at 8-10 Balcarres Avenue in Kelvindale is Scotland's primary venue and resource centre for mask, puppet, magic, mime and physical theatre, and is core-funded through Glasgow Life by Glasgow City Council. Its site redevelopment was still under way at the time of reading and that is recorded rather than smoothed over: the core funding is the fact that counts it, not the state of the building. The four refused are the reason this country is worth writing up. Every one of them has a hall and none has public backing. The Puppet Theatre Barge at Little Venice is a seventy-two-foot Thames lighter that the Movingstage Marionettes converted into a permanent marionette theatre with a stage built for string puppets, wintering in London and going up the river in summer since 1986. Biggar Puppet Theatre in Lanarkshire is a miniature Victorian theatre of a hundred seats built for the Purves Puppets in 1987, and its own appeal states the position exactly: it is not a charity with any regular funding and lives on ticket sales. Upfront Puppet Theatre in Eden is purpose-built. The Harlequin Puppet Theatre at Rhos-on-Sea is the oldest of them all, built by Eric Bramall in 1958 as the first purpose-built puppet theatre in Great Britain, closed after its operator died in 2023, listed Grade II to secure the building, and reopening under new management with two performances in December 2025 and wider plans for 2026 pending a licence. Heritage protection is a public act about a building and not support to a puppetry unit, so it does not count as backing. Three is therefore a statement about the British funding settlement, in which puppetry houses subsist on the box office, and not about British puppetry. The upper bound is set at 7 because all four refusals turn on one unread or absent fact each, and any of them could move.",
+      "lower_bound": 3,
+      "upper_bound": 7,
+      "units": {
+        "house": 3
+      },
+      "venues_list": [
+        {
+          "name": "Little Angel Theatre",
+          "city": "London",
+          "address": "14 Dagmar Passage, Islington, London N1 2DN",
+          "lat": 51.53882,
+          "lon": -0.10135,
+          "unit": "house",
+          "parent": null,
+          "authority": "Arts Council England",
+          "registration": null,
+          "url": "https://www.littleangeltheatre.com",
+          "source": "https://www.littleangeltheatre.com/about-us/our-impact/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Norwich Puppet Theatre",
+          "city": "Norwich",
+          "address": "St James, Whitefriars, Norwich NR3 1TN",
+          "lat": 52.63592,
+          "lon": 1.30034,
+          "unit": "house",
+          "parent": null,
+          "authority": "Norwich City Council annual core funding of 7 250 pounds; Arts Council England project grants",
+          "registration": null,
+          "url": "https://www.puppettheatre.co.uk",
+          "source": "https://en.wikipedia.org/wiki/Norwich_Puppet_Theatre",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Scottish Mask & Puppet Centre",
+          "city": "Glasgow",
+          "address": "8-10 Balcarres Avenue, Kelvindale, Glasgow G12 0QF",
+          "lat": 55.88757,
+          "lon": -4.3029,
+          "unit": "house",
+          "parent": null,
+          "authority": "Core-funded through Glasgow Life by Glasgow City Council",
+          "registration": null,
+          "url": "https://www.maskandpuppet.co.uk",
+          "source": "https://www.maskandpuppet.co.uk/funding",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,8 +153,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Little Angel and Puppet Barge, London. Norwich Puppet Theatre. Handspring UK.",
+  "notes": "Little Angel in Islington, Norwich in a medieval church, the Scottish Mask & Puppet Centre in Glasgow. Four more hold halls — the Barge, Biggar, Upfront, the Harlequin — and live on the box office.",
   "to_check": [
+    "venues: four British puppet theatres hold a building and were refused on backing alone — the Puppet Theatre Barge, Biggar, Upfront and the Harlequin at Rhos-on-Sea. Check each against Arts Council England, Creative Scotland, the Arts Council of Wales and their local authorities. Biggar states it has no regular funding; the other three were not read to the end.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
