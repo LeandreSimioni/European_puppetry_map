@@ -10,7 +10,7 @@ the exercise — a preview precise enough to be refutable.
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
 45. `venues` and `performances` are being collected, five countries at a time;
-`venues` is sourced for 41 countries, `performances` for 6.
+`venues` is sourced for 42 countries, `performances` for 6.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -152,6 +152,34 @@ Germany, read under the new wording on 2026-07-27, is the demonstration. Of its
 Bautzen, Gelsenkirchen, Chemnitz, Dresden, Dessau, Koblenz, Radebeul. The strict
 pre-ruling count would have been 11, and the gap with the east would have been
 an artefact of German theatre law. France, at 7, has not been re-read yet.
+
+### What war does to a count of walls, 2026-07-28
+
+Ukraine could not be counted without deciding two things, and the denominator
+already held both answers.
+
+- **Displacement.** An institution driven out of its own walls, working from
+  rooms another theatre lends it, is a funded company without a venue while that
+  lasts — the exclusion this indicator has carried from the start. It is named,
+  held in the upper bound, and not counted. The Kherson academic regional puppet
+  theatre left the occupied city in May 2022, opened its 52nd season in Kolomyia
+  and rehearses in rooms the Kolomyia academic Ukrainian theatre gives it; its
+  own building was damaged again in November 2024. Not counting it says nothing
+  about the theatre and everything about the indicator: it counts walls in use,
+  and war takes walls. A theatre that holds a hall in the town it fled to counts,
+  and counts **there** — the venue record already places a venue in the city
+  where it actually plays.
+- **Occupation.** A theatre whose backing has passed to the occupying
+  administration leaves the count of the country whose territory it is, since the
+  backing required is that of a public authority of that country. It does not
+  enter the occupier's count either: a seized institution is not evidence about
+  the occupier's own field. Donetsk, which took the word *republican* into its
+  name under the culture ministry of the self-proclaimed republic, is the
+  documented case; Luhansk, Simferopol and Sevastopol are the same situation less
+  well read.
+
+Both kinds are named in the country's reasoning rather than dropped in silence.
+An omission that cannot be seen is indistinguishable from an oversight.
 
 ## The activity layer
 
@@ -326,16 +354,9 @@ link to its website.
 
 1. **Source `venues` and `performances`, five countries at a time.** In progress.
    These are the two indicators a desk can reach: national culture statistics
-   count both, and neither waits on the `dates` ruling. Four countries are left
-   on `venues`, and they are the four hardest, each blocked on something other
+   count both, and neither waits on the `dates` ruling. Three countries are left
+   on `venues`, and they are the three hardest, each blocked on something other
    than research time:
-   - **Ukraine.** The spine is read and the count is not. UNIMA-Ukraine lists
-     twenty-five state puppet theatres, which is a first-party enumeration of
-     exactly this denominator, but two questions have to be settled before a
-     value: what to do with an institution driven out of its own walls — the
-     Kherson theatre left the occupied city and works from Kolomyia — and
-     whether the theatres of the occupied territories belong in a count of the
-     country. Neither is a research question.
    - **Turkey and Russia.** The `venues` denominator says nothing about
      transcontinental countries. `population_M` counts them entire since
      2026-07-27 and `schools` counts European establishments only; these two
