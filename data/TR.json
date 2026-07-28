@@ -1,6 +1,6 @@
 {
   "code": "TR",
-  "name": "Turkey (European part)",
+  "name": "Turkey",
   "observations": [
     {
       "indicator": "population_M",
@@ -24,15 +24,15 @@
     },
     {
       "indicator": "schools",
-      "value": 0.0,
+      "value": 1.0,
       "year": 2026,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Web check of 2026-07-27, searched in the country's own language. No establishment retained within this record's scope, and the reason deserves reading before the value. Turkey does have a course satisfying the denominator: the Puppet and Shadow Theatre branch of the state conservatoire of Anadolu University. But that university is in Eskisehir, in Anatolia, outside the European part to which the schema explicitly restricts this record. It is therefore not counted here. The performing arts departments checked, Suleyman Demirel, Uludag Bursa and Dokuz Eylul, have acting, dramatic writing and scenography as their specialisms, puppetry appearing only as a technique taught within scenography; none of them is in Eastern Thrace either. No course was identified in the European part, including the European side of Istanbul. The previous 0.5 was the midpoint of an estimated range. Upper bound at 1: Istanbul's universities were not checked one by one. A method point worth keeping for the whole series: the schema's geographical scoping can remove from a record a school that genuinely exists in the country.",
-      "lower_bound": 0,
-      "upper_bound": 1,
-      "checked_on": "2026-07-27",
+      "source": "https://konservatuvar.anadolu.edu.tr/bolumler/sahne-sanatlari-bolumu/sahne-sanatlari-bolumu-programlar/tiyatro-anasanat-dali/kukla-ve-golge-oyunu-sanat-dali",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Recounted on 2026-07-28, after the scope ruling of the same day made countries countable entire. The value moves from 0 to 1 and no new school was found: what changed is that the school Turkey already had stopped being deleted by a line on a map. The puppet and shadow theatre branch of the state conservatoire of Anadolu University, Kukla ve Gölge Oyunu Sanat Dalı, sits in Eskişehir, in Anatolia, and the old scope counted European establishments only; the previous record said in as many words that this was the clearest case in the series of a rule removing a school that genuinely exists in a country. What was read today does not soften the case but does describe it exactly, so the record says how it stands. The branch page itself, read at source on 2026-07-27 and cited here, could not be re-read on 2026-07-28: the conservatoire site now serves a JavaScript shell to a plain fetch. The department's general page names two anasanat dalları, Tiyatro and Opera, and no third. The conservatoire's own admission guide for 2025-2026 admits students by programme, and the programmes are Tiyatro with nine general places, Opera with ten, and the music and instrument-making programmes; puppetry is nowhere in that table. So Kukla ve Gölge Oyunu is a named art branch inside the theatre degree and not a degree admitting its own intake — which is exactly the shape settled on 2026-07-27 as counting: Latvia's object theatre specialism inside an acting degree counts, Dantzerti's puppetry module inside one does not, and a sanat dalı is a specialism and not a module. Counted by establishment, as the whole layer is: the university counts once whatever it carries. Status disputed, on one point only — that the branch page could not be reopened today. The three performing-arts departments checked on 2026-07-27, Süleyman Demirel, Uludağ in Bursa and Dokuz Eylül, teach puppetry only as a technique inside scenography and are still not counted; Istanbul's universities were never checked one by one, which is what the upper bound of 2 now holds.",
+      "lower_bound": 1,
+      "upper_bound": 2,
+      "checked_on": "2026-07-28",
       "establishments": [
         {
           "name": "Anadolu Üniversitesi, Devlet Konservatuvarı — Kukla ve Gölge Oyunu Sanat Dalı",
@@ -41,13 +41,12 @@
           "lat": 39.7767,
           "lon": 30.5206,
           "status": "public",
-          "award": "Meets the denominator but sits in Anatolia, outside this record's scope",
+          "award": "Kukla ve Gölge Oyunu Sanat Dalı, a named art branch inside the Tiyatro anasanat dalı of the state conservatoire; the 2025-2026 intake is to the Tiyatro programme, nine general places",
           "url": "https://konservatuvar.anadolu.edu.tr/",
-          "description": "The puppet and shadow theatre branch of the state conservatoire of Anadolu University. A genuine state puppetry course, excluded here only because this record covers European Turkey.",
-          "counted": false,
-          "exclusion_reason": "outside_scope",
+          "description": "The puppet and shadow theatre branch of the state conservatoire of Anadolu University. A specialism inside the theatre degree, in the shape settled on 2026-07-27 as counting. Counted since the scope ruling of 2026-07-28, which stopped excluding it for sitting in Anatolia.",
+          "counted": true,
           "source": "https://konservatuvar.anadolu.edu.tr/bolumler/sahne-sanatlari-bolumu/sahne-sanatlari-bolumu-programlar/tiyatro-anasanat-dali/kukla-ve-golge-oyunu-sanat-dali",
-          "checked_on": "2026-07-27"
+          "checked_on": "2026-07-28"
         }
       ]
     },
@@ -106,7 +105,7 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Istanbul. Karagöz shadow theatre. Puppet training at Eskişehir, outside this record's scope.",
+  "notes": "Istanbul. Karagöz shadow theatre. Puppet training at Eskişehir.",
   "to_check": [
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
