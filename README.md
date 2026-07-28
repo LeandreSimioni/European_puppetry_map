@@ -10,7 +10,7 @@ the exercise — a preview precise enough to be refutable.
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
 45. `venues` and `performances` are being collected, five countries at a time;
-`venues` is sourced for 34 countries, `performances` for 6.
+`venues` is sourced for 36 countries, `performances` for 6.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
