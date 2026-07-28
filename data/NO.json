@@ -13,14 +13,48 @@
     },
     {
       "indicator": "venues",
-      "value": 1.5,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 1,
-      "upper_bound": 2
+      "value": 2.0,
+      "year": 2026,
+      "source": "https://sceneweb.no/nb/organisation/2786/Figurteatret_i%20Nordland",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Norwegian, in the transversal venues pass. Two units, one house and one stage, against an opening estimate of 1.5 produced with no research. The two are as far apart as two Norwegian institutions can be. Figurteatret i Nordland, founded in Stamsund in 1991 as Nordland Dukketeaterverksted and renamed in 1998, is a fylkeskommunalt prosjektteater: run by Nordland fylkeskommune and financed with Vestvågøy kommune and the Norwegian arts council, on the ordinary state budget since 2015. Its mandate is to produce and distribute figure theatre for children, young people and adults in Nordland and to develop the form as a genre in Norway. It holds premises at J.M. Johansens vei 23 in Stamsund, where a black box and a technical workshop opened in March 1998, and it works with one artistic director and five permanent staff and no permanent ensemble, which under the wording of 2026-07-28 is no longer a test of anything. It is counted as a house: it is a named theatre institution with its own address and its own direction, and sitting inside a county administration is not the same as being a stage inside another theatre. The stage is Oslo Nyes dukketeater, more than seventy years old, the country's first institutional puppet theatre, which held its own rooms in the Oslo city museum at Frogner Hovedgård from 1966 to 2003 and then the Trikkestallen at Torshov for twenty-two years. Oslo kommune owns and funds Oslo Nye Teater and cut its subsidy drastically, and the board answered by closing the Trikkestallen: the last performance in the building was on 15 March 2025 and the puppet theatre moved on 1 May into Centralteatret at Akersgata 38, where it plays on. This is the case the ruling of 2026-07-27 was written for. A count of legal persons would have recorded a puppet theatre lost in 2025; what happened is that a named puppet stage changed halls inside the same municipal theatre, and it is still there in 2026, playing Kokosbananas og moromaskinen from February to May and Jul med Prøysen og snekker Andersen in November. One candidate is left out and it is the interesting one. Teater Visuell, founded by Annika Udo in 1994, plays figure theatre in Stillverk 1, a converted railway signal box on Kai 25 in Trondheim, twenty-four seats, and the Norwegian performing-arts database calls it Norway's smallest theatre in house size. It is a venue of its own beyond argument, and it is left out for exactly the reason the Austrian candidates were: no public backing could be read. Its own site is a placeholder page under construction, Sceneweb names no funder, and the Trondheim municipal grants database was not opened. It is not refused on the merits and would count the moment a subsidy is read, which is what the upper bound of 3 holds. Two named companies were examined and set aside for having no venue at all: Teater Fusentast, founded in Trondheim in 1988, which makes a virtue of playing anywhere with almost no electricity, and the wider free field the arts council funds by project. Norway is the country where the institutional apparatus of figure theatre was built on the training and production side rather than on halls — an academy in Fredrikstad from 1991 until the discipline disappeared in 2018, and a county production centre in the Lofoten islands that sent 400 performances into 13 countries in 2014 — which is why the venue count is low and says almost nothing about the activity.",
+      "lower_bound": 2,
+      "upper_bound": 3,
+      "units": {
+        "house": 1,
+        "stage": 1
+      },
+      "venues_list": [
+        {
+          "name": "Figurteatret i Nordland",
+          "city": "Stamsund",
+          "address": "J.M. Johansens vei 23, 8340 Stamsund",
+          "lat": 68.12255,
+          "lon": 13.84530,
+          "unit": "house",
+          "parent": null,
+          "authority": "Nordland fylkeskommune, financed with Vestvågøy kommune and Norsk kulturråd; on the ordinary state budget, post 78, since 2015",
+          "registration": null,
+          "url": "https://figurteatret.no",
+          "source": "https://sceneweb.no/nb/organisation/2786/Figurteatret_i%20Nordland",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Oslo Nyes dukketeater",
+          "city": "Oslo",
+          "address": "Centralteatret, Akersgata 38, 0158 Oslo",
+          "lat": 59.91454,
+          "lon": 10.74346,
+          "unit": "stage",
+          "parent": "Oslo Nye Teater",
+          "authority": "Oslo kommune, which has owned and funded Oslo Nye Teater since the State withdrew in 1999",
+          "registration": null,
+          "url": "https://oslonye.no",
+          "source": "https://oslonye.no/historikk/",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
