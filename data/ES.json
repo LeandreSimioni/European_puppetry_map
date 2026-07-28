@@ -14,13 +14,74 @@
     {
       "indicator": "venues",
       "value": 4.0,
-      "year": null,
-      "source": null,
-      "confidence": "estimated",
-      "status": "open",
-      "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data.",
-      "lower_bound": 3,
-      "upper_bound": 5
+      "year": 2026,
+      "source": "https://titeredata.eu/museos-salas-centros-y-teatros-de-titeres-en-espana/",
+      "confidence": "sourced",
+      "status": "disputed",
+      "reasoning": "Collected on 2026-07-28, in Spanish and Catalan, in the transversal venues pass. Four units, four houses, against an opening estimate of 4 produced with no research. The number is the same and the composition is not the one it imagined. Spain, like Italy, has no state list of puppetry venues, and for the same reason: the public money goes to companies and to festivals. What exists instead is a directory kept by the field itself, TiteredData's register of museums, salas, centros and teatros de títeres, and it was the candidate generator. Eighteen entries, of which six are museums and go out under the ruling of 2026-07-28 — Abizanda, the Marionetarium in Barcelona, MITA in Albaida, the Museo del Títere de Cádiz, the Museo Galego da Marioneta, the Museo Taller de Títeres — and one, the Institut del Teatre in Barcelona, is a school. The four that count. The Teatro de Títeres de El Retiro in Madrid, on the Avenida de Méjico, is a municipal space of the Ayuntamiento de Madrid under its Área de Cultura, Turismo y Deporte, and its brief is to be the seat of a puppetry programme of local, national and international reference; it plays every weekend of the year, outdoors and free. TOPIC, at Euskal Herria Plaza in Tolosa, opened in November 2009 out of the Titirijai festival begun in 1983, calls itself the only centre in Europe devoted solely to the art of puppetry, runs a season — 25/26 at the time of reading, with the Titerescena programme of the Centro Dramático Nacional — and shows the Basque Government, the Diputación de Gipuzkoa and the town of Tolosa. Its museum is one of four areas beside theatre, documentation and training, so it is a theatre that keeps a museum and not the reverse. The Centre de Titelles de Lleida, founded in 1986, has occupied the Convent de Santa Teresa since 1996 in premises ceded by the city council, has produced or co-produced some twenty shows and runs the Fira de Titelles with the Ajuntament. The Teatro Arbolé in Zaragoza has built since 1979, opened its first hall in 1990 and moved in 2008 to the Parque del Agua Luis Buñuel; 225 seats, a year-round programme with priority to children's theatre and puppetry, and it appears among the equipment of the Ayuntamiento de Zaragoza. Arbolé is the weakest of the four on vocation, being a children's theatre that came out of puppetry rather than a puppet house. Two salas with their own rooms and resident companies are left out for want of any public backing read: the Sala La Carreta in Elche, 86 seats, owned by the company La Carreta Teatro since 1998, and the Sala Petxina in Valencia, opened in 2008 as the second room of the Teatro de Marionetas la Estrella. Two more from the directory, the Sala Pocas Luces and the Teatre Lluerna, were not read at all. Both omissions run the same way, so four is a floor and the upper bound is set at 8. The Spanish case is worth stating plainly because the map will otherwise mislead. This is a country of companies with rooms, not of institutions with companies, and the indicator sees the second and not the first. Four is what the denominator can prove, not what Spanish puppetry amounts to.",
+      "lower_bound": 4,
+      "upper_bound": 8,
+      "units": {
+        "house": 4
+      },
+      "venues_list": [
+        {
+          "name": "Teatro de Títeres de El Retiro",
+          "city": "Madrid",
+          "address": "Avenida de Méjico s/n, 28009 Madrid",
+          "lat": 40.41872,
+          "lon": -3.6867,
+          "unit": "house",
+          "parent": null,
+          "authority": "Municipal space of the Ayuntamiento de Madrid, Área de Cultura, Turismo y Deporte",
+          "registration": null,
+          "url": "https://teatrotiteresretiro.es",
+          "source": "https://teatrotiteresretiro.es/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "TOPIC, Centro Internacional del Títere de Tolosa",
+          "city": "Tolosa",
+          "address": "Euskal Herria Plaza 1A, 20400 Tolosa",
+          "lat": 43.13805,
+          "lon": -2.07488,
+          "unit": "house",
+          "parent": null,
+          "authority": "Eusko Jaurlaritza, Diputación Foral de Gipuzkoa and the Ayuntamiento de Tolosa",
+          "registration": null,
+          "url": "https://topic.eus",
+          "source": "https://topic.eus/en/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Centre de Titelles de Lleida",
+          "city": "Lleida",
+          "address": "Convent de Santa Teresa, Carrer de les Carmelites 1, 25002 Lleida",
+          "lat": 41.61288,
+          "lon": 0.62234,
+          "unit": "house",
+          "parent": null,
+          "authority": "Premises ceded by the Ajuntament de Lleida in 1996; runs the Fira de Titelles with the city",
+          "registration": null,
+          "url": "https://www.titelleslleida.com",
+          "source": "https://titeredata.eu/museos-salas-centros-y-teatros-de-titeres-en-espana/",
+          "checked_on": "2026-07-28"
+        },
+        {
+          "name": "Teatro Arbolé",
+          "city": "Zaragoza",
+          "address": "Parque del Agua Luis Buñuel, Avenida de las Ranillas, 50010 Zaragoza",
+          "lat": 41.66762,
+          "lon": -0.91006,
+          "unit": "house",
+          "parent": null,
+          "authority": "Listed among the equipment of the Ayuntamiento de Zaragoza",
+          "registration": null,
+          "url": "https://www.teatroarbole.es",
+          "source": "https://www.zaragoza.es/sede/servicio/equipamiento/13023",
+          "checked_on": "2026-07-28"
+        }
+      ]
     },
     {
       "indicator": "schools",
@@ -106,8 +167,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Compagnies more than venues: Etcétera, La Estrella, Titiriteros de Binéfar. Tolosa festival.",
+  "notes": "El Retiro in Madrid, TOPIC in Tolosa, the Centre de Titelles in Lleida, Arbolé in Zaragoza. A country of companies with rooms rather than institutions with companies, and the indicator sees the second.",
   "to_check": [
+    "venues: read the Sala Pocas Luces and the Teatre Lluerna, and look for public backing at the Sala La Carreta in Elche and the Sala Petxina in Valencia. All four would raise the count; none was refused on the merits.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
