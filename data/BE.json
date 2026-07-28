@@ -13,17 +13,17 @@
     },
     {
       "indicator": "venues",
-      "value": 7.0,
+      "value": 5.0,
       "year": 2026,
-      "source": "https://www.maisondelamarionnette.be/fr/",
+      "source": "https://www.toone.be/fr/",
       "confidence": "sourced",
       "status": "disputed",
-      "reasoning": "Collected on 2026-07-28, in Dutch and French, in the transversal venues pass. Seven units, five houses and two stages, against an opening estimate of 3.5 produced with no research. Belgium is the first country where the count doubles, and the reason is the test being applied strictly: what is counted is a place where puppetry is shown, not a company that receives money. Belgium has many subsidised puppetry companies and the denominator excludes them by name; it has more halls than the estimate imagined. Flanders gives two, both freestanding houses. FroeFroe plays at Namenstraat 7 in Antwerp, having taken its own artistic course inside the Koninklijk Jeugdtheater complex from the 1997-98 season and gained a multi-year structural subsidy under the arts decree. Beeldsmederij De Maan holds its own theatre at Minderbroedersgang 3 in Mechelen — a hall of 175 seats, a second of 124 and a café, in the restored Holy Spirit chapel and house — and is a vzw supported by the Flemish government, the city of Mechelen and the province of Antwerp. Two of the four structurally funded Flemish figure-theatre organisations are not counted and the reason is the same rule: Theater De Spiegel and Ultima Thule are companies, and Ultima Thule works in residence in other people's halls, De Spil's Komedie among them. The denominator excludes funded companies without a venue and it is doing exactly the work it was written for. Brussels gives three. The Centre de la Marionnette de la Fédération Wallonie-Bruxelles, with its Musée des Arts de la Marionnette, sits at rue Saint-Martin 47 in Tournai and carries the Fédération Wallonie-Bruxelles, the Wallonie and the Ville de Tournai; it is the designated puppetry centre of the French Community, and it is the weakest of the seven because part of its programming happens in the Créa-Théâtre rather than in a hall of its own. The Théâtre Royal de Toone plays in the impasse Schuddeveld off the rue du Marché-aux-Herbes, is the only traditional Brussels puppet theatre still working, is inscribed on the Brussels inventory of intangible cultural heritage, and shows the Fédération Wallonie-Bruxelles, the Région de Bruxelles-Capitale and the Ville de Bruxelles. The Théâtre Royal du Peruchet has played since 1929 and for more than fifty years in Ixelles, in an eighteenth-century farmhouse holding its theatre and a free puppet museum, with the support of the Communauté française stated on its own pages beside COCOF and the Fédération Wallonie-Bruxelles. Liège gives the two stages, and they are the discovery of the pass. The Théâtre Royal Ancien Impérial at the Musée Tchantchès, rue Surlet 56, is the oldest puppet theatre in Liège; it is run by the asbl République Libre d'Outre-Meuse, whose vocation is the folklore of the quarter rather than puppetry alone, so the theatre is a stage inside it rather than a house. It holds two master puppeteers and a team of five manipulators and plays from October to the end of April, Sundays at 10h30 and Wednesdays at 14h30 — a fixed weekly rhythm, which is what a diffusion venue looks like. The Théâtre de marionnettes du Musée de la Vie wallonne, Cour des Mineurs, has carried the Liège tradition in the same room since 1931, has its own programming from September to April, and sits inside a museum run by the Province de Liège: a named permanent puppet stage inside a larger public organisation, which is the case the ruling of 2026-07-27 was written for. Seven is a floor. The Théâtre à Denis, given as a puppet museum and theatre in Liège, was not read and may well be an eighth; the Liège tradition alone is denser than any other single city in the record so far. The record is disputed on that, and on Tournai.",
-      "lower_bound": 7,
-      "upper_bound": 8,
+      "reasoning": "Collected on 2026-07-28, in Dutch and French, in the transversal venues pass, and corrected the same day. Five units, four houses and one stage, against an opening estimate of 3.5 produced with no research. The first count was 7 and three of those seven were museums; the ruling that a museum programming shows is not a venue of diffusion and creation removed two of them and kept the third. Flanders gives two houses. FroeFroe plays at Namenstraat 7 in Antwerp, having taken its own artistic course inside the Koninklijk Jeugdtheater complex from the 1997-98 season and gained a multi-year structural subsidy under the arts decree. Beeldsmederij De Maan holds its own theatre at Minderbroedersgang 3 in Mechelen — a hall of 175 seats, a second of 124 and a café, in the restored Holy Spirit chapel and house — and is a vzw supported by the Flemish government, the city of Mechelen and the province of Antwerp. Two of the four structurally funded Flemish figure-theatre organisations are not counted, for the rule that counts these: Theater De Spiegel and Ultima Thule are companies, and Ultima Thule works in residence in other people's halls, De Spil's Komedie among them. Brussels gives two houses. The Théâtre Royal de Toone plays in the impasse Schuddeveld off the rue du Marché-aux-Herbes, is the only traditional Brussels puppet theatre still working, is inscribed on the Brussels inventory of intangible cultural heritage, and shows the Fédération Wallonie-Bruxelles, the Région de Bruxelles-Capitale and the Ville de Bruxelles. The Théâtre Royal du Peruchet has played since 1929 and for more than fifty years in Ixelles, in an eighteenth-century farmhouse holding its theatre and a free puppet museum, with the support of the Communauté française stated on its own pages beside COCOF and the Fédération Wallonie-Bruxelles. Peruchet keeps a museum and is not one: it is a theatre that has played for a century and shows its collection to its own audience. Liège gives the stage, and it is the discovery of the pass. The Théâtre Royal Ancien Impérial at the Musée Tchantchès, rue Surlet 56, is the oldest puppet theatre in the city. It is run by the asbl République Libre d'Outre-Meuse, whose vocation is the folklore of the quarter rather than puppetry alone, so it is a stage inside a larger organisation rather than a house. It holds two master puppeteers and a team of five manipulators and plays from October to the end of April, Sundays at 10h30 and Wednesdays at 14h30. That fixed weekly rhythm and that permanent troupe are why it survived the museum ruling while the other two did not: the museum is beside the theatre here, not the thing doing the programming. Two are removed and the removal is the point. The Théâtre de marionnettes du Musée de la Vie wallonne has carried the Liège tradition in the same room since 1931 and has its own programming from September to April, but it is a room in an ethnographic museum run by the Province de Liège, and a museum that programmes shows is not a venue of diffusion and creation. The Centre de la Marionnette de la Fédération Wallonie-Bruxelles at rue Saint-Martin 47 in Tournai fails twice over: it is the French Community's designated puppetry centre and its Musée des Arts de la Marionnette, and its programming happens in the Créa-Théâtre rather than in a hall of its own. It is the most institutionally recognised puppetry body in French-speaking Belgium and it is not a venue. Five is a floor. Le Théâtre à Denis, given as a puppet museum and theatre in Liège, was not read and would have to pass the same test. The record is disputed on that and on Tchantchès, which is the one entry where the museum ruling had to be applied by judgement rather than by reading.",
+      "lower_bound": 5,
+      "upper_bound": 7,
       "units": {
-        "house": 5,
-        "stage": 2
+        "house": 4,
+        "stage": 1
       },
       "venues_list": [
         {
@@ -52,20 +52,6 @@
           "registration": null,
           "url": "https://www.demaan.be",
           "source": "https://nl.wikipedia.org/wiki/Beeldsmederij_De_Maan",
-          "checked_on": "2026-07-28"
-        },
-        {
-          "name": "Centre de la Marionnette de la Fédération Wallonie-Bruxelles",
-          "city": "Tournai",
-          "address": "Rue Saint-Martin 47, 7500 Tournai",
-          "lat": 50.60482,
-          "lon": 3.38622,
-          "unit": "house",
-          "parent": null,
-          "authority": "Fédération Wallonie-Bruxelles, Wallonie and Ville de Tournai",
-          "registration": null,
-          "url": "https://www.maisondelamarionnette.be",
-          "source": "https://www.maisondelamarionnette.be/fr/",
           "checked_on": "2026-07-28"
         },
         {
@@ -108,20 +94,6 @@
           "registration": null,
           "url": "https://www.tchantches.be",
           "source": "https://www.tchantches.be/le-theatre/",
-          "checked_on": "2026-07-28"
-        },
-        {
-          "name": "Théâtre de marionnettes du Musée de la Vie wallonne",
-          "city": "Liège",
-          "address": "Cour des Mineurs, 4000 Liège",
-          "lat": 50.64701,
-          "lon": 5.57622,
-          "unit": "stage",
-          "parent": "Musée de la Vie wallonne, Province de Liège",
-          "authority": "Province de Liège, which runs the museum",
-          "registration": null,
-          "url": "https://www.provincedeliege.be/viewallonne",
-          "source": "https://www.provincedeliege.be/viewallonne",
           "checked_on": "2026-07-28"
         }
       ]
@@ -209,9 +181,9 @@
       "reasoning": "Opening estimate, produced with no source and no research. It exists to be falsified, not to be used as data."
     }
   ],
-  "notes": "Two houses in Flanders, the FWB puppetry centre in Tournai, Toone and the Peruchet in Brussels, and two permanent puppet stages in Liège. The subsidised companies without halls — De Spiegel, Ultima Thule — are outside.",
+  "notes": "Two houses in Flanders, Toone and the Peruchet in Brussels, and the oldest Liège puppet theatre at the Musée Tchantchès. The FWB puppetry centre in Tournai and the Musée de la Vie wallonne are museums and are outside.",
   "to_check": [
-    "venues: read Le Théâtre à Denis in Liège, given as a puppet museum and theatre and not opened in this pass. Liège alone is denser than any other city in the record and an eighth unit there is likely.",
+    "venues: read Le Théâtre à Denis in Liège, given as a puppet museum and theatre. It has to pass the museum test — a theatre that keeps a museum counts, a museum that programmes shows does not.",
     "Settle the denominator of the dates indicator before collecting anything.",
     "Find the annual report of at least one organisation in the country."
   ]
