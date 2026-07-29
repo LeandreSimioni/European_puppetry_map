@@ -6,11 +6,11 @@ Everything here started as memory: values produced without research, to serve as
 hypotheses to be confirmed or refuted country by country. That is the point of
 the exercise — a preview precise enough to be refutable.
 
-**Two indicators have since been checked.** `schools` has been verified against
+**Three indicators have since been checked.** `schools` has been verified against
 sources for all 45 countries and carries the named list of the establishments
 behind each count; that layer is now closed. `population_M` is sourced for all
-45. `venues` and `performances` are being collected, five countries at a time;
-`venues` is sourced for 44 countries, `performances` for 6.
+45. **`venues` is now sourced for all 45 as well**, and carries 245 named venues.
+`performances` is still being collected and stands at 6 countries.
 Every other indicator is still an estimate and must not leave this repository.
 
 ## The population layer
@@ -205,6 +205,57 @@ already held both answers.
 Both kinds are named in the country's reasoning rather than dropped in silence.
 An omission that cannot be seen is indistinguishable from an oversight.
 
+### Russia, and the register a rubric is not, 2026-07-29
+
+The last country on `venues` closed at **63** — sixty houses and three stages, the
+largest count in the record by a wide margin, against an estimate of 80.
+
+The previous pass had stopped for want of a register and left sixty-seven candidates
+taken from a private directory. The register exists and the ministry publishes it:
+Культура.РФ catalogues theatres and filters them by federal subject. Its **puppetry
+rubric was tried first and refused**, and that refusal is the transferable finding.
+The rubric returns 43 entries for the whole federation and **zero** for Nizhny
+Novgorod, Saratov, Kirov and Tver, each of which holds a state puppet theatre. It is
+an editorial tag, not a classification, and a count built on it would have been wrong
+by half. What was read instead is the unfiltered catalogue of all fifty-five European
+federal subjects, paged to exhaustion: 753 theatres, of which 85 name puppetry. All
+85 were opened one at a time.
+
+Twenty-two were set aside, in four kinds: six second halls of a unit already counted;
+four failing on vocation, Vyborg's theatre of drama and puppets among them, the shape
+already refused for Kolibri, Osijek and Sumy; and twelve stating no public backing.
+
+**The count is disputed on completeness, not on reading.** Tula's state puppet theatre
+is missing from its own region's listing and its catalogue page answers 404, although
+the theatre exists; it is counted from its own site. A catalogue that drops a regional
+state theatre can drop others, so the upper bound is held at 70.
+
+Two things this pass corrected. The Golden Jug is at **Maykop**, inside the Adygea
+philharmonic, not at Cherkessk where the previous pass had put it — and
+Karachay-Cherkessia holds no puppet theatre at all. And reading the founders overturned
+two names: `Крошка` at Saransk and `Куклы и люди` at Lobnya read as private troupes and
+are municipal institutions. Authority stays null for 59 of the 63, which is a fact
+about the portal — it gives an address and a website and never names a founder.
+
+### What the frame could not hold
+
+Seven Russian venues — Vorkuta, Perm, Izhevsk, Ufa, Naberezhnye Chelny, Samara and
+Orenburg — fall outside the drawn outline of Russia, and their coordinates are right.
+Natural Earth's Russia runs to the Pacific; this base map was cut long before the
+Urals, so Orenburg projected past the right edge and Vorkuta far above the top.
+
+The frame is now computed from the outlines plus every point that has to be shown. No
+projection changed and no country moved — only the viewBox. The empty ground to the
+north-east is deliberate: it is the part of the continent this base map never drew,
+and a marker standing in it beats a marker suppressed.
+
+Containment could not test those points, since the outline it tests against is the
+truncated one, and it was rejecting Perm and Ufa for being correctly placed. Russia is
+therefore checked against what the scope ruling asserts — west of the Urals, the Ural
+river and the Caspian. That is **stricter** than containment, not looser: it catches a
+venue recorded at Yekaterinburg, Chelyabinsk or Omsk, which the full Natural Earth
+outline would have swallowed without complaint.
+
 ## The activity layer
 
 `performances` is the newest indicator and the first that counts work rather
@@ -376,19 +427,13 @@ link to its website.
 
 ## Next steps
 
-1. **Source `venues` and `performances`, five countries at a time.** In progress.
-   These are the two indicators a desk can reach: national culture statistics
-   count both, and neither waits on the `dates` ruling. One country is left on
-   `venues`, and it is a session of its own:
-   - **Russia**, European part, under the scope ruling of 2026-07-28. No register
-     could be read — the federal culture portal's catalogue answers 404 and the
-     Wikipedia category misses Kazan and Rostov. What exists is a directory
-     indexed by region and city, whose 54 European regions and 175 city pages
-     were read on 2026-07-28 and yielded 63 puppet entries; four more were
-     confirmed elsewhere. That list is kept in `data/RU.json` and it is not a
-     count: thirteen regions return nothing, the list mixes state houses with
-     private Moscow troupes, and Vyborg plays drama and puppets with one company.
-     Sixty-seven candidates to open one at a time.
+1. **`venues` is complete at 45 countries.** `performances` continues, five
+   countries at a time: national culture statistics count it and it does not wait
+   on the `dates` ruling. What Russia left open is narrow and named in
+   `data/RU.json` — a second enumeration to bound what the ministry's catalogue
+   drops, Tula having proved it drops things, and six regions returning nothing
+   (Ingushetia, Karachay-Cherkessia, North Ossetia, Chechnya, Novgorod and the
+   Nenets district) which are unconfirmed absences rather than established zeros.
 2. Settle the denominator of `dates`. It blocks 90 observations — `dates` and
    `share_under_20` for all 45 countries.
 3. Settle the Ukrainian denominator — residents, de jure population, or
