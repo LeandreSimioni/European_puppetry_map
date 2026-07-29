@@ -237,32 +237,42 @@ two names: `Крошка` at Saransk and `Куклы и люди` at Lobnya read
 are municipal institutions. Authority stays null for 59 of the 63, which is a fact
 about the portal — it gives an address and a website and never names a founder.
 
-### The cut that was hiding twenty theatres
+### Twenty venues that cannot be drawn, and the projection behind them
 
-**Twenty** Russian venues fell outside the drawn outline of Russia, and their
-coordinates are right. The base map closes Russia with a single straight chord from
-the Arctic coast to the Caspian — the cut made when the outlines were fitted to a
-European frame, and the one segment of that shape which is neither a border nor a
-coast. Kazan, Perm, Ufa, Samara, Vorkuta and fifteen others stand east of it.
+**Twenty of the sixty-three Russian venues are counted and not drawn.** They fall east
+of where this base map stops — its Russian outline is closed by a straight chord from
+the Arctic coast to the Caspian, the cut made when the outlines were fitted to a
+European frame — but the deeper reason is that they fall east of where the map's
+**projection** is fitted at all.
 
-Thirteen of the twenty were worse than invisible. The build pulls a point landing just
-offshore back towards the country's centroid — right for a generalised coastline,
-wrong for a continent that was cut off — and it did so **silently**, putting markers in
-the wrong town. Venue shifts are now logged like school shifts, which is how this
-surfaced at all.
+`tools/projection.py` is a degree-2 polynomial fitted on European centroids.
+Extrapolated past about 45°E it does not degrade, it fails:
 
-The chord is pushed out past the edge of the frame, and only the chord: **no vertex
-Natural Earth drew is touched and `geo/europe.json` is unchanged.** This is
-deliberately not the true shape of Russia — it is the same honest cut, moved far
-enough to hold the country's own theatres. The frame is computed from the outlines
-plus every point that must be shown, and the SVG now clips to it, so Russia runs off
-the top and right of the map rather than onto the page.
+| | |
+|---|---|
+| **Vorkuta**, 67.5°N | plots ~200 px **north** of **Murmansk**, 69.0°N |
+| **Ufa**, 54.7°N | plots **north** of **Moscow**, 55.8°N |
+| along 60°N | `y` falls 339 px between 20°E and 70°E, where a conic barely moves |
 
-Because that extended outline would happily swallow a venue at Yekaterinburg or Omsk,
-the scope ruling is enforced on the coordinate **before** the outline is consulted:
-west of the Urals, the Ural river and the Caspian. That is stricter than containment,
-not looser. Only Krasnodar is still nudged, by 14 px, where the fitted projection
-drifts at the southern border.
+Widening the drawing to cover those markers was tried on 2026-07-29 and undone the
+same day: it was colouring ground to reach points that were in the wrong place to
+begin with. An unmapped venue beats a false one — the trade this record has always
+made.
+
+**Thirteen were worse than undrawn.** The build pulls a point landing just offshore
+back towards the country's centroid — right for a generalised coastline, wrong for a
+continent that was cut off — and it did so **silently**, putting markers in the wrong
+town. That rescue is now capped at 12 px and every shift is logged. The cap separates
+two clean populations: no genuine coastal case in the whole record needs more than
+6.3 px, and no Russian case needs less than 14.
+
+The scope ruling is checked on the coordinate in validation rather than against the
+drawing, since a venue at Yekaterinburg would otherwise just go undrawn like the
+legitimate ones instead of failing the build.
+
+The count is unaffected: what this study measures is the venue, and the marker is only
+how it is shown. Every build prints the undrawn twenty by name, so a venue that quietly
+stops being drawn cannot go unnoticed.
 
 ## The activity layer
 

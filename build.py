@@ -11,48 +11,13 @@ it is overwritten on every build.
 import json, math, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / 'tools'))
-from projection import project, inside_path, rings
+from projection import project, inside_path
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SCHEMA = json.loads((ROOT / 'schema.json').read_text())
 GEO = json.loads((ROOT / 'geo' / 'europe.json').read_text())
 
 
-# The base map draws Russia as a wedge closed by one straight chord running from
-# the Arctic coast, (703.8, 54.5), to the Caspian, (948.3, 578.0). Every other
-# segment of that outline is a real border or a real coast; this one is the cut
-# made when the outlines were fitted to a European frame, and everything east of
-# it was dropped. Twenty counted venues stand east of it — Kazan, Perm, Ufa,
-# Samara, Vorkuta, Orenburg among them — and a marker on white ground reads as a
-# mistake rather than as a theatre.
-#
-# So the chord is pushed out past the frame, and only the chord: no vertex that
-# Natural Earth drew is touched, and geo/europe.json keeps the outlines exactly
-# as it received them. This is deliberately not the true shape of Russia — it is
-# the same honest cut, moved far enough east and north to hold the country's own
-# theatres, and running off the top and right of the frame so that what a reader
-# sees is a country continuing beyond the map, which is true, rather than one
-# stopping in the middle of the Volga, which is not.
-RU_CHORD = ((703.8, 54.5), (948.3, 578.0))
-RU_BLEED = [(740.0, -400.0), (1500.0, -400.0), (1500.0, 650.0)]
-
-
-def extend_russia(geo):
-    """Replaces the Russian chord with a boundary that leaves the frame."""
-    a, b = RU_CHORD
-    rs = rings(geo['paths']['RU'])
-    main = max(rs, key=len)
-    near = lambda p, q: math.dist(p, q) < 0.5
-    if not (near(main[0], b) and near(main[-1], a)):
-        raise SystemExit('RU outline no longer ends on the chord it used to: '
-                         'the base map changed and the extension must be refitted.')
-    rs[rs.index(main)] = main + RU_BLEED
-    geo['paths']['RU'] = ''.join(
-        'M' + 'L'.join(f'{x:.1f},{y:.1f}' for x, y in r) + 'Z' for r in rs)
-    return geo
-
-
-GEO = extend_russia(GEO)
 TPL = (ROOT / 'templates' / 'carte.html').read_text()
 
 IDS = {i['id'] for i in SCHEMA['indicators']}
@@ -69,6 +34,36 @@ PERF_BASES = {'form', 'organisation'}
 VENUE_UNITS = ('house', 'stage', 'unknown')
 VENUE_FIELDS = ('name', 'city', 'address', 'lat', 'lon', 'unit', 'parent',
                 'authority', 'registration', 'url', 'source', 'checked_on')
+
+
+def west_of_the_urals(lon, lat):
+    """The scope ruling of 2026-07-28 in three lines: Urals, Ural river, Caspian.
+
+    Approximated by latitude band, which is enough to catch the error that
+    matters — a Russian venue recorded east of the line, in a part of the
+    federation this study does not cover.
+    """
+    if lat >= 66.0:      # the Polar Urals run east of Vorkuta
+        return lon <= 66.0
+    if lat >= 50.0:      # the range proper, keeping Perm, Ufa and Kirov inside
+        return lon <= 60.5
+    return lon <= 56.0   # the Ural river down to the Caspian
+
+
+# A generalised coastline puts a port a few pixels offshore. It does not put a
+# city two hundred pixels into the sea. The rescue below is for the first case
+# only, and the cap is what tells them apart: beyond it, the point is not a
+# rounding error against the drawing but a point the drawing cannot hold.
+#
+# 12 px is not arbitrary. The data separates cleanly into two populations: every
+# genuine coastal case needs 6.3 px or less (Fredrikstad is the worst, then
+# Porto at 4.6), and every case caused by the projection failing in the east
+# needs 14 px or more (Penza 14.0, Krasnodar 14.3, Saransk 16.1, and the rest
+# hundreds). The cap sits in that gap, just above the 12.5 px worst case
+# tools/projection.py declares for its own fit — so anything needing more cannot
+# be explained by the projection's known error at all.
+MAX_SHIFT_PX = 12.0
+
 
 
 def check_venues(code, o):
@@ -122,6 +117,13 @@ def check_venues(code, o):
             err.append(f'{code}/venues/{where}: half a coordinate is not a coordinate')
         if not v.get('source'):
             err.append(f'{code}/venues/{where}: no source')
+        # The scope ruling of 2026-07-28 checked on the coordinate, because the
+        # drawing cannot check it: the base map stops before the Urals, so a
+        # venue in Yekaterinburg would simply go undrawn like the legitimate
+        # eastern ones rather than announce itself. This is data, not display.
+        if code == 'RU' and v['lat'] is not None and not west_of_the_urals(v['lon'], v['lat']):
+            err.append(f'{code}/venues/{where}: east of the Urals, outside the scope '
+                       f'this record covers')
         tally[v['unit']] = tally.get(v['unit'], 0) + 1
     if len(lst) != named:
         err.append(f'{code}/venues: {len(lst)} venue(s) listed but house + stage = {named}. '
@@ -239,36 +241,24 @@ def load():
     return countries, errors
 
 
-def west_of_the_urals(lon, lat):
-    """The scope ruling of 2026-07-28 in three lines: Urals, Ural river, Caspian.
-
-    Approximated by latitude band, which is enough to catch the error that
-    matters — a Russian venue recorded east of the line, in a part of the
-    federation this study does not cover.
-    """
-    if lat >= 66.0:      # the Polar Urals run east of Vorkuta
-        return lon <= 66.0
-    if lat >= 50.0:      # the range proper, keeping Perm, Ufa and Kirov inside
-        return lon <= 60.5
-    return lon <= 56.0   # the Ural river down to the Caspian
-
-
 def locate(code, lon, lat):
-    """Projects a school and pulls it back inside its country outline if needed.
+    """Projects a point and pulls it back inside its country outline if needed.
 
     The coastline of the base map is generalised, so a port city often lands a
     few pixels offshore. In that case the point is moved towards the country
-    centroid in 2% steps, up to 40% of the way. Returns (x, y, shift_in_px), or
-    None if the point stays outside, which signals a wrong coordinate rather
-    than a roughly cut coastline.
+    centroid in 2% steps, up to 40% of the way or MAX_SHIFT_PX, whichever comes
+    first. Returns (x, y, shift_in_px), or None when no small shift rescues it.
 
-    Russia carries one check the others do not need. Its outline is the extended
-    one, which reaches past the frame and would happily swallow a venue recorded
-    in Yekaterinburg or Omsk, so the scope ruling of 2026-07-28 is enforced on
-    the coordinate itself before the outline is consulted at all.
+    The cap was added on 2026-07-29 and it is not a detail. Without it the
+    rescue will drag a point any distance at all, and it was dragging thirteen
+    Russian venues — Kazan, Perm, Ufa, Samara among them — up to two hundred
+    pixels towards the centroid and drawing them in the wrong town. They are not
+    offshore. They are east of where this base map stops and, worse, east of
+    where its projection is fitted: tools/projection.py is a degree-2 polynomial
+    fitted on European centroids, and extrapolated past about lon 45 it fails
+    grossly, placing Vorkuta at 67.5N some 200 px north of Murmansk at 69.0N and
+    Ufa north of Moscow. A marker there is not approximate, it is false.
     """
-    if code == 'RU' and not west_of_the_urals(lon, lat):
-        return None
     x, y = project(lon, lat)
     outline = GEO['paths'].get(code)
     if outline is None or inside_path(outline, x, y):
@@ -277,6 +267,8 @@ def locate(code, lon, lat):
     for i in range(1, 21):
         t = i * 0.02
         nx, ny = x + (cx - x) * t, y + (cy - y) * t
+        if math.hypot(nx - x, ny - y) > MAX_SHIFT_PX:
+            return None
         if inside_path(outline, nx, ny):
             return nx, ny, math.hypot(nx - x, ny - y)
     return None
@@ -308,11 +300,12 @@ def school_points(countries):
 def venue_points(countries):
     """[x, y, name, city, address, unit, parent, authority, url, output] per country.
     A venue with no coordinate keeps its place in the count and simply does not
-    appear on the map. A venue that had to be pulled inland is reported: the
-    shift was silent here until 2026-07-29, and thirteen Russian venues were
-    being dragged up to 40% of the way to the country's centroid without saying
-    so, which is a marker in the wrong town rather than a marker missing."""
-    pts, lost, shifted = {}, [], []
+    appear on the map, and so does one the base map cannot hold: the count is
+    what this study measures, the marker is only how it is shown. Both are
+    reported. Until 2026-07-29 neither was — the shift was silent and thirteen
+    Russian venues were being dragged towards the centroid without a word, which
+    is a marker in the wrong town rather than a marker missing."""
+    pts, beyond, shifted = {}, [], []
     for code, p in countries.items():
         lst = []
         out = ((p['obs'].get('performances') or {}).get('by_venue') or [])
@@ -323,7 +316,7 @@ def venue_points(countries):
                 continue
             r = locate(code, e['lon'], e['lat'])
             if r is None:
-                lost.append(f"{code}/{e['name']}")
+                beyond.append(f"{code}/{e.get('city') or e['name']}")
                 continue
             x, y, d = r
             if d > 0:
@@ -334,7 +327,7 @@ def venue_points(countries):
                         out.get(e['name'], 0)])
         if lst:
             pts[code] = lst
-    return pts, lost, shifted
+    return pts, beyond, shifted
 
 
 def frame(*point_sets):
@@ -430,14 +423,19 @@ def main():
     pts, shifted, lost = school_points(countries)
     tot = sum(len(v) for v in pts.values())
     print(f'{tot} establishments located across {len(pts)} countries')
-    vpts, vlost, vshifted = venue_points(countries)
+    vpts, beyond, vshifted = venue_points(countries)
     vtot = sum(len(v) for v in vpts.values())
     nlist = sum(len(p['obs']['venues'].get('venues_list', [])) for p in countries.values())
     print(f'{vtot} venues located of {nlist} listed, across {len(vpts)} countries')
-    lost += vlost
     shifted += vshifted
     if shifted:
         print(f'  pulled inland (generalised coastline): {", ".join(shifted)}')
+    # Counted, and off the base map. Not an error: the count is the measurement
+    # and the marker is only the display of it. Printed every build so that a
+    # venue which quietly stops being drawn cannot go unnoticed.
+    if beyond:
+        print(f'  counted but beyond the base map, not drawn ({len(beyond)}): '
+              f'{", ".join(beyond)}')
     if lost:
         print('INVALID DATA', file=sys.stderr)
         print(f'  outside their country outline even after shifting: {", ".join(lost)}',
