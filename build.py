@@ -202,6 +202,20 @@ def load():
     return countries, errors
 
 
+def west_of_the_urals(lon, lat):
+    """The scope ruling of 2026-07-28 in three lines: Urals, Ural river, Caspian.
+
+    Approximated by latitude band, which is enough to catch the error that
+    matters — a Russian venue recorded east of the line, in a part of the
+    federation this study does not cover.
+    """
+    if lat >= 66.0:      # the Polar Urals run east of Vorkuta
+        return lon <= 66.0
+    if lat >= 50.0:      # the range proper, keeping Perm, Ufa and Kirov inside
+        return lon <= 60.5
+    return lon <= 56.0   # the Ural river down to the Caspian
+
+
 def locate(code, lon, lat):
     """Projects a school and pulls it back inside its country outline if needed.
 
@@ -210,11 +224,21 @@ def locate(code, lon, lat):
     centroid in 2% steps, up to 40% of the way. Returns (x, y, shift_in_px), or
     None if the point stays outside, which signals a wrong coordinate rather
     than a roughly cut coastline.
+
+    Russia is the exception, and not because its data deserves less checking.
+    The base map's Russian outline is cut by the frame — Natural Earth's Russia
+    runs to the Pacific and the drawing stops long before the Urals do — so
+    containment there tests the frame rather than the coordinate, and rejects
+    Perm, Ufa and Vorkuta for being correctly placed. What is tested instead is
+    what the scope ruling actually asserts: the venue lies west of the line. A
+    point beyond it is out of scope, which is the error worth catching here.
     """
     x, y = project(lon, lat)
     outline = GEO['paths'].get(code)
     if outline is None or inside_path(outline, x, y):
         return x, y, 0.0
+    if code == 'RU':
+        return (x, y, 0.0) if west_of_the_urals(lon, lat) else None
     cx, cy = GEO['centroids'][code]
     for i in range(1, 21):
         t = i * 0.02
@@ -274,6 +298,24 @@ def venue_points(countries):
     return pts, lost
 
 
+def frame(*point_sets):
+    """The SVG viewBox: the drawn outlines, plus whatever falls outside them.
+
+    The base map was cut to the countries it draws, and eastern European Russia
+    is not one of them: Vorkuta lands above the top edge and Orenburg past the
+    right one. Rather than drop those venues or invent a Russian coastline for
+    them, the frame simply opens far enough to hold every point it has to show.
+    The space that appears to the north-east is empty on purpose — it is the part
+    of the continent this base map never drew.
+    """
+    xs = [p[0] for s in point_sets for lst in s.values() for p in lst]
+    ys = [p[1] for s in point_sets for lst in s.values() for p in lst]
+    pad = 6.0
+    x0, y0 = min([0.0] + xs) - pad, min([0.0] + ys) - pad
+    x1, y1 = max([GEO['w']] + xs) + pad, max([GEO['h']] + ys) + pad
+    return [round(x0, 1), round(y0, 1), round(x1 - x0, 1), round(y1 - y0, 1)]
+
+
 def payload(countries):
     """Pivots the long format into the structure the template expects."""
     data, job, conf = {}, {}, {}
@@ -316,7 +358,8 @@ def payload(countries):
              for code, p in countries.items() if p['obs']['venues'].get('venues_list')}
     checked = {c: p['obs']['schools'].get('checked_on') for c, p in countries.items()
                if p['obs']['schools'].get('checked_on')}
-    return {'geo': GEO, 'data': data, 'job': job, 'act': act, 'units': units,
+    return {'geo': dict(GEO, frame=frame(pts, vpts)), 'data': data, 'job': job,
+            'act': act, 'units': units,
             'confidence': conf, 'school_pts': pts, 'venue_pts': vpts, 'venue_list': vlist,
             'by_venue': {c: (p['obs'].get('performances') or {}).get('by_venue')
                          for c, p in countries.items()

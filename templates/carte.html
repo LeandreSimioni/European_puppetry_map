@@ -280,7 +280,9 @@ let metric = METRICS[0], showSchools = true, showVenues = true, showLabels = fal
 
 /* ---- carte ---- */
 const map = document.getElementById('map');
-map.setAttribute('viewBox', `-6 -6 ${GEO.w+12} ${GEO.h+12}`);
+/* The frame is computed at build time and opens wide enough to hold every point,
+   including the eastern Russian venues the base map's outline stops short of. */
+map.setAttribute('viewBox', (GEO.frame || [-6, -6, GEO.w+12, GEO.h+12]).join(' '));
 const NS='http://www.w3.org/2000/svg';
 (function defs(){
   const d=document.createElementNS(NS,'defs');
