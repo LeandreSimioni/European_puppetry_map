@@ -11,11 +11,48 @@ it is overwritten on every build.
 import json, math, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / 'tools'))
-from projection import project, inside_path
+from projection import project, inside_path, rings
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SCHEMA = json.loads((ROOT / 'schema.json').read_text())
 GEO = json.loads((ROOT / 'geo' / 'europe.json').read_text())
+
+
+# The base map draws Russia as a wedge closed by one straight chord running from
+# the Arctic coast, (703.8, 54.5), to the Caspian, (948.3, 578.0). Every other
+# segment of that outline is a real border or a real coast; this one is the cut
+# made when the outlines were fitted to a European frame, and everything east of
+# it was dropped. Twenty counted venues stand east of it — Kazan, Perm, Ufa,
+# Samara, Vorkuta, Orenburg among them — and a marker on white ground reads as a
+# mistake rather than as a theatre.
+#
+# So the chord is pushed out past the frame, and only the chord: no vertex that
+# Natural Earth drew is touched, and geo/europe.json keeps the outlines exactly
+# as it received them. This is deliberately not the true shape of Russia — it is
+# the same honest cut, moved far enough east and north to hold the country's own
+# theatres, and running off the top and right of the frame so that what a reader
+# sees is a country continuing beyond the map, which is true, rather than one
+# stopping in the middle of the Volga, which is not.
+RU_CHORD = ((703.8, 54.5), (948.3, 578.0))
+RU_BLEED = [(740.0, -400.0), (1500.0, -400.0), (1500.0, 650.0)]
+
+
+def extend_russia(geo):
+    """Replaces the Russian chord with a boundary that leaves the frame."""
+    a, b = RU_CHORD
+    rs = rings(geo['paths']['RU'])
+    main = max(rs, key=len)
+    near = lambda p, q: math.dist(p, q) < 0.5
+    if not (near(main[0], b) and near(main[-1], a)):
+        raise SystemExit('RU outline no longer ends on the chord it used to: '
+                         'the base map changed and the extension must be refitted.')
+    rs[rs.index(main)] = main + RU_BLEED
+    geo['paths']['RU'] = ''.join(
+        'M' + 'L'.join(f'{x:.1f},{y:.1f}' for x, y in r) + 'Z' for r in rs)
+    return geo
+
+
+GEO = extend_russia(GEO)
 TPL = (ROOT / 'templates' / 'carte.html').read_text()
 
 IDS = {i['id'] for i in SCHEMA['indicators']}
@@ -225,20 +262,17 @@ def locate(code, lon, lat):
     None if the point stays outside, which signals a wrong coordinate rather
     than a roughly cut coastline.
 
-    Russia is the exception, and not because its data deserves less checking.
-    The base map's Russian outline is cut by the frame — Natural Earth's Russia
-    runs to the Pacific and the drawing stops long before the Urals do — so
-    containment there tests the frame rather than the coordinate, and rejects
-    Perm, Ufa and Vorkuta for being correctly placed. What is tested instead is
-    what the scope ruling actually asserts: the venue lies west of the line. A
-    point beyond it is out of scope, which is the error worth catching here.
+    Russia carries one check the others do not need. Its outline is the extended
+    one, which reaches past the frame and would happily swallow a venue recorded
+    in Yekaterinburg or Omsk, so the scope ruling of 2026-07-28 is enforced on
+    the coordinate itself before the outline is consulted at all.
     """
+    if code == 'RU' and not west_of_the_urals(lon, lat):
+        return None
     x, y = project(lon, lat)
     outline = GEO['paths'].get(code)
     if outline is None or inside_path(outline, x, y):
         return x, y, 0.0
-    if code == 'RU':
-        return (x, y, 0.0) if west_of_the_urals(lon, lat) else None
     cx, cy = GEO['centroids'][code]
     for i in range(1, 21):
         t = i * 0.02
@@ -274,8 +308,11 @@ def school_points(countries):
 def venue_points(countries):
     """[x, y, name, city, address, unit, parent, authority, url, output] per country.
     A venue with no coordinate keeps its place in the count and simply does not
-    appear on the map."""
-    pts, lost = {}, []
+    appear on the map. A venue that had to be pulled inland is reported: the
+    shift was silent here until 2026-07-29, and thirteen Russian venues were
+    being dragged up to 40% of the way to the country's centroid without saying
+    so, which is a marker in the wrong town rather than a marker missing."""
+    pts, lost, shifted = {}, [], []
     for code, p in countries.items():
         lst = []
         out = ((p['obs'].get('performances') or {}).get('by_venue') or [])
@@ -288,14 +325,16 @@ def venue_points(countries):
             if r is None:
                 lost.append(f"{code}/{e['name']}")
                 continue
-            x, y, _ = r
+            x, y, d = r
+            if d > 0:
+                shifted.append(f"{code}/{e.get('city') or e['name']} {d:.1f}px")
             lst.append([round(x, 1), round(y, 1), e['name'], e.get('city') or '',
                         e.get('address') or '', e['unit'], e.get('parent') or '',
                         e.get('authority') or '', e.get('url') or '',
                         out.get(e['name'], 0)])
         if lst:
             pts[code] = lst
-    return pts, lost
+    return pts, lost, shifted
 
 
 def frame(*point_sets):
@@ -310,7 +349,9 @@ def frame(*point_sets):
     """
     xs = [p[0] for s in point_sets for lst in s.values() for p in lst]
     ys = [p[1] for s in point_sets for lst in s.values() for p in lst]
-    pad = 6.0
+    # Wide enough that a marker at the extreme point keeps its ring, now that the
+    # frame clips instead of letting the drawing spill onto the page.
+    pad = 10.0
     x0, y0 = min([0.0] + xs) - pad, min([0.0] + ys) - pad
     x1, y1 = max([GEO['w']] + xs) + pad, max([GEO['h']] + ys) + pad
     return [round(x0, 1), round(y0, 1), round(x1 - x0, 1), round(y1 - y0, 1)]
@@ -351,7 +392,7 @@ def payload(countries):
              if e.get('venue') and e['unit'] == 'performances'}
         if m:
             vout[code] = m
-    vpts, _ = venue_points(countries)
+    vpts, _, _ = venue_points(countries)
     vlist = {code: [{k: e[k] for k in ('name', 'city', 'address', 'unit', 'parent',
                                        'authority', 'registration', 'url')}
                     for e in p['obs']['venues'].get('venues_list', [])]
@@ -389,11 +430,12 @@ def main():
     pts, shifted, lost = school_points(countries)
     tot = sum(len(v) for v in pts.values())
     print(f'{tot} establishments located across {len(pts)} countries')
-    vpts, vlost = venue_points(countries)
+    vpts, vlost, vshifted = venue_points(countries)
     vtot = sum(len(v) for v in vpts.values())
     nlist = sum(len(p['obs']['venues'].get('venues_list', [])) for p in countries.values())
     print(f'{vtot} venues located of {nlist} listed, across {len(vpts)} countries')
     lost += vlost
+    shifted += vshifted
     if shifted:
         print(f'  pulled inland (generalised coastline): {", ".join(shifted)}')
     if lost:

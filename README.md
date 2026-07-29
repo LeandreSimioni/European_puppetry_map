@@ -237,24 +237,32 @@ two names: `Крошка` at Saransk and `Куклы и люди` at Lobnya read
 are municipal institutions. Authority stays null for 59 of the 63, which is a fact
 about the portal — it gives an address and a website and never names a founder.
 
-### What the frame could not hold
+### The cut that was hiding twenty theatres
 
-Seven Russian venues — Vorkuta, Perm, Izhevsk, Ufa, Naberezhnye Chelny, Samara and
-Orenburg — fall outside the drawn outline of Russia, and their coordinates are right.
-Natural Earth's Russia runs to the Pacific; this base map was cut long before the
-Urals, so Orenburg projected past the right edge and Vorkuta far above the top.
+**Twenty** Russian venues fell outside the drawn outline of Russia, and their
+coordinates are right. The base map closes Russia with a single straight chord from
+the Arctic coast to the Caspian — the cut made when the outlines were fitted to a
+European frame, and the one segment of that shape which is neither a border nor a
+coast. Kazan, Perm, Ufa, Samara, Vorkuta and fifteen others stand east of it.
 
-The frame is now computed from the outlines plus every point that has to be shown. No
-projection changed and no country moved — only the viewBox. The empty ground to the
-north-east is deliberate: it is the part of the continent this base map never drew,
-and a marker standing in it beats a marker suppressed.
+Thirteen of the twenty were worse than invisible. The build pulls a point landing just
+offshore back towards the country's centroid — right for a generalised coastline,
+wrong for a continent that was cut off — and it did so **silently**, putting markers in
+the wrong town. Venue shifts are now logged like school shifts, which is how this
+surfaced at all.
 
-Containment could not test those points, since the outline it tests against is the
-truncated one, and it was rejecting Perm and Ufa for being correctly placed. Russia is
-therefore checked against what the scope ruling asserts — west of the Urals, the Ural
-river and the Caspian. That is **stricter** than containment, not looser: it catches a
-venue recorded at Yekaterinburg, Chelyabinsk or Omsk, which the full Natural Earth
-outline would have swallowed without complaint.
+The chord is pushed out past the edge of the frame, and only the chord: **no vertex
+Natural Earth drew is touched and `geo/europe.json` is unchanged.** This is
+deliberately not the true shape of Russia — it is the same honest cut, moved far
+enough to hold the country's own theatres. The frame is computed from the outlines
+plus every point that must be shown, and the SVG now clips to it, so Russia runs off
+the top and right of the map rather than onto the page.
+
+Because that extended outline would happily swallow a venue at Yekaterinburg or Omsk,
+the scope ruling is enforced on the coordinate **before** the outline is consulted:
+west of the Urals, the Ural river and the Caspian. That is stricter than containment,
+not looser. Only Krasnodar is still nudged, by 14 px, where the fitted projection
+drifts at the southern border.
 
 ## The activity layer
 

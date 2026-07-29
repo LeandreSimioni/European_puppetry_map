@@ -40,7 +40,9 @@
   .stage{position:relative;margin:22px 0 0;background:var(--surface);
     border:1px solid var(--border);border-radius:6px}
   .stage-inner{position:relative;padding:6px 10px 12px}
-  svg.map{display:block;width:100%;height:auto;overflow:visible}
+  /* Clipped to the viewBox: the Russian outline deliberately runs off the top and
+     right of the frame, and must stop at the frame rather than at the page. */
+  svg.map{display:block;width:100%;height:auto;overflow:hidden}
   .country{stroke:var(--surface);stroke-width:.9;cursor:pointer;transition:fill .3s ease}
   .country:hover{stroke:var(--ink);stroke-width:1.4}
   .country.sel{stroke:var(--ink);stroke-width:2.2}
